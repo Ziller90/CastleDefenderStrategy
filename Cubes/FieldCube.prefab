@@ -54,7 +54,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5612055948549700339}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.498, z: 0}
+  m_LocalPosition: {x: 0, y: 0.527, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7038081499690511215}
@@ -76,7 +76,7 @@ GameObject:
   - component: {fileID: 919167843871246554}
   m_Layer: 0
   m_Name: FieldCube
-  m_TagString: Untagged
+  m_TagString: Cube
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -89,7 +89,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8639182407056177850}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.0000017589}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5642248999651025032}
@@ -153,8 +153,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.9670929, y: 0.044880867, z: 0.9785599}
+  m_Center: {x: 0.0024315715, y: 0.47755957, z: -0.010789841}
 --- !u!114 &8117122315605040250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,11 +183,15 @@ MonoBehaviour:
   Buildings:
   - {fileID: 5443486789310978349, guid: b2af61d1834e4db4ca3d2d4faf3a8f85, type: 3}
   - {fileID: 5909910951541165008, guid: 878565575b68b11499d31056710bf822, type: 3}
+  - {fileID: 2991281259419329068, guid: 7a8bb2ef1a13be74cacff4f15898fc3f, type: 3}
   - {fileID: 3627186018734139144, guid: d7b9f8011a46c9543ba180cdb55fcc50, type: 3}
-  - {fileID: 0}
+  - {fileID: 6791168615514283296, guid: 27f43bea482b9aa42a7083cb3b06580f, type: 3}
   HighLightFrame: {fileID: 134362943185089884, guid: 1a7e6b617f2abf946b6af5354c48010a,
     type: 3}
   HighlightFramepoint: {fileID: 2435286213796147436}
   BuildPoint: {fileID: 925464277199102942}
   BuildingManager: {fileID: 0}
   BuildingFiled: -1
+  MouseOver: 0
+  ResourcesManager: {fileID: 0}
+  CubeTypeIndex: 1

@@ -13,6 +13,5 @@ MonoBehaviour:
   m_Name: BombTower
   m_EditorClassIdentifier: 
   BuildingImage: {fileID: 2800000, guid: 4cd1a44d458c02545b6e1172156215af, type: 3}
-  GoldPrice: 100
-  WoodPrice: 200
+  GoldPrice: 80
   BuildingId: 0

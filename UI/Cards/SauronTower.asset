@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf38c5c0a374be428df77629206090f, type: 3}
   m_Name: SauronTower
   m_EditorClassIdentifier: 
-  BuildingImage: {fileID: 2800000, guid: 4cd1a44d458c02545b6e1172156215af, type: 3}
-  GoldPrice: 500
-  WoodPrice: 100
-  BuildingId: 2
+  BuildingImage: {fileID: 2800000, guid: c93afc7321643bc43bb2d1c4c9bb69ce, type: 3}
+  GoldPrice: 150
+  WoodPrice: 150
+  BuildingId: 3

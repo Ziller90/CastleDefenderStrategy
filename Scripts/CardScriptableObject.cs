@@ -9,7 +9,6 @@ public class CardScriptableObject : ScriptableObject
 {
     public Texture BuildingImage;
     public int  GoldPrice;
-    public int WoodPrice;
     public int BuildingId;
 
 }

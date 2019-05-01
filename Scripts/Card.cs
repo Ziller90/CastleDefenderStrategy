@@ -17,7 +17,6 @@ public class Card : MonoBehaviour
         BuildingManager = GameObject.Find("BuildingManager").GetComponent<BuildingManager>();
         BuildingID = CardInfo.BuildingId;
         GoldPrice.text = (" " + CardInfo.GoldPrice);
-        WoodPrice.text = (" " + CardInfo.WoodPrice);
         BuildingImage.texture = CardInfo.BuildingImage;
     }
 
@@ -28,9 +27,7 @@ public class Card : MonoBehaviour
     }
     public void OnCardClick()
     {
-        Debug.Log("fdf");
         var Builder = BuildingManager.HighLightedCube.GetComponent<BuilderManager>();
-        Builder.BuildTheBuilding(BuildingID);
-        Debug.Log("fdf");
+        Builder.BuildTheBuilding(BuildingID, CardInfo.GoldPrice);
     }
 }

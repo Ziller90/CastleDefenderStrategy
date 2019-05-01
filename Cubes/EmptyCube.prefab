@@ -105,4 +105,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Cube: {fileID: 0}
-  Grid: {fileID: 0}
