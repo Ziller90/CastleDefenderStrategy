@@ -15,11 +15,18 @@ public class EnemyFieldOfView : MonoBehaviour
     {
         
     }
-    void OnTriggerStay (Collider Col)
+    void OnTriggerEnter (Collider Col)
     {
         if (Col.gameObject.tag == "Castle" || Col.gameObject.tag == "StopTower")
         {
-            gameObject.transform.parent.GetComponent<EnemyBehaviour>().SeeTheEnemy = true;
+            gameObject.transform.parent.GetComponent<EnemyBehaviour>().AttackModeStart(Col.gameObject);
+        }
+    }
+    void OnTriggerExit(Collider Col)
+    {
+        if (Col.gameObject.tag == "Castle" || Col.gameObject.tag == "StopTower")
+        {
+            gameObject.transform.parent.GetComponent<EnemyBehaviour>().AttackModeStop();
         }
     }
 }

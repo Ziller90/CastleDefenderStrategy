@@ -23,7 +23,10 @@ public class EnemyBehaviour : MonoBehaviour
     public GameObject Castle;
     public bool Go;
     public float EnemyDamage;
-    public bool SeeTheEnemy = false;
+    public string EnemyId;
+   
+    
+    
 
     void Start()
     {
@@ -32,17 +35,12 @@ public class EnemyBehaviour : MonoBehaviour
         HPIndex = 1;
         Go = true;
         Castle = GameObject.Find("Castle");
+
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (SeeTheEnemy == true)
-        {
-            Go = false;
-            gameObject.GetComponent<EnemyAttackBehaviour>().StartCoroutine("Attack");
-        }
-
         if (Go == true)
         {
             gameObject.transform.position += transform.forward * speed;
@@ -92,12 +90,30 @@ public class EnemyBehaviour : MonoBehaviour
         speed = NormalSpeed;
     }
 
-    void OnTriggerStay (Collider Col)
+    public void AttackModeStart (GameObject ObjectToAttack)
     {
-        if (Col.gameObject.tag == "Castle" || Col.gameObject.tag == "StopTower")
+        if (EnemyId == "Infanity")
         {
-            Debug.Log("ok");
+            gameObject.GetComponent<InfanityAttackBehavior>().Attack = true;
+            gameObject.GetComponent<InfanityAttackBehavior>().Damage = EnemyDamage;
+            gameObject.GetComponent<InfanityAttackBehavior>().ObjectToAttack = ObjectToAttack;
             Go = false;
+        }
+        if (EnemyId == "DistanceAttack")
+        {
+            
+        }
+    }
+    public void AttackModeStop()
+    {
+        if (EnemyId == "Infanity")
+        {
+            gameObject.GetComponent<InfanityAttackBehavior>().Attack = false;
+            Go = true;
+        }
+        if (EnemyId == "DistanceAttack")
+        {
+
         }
     }
 }
