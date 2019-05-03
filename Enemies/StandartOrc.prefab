@@ -472,8 +472,9 @@ MonoBehaviour:
   Enemy: {fileID: 4419810252268241588}
   Castle: {fileID: 0}
   Go: 0
-  EnemyDamage: 0.1
+  EnemyDamage: 1
   EnemyId: Infanity
+  KillReward: 5
 --- !u!114 &568281878354978770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -486,10 +487,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa559eb7cc6fc4d40b51ab39dbfb609b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Attack: 0
   Damage: 0
-  ObjectToAttack: {fileID: 0}
   InfanityAnimator: {fileID: 4769820536161708155}
+  Reloaded: 1
 --- !u!23 &9094996152137279174
 MeshRenderer:
   m_ObjectHideFlags: 0

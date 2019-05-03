@@ -176,6 +176,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &198280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -311,6 +312,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &4366472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -883,6 +885,88 @@ Transform:
   m_Father: {fileID: 79245661}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &19380078
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 19380079}
+  - component: {fileID: 19380081}
+  - component: {fileID: 19380080}
+  m_Layer: 5
+  m_Name: Description
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &19380079
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 19380078}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2090364047}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -85.9, y: -12.5}
+  m_SizeDelta: {x: 246.23, y: 75.78}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &19380080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 19380078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 16
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "\u0418\u0441\u043F\u0435\u043F\u0435\u043B\u044F\u0435\u0442 \u0432\u0440\u0430\u0433\u043E\u0432
+    \u043C\u0430\u0433\u0438\u0447\u0435\u0441\u043A\u0438\u043C \u043B\u0443\u0447\u043E\u043C.
+    \u042D\u0444\u0444\u0435\u043A\u0442\u0438\u0432\u043D\u0430 \u043D\u0430 \u0434\u0430\u043B\u044C\u043D\u0438\u0445
+    \u0434\u0438\u0441\u0442\u0430\u043D\u0446\u0438\u044F\u0445. "
+--- !u!222 &19380081
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 19380078}
+  m_CullTransparentMesh: 0
 --- !u!1 &20263549
 GameObject:
   m_ObjectHideFlags: 0
@@ -1052,6 +1136,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &20393754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1247,6 +1332,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &24938133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1378,6 +1464,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &27552591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1633,6 +1720,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &37130847
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1768,6 +1856,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &38754720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1933,6 +2022,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &39772764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2034,6 +2124,80 @@ Transform:
   m_Father: {fileID: 1400697862}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &40479517
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 40479518}
+  - component: {fileID: 40479520}
+  - component: {fileID: 40479519}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &40479518
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 40479517}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.16491, y: 0.16491, z: 0.16491}
+  m_Children: []
+  m_Father: {fileID: 2090364047}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 221.5, y: -2.4000087}
+  m_SizeDelta: {x: 599.01, y: 599.01}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &40479519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 40479517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: b9dd5b7fba0550645b471f344355a7e0, type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!222 &40479520
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 40479517}
+  m_CullTransparentMesh: 0
 --- !u!1 &41867250
 GameObject:
   m_ObjectHideFlags: 0
@@ -2303,6 +2467,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &48577741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2468,6 +2633,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &50909318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2813,6 +2979,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &61562948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2944,6 +3111,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &63805644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3109,6 +3277,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &67746794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3244,6 +3413,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &69083113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3409,6 +3579,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &72671406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3776,6 +3947,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &79245663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3911,6 +4083,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &81548338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4391,6 +4564,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &100202484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4586,6 +4760,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &101795194
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5051,6 +5226,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &114921007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5486,6 +5662,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &127484228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5831,6 +6008,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &144525566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5962,6 +6140,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &144853047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6263,6 +6442,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &160719385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6428,6 +6608,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &166298628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6623,6 +6804,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &168864041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6758,6 +6940,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &169380884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7097,6 +7280,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &176602502
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7352,6 +7536,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 2
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &180031079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7487,6 +7672,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &180871587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8012,6 +8198,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &189691765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8177,6 +8364,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &191969663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8342,6 +8530,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &196126381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8953,6 +9142,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &218071856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9403,6 +9593,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &234539703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9538,6 +9729,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &235866332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9808,6 +10000,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &239176015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9973,6 +10166,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &239993322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10209,6 +10403,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &242014048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10505,6 +10700,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &248490877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10925,6 +11121,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &259445090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11086,6 +11283,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &263746056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11217,6 +11415,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &265751776
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11622,6 +11821,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &280020408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11757,6 +11957,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &283164259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11922,6 +12123,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &286447745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12297,6 +12499,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &296718339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12522,6 +12725,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &302448237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12866,6 +13070,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &309146449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13001,6 +13206,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &309408574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13136,6 +13342,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &310880939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13601,6 +13808,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &321548830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13762,6 +13970,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &327271268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14122,6 +14331,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &343460292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14467,6 +14677,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &362621163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14662,6 +14873,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &371310603
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14797,6 +15009,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &373934433
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15112,6 +15325,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &381559809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15247,6 +15461,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &384056737
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15487,6 +15702,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &385296443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15682,6 +15898,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &387483096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16027,6 +16244,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &389966818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16297,6 +16515,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &394866507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16938,6 +17157,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &416885408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17103,6 +17323,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &419252797
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17238,6 +17459,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &419904363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17478,6 +17700,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &421221190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17718,6 +17941,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &429009682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17853,6 +18077,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &429349864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17984,6 +18209,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &438930318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18119,6 +18345,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &443925674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18511,6 +18738,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &458962727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18943,6 +19171,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &470015291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19299,6 +19528,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &481385785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19764,6 +19994,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &492524787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19955,6 +20186,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &497103954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20120,6 +20352,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &500716534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20420,6 +20653,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &509574959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20585,6 +20819,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &510216136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20780,6 +21015,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &521068550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21020,6 +21256,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &527820908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21155,6 +21392,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &530475076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21937,6 +22175,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &566974508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22068,6 +22307,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &571436535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22323,6 +22563,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &575579174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22488,6 +22729,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &576506126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22623,6 +22865,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &576963227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22758,6 +23001,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &577498589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22953,6 +23197,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &581637226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23223,6 +23468,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &583096209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23493,6 +23739,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &586154846
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23658,6 +23905,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &592139180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24213,6 +24461,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &608153385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24348,6 +24597,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &609038316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24706,6 +24956,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &621115780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24837,6 +25088,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &621204092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24968,6 +25220,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &622104075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25584,6 +25837,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &651207581
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25910,6 +26164,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &657165584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26045,6 +26300,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &661182658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26300,6 +26556,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &668036566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26605,7 +26862,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1 &680260746
 GameObject:
@@ -26667,6 +26924,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &680260749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27411,6 +27669,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &692833010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27575,7 +27834,7 @@ RectTransform:
   - {fileID: 1446350894}
   - {fileID: 1253423576}
   m_Father: {fileID: 778041009}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -27779,6 +28038,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &699980227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28000,6 +28260,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &702071459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28135,6 +28396,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &704389189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28270,6 +28532,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &704539378
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28405,6 +28668,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &705699891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28570,6 +28834,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &710236878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29006,6 +29271,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &714789886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29107,6 +29373,78 @@ Transform:
   m_Father: {fileID: 1963826145}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &717442797
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 717442798}
+  - component: {fileID: 717442800}
+  - component: {fileID: 717442799}
+  m_Layer: 5
+  m_Name: RawImage (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &717442798
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 717442797}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.87740004, y: 0.87740004, z: 0.87740004}
+  m_Children: []
+  m_Father: {fileID: 2090364047}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 220.9, y: -1.1}
+  m_SizeDelta: {x: 84.72, y: 84.72}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &717442799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 717442797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -98529514, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Texture: {fileID: 2800000, guid: 7f9832739fd9a68479293364eebff418, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &717442800
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 717442797}
+  m_CullTransparentMesh: 0
 --- !u!1 &719061587
 GameObject:
   m_ObjectHideFlags: 0
@@ -29167,6 +29505,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &719061590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29464,6 +29803,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &724224398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29599,6 +29939,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &726272486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29734,6 +30075,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &731301006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29899,6 +30241,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &734572378
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30064,6 +30407,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &738213338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30334,6 +30678,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &748586515
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30589,6 +30934,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &756921436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30754,6 +31100,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &758553866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30975,6 +31322,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &766577876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31170,6 +31518,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &769192424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31335,6 +31684,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &771210587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31500,6 +31850,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &773780440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31721,11 +32072,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 2090364047}
   - {fileID: 1103553690}
   - {fileID: 1488676046}
   - {fileID: 697022034}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -32105,6 +32457,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &788452396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32555,6 +32908,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &815217696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32750,6 +33104,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &826044079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33230,6 +33585,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &845909259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33395,6 +33751,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &851526596
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33650,6 +34007,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &854245480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33811,6 +34169,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &855673153
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34077,6 +34436,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &860116041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34242,6 +34602,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &861686176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34407,6 +34768,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &863702843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34594,7 +34956,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &870509386
 GameObject:
@@ -34885,6 +35247,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &871263449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35020,6 +35383,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &882291415
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35215,6 +35579,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &892234360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35346,6 +35711,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &895443803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35481,6 +35847,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &896027449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36056,6 +36423,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &900404929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36311,6 +36679,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &910016999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36446,6 +36815,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &911389001
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36611,6 +36981,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &914232577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36742,6 +37113,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &914814816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36873,6 +37245,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &915588329
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37460,6 +37833,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &927332377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37896,6 +38270,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &934812908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38027,6 +38402,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &935278246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38327,6 +38703,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &945702115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38522,6 +38899,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &951122886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38713,6 +39091,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &953076342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38848,6 +39227,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &953297817
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39102,6 +39482,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &966222322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39432,6 +39813,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &974699864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39567,6 +39949,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &975662186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39732,6 +40115,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &986391842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40099,6 +40483,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &997189412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40230,6 +40615,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &997522011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40421,6 +40807,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1001943191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40556,6 +40943,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1003306702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41261,6 +41649,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1031472811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41486,6 +41875,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1037260654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41621,6 +42011,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1037397464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41786,6 +42177,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1038737360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42161,6 +42553,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1044152229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42296,6 +42689,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1045684525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43398,6 +43792,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1059878763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43743,6 +44138,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1080125005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44177,6 +44573,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1101776630
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44290,7 +44687,7 @@ GameObject:
   - component: {fileID: 1103553692}
   - component: {fileID: 1103553691}
   m_Layer: 5
-  m_Name: ListsOfBuildings
+  m_Name: ListOfBuildings
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44311,7 +44708,7 @@ RectTransform:
   - {fileID: 786703564}
   - {fileID: 1986567640}
   m_Father: {fileID: 778041009}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -44331,7 +44728,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -44415,6 +44812,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1104224138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44640,6 +45038,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1115654584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44895,6 +45294,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1128663831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45030,6 +45430,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1129410573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45161,6 +45562,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1129525636
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45629,6 +46031,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1146071723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45870,6 +46273,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1150582147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46065,6 +46469,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1153883171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46200,6 +46605,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1156383461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46365,6 +46771,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1159062013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46500,6 +46907,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1159738320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46796,6 +47204,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1168201706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46931,7 +47340,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1169494079
 GameObject:
@@ -46997,6 +47406,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1169494082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47552,6 +47962,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1191707352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47989,6 +48400,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1195516239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48289,6 +48701,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1198840283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48802,6 +49215,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1214833047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48937,6 +49351,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1217062495
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49072,6 +49487,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1217480119
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49372,6 +49788,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1225024469
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49702,6 +50119,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1231626836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50023,6 +50441,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1236738173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50214,6 +50633,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1241483878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50480,6 +50900,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1248189006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50611,6 +51032,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1248363202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51176,6 +51598,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1256716590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51933,6 +52356,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1278769931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52263,6 +52687,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1291197325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52428,6 +52853,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1293829197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52728,6 +53154,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1302791533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52863,6 +53290,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1310045906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52994,6 +53422,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1312047533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53522,6 +53951,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1340625841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53657,6 +54087,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1348744226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54181,6 +54612,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1372488515
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54316,6 +54748,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1373765510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54417,6 +54850,78 @@ Transform:
   m_Father: {fileID: 914814814}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1376113716
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1376113717}
+  - component: {fileID: 1376113719}
+  - component: {fileID: 1376113718}
+  m_Layer: 5
+  m_Name: BuildingImage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1376113717
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376113716}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2090364047}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -247.6, y: 0.0000016689}
+  m_SizeDelta: {x: 87.59, y: 106.87}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1376113718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376113716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -98529514, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Texture: {fileID: 2800000, guid: c93afc7321643bc43bb2d1c4c9bb69ce, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &1376113719
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376113716}
+  m_CullTransparentMesh: 0
 --- !u!1001 &1379181745
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54704,6 +55209,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1379735308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54974,6 +55480,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1382899097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55330,6 +55837,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1387153233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55656,6 +56164,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1400697864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56423,6 +56932,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1435020812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56558,6 +57068,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1440950986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56799,6 +57310,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1444923900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57073,6 +57585,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 2
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1450340769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57208,6 +57721,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1452089047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57373,6 +57887,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1456943288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57508,6 +58023,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1457205775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57928,6 +58444,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1467458984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58063,6 +58580,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1471542019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58198,6 +58716,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1473752222
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58464,6 +58983,85 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1478255303}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1478436483
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1478436484}
+  - component: {fileID: 1478436486}
+  - component: {fileID: 1478436485}
+  m_Layer: 5
+  m_Name: AttackDistance
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1478436484
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1478436483}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2090364047}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 122.43003, y: -1.5499859}
+  m_SizeDelta: {x: 160, y: 17.68}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1478436485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1478436483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "\u0414\u0430\u043B\u044C\u043D\u043E\u0441\u0442\u044C - 3 \u043A\u043B."
+--- !u!222 &1478436486
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1478436483}
+  m_CullTransparentMesh: 0
 --- !u!1 &1480598572
 GameObject:
   m_ObjectHideFlags: 0
@@ -58768,6 +59366,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1485304549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58900,7 +59499,7 @@ RectTransform:
   m_Children:
   - {fileID: 1827523690}
   m_Father: {fileID: 778041009}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -59008,6 +59607,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1492203444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59209,6 +59809,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1498992960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59374,6 +59975,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1500788938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59539,6 +60141,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1501623172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59674,6 +60277,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1506758482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60034,6 +60638,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1521085741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60165,6 +60770,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1524405394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60326,6 +60932,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1532205110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60461,6 +61068,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1533279187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60592,6 +61200,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1534289906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60753,6 +61362,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1542407747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61244,6 +61854,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1566541788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61875,6 +62486,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 2
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1581888913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62010,6 +62622,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1584414550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62205,6 +62818,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1591211423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62340,6 +62954,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1592176487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62505,6 +63120,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1596677127
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63016,6 +63632,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1607026501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63286,6 +63903,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1610211938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63721,6 +64339,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1618435152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63976,6 +64595,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1624686029
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64261,6 +64881,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1630791105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64392,6 +65013,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1634550003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64527,6 +65149,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1634974160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64827,6 +65450,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1640164558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64958,6 +65582,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1640385695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65254,6 +65879,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1646456436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65389,6 +66015,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1649149248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65839,6 +66466,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1660336374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66124,6 +66752,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1677573955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66289,6 +66918,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1681493038
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66559,6 +67189,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1683662887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66724,6 +67355,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1686076482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66979,6 +67611,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1691839438
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67114,6 +67747,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1694125445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67249,6 +67883,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1696140646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67594,6 +68229,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1700631541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67729,6 +68365,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1701689021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68299,6 +68936,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1727253871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68748,6 +69386,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1741819873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69018,6 +69657,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1743123521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69239,6 +69879,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1745278287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69479,6 +70120,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1748780560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69704,6 +70346,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1753456948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69845,6 +70488,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1755825480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70010,6 +70654,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1757065363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70351,6 +70996,85 @@ Transform:
   m_Father: {fileID: 429009680}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1765084068
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1765084069}
+  - component: {fileID: 1765084071}
+  - component: {fileID: 1765084070}
+  m_Layer: 5
+  m_Name: Damage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1765084069
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1765084068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2090364047}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 122.43006, y: 16.550014}
+  m_SizeDelta: {x: 160, y: 18.51}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1765084070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1765084068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "\u0423\u0440\u043E\u043D - 10"
+--- !u!222 &1765084071
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1765084068}
+  m_CullTransparentMesh: 0
 --- !u!1 &1765618094
 GameObject:
   m_ObjectHideFlags: 0
@@ -70411,6 +71135,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1765618097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70576,6 +71301,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1769288117
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70711,6 +71437,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1770806111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71007,6 +71734,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1776649268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71138,6 +71866,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1778251140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71273,6 +72002,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1780448365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71438,6 +72168,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1786521513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71573,6 +72304,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1792660293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71798,6 +72530,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1804031886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71959,6 +72692,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1806646732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72090,6 +72824,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1807540945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72225,6 +72960,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1807808717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72356,6 +73092,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1808181307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72713,7 +73450,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1816344164
 RectTransform:
   m_ObjectHideFlags: 0
@@ -72798,6 +73535,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1818221764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72993,6 +73731,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1820132025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73537,6 +74276,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1836599545
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73943,6 +74683,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1849296374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74812,6 +75553,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1867090491
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75097,6 +75839,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1872769904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75232,6 +75975,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1883963808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75423,6 +76167,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1887903131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75558,6 +76303,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1892451511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75824,6 +76570,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1897032855
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75959,6 +76706,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1899365266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76094,6 +76842,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1899764278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76225,6 +76974,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1901300004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77005,6 +77755,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1940429671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77335,6 +78086,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1946054255
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77526,6 +78278,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1954706049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77691,6 +78444,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1956347779
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77826,6 +78580,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1963826147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78021,6 +78776,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1971520326
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78225,7 +78981,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1983637953
 GameObject:
@@ -78321,6 +79077,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1984413665
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78496,6 +79253,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1989161357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78691,6 +79449,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &1998944188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78886,6 +79645,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &2003965373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79350,6 +80110,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &2015094107
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79481,6 +80242,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &2015389831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79717,6 +80479,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &2022763405
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79912,6 +80675,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &2024971293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80047,6 +80811,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &2025991838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80256,6 +81021,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &2031433246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80522,6 +81288,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &2034791443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80687,6 +81454,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &2035606704
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80852,6 +81620,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &2039728424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81484,6 +82253,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &2053664726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81615,6 +82385,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &2053775256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81810,6 +82581,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &2063618007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81941,6 +82713,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &2065017286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82191,6 +82964,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &2068422648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82326,6 +83100,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &2074266854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82491,6 +83266,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &2074613240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82686,6 +83462,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &2078607909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82906,6 +83683,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &2088810991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83041,6 +83819,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &2088979297
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83217,6 +83996,105 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2090081296}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &2090364046
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2090364047}
+  - component: {fileID: 2090364049}
+  - component: {fileID: 2090364048}
+  - component: {fileID: 2090364050}
+  m_Layer: 5
+  m_Name: BuildingInfo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2090364047
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2090364046}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.86, y: 0.86, z: 0.86}
+  m_Children:
+  - {fileID: 40479518}
+  - {fileID: 717442798}
+  - {fileID: 1376113717}
+  - {fileID: 2129083628}
+  - {fileID: 19380079}
+  - {fileID: 1765084069}
+  - {fileID: 1478436484}
+  m_Father: {fileID: 778041009}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -13.365, y: 52}
+  m_SizeDelta: {x: -212.68, y: 124}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2090364048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2090364046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!222 &2090364049
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2090364046}
+  m_CullTransparentMesh: 0
+--- !u!114 &2090364050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2090364046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ef7e53814f7f1648981f9358f3c476e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BuildingImage: {fileID: 1376113718}
+  BuildingDescription: {fileID: 19380080}
+  BuildingDamage: {fileID: 1765084070}
+  BuildingAttackDistance: {fileID: 1478436485}
+  BuildingName: {fileID: 2129083629}
 --- !u!1 &2092661465
 GameObject:
   m_ObjectHideFlags: 0
@@ -83341,6 +84219,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &2103575627
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83596,6 +84475,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &2109644771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84103,7 +84983,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2123874056
 GameObject:
@@ -84199,6 +85079,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &2125123388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84270,6 +85151,86 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2125123385}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &2129083627
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2129083628}
+  - component: {fileID: 2129083630}
+  - component: {fileID: 2129083629}
+  m_Layer: 5
+  m_Name: BuildingName
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2129083628
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2129083627}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2090364047}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -124.12995, y: 39.085007}
+  m_SizeDelta: {x: 169.76, y: 27.4}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2129083629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2129083627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 20
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "\u0411\u0430\u0448\u043D\u044F \u0421\u0430\u0443\u0440\u043E\u043D\u0430.
+    \n"
+--- !u!222 &2129083630
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2129083627}
+  m_CullTransparentMesh: 0
 --- !u!1 &2129910374
 GameObject:
   m_ObjectHideFlags: 0
@@ -84364,6 +85325,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &2131381829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84499,6 +85461,7 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 1
+  ListOfBuildings: {fileID: 0}
 --- !u!114 &2134912620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84809,75 +85772,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &3173250163654045749
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 5443486789311268109, guid: b2af61d1834e4db4ca3d2d4faf3a8f85,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5443486789311268109, guid: b2af61d1834e4db4ca3d2d4faf3a8f85,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.37730002
-      objectReference: {fileID: 0}
-    - target: {fileID: 5443486789311268109, guid: b2af61d1834e4db4ca3d2d4faf3a8f85,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5443486789311268109, guid: b2af61d1834e4db4ca3d2d4faf3a8f85,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5443486789311268109, guid: b2af61d1834e4db4ca3d2d4faf3a8f85,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5443486789311268109, guid: b2af61d1834e4db4ca3d2d4faf3a8f85,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5443486789311268109, guid: b2af61d1834e4db4ca3d2d4faf3a8f85,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5443486789311268109, guid: b2af61d1834e4db4ca3d2d4faf3a8f85,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5443486789311268109, guid: b2af61d1834e4db4ca3d2d4faf3a8f85,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5443486789311268109, guid: b2af61d1834e4db4ca3d2d4faf3a8f85,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5443486789311268109, guid: b2af61d1834e4db4ca3d2d4faf3a8f85,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5443486789310978349, guid: b2af61d1834e4db4ca3d2d4faf3a8f85,
-        type: 3}
-      propertyPath: m_Name
-      value: 'TowerBomb '
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b2af61d1834e4db4ca3d2d4faf3a8f85, type: 3}
 --- !u!1 &4419810250767920813
 GameObject:
   m_ObjectHideFlags: 0
@@ -84958,7 +85852,7 @@ PrefabInstance:
     - target: {fileID: 7966270847051740870, guid: a7cc9f3f0a9093d48b90ba4e8dfd1a5a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7966270847051740870, guid: a7cc9f3f0a9093d48b90ba4e8dfd1a5a,
         type: 3}
@@ -85229,7 +86123,7 @@ PrefabInstance:
     - target: {fileID: 6946363656239853548, guid: b489957551f6c0d42b564afb17f27459,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6946363656239853548, guid: b489957551f6c0d42b564afb17f27459,
         type: 3}

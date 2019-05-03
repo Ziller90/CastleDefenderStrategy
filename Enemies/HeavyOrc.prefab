@@ -1,5 +1,17 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!4 &7591530015399718977 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 481300, guid: 6012b8dcfdc2b314aa83a0b7b9d2d6e2,
+    type: 3}
+  m_PrefabInstance: {fileID: 7591530015399536725}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &7591530015390163589 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9505488, guid: 6012b8dcfdc2b314aa83a0b7b9d2d6e2,
+    type: 3}
+  m_PrefabInstance: {fileID: 7591530015399536725}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &746890577865058220
 GameObject:
   m_ObjectHideFlags: 0
@@ -291,18 +303,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8d1c64c3ab633c4da1ba766057599a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &7591530015399718977 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 481300, guid: 6012b8dcfdc2b314aa83a0b7b9d2d6e2,
-    type: 3}
-  m_PrefabInstance: {fileID: 7591530015399536725}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &7591530015390163589 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 9505488, guid: 6012b8dcfdc2b314aa83a0b7b9d2d6e2,
-    type: 3}
-  m_PrefabInstance: {fileID: 7591530015399536725}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &8598828742072929908
 GameObject:
   m_ObjectHideFlags: 0
@@ -472,8 +472,9 @@ MonoBehaviour:
   Enemy: {fileID: 4419810252268241588}
   Castle: {fileID: 0}
   Go: 0
-  EnemyDamage: 0.5
+  EnemyDamage: 3
   EnemyId: Infanity
+  KillReward: 0
 --- !u!114 &568281878354978770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -486,10 +487,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa559eb7cc6fc4d40b51ab39dbfb609b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Attack: 0
   Damage: 0
-  ObjectToAttack: {fileID: 0}
   InfanityAnimator: {fileID: 7591530015390163589}
+  Reloaded: 1
 --- !u!23 &9094996152137279174
 MeshRenderer:
   m_ObjectHideFlags: 0

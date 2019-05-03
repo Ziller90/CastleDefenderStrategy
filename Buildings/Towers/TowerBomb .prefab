@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 4461063904314612164}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Tower
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -198,6 +198,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5443486789311268109}
+  - component: {fileID: 4120285573001298944}
+  - component: {fileID: 376630394879283305}
   m_Layer: 0
   m_Name: 'TowerBomb '
   m_TagString: Tower
@@ -222,6 +224,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4120285573001298944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5443486789310978349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3303882d8ed841e47aa8a1a2c59e42f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BuildingInfoPanel: {fileID: 0}
+  ListOfBuildings: {fileID: 0}
+  BuildingCard: {fileID: 11400000, guid: 5eefbea6c6511444d915187a5b9abefa, type: 2}
+  Panel: {fileID: 0}
+--- !u!65 &376630394879283305
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5443486789310978349}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.609348, y: 7.76796, z: 3.383237}
+  m_Center: {x: -0.018787017, y: 0.90408623, z: 0.061558414}
 --- !u!1 &7700980124685421507
 GameObject:
   m_ObjectHideFlags: 0

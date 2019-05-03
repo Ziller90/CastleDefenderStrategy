@@ -24,6 +24,8 @@ public class EnemyBehaviour : MonoBehaviour
     public bool Go;
     public float EnemyDamage;
     public string EnemyId;
+    public int KillReward;
+ 
    
     
     
@@ -57,6 +59,8 @@ public class EnemyBehaviour : MonoBehaviour
 
         if (HP <= 0)
         {
+            GameObject Resourcesmanager = GameObject.Find("ResourcesManager");
+            Resourcesmanager.GetComponent<ResourcesManager>().Gold = Resourcesmanager.GetComponent<ResourcesManager>().Gold + KillReward;
             Destroy(Enemy);
         }
 
@@ -94,10 +98,8 @@ public class EnemyBehaviour : MonoBehaviour
     {
         if (EnemyId == "Infanity")
         {
-            gameObject.GetComponent<InfanityAttackBehavior>().Attack = true;
+            gameObject.GetComponent<InfanityAttackBehavior>().StartCoroutine("Attack", ObjectToAttack);
             gameObject.GetComponent<InfanityAttackBehavior>().Damage = EnemyDamage;
-            gameObject.GetComponent<InfanityAttackBehavior>().ObjectToAttack = ObjectToAttack;
-            Go = false;
         }
         if (EnemyId == "DistanceAttack")
         {
@@ -108,8 +110,7 @@ public class EnemyBehaviour : MonoBehaviour
     {
         if (EnemyId == "Infanity")
         {
-            gameObject.GetComponent<InfanityAttackBehavior>().Attack = false;
-            Go = true;
+            gameObject.GetComponent<InfanityAttackBehavior>().StartCoroutine("StopAttack");
         }
         if (EnemyId == "DistanceAttack")
         {

@@ -15,6 +15,7 @@ public class BuilderManager : MonoBehaviour
     public bool MouseOver = false;
     public ResourcesManager ResourcesManager;
     public int CubeTypeIndex;
+    public GameObject ListOfBuildings;
     void Start()
     {
         BuildingManager = GameObject.Find("BuildingManager").GetComponent<BuildingManager>();
@@ -41,7 +42,6 @@ public class BuilderManager : MonoBehaviour
     {
         BuildingManager.HighLightedCube = gameObject;
         Frame = Instantiate(HighLightFrame, HighlightFramepoint.transform.position, Quaternion.identity);
-
     }
     public void CubeRemoveHightLighting()
     {

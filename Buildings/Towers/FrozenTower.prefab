@@ -85,9 +85,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2244093364175489535}
+  - component: {fileID: 3813928390624235689}
+  - component: {fileID: 8111342813182188676}
   m_Layer: 0
   m_Name: FrozenTower
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -108,6 +110,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3813928390624235689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6791168615514283296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3303882d8ed841e47aa8a1a2c59e42f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BuildingInfoPanel: {fileID: 0}
+  ListOfBuildings: {fileID: 0}
+  BuildingCard: {fileID: 11400000, guid: 2b935e8d1c4799243ae68d36c9694ba0, type: 2}
+  Panel: {fileID: 0}
+--- !u!65 &8111342813182188676
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6791168615514283296}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.7562468, z: 1}
+  m_Center: {x: 0, y: 0.37812337, z: 0}
 --- !u!1001 &499345239430866424
 PrefabInstance:
   m_ObjectHideFlags: 0

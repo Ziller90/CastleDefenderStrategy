@@ -41,9 +41,13 @@ public class CameraRayCast : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0) && IsOverUI() == false)
         {
-            if (OldHitObject != null)
+            if (OldHitObject != null && OldHitObject.tag == "Cube")
             {
                 OldHitObject.GetComponent<BuilderManager>().CubeRemoveHightLighting();
+            }
+            if (OldHitObject != null && OldHitObject.tag == "Tower")
+            {
+                OldHitObject.GetComponent<BuildingInfo>().InfoHide();
             }
 
             CameraRay = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -62,6 +66,22 @@ public class CameraRayCast : MonoBehaviour
     {
         for (int i = 0; i < hits.Length; i++)
         {
+
+
+            if (hits[i].collider.gameObject.tag == "Tower" && AlwaysDetected == false)
+            {
+                Debug.Log("DetectedCube");
+                AlwaysDetected = true;
+                Debug.Log(hits[i].collider.gameObject.name);
+                hits[i].collider.gameObject.GetComponent<BuildingInfo>().InfoShowing();
+                OldHitObject = hits[i].collider.gameObject;
+            }
+
+        }
+
+        for (int i = 0; i < hits.Length; i++)
+        {
+
             if (hits[i].collider.gameObject.tag == "Cube" && AlwaysDetected == false)
             {
                 Debug.Log("DetectedCube");
@@ -70,6 +90,7 @@ public class CameraRayCast : MonoBehaviour
                 hits[i].collider.gameObject.GetComponent<BuilderManager>().CubeHighLighting();
                 OldHitObject = hits[i].collider.gameObject;
             }
+
         }
         AlwaysDetected = false;
     }

@@ -6,12 +6,17 @@ using UnityEngine.UI;
 [ExecuteInEditMode]
 public class Card : MonoBehaviour
 {
+    
     public CardScriptableObject CardInfo;
     public Text GoldPrice;
     public Text WoodPrice;
     public RawImage BuildingImage;
     private int BuildingID;
     private BuildingManager BuildingManager;
+    public Text BuildingDescription;
+    public Text BuildingDamage;
+    public Text BuildingAttackDistance;
+    public Text BuildingName;
     void Start()
     {
         BuildingManager = GameObject.Find("BuildingManager").GetComponent<BuildingManager>();

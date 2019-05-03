@@ -22,11 +22,4 @@ public class EnemyFieldOfView : MonoBehaviour
             gameObject.transform.parent.GetComponent<EnemyBehaviour>().AttackModeStart(Col.gameObject);
         }
     }
-    void OnTriggerExit(Collider Col)
-    {
-        if (Col.gameObject.tag == "Castle" || Col.gameObject.tag == "StopTower")
-        {
-            gameObject.transform.parent.GetComponent<EnemyBehaviour>().AttackModeStop();
-        }
-    }
 }
