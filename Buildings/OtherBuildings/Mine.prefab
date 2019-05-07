@@ -356,4 +356,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ResourceManager: {fileID: 0}
-  MineResource: 350
+  MineResource: 200
+  MineWasDigged: 0

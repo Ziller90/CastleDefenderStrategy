@@ -13,6 +13,21 @@ MonoBehaviour:
   m_Name: SauronTower
   m_EditorClassIdentifier: 
   BuildingImage: {fileID: 2800000, guid: c93afc7321643bc43bb2d1c4c9bb69ce, type: 3}
-  GoldPrice: 150
-  WoodPrice: 150
+  GoldPrice: 120
   BuildingId: 3
+  AmountOfLevels: 3
+  LevelUpPrice: 000000003200000064000000
+  LevelUpDamageBonus:
+  - 0.06
+  - 0.035
+  - 0.05
+  LevelUpAttackDistanceBonus:
+  - 1
+  - 1
+  - 1
+  LevelUpReloadingSpeedBonus: []
+  LevelUpSpeedDeBuffBonus: []
+  GoldenDamageBonus: 0.05
+  GoldenAttackDistanceBonus: 0
+  GoldenReloadingSpeedBonus: 0
+  GoldenSpeedDeBuffBonus: 0

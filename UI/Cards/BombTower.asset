@@ -15,13 +15,19 @@ MonoBehaviour:
   BuildingImage: {fileID: 2800000, guid: 4cd1a44d458c02545b6e1172156215af, type: 3}
   GoldPrice: 80
   BuildingId: 0
-  BuildingDescription: Kill orcs with bomb. Effective against few enemies
-  BuildingDamage: 1
-  BuildingAttackDistance: 1
-  BuildingName: BombTower
-  Levelup2Price: 0
-  Levelup2DamageBonus: 0
-  Levelup2DistanceBonus: 0
-  Levelup3Price: 0
-  Levelup3DDamageBonus: 0
-  Levelup3DistanceBonus: 0
+  AmountOfLevels: 2
+  LevelUpPrice: 0000000046000000
+  LevelUpDamageBonus:
+  - 0.8
+  - 0.8
+  LevelUpAttackDistanceBonus:
+  - 1
+  - 1
+  LevelUpReloadingSpeedBonus:
+  - 1
+  - 0.2
+  LevelUpSpeedDeBuffBonus: []
+  GoldenDamageBonus: 0
+  GoldenAttackDistanceBonus: 0
+  GoldenReloadingSpeedBonus: -0.3
+  GoldenSpeedDeBuffBonus: 0

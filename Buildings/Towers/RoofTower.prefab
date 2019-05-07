@@ -89,10 +89,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3303882d8ed841e47aa8a1a2c59e42f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BuildingInfoPanel: {fileID: 0}
-  ListOfBuildings: {fileID: 0}
   BuildingCard: {fileID: 11400000, guid: 9214b343d0a7f044f8bc0e2d39eac38e, type: 2}
-  Panel: {fileID: 0}
+  UIManager: {fileID: 0}
+  ResourceManager: {fileID: 0}
+  FilledCube: {fileID: 0}
+  Currentlevel: 0
+  Damage: 0
+  AttackDistance: 0
+  ReloadingSpeed: 0
+  SpeedDeBuff: 0
 --- !u!1 &5909910951541165012
 GameObject:
   m_ObjectHideFlags: 0
@@ -104,8 +109,8 @@ GameObject:
   - component: {fileID: 5909910951541004276}
   - component: {fileID: 5909910951544395734}
   - component: {fileID: 5909910951543428374}
-  - component: {fileID: 4732985431128516159}
   - component: {fileID: 7159581353668574380}
+  - component: {fileID: 7970029965997194894}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -172,19 +177,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!135 &4732985431128516159
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5909910951541165012}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.035170354
-  m_Center: {x: -0.0008485213, y: 0.002086393, z: 0.0007297296}
 --- !u!114 &7159581353668574380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -205,4 +197,19 @@ MonoBehaviour:
   NewArrow: {fileID: 0}
   TowerReloadingSpeed: 1.5
   TowerDamage: 5
+  TowerAttackDistance: 0
   Enemy: {fileID: 0}
+  Stats: {fileID: 7640520746749292979}
+--- !u!65 &7970029965997194894
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5909910951541165012}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.18164709, y: 0.17883685, z: 0.025254346}
+  m_Center: {x: -0.00067952473, y: -0.00057908666, z: 0.0029503647}

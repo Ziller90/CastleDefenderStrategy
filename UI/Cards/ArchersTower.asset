@@ -15,13 +15,22 @@ MonoBehaviour:
   BuildingImage: {fileID: 2800000, guid: 8c7d9568f4f0ffc478b0447520836bc8, type: 3}
   GoldPrice: 70
   BuildingId: 1
-  BuildingDescription: Kill orcs with arrows
-  BuildingDamage: 5
-  BuildingAttackDistance: 2
-  BuildingName: ArchersTower
-  Levelup2Price: 50
-  Levelup2DamageBonus: 4
-  Levelup2DistanceBonus: 0.3
-  Levelup3Price: 70
-  Levelup3DDamageBonus: 7
-  Levelup3DistanceBonus: 0
+  AmountOfLevels: 2
+  LevelUpPrice: 000000003c00000050000000
+  LevelUpDamageBonus:
+  - 3
+  - 2
+  - 3.5
+  LevelUpAttackDistanceBonus:
+  - 1
+  - 1
+  - 1
+  LevelUpReloadingSpeedBonus:
+  - 1.7
+  - 0
+  - 0
+  LevelUpSpeedDeBuffBonus: []
+  GoldenDamageBonus: 3
+  GoldenAttackDistanceBonus: 1
+  GoldenReloadingSpeedBonus: -0.5
+  GoldenSpeedDeBuffBonus: 0

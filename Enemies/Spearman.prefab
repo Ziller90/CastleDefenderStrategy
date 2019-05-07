@@ -1,17 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!4 &8600715864990850832 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400056, guid: 4fb36f157afcb204585a65fa968886fe,
-    type: 3}
-  m_PrefabInstance: {fileID: 8600715864991237544}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &8600715864981795016 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 9500000, guid: 4fb36f157afcb204585a65fa968886fe,
-    type: 3}
-  m_PrefabInstance: {fileID: 8600715864991237544}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &746890577865058220
 GameObject:
   m_ObjectHideFlags: 0
@@ -375,6 +363,18 @@ MonoBehaviour:
     y: 0
     width: 1
     height: 1
+--- !u!4 &8600715864990850832 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400056, guid: 4fb36f157afcb204585a65fa968886fe,
+    type: 3}
+  m_PrefabInstance: {fileID: 8600715864991237544}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &8600715864981795016 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9500000, guid: 4fb36f157afcb204585a65fa968886fe,
+    type: 3}
+  m_PrefabInstance: {fileID: 8600715864991237544}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &9068311631442063823
 GameObject:
   m_ObjectHideFlags: 0
@@ -459,8 +459,8 @@ MonoBehaviour:
   speed: 0.018
   RotateTimes: 0
   RotatePover: 0
-  MaxHP: 30
-  HP: 30
+  MaxHP: 20
+  HP: 20
   Delay: 0
   HPLine: {fileID: 4661211424190319859}
   NewHPIndex: 0
@@ -474,7 +474,7 @@ MonoBehaviour:
   Go: 0
   EnemyDamage: 2
   EnemyId: Infanity
-  KillReward: 0
+  KillReward: 5
 --- !u!114 &568281878354978770
 MonoBehaviour:
   m_ObjectHideFlags: 0

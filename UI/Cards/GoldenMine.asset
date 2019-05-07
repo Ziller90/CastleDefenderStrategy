@@ -13,6 +13,11 @@ MonoBehaviour:
   m_Name: GoldenMine
   m_EditorClassIdentifier: 
   BuildingImage: {fileID: 2800000, guid: 0f6150576be21124da048eb7e2a9d418, type: 3}
-  GoldPrice: 100
-  WoodPrice: 100
+  GoldPrice: 75
   BuildingId: 2
+  AmountOfLevels: 0
+  LevelUpPrice: 
+  LevelUpDamageBonus: []
+  LevelUpAttackDistanceBonus: []
+  LevelUpReloadingSpeedBonus: []
+  LevelUpSpeedDeBuffBonus: []

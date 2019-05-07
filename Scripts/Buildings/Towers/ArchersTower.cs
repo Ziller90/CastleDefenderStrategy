@@ -11,17 +11,21 @@ public class ArchersTower : MonoBehaviour
     public bool SeeTheEnemy;
     public GameObject NewArrow;
     public float TowerReloadingSpeed;
-    public int TowerDamage;
+    public float TowerDamage;
+    public float TowerAttackDistance;
     public GameObject Enemy;
+    public BuildingStats Stats;
     void Start()
     {
-        
+ 
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        TowerDamage = Stats.Damage;
+        TowerReloadingSpeed = Stats.ReloadingSpeed;
+        TowerAttackDistance = Stats.AttackDistance;
     }
     void OnTriggerStay (Collider Col)
     {

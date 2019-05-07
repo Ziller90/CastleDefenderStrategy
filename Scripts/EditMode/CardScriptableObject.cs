@@ -10,16 +10,19 @@ public class CardScriptableObject : ScriptableObject
     public Texture BuildingImage;
     public int  GoldPrice;
     public int BuildingId;
-    public string BuildingDescription;
-    public string BuildingDamage;
-    public string BuildingAttackDistance;
-    public string BuildingName;
 
-    public int Levelup2Price;
-    public float Levelup2DamageBonus;
-    public float Levelup2DistanceBonus;
+    public int AmountOfLevels;
 
-    public int Levelup3Price;
-    public float Levelup3DDamageBonus;
-    public float Levelup3DistanceBonus;
+    public int[] LevelUpPrice;
+    public float[] LevelUpDamageBonus;
+    public float[] LevelUpAttackDistanceBonus;
+    public float[] LevelUpReloadingSpeedBonus;
+    public float[] LevelUpSpeedDeBuffBonus;
+
+    public float GoldenDamageBonus;
+    public float GoldenAttackDistanceBonus;
+    public float GoldenReloadingSpeedBonus;
+    public float GoldenSpeedDeBuffBonus;
+
+
 }

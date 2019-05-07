@@ -13,6 +13,8 @@ public class FrozenTowerScript : MonoBehaviour
     public float TowerReloadingSpeed;
     public float TowerDamage;
     public float TowerSpeedDeBuff;
+    public float TowerAttackDistance;
+    public BuildingStats Stats;
 
     void Start()
     {
@@ -22,7 +24,10 @@ public class FrozenTowerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        TowerDamage = Stats.Damage;
+        TowerReloadingSpeed = Stats.ReloadingSpeed;
+        TowerAttackDistance = Stats.AttackDistance;
+        TowerSpeedDeBuff = Stats.SpeedDeBuff;
     }
     void OnTriggerStay(Collider Col)
     {

@@ -9,6 +9,7 @@ public class CameraRayCast : MonoBehaviour
     public RaycastHit[] hits;
     public GameObject OldHitObject;
     public bool AlwaysDetected;
+    public GameUIManager UIManager;
     void Start()
     {
         
@@ -47,7 +48,7 @@ public class CameraRayCast : MonoBehaviour
             }
             if (OldHitObject != null && OldHitObject.tag == "Tower")
             {
-                OldHitObject.GetComponent<BuildingInfo>().InfoHide();
+                OldHitObject.GetComponent<BuildingStats>().BuildingHighLightRemove();
             }
 
             CameraRay = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -73,7 +74,7 @@ public class CameraRayCast : MonoBehaviour
                 Debug.Log("DetectedCube");
                 AlwaysDetected = true;
                 Debug.Log(hits[i].collider.gameObject.name);
-                hits[i].collider.gameObject.GetComponent<BuildingInfo>().InfoShowing();
+                hits[i].collider.gameObject.GetComponent<BuildingStats>().BuildingIsHignLighted();
                 OldHitObject = hits[i].collider.gameObject;
             }
 

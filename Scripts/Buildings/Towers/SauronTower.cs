@@ -10,6 +10,7 @@ public class SauronTower : MonoBehaviour
     public float Damage;
     public GameObject Enemy;
     public bool ray;
+    public BuildingStats Stats;
     void Start()
     {
         
@@ -18,6 +19,7 @@ public class SauronTower : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        Damage = Stats.Damage;
         if (Enemy == null)
         {
             StopRay();

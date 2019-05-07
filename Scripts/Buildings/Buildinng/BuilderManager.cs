@@ -53,24 +53,26 @@ public class BuilderManager : MonoBehaviour
         {
             if (BuildingId == 2 && CubeTypeIndex == 2)
             {
-                ResourcesManager.Gold = ResourcesManager.Gold - GoldPrice;
-                Debug.Log("Buided" + BuildingId);
-                GameObject NewBuilding = Instantiate(Buildings[BuildingId], BuildPoint);
-                BuildingFiled = BuildingId;
-                NewBuilding.transform.parent = null;
+                StandartBuilding(BuildingId, GoldPrice);
             }
-            if (BuildingId == 2 && CubeTypeIndex != 2)
+            if (BuildingId != 2 && CubeTypeIndex == 2)
             {
- 
+                StandartBuilding(BuildingId, GoldPrice);
             }
-            if (BuildingId != 2) 
+            if (BuildingId != 2 && CubeTypeIndex != 2) 
             {
-                ResourcesManager.Gold = ResourcesManager.Gold - GoldPrice;
-                Debug.Log("Buided" + BuildingId);
-                GameObject NewBuilding = Instantiate(Buildings[BuildingId], BuildPoint);
-                BuildingFiled = BuildingId;
-                NewBuilding.transform.parent = null;
+                StandartBuilding(BuildingId, GoldPrice);
             }
         }
+    }
+    public void StandartBuilding (int BuildingId, int GoldPrice)
+    {
+        ResourcesManager.Gold = ResourcesManager.Gold - GoldPrice;
+        Debug.Log("Buided" + BuildingId);
+        GameObject NewBuilding = Instantiate(Buildings[BuildingId], BuildPoint);
+        BuildingFiled = BuildingId;
+
+        NewBuilding.transform.parent = null;
+        NewBuilding.GetComponent<BuildingStats>().FilledCube = gameObject;
     }
 }

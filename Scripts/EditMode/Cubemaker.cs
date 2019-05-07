@@ -6,15 +6,16 @@ using UnityEngine;
 public class Cubemaker : MonoBehaviour
 {
     public GameObject Cube;
-    private GameObject Grid;
+    public GameObject Grid;
     void Start ()
     {
-        Grid = GameObject.Find("Grid");
+        Grid = gameObject.transform.parent.gameObject;
     }
     void Update()
     {
         if (Cube != null )
         {
+            Grid = gameObject.transform.parent.gameObject;
             var NewCube = Instantiate(Cube, gameObject.transform.position, Quaternion.identity);
             NewCube.transform.SetParent(Grid.transform);
             DestroyImmediate(gameObject);

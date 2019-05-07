@@ -1,17 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!4 &4769820536171653301 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 433482, guid: 9c2c5224d2a555b48b76b8e6813a65ab,
-    type: 3}
-  m_PrefabInstance: {fileID: 4769820536171230719}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &4769820536161708155 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 9526660, guid: 9c2c5224d2a555b48b76b8e6813a65ab,
-    type: 3}
-  m_PrefabInstance: {fileID: 4769820536171230719}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &746890577865058220
 GameObject:
   m_ObjectHideFlags: 0
@@ -146,6 +134,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4769820536171653301 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 433482, guid: 9c2c5224d2a555b48b76b8e6813a65ab,
+    type: 3}
+  m_PrefabInstance: {fileID: 4769820536171230719}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &4769820536161708155 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9526660, guid: 9c2c5224d2a555b48b76b8e6813a65ab,
+    type: 3}
+  m_PrefabInstance: {fileID: 4769820536171230719}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6763485825018560615
 GameObject:
   m_ObjectHideFlags: 0
@@ -474,7 +474,7 @@ MonoBehaviour:
   Go: 0
   EnemyDamage: 1
   EnemyId: Infanity
-  KillReward: 5
+  KillReward: 1
 --- !u!114 &568281878354978770
 MonoBehaviour:
   m_ObjectHideFlags: 0

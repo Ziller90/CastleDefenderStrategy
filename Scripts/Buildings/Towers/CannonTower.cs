@@ -12,6 +12,8 @@ public class CannonTower : MonoBehaviour
     public GameObject NewBullet;
     public float TowerReloadingSpeed;
     public float TowerDamage;
+    public float TowerAttackDistance;
+    public BuildingStats Stats;
     void Start()
     {
 
@@ -20,7 +22,9 @@ public class CannonTower : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        TowerDamage = Stats.Damage;
+        TowerReloadingSpeed = Stats.ReloadingSpeed;
+        TowerAttackDistance = Stats.AttackDistance;
     }
     void OnTriggerStay(Collider Col)
     {

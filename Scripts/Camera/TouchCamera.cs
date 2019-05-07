@@ -3,15 +3,18 @@
 using UnityEngine;
 
 public class TouchCamera : MonoBehaviour {
+
+    public Camera camera;
 	Vector2?[] oldTouchPositions = {
 		null,
 		null
 	};
+    public Vector2 NewPos;
 	Vector2 oldTouchVector;
 	float oldTouchDistance;
-    public Camera camera;
 
 	void Update() {
+        gameObject.transform.position = new Vector3(gameObject.transform.position.x, 8, gameObject.transform.position.z);
 		if (Input.touchCount == 0) {
 			oldTouchPositions[0] = null;
 			oldTouchPositions[1] = null;
@@ -25,6 +28,7 @@ public class TouchCamera : MonoBehaviour {
 				Vector2 newTouchPosition = Input.GetTouch(0).position;
 				
 				transform.position += transform.TransformDirection((Vector3)((oldTouchPositions[0] - newTouchPosition) * camera.orthographicSize / camera.pixelHeight * 2f));
+
 				
 				oldTouchPositions[0] = newTouchPosition;
 			}

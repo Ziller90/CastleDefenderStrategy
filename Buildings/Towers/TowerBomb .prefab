@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 5443486789309973797}
   - component: {fileID: 5443486789308975077}
   - component: {fileID: 2126051631456254330}
-  - component: {fileID: 4461063904314612164}
+  - component: {fileID: 6533206811439659914}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -176,8 +176,10 @@ MonoBehaviour:
   NewBullet: {fileID: 0}
   TowerReloadingSpeed: 1
   TowerDamage: 1
---- !u!135 &4461063904314612164
-SphereCollider:
+  TowerAttackDistance: 0
+  Stats: {fileID: 4120285573001298944}
+--- !u!65 &6533206811439659914
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -187,8 +189,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.03200411
-  m_Center: {x: -0.000052628828, y: -0.00009549684, z: 0.0016883407}
+  m_Size: {x: 0.115058415, y: 0.11501882, z: 0.03451696}
+  m_Center: {x: -0.0006694888, y: -0.0004953211, z: 0.005630763}
 --- !u!1 &5443486789310978349
 GameObject:
   m_ObjectHideFlags: 0
@@ -236,10 +238,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3303882d8ed841e47aa8a1a2c59e42f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BuildingInfoPanel: {fileID: 0}
-  ListOfBuildings: {fileID: 0}
   BuildingCard: {fileID: 11400000, guid: 5eefbea6c6511444d915187a5b9abefa, type: 2}
-  Panel: {fileID: 0}
+  UIManager: {fileID: 0}
+  ResourceManager: {fileID: 0}
+  FilledCube: {fileID: 0}
+  Currentlevel: 0
+  Damage: 0
+  AttackDistance: 0
+  ReloadingSpeed: 0
+  SpeedDeBuff: 0
 --- !u!65 &376630394879283305
 BoxCollider:
   m_ObjectHideFlags: 0

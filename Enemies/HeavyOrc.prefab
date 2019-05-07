@@ -460,7 +460,7 @@ MonoBehaviour:
   RotateTimes: 0
   RotatePover: 0
   MaxHP: 60
-  HP: 60
+  HP: 100
   Delay: 0
   HPLine: {fileID: 4661211424190319859}
   NewHPIndex: 0
@@ -474,7 +474,7 @@ MonoBehaviour:
   Go: 0
   EnemyDamage: 3
   EnemyId: Infanity
-  KillReward: 0
+  KillReward: 15
 --- !u!114 &568281878354978770
 MonoBehaviour:
   m_ObjectHideFlags: 0

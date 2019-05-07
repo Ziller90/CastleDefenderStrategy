@@ -15,3 +15,21 @@ MonoBehaviour:
   BuildingImage: {fileID: 2800000, guid: b95f3a8ba5cbb444d90dd58b92673db8, type: 3}
   GoldPrice: 100
   BuildingId: 4
+  AmountOfLevels: 3
+  LevelUpPrice: 000000003200000032000000
+  LevelUpDamageBonus:
+  - 0.5
+  - 0.5
+  - 0.5
+  LevelUpAttackDistanceBonus:
+  - 1
+  - 11
+  - 1
+  LevelUpReloadingSpeedBonus:
+  - 1
+  - 0.5
+  - 0.5
+  LevelUpSpeedDeBuffBonus:
+  - 0.3
+  - -0.05
+  - -0.05
