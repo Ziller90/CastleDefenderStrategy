@@ -16,6 +16,10 @@ public class BuilderManager : MonoBehaviour
     public ResourcesManager ResourcesManager;
     public int CubeTypeIndex;
     public GameObject ListOfBuildings;
+    public bool BuildAbility;
+    public bool HaveDeliteAbleObject;
+    public GameObject DeliteAbleObject;
+    public bool IsHighLighted;
     void Start()
     {
         BuildingManager = GameObject.Find("BuildingManager").GetComponent<BuildingManager>();
@@ -25,26 +29,19 @@ public class BuilderManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            if (AlwaysCreated == false && BuildingManager.PointerOnUI == false && MouseOver == true)
-            {
-                BuildingManager.HighLightedCube = gameObject;
-                Frame = Instantiate(HighLightFrame, HighlightFramepoint.transform.position, Quaternion.identity);
-            }
-            AlwaysCreated = true;
-        }
-    }
 
     public void CubeHighLighting ()
     {
-        BuildingManager.HighLightedCube = gameObject;
-        Frame = Instantiate(HighLightFrame, HighlightFramepoint.transform.position, Quaternion.identity);
+        if (BuildAbility == true)
+        {
+            IsHighLighted = true;
+            BuildingManager.HighLightedCube = gameObject;
+            Frame = Instantiate(HighLightFrame, HighlightFramepoint.transform.position, Quaternion.identity);
+        }
     }
     public void CubeRemoveHightLighting()
     {
+        IsHighLighted = false;
         Destroy(Frame);
     }
     public void BuildTheBuilding (int BuildingId, int GoldPrice)
@@ -59,20 +56,29 @@ public class BuilderManager : MonoBehaviour
             {
                 StandartBuilding(BuildingId, GoldPrice);
             }
-            if (BuildingId != 2 && CubeTypeIndex != 2) 
+            if (CubeTypeIndex != 2) 
             {
                 StandartBuilding(BuildingId, GoldPrice);
             }
+            if (HaveDeliteAbleObject == true)
+            {
+                DeliteDecoration();
+            }
         }
+
     }
     public void StandartBuilding (int BuildingId, int GoldPrice)
     {
         ResourcesManager.Gold = ResourcesManager.Gold - GoldPrice;
-        Debug.Log("Buided" + BuildingId);
         GameObject NewBuilding = Instantiate(Buildings[BuildingId], BuildPoint);
+        NewBuilding.transform.rotation = Quaternion.Euler(0, 0, 0);
         BuildingFiled = BuildingId;
 
         NewBuilding.transform.parent = null;
         NewBuilding.GetComponent<BuildingStats>().FilledCube = gameObject;
+    }
+    public void DeliteDecoration ()
+    {
+        Destroy(DeliteAbleObject);
     }
 }

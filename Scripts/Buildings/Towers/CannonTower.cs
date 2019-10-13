@@ -24,7 +24,6 @@ public class CannonTower : MonoBehaviour
     {
         TowerDamage = Stats.Damage;
         TowerReloadingSpeed = Stats.ReloadingSpeed;
-        TowerAttackDistance = Stats.AttackDistance;
     }
     void OnTriggerStay(Collider Col)
     {

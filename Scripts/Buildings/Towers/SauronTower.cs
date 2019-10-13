@@ -11,6 +11,7 @@ public class SauronTower : MonoBehaviour
     public GameObject Enemy;
     public bool ray;
     public BuildingStats Stats;
+
     void Start()
     {
         
@@ -20,46 +21,59 @@ public class SauronTower : MonoBehaviour
     void FixedUpdate()
     {
         Damage = Stats.Damage;
-        if (Enemy == null)
+        if (Enemy != null)
         {
-            StopRay();
+            if (Enemy.GetComponent<EnemyBehaviour>().HP <= 0)
+            {
+                StopRay();
+            }
         }
-        if (ray == true && Enemy != null)
+        if (Enemy != null)
         {
-            Renderer.SetPosition(0, FirePoint.position);
-            Renderer.SetPosition(1, EnemyPosition.position);
-            Enemy.GetComponent<EnemyBehaviour>().HP = Enemy.GetComponent<EnemyBehaviour>().HP - Damage;
+            if (ray == true && Enemy.GetComponent<EnemyBehaviour>().HP > 0)
+            {
+                gameObject.GetComponent<AudioSource>().enabled = true;
+                Renderer.SetPosition(0, FirePoint.position);
+                Renderer.SetPosition(1, EnemyPosition.position);
+                Enemy.GetComponent<DamageReciever>().DamageResistance(Damage, CardScriptableObject.DamageType.MagicDamage);
+            }
         }
- 
     }
     void OnTriggerStay(Collider Col)
     {
         if (Col.gameObject.tag == "Enemy")
         {
-            if (Enemy == null)
+            if (Enemy != null)
+            {
+                if (Enemy.GetComponent<EnemyBehaviour>().HP <= 0)
+                {
+                    Enemy = Col.gameObject;
+                    EnemyPosition = Enemy.transform;
+                    ray = true;
+                }
+            }
+            else
             {
                 Enemy = Col.gameObject;
+                EnemyPosition = Enemy.transform;
+                ray = true;
             }
-            EnemyPosition = Enemy.transform;
-            ray = true;
         }
     }
     void OnTriggerExit (Collider col)
     {
-        StopRay();
-        ray = false;
-    }
-
-    void Ray ()
-    {
-
-        Renderer.SetPosition(0, FirePoint.position);
-        Renderer.SetPosition(1, EnemyPosition.position);
-        Enemy.GetComponent<EnemyBehaviour>().HP = Enemy.GetComponent<EnemyBehaviour>().HP - Damage;
+        if (col.gameObject.tag == "Enemy")
+        {
+            StopRay();
+            ray = false;
+            Enemy = null;
+        }
     }
 
     void StopRay()
     {
+        gameObject.GetComponent<AudioSource>().enabled = false;
+
         Renderer.SetPosition(0, FirePoint.position);
         Renderer.SetPosition(1, FirePoint.position);
     }

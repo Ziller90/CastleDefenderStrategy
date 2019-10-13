@@ -6,10 +6,15 @@ public class MineScript : MonoBehaviour
 {
     public ResourcesManager ResourceManager;
     public int MineResource;
+    public float IncomeDelay;
+    public int IncomeSize;
+    public float GoldLeft;
+
     void Start()
     {
         ResourceManager = GameObject.Find("ResourcesManager").GetComponent<ResourcesManager>();
         StartCoroutine("GoldProduce");
+        GoldLeft = MineResource;
     }
 
     // Update is called once per frame
@@ -21,9 +26,9 @@ public class MineScript : MonoBehaviour
     {
         for (int i = 0; i < MineResource; i++)
         {
-            yield return new WaitForSeconds(0.3f);
-            ResourceManager.Gold++;
-
+            yield return new WaitForSeconds(IncomeDelay);
+            ResourceManager.Gold += IncomeSize;
+            GoldLeft -= IncomeSize;
         }
 
     }

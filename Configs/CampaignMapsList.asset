@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: CampaignMapsList
   m_EditorClassIdentifier: 
   CamapaignMaps:
-  - {fileID: 6898245260942737936, guid: 3a1e2b4a13377694db6cf6219d519da1, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1780706591659541587, guid: e442d37206a4fc84e888d29afe19288a, type: 3}
+  - {fileID: 1780706591659541587, guid: e442d37206a4fc84e888d29afe19288a, type: 3}
+  - {fileID: 1780706591659541587, guid: ff11b5cb4c9f7d5469a656e2be8ef7b2, type: 3}
+  - {fileID: 1780706591659541587, guid: fb0803a629f35bf45b0ce427bf1d0c49, type: 3}
+  - {fileID: 1780706591659541587, guid: f7a9293cb36468540816073bb6ad43d3, type: 3}
+  - {fileID: 1780706591659541587, guid: 424b22db8322232428fdb1938144f462, type: 3}
+  - {fileID: 1780706591659541587, guid: 1b26c3c2e6bf7884cacaba34340762c6, type: 3}
+  - {fileID: 1780706591659541587, guid: f7a9293cb36468540816073bb6ad43d3, type: 3}
   - {fileID: 0}
   - {fileID: 0}

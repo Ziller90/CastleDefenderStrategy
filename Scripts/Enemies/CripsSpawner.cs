@@ -5,38 +5,59 @@ using UnityEngine;
 public class CripsSpawner : MonoBehaviour
 {
     public int SquadCounter;
+    public int CripsCounter;
     public int[] SquadTime;
     public int[] AmountOFCrips;
     public GameObject[] Crips;
+    public int[] RoutesNumber;
     public float[] SpawningTime;
+    public int[] MessageTrigger;
+    public EnemyBehaviour NewEnemyController;
+    public bool IsEmpty;
+    public MessagesManager MessagesManager;
+    bool AlreadyStartedCoroutine;
+
+
+
     void Start()
     {
-        StartCoroutine("SquadLoader");
+        MessagesManager = GameObject.FindGameObjectWithTag("Level").GetComponent<MessagesManager>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (AlreadyStartedCoroutine == false)
+        {
+            StartCoroutine("SquadLoader");
+            AlreadyStartedCoroutine = true;
+        }
+        if (SquadCounter == SquadTime.Length && CripsCounter == AmountOFCrips[SquadCounter - 1])
+        {
+            IsEmpty = true;
+        }
     }
     IEnumerator SquadLoader ()
     {
-        for (SquadCounter = 0; SquadCounter < SquadTime.Length; SquadCounter++)
+        yield return new WaitForSeconds(SquadTime[SquadCounter]);
+        if (MessageTrigger[SquadCounter] > 0)
         {
-            yield return new WaitForSeconds(SquadTime[SquadCounter]);
-            StartCoroutine("SquadMaker");
-            yield return new WaitForSeconds(SpawningTime[SquadCounter] * AmountOFCrips[SquadCounter] + 1);
-            Debug.Log("shit1");
+            StartCoroutine("ButtonShowing");
         }
-    }
-    IEnumerator SquadMaker ()
-    {
-        Debug.Log(SquadCounter);
-        for (int CripsCounter = 0; CripsCounter < AmountOFCrips[SquadCounter]; CripsCounter++)
+        for (CripsCounter = 0; CripsCounter < AmountOFCrips[SquadCounter]; CripsCounter++)
         {
-            Instantiate(Crips[SquadCounter], gameObject.transform.transform);
+            GameObject NewCrip = Instantiate(Crips[SquadCounter], gameObject.transform.transform);
+            NewEnemyController = NewCrip.transform.GetChild(1).gameObject.GetComponent<EnemyBehaviour>();
+            NewEnemyController.RouteNumber = RoutesNumber[SquadCounter];
             yield return new WaitForSeconds(SpawningTime[SquadCounter]);
         }
-        Debug.Log("Squad was maded");
+        SquadCounter++;
+        AlreadyStartedCoroutine = false;
+    }
+    IEnumerator ButtonShowing()
+    {
+        yield return new WaitForSeconds(3);
+        MessagesManager.ShowNewMessageButton(MessageTrigger[SquadCounter]);
     }
 }

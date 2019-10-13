@@ -5,7 +5,7 @@ using UnityEngine;
 [ExecuteInEditMode]
 public class CubeManager : MonoBehaviour
 {
-    public CubeScriptableObject Cube;
+  //  public CubeScriptableObject Cube;
     public GameObject HighLightFrame;
     public GameObject HighlightFramepoint;
     public GameObject Frame;
@@ -14,7 +14,7 @@ public class CubeManager : MonoBehaviour
 
     void Update()
     {
-        gameObject.GetComponent<MeshRenderer>().material = Cube.CubeMaterial;
+  //      gameObject.GetComponent<MeshRenderer>().material = Cube.CubeMaterial;
     }
     void OnMouseDown()
     {

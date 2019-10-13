@@ -18,6 +18,6 @@ public class LevelStartButton : MonoBehaviour
     }
     public void OnButtonClick ()
     {
-        Loader.LoadeLevel(ButtonIndex);
+        Loader.StartCoroutine("LoadLevel", ButtonIndex);
     }
 }

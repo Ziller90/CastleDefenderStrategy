@@ -122,7 +122,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6cb5d6dca8b315243b13aef194d021e3, type: 2}
+  - {fileID: 2100000, guid: 8398a687c554e7d4d9ba4ea06de7eef8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -130,6 +130,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -168,6 +169,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Cube: {fileID: 0}
+  Grid: {fileID: 0}
+  ChangeCube: 0
 --- !u!114 &5444040993431092735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,7 +184,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Buildings:
-  - {fileID: 412396824474090010, guid: a7cc9f3f0a9093d48b90ba4e8dfd1a5a, type: 3}
+  - {fileID: 5115748256209622629, guid: 8b68a5047bda77444a256dfab130afdd, type: 3}
+  - {fileID: 7114406476314116194, guid: dac4a0830afb78b4caa5bb996823e568, type: 3}
+  - {fileID: 7114406476314116194, guid: 8111e91ce8fba274c80bab25c1fc791e, type: 3}
   HighLightFrame: {fileID: 134362943185089884, guid: 1a7e6b617f2abf946b6af5354c48010a,
     type: 3}
   HighlightFramepoint: {fileID: 981834989186794073}
@@ -191,3 +196,8 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
+  BuildAbility: 1
+  HaveDeliteAbleObject: 0
+  DeliteAbleObject: {fileID: 0}
+  IsHighLighted: 0

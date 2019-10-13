@@ -12,9 +12,9 @@ public class FrozenTowerScript : MonoBehaviour
     public GameObject NewBullet;
     public float TowerReloadingSpeed;
     public float TowerDamage;
-    public float TowerSpeedDeBuff;
-    public float TowerAttackDistance;
     public BuildingStats Stats;
+    public float EffectPower;
+    public float EffectTime;
 
     void Start()
     {
@@ -26,8 +26,10 @@ public class FrozenTowerScript : MonoBehaviour
     {
         TowerDamage = Stats.Damage;
         TowerReloadingSpeed = Stats.ReloadingSpeed;
-        TowerAttackDistance = Stats.AttackDistance;
-        TowerSpeedDeBuff = Stats.SpeedDeBuff;
+        EffectPower = Stats.EffectPower;
+        EffectTime = Stats.EffectTime;
+
+
     }
     void OnTriggerStay(Collider Col)
     {
@@ -47,7 +49,8 @@ public class FrozenTowerScript : MonoBehaviour
             NewBullet = Instantiate(Bullet, BulletSpawnPoint.transform);
             NewBullet.GetComponent<FrozenBulletScript>().EnemyPosition = EnemyPosition;
             NewBullet.GetComponent<FrozenBulletScript>().Damage = TowerDamage;
-            NewBullet.GetComponent<FrozenBulletScript>().SpeedDeBuff = TowerSpeedDeBuff;
+            NewBullet.GetComponent<FrozenBulletScript>().EffectPower = EffectPower;
+            NewBullet.GetComponent<FrozenBulletScript>().EffectTime = EffectTime;
             Reloaded = false;
             StartCoroutine("Reloading");
         }

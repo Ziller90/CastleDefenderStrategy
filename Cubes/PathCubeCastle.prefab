@@ -105,7 +105,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6cb5d6dca8b315243b13aef194d021e3, type: 2}
+  - {fileID: 2100000, guid: 8398a687c554e7d4d9ba4ea06de7eef8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -151,6 +151,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Cube: {fileID: 0}
+  Grid: {fileID: 0}
+  ChangeCube: 0
 --- !u!114 &1298912008358567181
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,3 +174,5 @@ MonoBehaviour:
   MouseOver: 0
   ResourcesManager: {fileID: 0}
   CubeTypeIndex: 3
+  ListOfBuildings: {fileID: 0}
+  BuildAbility: 0

@@ -8,23 +8,31 @@ public class BuildingStats : MonoBehaviour
     public CardScriptableObject BuildingCard;
     public GameUIManager UIManager;
     public ResourcesManager ResourceManager;
+    public int ImprovingsAvaiableLevel;
     public GameObject FilledCube;
     public int Currentlevel = 0;
+    public GameObject AttackZone;
 
     public float Damage;
-    public float AttackDistance;
     public float ReloadingSpeed;
-    public float SpeedDeBuff;
+    public CardScriptableObject.DamageType DamageType;
+    public CardScriptableObject.EffectType EffectType;
+    public float EffectTime;
+    public float EffectPower;
+
+
     bool HasGoldenBonus = false;
     void Start()
     {
+        ImprovingsAvaiableLevel = GameObject.FindGameObjectWithTag("Level").GetComponent<ImprovingsLevelsAvaiable>().ImprovingsAvaiableLevel;
         UIManager = GameObject.Find("GameUIManager").GetComponent<GameUIManager>();
         ResourceManager = GameObject.Find("ResourcesManager").GetComponent<ResourcesManager>();
-
         Damage = BuildingCard.LevelUpDamageBonus[Currentlevel];
-        AttackDistance = BuildingCard.LevelUpAttackDistanceBonus[Currentlevel];
         ReloadingSpeed = BuildingCard.LevelUpReloadingSpeedBonus[Currentlevel];
-        SpeedDeBuff = BuildingCard.LevelUpSpeedDeBuffBonus[Currentlevel];
+        DamageType = BuildingCard.damageType;
+        EffectType = BuildingCard.effectType;
+        EffectPower = BuildingCard.LevelUpEffectPower[Currentlevel];
+        EffectTime = BuildingCard.LevelUpEffectTime[Currentlevel];
     }
 
     // Update is called once per frame
@@ -39,11 +47,18 @@ public class BuildingStats : MonoBehaviour
     public void BuildingIsHignLighted ()
     {
         UIManager.BuildingToImprove = gameObject.GetComponent<BuildingStats>();
-        UIManager.ShowBuidlingButtons();
+        UIManager.ShowDestroyButton();
+        if (ImprovingsAvaiableLevel != 0)
+        {
+            UIManager.ShowImproveButton();
+        }
+        AttackZone.SetActive(true);
     }
     public void BuildingHighLightRemove()
     {
-        UIManager.HideBuildingButtons();
+        UIManager.HideDestroyButton();
+        UIManager.HideImproveButton();
+        AttackZone.SetActive(false);
 
     }
 
@@ -53,13 +68,12 @@ public class BuildingStats : MonoBehaviour
         {
             if (ResourceManager.Gold >= BuildingCard.LevelUpPrice[Currentlevel + 1])
             {
-                Debug.Log("I Work cool");
                 Currentlevel++;
                 ResourceManager.Gold = ResourceManager.Gold - BuildingCard.LevelUpPrice[Currentlevel];
                 Damage = Damage + BuildingCard.LevelUpDamageBonus[Currentlevel];
-                AttackDistance = AttackDistance + BuildingCard.LevelUpAttackDistanceBonus[Currentlevel];
                 ReloadingSpeed = ReloadingSpeed + BuildingCard.LevelUpReloadingSpeedBonus[Currentlevel];
-                SpeedDeBuff = SpeedDeBuff + BuildingCard.LevelUpSpeedDeBuffBonus[Currentlevel];
+                EffectPower = EffectPower + BuildingCard.LevelUpEffectPower[Currentlevel];
+                EffectTime = EffectTime + BuildingCard.LevelUpEffectTime[Currentlevel];
             }
         }
         
@@ -72,11 +86,8 @@ public class BuildingStats : MonoBehaviour
     }
     public void GoldenBonus ()
     {
-        Debug.Log("GoldenBonuWork");
         Damage = Damage + BuildingCard.GoldenDamageBonus;
-        AttackDistance = AttackDistance + BuildingCard.GoldenAttackDistanceBonus;
         ReloadingSpeed = ReloadingSpeed + BuildingCard.GoldenReloadingSpeedBonus;
-        SpeedDeBuff = SpeedDeBuff + BuildingCard.GoldenSpeedDeBuffBonus;
-
     }
+    
 }

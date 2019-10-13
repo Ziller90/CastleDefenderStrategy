@@ -10,9 +10,10 @@ public class CameraRayCast : MonoBehaviour
     public GameObject OldHitObject;
     public bool AlwaysDetected;
     public GameUIManager UIManager;
+    BuildingManager buildingManager;
     void Start()
     {
-        
+        buildingManager = GameObject.Find("BuildingManager").GetComponent<BuildingManager>();
     }
 
     public static bool IsOverUI()
@@ -50,6 +51,10 @@ public class CameraRayCast : MonoBehaviour
             {
                 OldHitObject.GetComponent<BuildingStats>().BuildingHighLightRemove();
             }
+            if (OldHitObject != null && OldHitObject.tag == "Mine")
+            {
+                OldHitObject.GetComponent<MineInfoPanel>().HidePanel();
+            }
 
             CameraRay = Camera.main.ScreenPointToRay(Input.mousePosition);
             Debug.DrawRay(CameraRay.origin, CameraRay.direction * 30, Color.yellow);
@@ -57,7 +62,6 @@ public class CameraRayCast : MonoBehaviour
             Debug.Log("Rayed");
             if (hits.Length > 0)
             {
-                Debug.Log("HaveObjectsToCheck");
                 DetectedObjectsManager();
             }
             
@@ -67,8 +71,6 @@ public class CameraRayCast : MonoBehaviour
     {
         for (int i = 0; i < hits.Length; i++)
         {
-
-
             if (hits[i].collider.gameObject.tag == "Tower" && AlwaysDetected == false)
             {
                 Debug.Log("DetectedCube");
@@ -85,10 +87,11 @@ public class CameraRayCast : MonoBehaviour
 
             if (hits[i].collider.gameObject.tag == "Cube" && AlwaysDetected == false)
             {
-                Debug.Log("DetectedCube");
                 AlwaysDetected = true;
                 Debug.Log(hits[i].collider.gameObject.name);
                 hits[i].collider.gameObject.GetComponent<BuilderManager>().CubeHighLighting();
+                buildingManager.ChangedHighLightedCube();
+
                 OldHitObject = hits[i].collider.gameObject;
             }
 

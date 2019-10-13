@@ -9,9 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7966270847051740870}
+  - component: {fileID: 1818914699023948600}
+  - component: {fileID: 1067117542443246118}
   m_Layer: 0
   m_Name: StopTower
-  m_TagString: Untagged
+  m_TagString: StopTower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31,44 +33,38 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &5412977962170189537 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100000, guid: af483ef1e02b2c4449eff18344196631,
-    type: 3}
-  m_PrefabInstance: {fileID: 5412977962170286145}
+--- !u!114 &1818914699023948600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 412396824474090010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4896efec9c3851b40baaed4b10b53827, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HP: 100
+--- !u!65 &1067117542443246118
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 412396824474090010}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &5412977962170161857 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: af483ef1e02b2c4449eff18344196631,
     type: 3}
   m_PrefabInstance: {fileID: 5412977962170286145}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &5466889315883826004
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5412977962170189537}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.053276766, y: 0.05294519, z: 0.02970776}
-  m_Center: {x: 0.00039675616, y: -0.001043288, z: 0.004657306}
---- !u!114 &8781805596203196660
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5412977962170189537}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60b44871c0cdb66469fd43c6c099ffe6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HP: 100
 --- !u!1001 &5412977962170286145
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -143,6 +139,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: af483ef1e02b2c4449eff18344196631, type: 3}
       propertyPath: m_TagString
       value: StopTower
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: af483ef1e02b2c4449eff18344196631, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af483ef1e02b2c4449eff18344196631, type: 3}

@@ -25,13 +25,14 @@ public class FrozenBulletExplosion : MonoBehaviour
              AttackGoals.Add(col.gameObject);
         }
     }
-    public void Explose (float Damage, float SpeedDeBuff)
+    public void Explose (float Damage, float EffectPower, float EffectTime)
     {
+        gameObject.GetComponent<AudioSource>().Play();
         for(int q = 0; q < AttackGoals.Count; q++)
         {
             Debug.Log("ofof");
-            AttackGoals[q].GetComponent<EnemyBehaviour>().HP = AttackGoals[q].GetComponent<EnemyBehaviour>().HP - Damage;
-            AttackGoals[q].GetComponent<EnemyBehaviour>().speed = AttackGoals[q].GetComponent<EnemyBehaviour>().NormalSpeed * SpeedDeBuff;
+            AttackGoals[q].GetComponent<DamageReciever>().DamageResistance(Damage, CardScriptableObject.DamageType.ExplosionDamage);
+            AttackGoals[q].GetComponent<EffectsResistance>().EffectCast(CardScriptableObject.EffectType.FreezingEffect, EffectPower, EffectTime);
         }
     }
 }

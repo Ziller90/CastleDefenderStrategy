@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyBehaviour : MonoBehaviour
@@ -7,11 +6,8 @@ public class EnemyBehaviour : MonoBehaviour
     public int RouteNumber;
     public float NormalSpeed;
     public float speed;
-    public float RotateTimes;
-    public float RotatePover;
     public float MaxHP;
     public float HP;
-    public float Delay;
     public Transform HPLine;
     public float NewHPIndex;
     public float HPIndex;
@@ -25,10 +21,21 @@ public class EnemyBehaviour : MonoBehaviour
     public float EnemyDamage;
     public string EnemyId;
     public int KillReward;
- 
-   
-    
-    
+    public int CrystalsKillReward;
+    public int FrozenRecover;
+    public Animator EnemyAnimator;
+    public bool AlreadyDead = false;
+    public int ProbabilytyOfCrystalsReward;
+    public AudioSource Audio;
+
+    public AudioClip[] DeathAudioClips;
+
+
+
+
+
+
+
 
     void Start()
     {
@@ -37,7 +44,6 @@ public class EnemyBehaviour : MonoBehaviour
         HPIndex = 1;
         Go = true;
         Castle = GameObject.Find("Castle");
-
     }
 
     // Update is called once per frame
@@ -48,20 +54,16 @@ public class EnemyBehaviour : MonoBehaviour
             gameObject.transform.position += transform.forward * speed;
         }
         HPBar.position = HPBarPoint.position;
-        RotateTimes = 1;
-        RotatePover = 90;
-        Delay = 0.006f / speed;
         HPBar.LookAt(CameraViewPoint.transform);
 
         NewHPIndex = HP / MaxHP;
         HPIndex = Mathf.Lerp(HPIndex, NewHPIndex, Time.deltaTime * ChangingSpeed);
         HPLine.localScale = new Vector3(HPIndex, HPLine.localScale.y, HPLine.localScale.z);
 
-        if (HP <= 0)
+        if (HP <= 0 && AlreadyDead == false)
         {
-            GameObject Resourcesmanager = GameObject.Find("ResourcesManager");
-            Resourcesmanager.GetComponent<ResourcesManager>().Gold = Resourcesmanager.GetComponent<ResourcesManager>().Gold + KillReward;
-            Destroy(Enemy);
+            StartCoroutine("Death");
+            AlreadyDead = true;
         }
 
         if (speed != NormalSpeed)
@@ -70,51 +72,77 @@ public class EnemyBehaviour : MonoBehaviour
         }
 
     }
+
  
     public IEnumerator TurnRight ()
     {
-        for (float t = 0; t < RotateTimes; t = t + 1)
-        {
-            yield return new WaitForSeconds(Delay);
-            gameObject.transform.Rotate(0, RotatePover, 0);
-        }
+        yield return new WaitForSeconds(0.25f);
+        gameObject.transform.Rotate(0, 90, 0);
     }
     public IEnumerator TurnLeft()
     {
-        for (float t = 0; t < RotateTimes; t = t + 1)
-        {
-            yield return new WaitForSeconds(Delay);
-            gameObject.transform.Rotate(0, -RotatePover, 0);
-        }
+        yield return new WaitForSeconds(0.25f);
+        gameObject.transform.Rotate(0, -90, 0);
     }
 
     public IEnumerator SpeedRecover ()
     {
-        yield return new WaitForSeconds(60);
+        yield return new WaitForSeconds(FrozenRecover);
         speed = NormalSpeed;
     }
 
-    public void AttackModeStart (GameObject ObjectToAttack)
+    public IEnumerator AttackCastle ()
     {
-        if (EnemyId == "Infanity")
+        if (AlreadyDead == false)
         {
-            gameObject.GetComponent<InfanityAttackBehavior>().StartCoroutine("Attack", ObjectToAttack);
-            gameObject.GetComponent<InfanityAttackBehavior>().Damage = EnemyDamage;
-        }
-        if (EnemyId == "DistanceAttack")
-        {
-            
+            float Delay = Random.Range(0.1f, 0.7f);
+            yield return new WaitForSeconds(Delay);
+            Go = false;
+            EnemyAnimator.SetBool("Attack", true);
+            yield return new WaitForSeconds(0.5f);
+            StartCoroutine("AttackCastle");
         }
     }
-    public void AttackModeStop()
+    public void OnAttack ()
     {
-        if (EnemyId == "Infanity")
-        {
-            gameObject.GetComponent<InfanityAttackBehavior>().StartCoroutine("StopAttack");
-        }
-        if (EnemyId == "DistanceAttack")
-        {
+        Castle.GetComponent<CastleScript>().DamageReceive(EnemyDamage, gameObject.transform.position);
+    }
+    public IEnumerator Death ()
+    {
+        EnemyAnimator.SetBool("Dead", true);
+        gameObject.GetComponent<BoxCollider>().enabled = false;
+        GameObject Resourcesmanager = GameObject.Find("ResourcesManager");
+        Resourcesmanager.GetComponent<ResourcesManager>().Gold = Resourcesmanager.GetComponent<ResourcesManager>().Gold + KillReward;
+        AddCrystals();
+        Go = false;
+        HPBar.gameObject.SetActive(false);
+        DeathSoundPlaying();
+        yield return new WaitForSeconds(4);
 
+        Destroy(Enemy);
+
+    }
+    public void AddCrystals ()
+    {
+        int rand = Random.Range(1, 101);
+        Debug.Log("1");
+        if (rand <= ProbabilytyOfCrystalsReward)
+        {
+            Debug.Log("2");
+            PlayerStats.Crystals += CrystalsKillReward;
+        }
+    }
+    public void DeathSoundPlaying ()
+    {
+        int rand = Random.Range(0, (DeathAudioClips.Length + DeathAudioClips.Length));
+        if (rand >= DeathAudioClips.Length)
+        {
+            return;
+        }
+        else
+        {
+            Audio.clip = DeathAudioClips[rand];
+            Audio.Play();
         }
     }
 }

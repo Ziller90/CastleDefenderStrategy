@@ -15,14 +15,26 @@ public class CardScriptableObject : ScriptableObject
 
     public int[] LevelUpPrice;
     public float[] LevelUpDamageBonus;
-    public float[] LevelUpAttackDistanceBonus;
     public float[] LevelUpReloadingSpeedBonus;
-    public float[] LevelUpSpeedDeBuffBonus;
+    public int[] SellCost;
+
+    public float[] LevelUpEffectTime;
+    public float[] LevelUpEffectPower;
+
+    public enum DamageType
+    {
+        PenetrationDamage, ExplosionDamage, MagicDamage
+    }
+    public enum EffectType
+    {
+        FreezingEffect, BurningEffect, PoisonEffect, None
+    }
+    public DamageType damageType;
+    public EffectType effectType;
 
     public float GoldenDamageBonus;
     public float GoldenAttackDistanceBonus;
     public float GoldenReloadingSpeedBonus;
     public float GoldenSpeedDeBuffBonus;
-
 
 }

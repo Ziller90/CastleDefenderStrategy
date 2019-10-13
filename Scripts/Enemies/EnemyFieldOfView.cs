@@ -17,9 +17,15 @@ public class EnemyFieldOfView : MonoBehaviour
     }
     void OnTriggerEnter (Collider Col)
     {
-        if (Col.gameObject.tag == "Castle" || Col.gameObject.tag == "StopTower")
+        if (Col.gameObject.tag == "Castle")
         {
-            gameObject.transform.parent.GetComponent<EnemyBehaviour>().AttackModeStart(Col.gameObject);
+            if (gameObject.transform.parent.GetComponent<EnemyBehaviour>().EnemyId == "Infanity" ) 
+                gameObject.transform.parent.GetComponent<EnemyBehaviour>().StartCoroutine("AttackCastle");
+
+            if (gameObject.transform.parent.GetComponent<EnemyBehaviour>().EnemyId == "Archer")
+                gameObject.transform.parent.GetComponent<ArcherDistanceAttack>().StartCoroutine("AttackDelay");
+            if (gameObject.transform.parent.GetComponent<EnemyBehaviour>().EnemyId == "Catapult")
+                gameObject.transform.parent.GetComponent<CatapultDistanceAttack>().StartCoroutine("AttackDelay");
         }
     }
 }

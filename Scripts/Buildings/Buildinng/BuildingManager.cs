@@ -14,42 +14,44 @@ public class BuildingManager : MonoBehaviour
     public GameObject FieldBuildings;
     public GameObject GoldenBuildings;
 
+    public BuilderManager Manager;
     void Start()
     {
-        
+        Manager = HighLightedCube.GetComponent<BuilderManager>();
     }
 
-    void Update()
+    public void ChangedHighLightedCube()
     {
-        if (HighLightedCube.GetComponent<BuilderManager>().CubeTypeIndex == 1)
+        Manager = HighLightedCube.GetComponent<BuilderManager>();
+        if (Manager.CubeTypeIndex == 1)
         {
             Debug.Log("popo");
             FieldBuildings.SetActive(true);
             RoadBuildings.SetActive(true);
             GoldenBuildings.SetActive(false);
         }
-        if (HighLightedCube.GetComponent<BuilderManager>().CubeTypeIndex == 2)
+        if (Manager.CubeTypeIndex == 2)
         {
             FieldBuildings.SetActive(false);
             RoadBuildings.SetActive(false);
             GoldenBuildings.SetActive(true);
         }
-        if (HighLightedCube.GetComponent<BuilderManager>().CubeTypeIndex == 3)
+        if (Manager.CubeTypeIndex == 3)
         {
             FieldBuildings.SetActive(false);
             RoadBuildings.SetActive(true);
             GoldenBuildings.SetActive(false);
         }
-
+    }
+    void Update ()
+    {
         if (EventSystem.current.IsPointerOverGameObject())
         {
             PointerOnUI = true;
         }
         else
         {
-            PointerOnUI = false; 
+            PointerOnUI = false;
         }
-
-
     }
 }

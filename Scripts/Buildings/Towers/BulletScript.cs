@@ -11,6 +11,9 @@ public class BulletScript : MonoBehaviour
     public float Damage;
     public GameObject ExplosionArea;
     public bool AlwaysExploud;
+    public ParticleSystem ExplosionEffect;
+    public ParticleSystem ExplosionEffect2;
+
 
     void Start()
     {
@@ -28,16 +31,19 @@ public class BulletScript : MonoBehaviour
     }
     void OnTriggerEnter (Collider col)
     {
-        if (col.gameObject.tag == "Enemy" || col.gameObject.tag == "Cube" && AlwaysExploud == false)
+        if (col.gameObject.tag == "Cube" && AlwaysExploud == false)
         {
             StartCoroutine("Destroing");
-            ExplosionArea.GetComponent<BulletExplosion>().Explose(Damage);
+            ExplosionArea.GetComponent<BulletExplosion>().StartCoroutine("Explose", Damage);
             AlwaysExploud = true;
         }
     }
     IEnumerator Destroing ()
     {
         yield return new WaitForSeconds(0.2f);
+        gameObject.GetComponent<MeshRenderer>().enabled = false;
+        ExplosionEffect.Play();
+        yield return new WaitForSeconds(1f);
         Destroy(gameObject);
     }
 }

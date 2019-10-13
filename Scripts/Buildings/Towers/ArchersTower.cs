@@ -25,24 +25,25 @@ public class ArchersTower : MonoBehaviour
     {
         TowerDamage = Stats.Damage;
         TowerReloadingSpeed = Stats.ReloadingSpeed;
-        TowerAttackDistance = Stats.AttackDistance;
     }
     void OnTriggerStay (Collider Col)
     {
         if (Col.gameObject.tag == "Enemy")
         {
-            EnemyPosition = Col.gameObject.transform;
+            Enemy = Col.gameObject;
             ArrowInstantiate();
         }
     }
+
     void ArrowInstantiate ()
     {
         if (Reloaded == true)
         {
             NewArrow = Instantiate(Arrow, ArrowSpawnPoint.transform);
-            NewArrow.GetComponent<ArrowScript>().EnemyPosition = EnemyPosition;
+            NewArrow.GetComponent<ArrowScript>().Enemy = Enemy;
             NewArrow.GetComponent<ArrowScript>().ArrowSpawnPoint = ArrowSpawnPoint;
-            NewArrow.GetComponent<Damager>().Damage = TowerDamage;
+            NewArrow.GetComponent<ArrowScript>().Damage = TowerDamage;
+
             Reloaded = false;
             StartCoroutine("Reloading");
         }
