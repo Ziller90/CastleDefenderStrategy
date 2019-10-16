@@ -19,13 +19,13 @@ MonoBehaviour:
   LevelUpPrice: 000000002800000032000000
   LevelUpDamageBonus:
   - 4
-  - 2.5
+  - 2
   - 3
   LevelUpReloadingSpeedBonus:
   - 2
   - 0
   - 0
-  SellCost: 1e0000003c0000005a000000
+  SellCost: 280000003c00000050000000
   LevelUpEffectTime: []
   LevelUpEffectPower: []
   damageType: 0

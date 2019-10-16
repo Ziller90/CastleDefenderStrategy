@@ -16,7 +16,7 @@ MonoBehaviour:
   GoldPrice: 125
   BuildingId: 3
   AmountOfLevels: 2
-  LevelUpPrice: 000000003200000064000000
+  LevelUpPrice: 000000004b00000064000000
   LevelUpDamageBonus:
   - 0.045
   - 0.015

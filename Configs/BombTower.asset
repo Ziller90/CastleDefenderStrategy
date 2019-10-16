@@ -15,15 +15,17 @@ MonoBehaviour:
   BuildingImage: {fileID: 2800000, guid: 4cd1a44d458c02545b6e1172156215af, type: 3}
   GoldPrice: 100
   BuildingId: 0
-  AmountOfLevels: 1
-  LevelUpPrice: 0000000046000000
+  AmountOfLevels: 2
+  LevelUpPrice: 000000003200000046000000
   LevelUpDamageBonus:
   - 2
+  - 1
   - 1
   LevelUpReloadingSpeedBonus:
   - 1.5
   - 0
-  SellCost: 280000004b000000
+  - 0
+  SellCost: 3c0000005000000064000000
   LevelUpEffectTime: []
   LevelUpEffectPower: []
   damageType: 0
