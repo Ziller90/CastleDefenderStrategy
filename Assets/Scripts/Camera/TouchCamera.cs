@@ -27,11 +27,7 @@ public class TouchCamera : MonoBehaviour
     public int XStop;
     public int ZStop;
 
-    void Start()
-    {
-
-
-    }
+     
     IEnumerator Wait(float Time)
     {
         Waited = false;

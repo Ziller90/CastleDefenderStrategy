@@ -35,10 +35,6 @@ public class LanguageButton : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void OnClick()
     {
         if (GlobalLanguageManager.Language == GlobalLanguageManager.GloabalLanguage.English)

@@ -23,10 +23,6 @@ public class MineScript : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
     IEnumerator GoldProduce ()
     {
         for (int i = 0; i < MineResource; i++)

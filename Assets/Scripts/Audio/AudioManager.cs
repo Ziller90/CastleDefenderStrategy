@@ -17,10 +17,7 @@ public class AudioManager : MonoBehaviour
     {
        
     }
-    void Start()
-    {
-        
-    }
+     
     void Update()
     {
         if (SoundOn == true)

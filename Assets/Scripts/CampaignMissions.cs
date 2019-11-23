@@ -5,16 +5,8 @@ using UnityEngine;
 public class CampaignMissions : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
     void LoadCampaignMission ()
     {
         

@@ -6,16 +6,6 @@ public class SpikesScript : MonoBehaviour
 {
     public float Damage;
     public bool Reloaded;
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     void OnTriggerStay (Collider col)
     {
         if (col.gameObject.tag == "Enemy" && Reloaded == true)

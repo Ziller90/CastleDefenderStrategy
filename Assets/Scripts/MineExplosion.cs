@@ -16,10 +16,6 @@ public class MineExplosion : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-
-    }
     public void OnTriggerEnter(Collider col)
     {
         if (col.gameObject.tag == "Enemy" && AttackGoals.Count <= 6)

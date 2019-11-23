@@ -5,10 +5,7 @@ using UnityEngine;
 public class StopTowerScript : MonoBehaviour
 {
     public float HP;
-    void Start()
-    {
-        
-    }
+     
 
     // Update is called once per frame
     void Update()

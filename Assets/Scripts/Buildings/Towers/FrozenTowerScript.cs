@@ -16,10 +16,7 @@ public class FrozenTowerScript : MonoBehaviour
     public float EffectPower;
     public float EffectTime;
 
-    void Start()
-    {
-
-    }
+     
 
     // Update is called once per frame
     void Update()

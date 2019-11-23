@@ -19,10 +19,6 @@ public class GameSarter : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
     void MapLoader (int MapID)
     {
         NewMap = Instantiate(Config.CamapaignMaps[MapID], MapPosition.position, Quaternion.identity);

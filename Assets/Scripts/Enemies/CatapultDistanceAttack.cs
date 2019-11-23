@@ -11,10 +11,7 @@ public class CatapultDistanceAttack : MonoBehaviour
     public bool AlreadyAttacked;
     public float ReloadingSpeed;
 
-    void Start()
-    {
-        
-    }
+     
 
     // Update is called once per frame
     void Update()

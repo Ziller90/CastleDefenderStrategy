@@ -19,10 +19,7 @@ public class DamageReciever : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
     public void DamageResistance (float Damage, CardScriptableObject.DamageType damageType)
     {
         switch(damageType)

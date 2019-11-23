@@ -7,16 +7,10 @@ public class EffectBulletExplosion : MonoBehaviour
     List<GameObject> AttackGoals = new List <GameObject>();
     int i = 0;
     public CardScriptableObject.EffectType EffectType;
-    void Start()
-    {
-
-    }
+     
 
     // Update is called once per frame
-    void Update()
-    {
 
-    }
     public void OnTriggerEnter (Collider col)
     {
         if (col.gameObject.tag == "Enemy")

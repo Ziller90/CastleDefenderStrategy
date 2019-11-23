@@ -7,16 +7,6 @@ using UnityEngine.SceneManagement;
 public class ImprovingsShop : MonoBehaviour
 {
     public int StartCapitalCost = 200;
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void ShopQuit ()
     {
         SceneManager.LoadScene(0);

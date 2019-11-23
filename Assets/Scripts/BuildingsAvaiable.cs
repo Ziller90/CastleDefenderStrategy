@@ -5,14 +5,8 @@ using UnityEngine;
 public class BuildingsAvaiable : MonoBehaviour
 {
     public bool[] BuildingAvaiable;
-    void Start()
-    {
-        
-    }
+
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }

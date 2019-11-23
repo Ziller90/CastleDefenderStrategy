@@ -14,10 +14,7 @@ public class LanguageText : MonoBehaviour
         Text.text = Translation.GetTranslatedText();
     }
         
-    void Start()
-    {
-
-    }
+     
     void Update()
     {
         Text = gameObject.GetComponent<Text>();

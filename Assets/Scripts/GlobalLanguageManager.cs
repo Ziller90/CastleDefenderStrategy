@@ -10,9 +10,6 @@ public class GlobalLanguageManager : MonoBehaviour
     }
     public static GloabalLanguage Language;
 
-    void Start()
-    {
-        
-    }
+     
 
 }

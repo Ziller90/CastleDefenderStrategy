@@ -8,10 +8,7 @@ public class OrcArrowScipt : MonoBehaviour
     public float Speed;
     public float ArrowDamage;
 
-    void Start()
-    {
-        
-    }
+     
 
     void FixedUpdate()
     {

@@ -15,23 +15,16 @@ public class SoundClient : MonoBehaviour
         NewSoundClient = gameObject.GetComponent<SoundClient>();
         SoundManager.SetNewSound(NewSoundClient);
     }
-    void Start()
-    {
 
-    }
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
     public void SwitchSoundOff()
     {
-        Debug.Log("off");
+
         gameObject.GetComponent<AudioSource>().volume = 0;
     }
     public void SwitchSoundOn()
     {
-        Debug.Log("On");
         gameObject.GetComponent<AudioSource>().volume = SoundNormalVolume;
     }
 }

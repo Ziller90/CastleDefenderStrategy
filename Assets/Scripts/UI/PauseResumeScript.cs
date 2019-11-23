@@ -10,16 +10,8 @@ public class PauseResumeScript : MonoBehaviour
     public Texture ResumeTexture;
     public RawImage ButtonImange;
     public bool Paused;
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void OnClick ()
     {
         if (Paused == false)

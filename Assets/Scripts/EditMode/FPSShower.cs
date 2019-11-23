@@ -12,10 +12,6 @@ public class FPSShower : MonoBehaviour
     {
         StartCoroutine("Repite");
     }
-    void Update()
-    {
-
-    }
     IEnumerator Repite()
     {
         yield return new WaitForSeconds(0.3f);

@@ -14,10 +14,7 @@ public class EffectBulletScript : MonoBehaviour
     public float EffectTime;
     public ParticleSystem FrozenParticle;
 
-    void Start()
-    {
-        
-    }
+     
 
     // Update is called once per frame
     void FixedUpdate()

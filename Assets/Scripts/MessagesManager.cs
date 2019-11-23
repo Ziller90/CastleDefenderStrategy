@@ -39,10 +39,6 @@ public class MessagesManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void ShowMessage(int MessageNumber)
     {
         Messages[MessageNumber].SetActive(true);

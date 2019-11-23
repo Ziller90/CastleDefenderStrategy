@@ -15,10 +15,7 @@ public class ArchersTower : MonoBehaviour
     public float TowerAttackDistance;
     public GameObject Enemy;
     public BuildingStats Stats;
-    void Start()
-    {
- 
-    }
+     
 
     // Update is called once per frame
     void Update()

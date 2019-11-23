@@ -12,10 +12,7 @@ public class SauronTower : MonoBehaviour
     public bool ray;
     public BuildingStats Stats;
 
-    void Start()
-    {
-        
-    }
+     
 
     // Update is called once per frame
     void FixedUpdate()

@@ -6,16 +6,8 @@ public class GeneralScript : MonoBehaviour
 {
     public float DamageIncrease;
 
-    void Start()
-    {
-
-    }
 
     // Update is called once per frame
-    void Update()
-    {
-
-    }
     void OnTriggerStay(Collider Col)
     {
         if (Col.gameObject.tag == "Enemy") {

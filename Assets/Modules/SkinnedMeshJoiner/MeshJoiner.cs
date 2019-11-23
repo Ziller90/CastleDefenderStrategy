@@ -185,11 +185,5 @@ public class MeshJoiner : MonoBehaviour
         }
         return sb.ToString();
     }
-
-
-    private void Update()
-    {
-
-    }
 #endif
 }

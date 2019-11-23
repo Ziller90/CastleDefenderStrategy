@@ -7,10 +7,7 @@ public class BloodVisualisation : MonoBehaviour
     public ParticleSystem BloodParticles;
     public float LastDamageTime;
     public float StopBloodDelay;
-    void Start()
-    {
-        
-    }
+     
 
     // Update is called once per frame
     void Update()

@@ -13,12 +13,14 @@ public class Cubemaker : MonoBehaviour
     public bool ChangeCube = false;
     void Start ()
     {
+        if (Application.isPlaying == true)
+        {
+            gameObject.GetComponent<Cubemaker>().enabled = false;
+        }
         Grid = gameObject.transform.parent.gameObject;
     }
     void Update()
     {
-        if (Application.isPlaying == false)
-        {
             if (ChangeCube == true)
             {
                 Grid = gameObject.transform.parent.gameObject;
@@ -30,7 +32,6 @@ public class Cubemaker : MonoBehaviour
                 gameObject.transform.position = new Vector3(0, -10, 0);
                 PrefabUtility.ApplyPrefabInstance(NewCube, InteractionMode.AutomatedAction);
             }
-        }
     }
 #endif 
 }

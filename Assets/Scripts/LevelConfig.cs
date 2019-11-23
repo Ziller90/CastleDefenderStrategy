@@ -8,15 +8,4 @@ public class LevelConfig : ScriptableObject
     public int LevelNumber;
     public string LevelName;
     public int CrystalsRewardForWin;
-    
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

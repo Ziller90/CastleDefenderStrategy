@@ -14,10 +14,7 @@ public class CannonTower : MonoBehaviour
     public float TowerDamage;
     public float TowerAttackDistance;
     public BuildingStats Stats;
-    void Start()
-    {
-
-    }
+     
 
     // Update is called once per frame
     void Update()

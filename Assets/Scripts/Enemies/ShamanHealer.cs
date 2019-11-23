@@ -13,10 +13,7 @@ public class ShamanHealer : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
     IEnumerator Healing ()
     {
         if (Enemy.EnemyAnimator.GetBool("Attack") != true)

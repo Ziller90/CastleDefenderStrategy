@@ -28,10 +28,6 @@ public class MusicManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public IEnumerator StopMusic (float StopTime)
     {
         for (float i = AudioSource.volume; i > 0; i -= 0.01f)

@@ -9,10 +9,7 @@ public class PauseMenuManager : MonoBehaviour
     public GameObject PausePanel;
     public GameObject SettingsPanel;
     public PauseResumeScript Pauser;
-    void Start()
-    {
-        
-    }
+     
 
     // Update is called once per frame
     void Update()

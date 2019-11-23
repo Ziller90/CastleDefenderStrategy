@@ -5,14 +5,6 @@ using UnityEngine;
 public class ImprovingsLevelsAvaiable : MonoBehaviour
 {
     public int ImprovingsAvaiableLevel;
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

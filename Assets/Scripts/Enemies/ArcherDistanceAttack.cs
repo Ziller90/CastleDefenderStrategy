@@ -8,16 +8,6 @@ public class ArcherDistanceAttack : MonoBehaviour
     public Transform EnemyTransform;
     public GameObject OrcArrow;
 
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public IEnumerator AttackDelay()
     {
         float Delay = Random.Range(0f, 3.5f);

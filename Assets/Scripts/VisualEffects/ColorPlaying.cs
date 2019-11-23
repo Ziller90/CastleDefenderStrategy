@@ -14,11 +14,6 @@ public class ColorPlaying : MonoBehaviour
         StartCoroutine("Darker");
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
     IEnumerator Darker()
     {
         for (int i = 255; i > 100; i--)

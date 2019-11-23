@@ -12,10 +12,7 @@ public class LevelStartButton : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
     public void OnButtonClick ()
     {
         Loader.StartCoroutine("LoadLevel", ButtonIndex);

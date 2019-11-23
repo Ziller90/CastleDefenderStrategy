@@ -22,10 +22,6 @@ public class Translation : ScriptableObject
 
 
 
-    void Start()
-    {
-
-    }
     public string GetTranslatedText()
     {
         if (GlobalLanguageManager.Language == GlobalLanguageManager.GloabalLanguage.English)
@@ -44,8 +40,4 @@ public class Translation : ScriptableObject
 
 
     // Update is called once per frame
-    void Update()
-    {
-       
-    }
 }

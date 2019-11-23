@@ -15,10 +15,7 @@ public class BulletScript : MonoBehaviour
     public ParticleSystem ExplosionEffect2;
 
 
-    void Start()
-    {
-        
-    }
+     
 
     // Update is called once per frame
     void FixedUpdate()

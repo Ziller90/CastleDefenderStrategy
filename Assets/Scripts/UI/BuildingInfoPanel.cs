@@ -12,15 +12,4 @@ public class BuildingInfoPanel : MonoBehaviour
     public Text BuildingDamage;
     public Text BuildingAttackDistance;
     public Text BuildingName;
-
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
