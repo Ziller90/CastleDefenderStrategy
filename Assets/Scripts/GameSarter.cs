@@ -14,7 +14,6 @@ public class GameSarter : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("Loaded " + LevelLoader.LevelToLoad);
         MapLoader(LevelLoader.LevelToLoad);
     }
 

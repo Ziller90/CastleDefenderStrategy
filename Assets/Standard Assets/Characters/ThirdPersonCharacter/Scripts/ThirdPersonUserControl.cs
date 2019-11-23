@@ -23,9 +23,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             }
             else
             {
-                Debug.LogWarning(
-                    "Warning: no main camera found. Third person character needs a Camera tagged \"MainCamera\", for camera-relative controls.", gameObject);
-                // we use self-relative controls in this case, which probably isn't what the user wants, but hey, we warned them!
+              
             }
 
             // get the third person character ( this should never be null due to require component )

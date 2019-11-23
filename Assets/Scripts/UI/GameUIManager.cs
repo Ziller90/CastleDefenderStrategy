@@ -40,7 +40,6 @@ public class GameUIManager : MonoBehaviour
 
             if (BuildingToImprove.BuildingCard.AmountOfLevels == BuildingToImprove.Currentlevel || BuildingToImprove.Currentlevel + 1 == ImprovingAvaiableLevel)
             {
-                Debug.Log("Has max level");
                 ImprovingCost.text = "MAX";
                 CurrentLevel.text = "LEVEL " + (BuildingToImprove.Currentlevel + 1);
                 BuidlingImproveButton.GetComponent<Button>().interactable = false;

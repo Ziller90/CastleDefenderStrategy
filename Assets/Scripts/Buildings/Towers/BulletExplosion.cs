@@ -24,7 +24,6 @@ public class BulletExplosion : MonoBehaviour
         gameObject.GetComponent<AudioSource>().Play();
         for(int q = 0; q < AttackGoals.Count; q++)
         {
-            Debug.Log("ofof");
             AttackGoals[q].GetComponent<DamageReciever>().DamageResistance(Damage, CardScriptableObject.DamageType.ExplosionDamage);
         }
     }

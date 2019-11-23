@@ -9,7 +9,6 @@ public class GrowingVisualization : MonoBehaviour
     // Update is called once per frame
     public void Grow (int GrowIndex)
     {
-        Debug.Log("Grow");
         TowerAnimator.SetInteger("GrowIndex", GrowIndex);
     }
 }

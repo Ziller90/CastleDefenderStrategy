@@ -16,16 +16,13 @@ public class MeshJoiner : MonoBehaviour
     int getBoneIndex(SkinnedMeshRenderer skinnedRenderer, GameObject obj)
     {
         
-        //Debug.Log("Object: " + obj.name);
             
         Transform parent = obj.transform.parent;
         do
         {
-            //Debug.Log("Parent: " + parent.gameObject.name);
             int index = 0;
             foreach (var bone in skinnedRenderer.bones)
             {
-                //Debug.Log("Bone: " + bone.gameObject.name);
                 if (parent.GetInstanceID() == bone.GetInstanceID())
                     return index;
                 index++;
@@ -60,7 +57,6 @@ public class MeshJoiner : MonoBehaviour
         {
             str += " " + weight.boneIndex0 + ":" + weight.weight0 + " ";
         }
-        Debug.Log(str);
     }
 
     void printMatrices(Matrix4x4[] matrices)
@@ -70,7 +66,6 @@ public class MeshJoiner : MonoBehaviour
         {
             str += " " + matrix.ToString();
         }
-        Debug.Log(str);
     }
 
     [ContextMenu("Join")]
@@ -96,7 +91,6 @@ public class MeshJoiner : MonoBehaviour
         {
             var meshFilter = meshFilters[i];
             var obj = meshFilter.gameObject;
-            Debug.Log("Object: " + obj.name);
             if (meshFilter.sharedMesh == null)
                 continue;
             var currentMesh = Instantiate(meshFilters[i].sharedMesh);
@@ -105,7 +99,6 @@ public class MeshJoiner : MonoBehaviour
 
             combination.mesh = currentMesh;
             int boneIndex = getBoneIndex(skinnedRenderer, obj);
-            Debug.Log("Bone index: " + boneIndex);
             currentMesh.boneWeights = generateWeights(currentMesh, boneIndex, weight);
 
             var curTransform = meshFilters[i].transform;
@@ -123,7 +116,6 @@ public class MeshJoiner : MonoBehaviour
 
         printMatrices(mesh.bindposes);
 
-        Debug.Log(mesh.bindposes);
 
         int vertexIndex = 0;
         var weights = new List<BoneWeight> ();

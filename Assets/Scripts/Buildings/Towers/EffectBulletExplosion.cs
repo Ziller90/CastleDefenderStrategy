@@ -23,7 +23,6 @@ public class EffectBulletExplosion : MonoBehaviour
         gameObject.GetComponent<AudioSource>().Play();
         for(int q = 0; q < AttackGoals.Count; q++)
         {
-            Debug.Log("ofof");
             AttackGoals[q].GetComponent<DamageReciever>().DamageResistance(Damage, CardScriptableObject.DamageType.ExplosionDamage);
             if (EffectType == CardScriptableObject.EffectType.FreezingEffect)
             AttackGoals[q].GetComponent<EffectsResistance>().EffectCast(CardScriptableObject.EffectType.FreezingEffect, EffectPower, EffectTime);

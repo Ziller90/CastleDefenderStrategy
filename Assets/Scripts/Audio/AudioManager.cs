@@ -31,7 +31,6 @@ public class AudioManager : MonoBehaviour
     }
     public void SetNewSound(SoundClient NewClient)
     {
-        Debug.Log("NewClient");
         Sounds.Add(NewClient);
         if (SoundOn == true)
         {

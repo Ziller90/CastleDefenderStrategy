@@ -18,11 +18,6 @@ public class ImprovingsShop : MonoBehaviour
         {
             PlayerStats.Crystals -= StartCapitalCost;
             PlayerStats.StartCapitalOpened = true;
-            Debug.Log(PlayerStats.StartCapitalOpened);
-        }
-        else
-        {
-            Debug.Log(PlayerStats.StartCapitalOpened);
         }
     }
 }

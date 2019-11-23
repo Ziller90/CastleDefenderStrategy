@@ -59,7 +59,6 @@ public class CameraRayCast : MonoBehaviour
             CameraRay = Camera.main.ScreenPointToRay(Input.mousePosition);
             Debug.DrawRay(CameraRay.origin, CameraRay.direction * 30, Color.yellow);
             hits = Physics.RaycastAll(CameraRay);
-            Debug.Log("Rayed");
             if (hits.Length > 0)
             {
                 DetectedObjectsManager();
@@ -73,9 +72,7 @@ public class CameraRayCast : MonoBehaviour
         {
             if (hits[i].collider.gameObject.tag == "Tower" && AlwaysDetected == false)
             {
-                Debug.Log("DetectedCube");
                 AlwaysDetected = true;
-                Debug.Log(hits[i].collider.gameObject.name);
                 hits[i].collider.gameObject.GetComponent<BuildingStats>().BuildingIsHignLighted();
                 OldHitObject = hits[i].collider.gameObject;
             }
@@ -88,7 +85,6 @@ public class CameraRayCast : MonoBehaviour
             if (hits[i].collider.gameObject.tag == "Cube" && AlwaysDetected == false)
             {
                 AlwaysDetected = true;
-                Debug.Log(hits[i].collider.gameObject.name);
                 hits[i].collider.gameObject.GetComponent<BuilderManager>().CubeHighLighting();
                 buildingManager.ChangedHighLightedCube();
 

@@ -25,7 +25,6 @@ public class BuildingManager : MonoBehaviour
         Manager = HighLightedCube.GetComponent<BuilderManager>();
         if (Manager.CubeTypeIndex == 1)
         {
-            Debug.Log("popo");
             FieldBuildings.SetActive(true);
             RoadBuildings.SetActive(true);
             GoldenBuildings.SetActive(false);

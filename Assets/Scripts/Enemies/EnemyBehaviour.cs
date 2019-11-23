@@ -149,10 +149,8 @@ public class EnemyBehaviour : MonoBehaviour
     public void AddCrystals ()
     {
         int rand = Random.Range(1, 101);
-        Debug.Log("1");
         if (rand <= ProbabilytyOfCrystalsReward)
         {
-            Debug.Log("2");
             PlayerStats.Crystals += CrystalsKillReward;
         }
     }

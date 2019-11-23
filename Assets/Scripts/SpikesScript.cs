@@ -10,7 +10,6 @@ public class SpikesScript : MonoBehaviour
     {
         if (col.gameObject.tag == "Enemy" && Reloaded == true)
         {
-            Debug.Log("of");
             StartCoroutine("Attack", col.gameObject);
             Reloaded = false;
         }

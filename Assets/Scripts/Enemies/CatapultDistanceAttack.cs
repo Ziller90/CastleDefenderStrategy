@@ -18,7 +18,6 @@ public class CatapultDistanceAttack : MonoBehaviour
     {
         if (Enemy.EnemyAnimator.GetCurrentAnimatorStateInfo(0).IsName("Orc_catapult_03_attack") && AlreadyAttacked == false)
         {
-            Debug.Log("Fuck");
             AlreadyAttacked = true;
         }
     }
@@ -38,8 +37,6 @@ public class CatapultDistanceAttack : MonoBehaviour
             Enemy.EnemyAnimator.SetBool("Attack", true);
             yield return new WaitForSeconds(ReloadingSpeed);
             ReloadingSpeed = 1.55f;
-            Debug.Log(Enemy.EnemyAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime);
-            Debug.Log("Make new stone");
             GameObject NewArrow = Instantiate(CatapultStone, CatapultStoneAppearPoint);
             StartCoroutine("Attack");
         }

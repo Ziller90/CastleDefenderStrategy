@@ -34,10 +34,8 @@ public class ShamanHealer : MonoBehaviour
             {
                 if (EnemiesToHeal[i].AlreadyDead == false)
                 EnemiesToHeal[i].Heal(HealingPower);
-                Debug.Log(i + "Healed");
             }
         }
-        Debug.Log("AllHealed");
         StartCoroutine("Healing");
     }
     void OnTriggerEnter(Collider col)

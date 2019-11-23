@@ -10,7 +10,6 @@ public class Damager : MonoBehaviour
         if (col.gameObject.tag == "Enemy")
         {
             col.gameObject.GetComponent<EnemyBehaviour>().HP = col.gameObject.GetComponent<EnemyBehaviour>().HP - Damage;
-            Debug.Log("sdfe");
         }
     }
 }
