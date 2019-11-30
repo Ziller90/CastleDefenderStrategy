@@ -15,21 +15,30 @@ public class ArchersTower : MonoBehaviour
     public float TowerAttackDistance;
     public GameObject Enemy;
     public BuildingStats Stats;
+    GlobalEnemiesManager globalEnemiesManager;
      
 
+    void Start()
+    {
+        globalEnemiesManager = GameObject.Find("GlobalEnemiesManager").GetComponent<GlobalEnemiesManager>();
+    }
     // Update is called once per frame
     void Update()
     {
+        if (Enemy == null)
+        {
+            Enemy = globalEnemiesManager.EnemyToAttack(gameObject.transform.position, TowerAttackDistance);
+        }
+        else
+        {
+            ArrowInstantiate();
+            if (globalEnemiesManager.IsEnemyAttackAble(Enemy, gameObject.transform.position,TowerAttackDistance) == false)
+            {
+                Enemy = null;
+            }
+        }
         TowerDamage = Stats.Damage;
         TowerReloadingSpeed = Stats.ReloadingSpeed;
-    }
-    void OnTriggerStay (Collider Col)
-    {
-        if (Col.gameObject.tag == "Enemy")
-        {
-            Enemy = Col.gameObject;
-            ArrowInstantiate();
-        }
     }
 
     void ArrowInstantiate ()

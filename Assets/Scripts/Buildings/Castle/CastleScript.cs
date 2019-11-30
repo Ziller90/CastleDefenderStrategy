@@ -21,6 +21,7 @@ public class CastleScript : MonoBehaviour
     public AudioClip[] HitSounds;
     public AudioSource AudioSource;
     bool CanPlay = true;
+    GlobalEnemiesManager Manager;
     void Awake()
     {
         if (ShopManager.StrongWalls == true)
@@ -33,11 +34,15 @@ public class CastleScript : MonoBehaviour
         UIManager = GameObject.Find("GameUIManager").GetComponent<GameUIManager>();
         HP = MaxHP;
     }
+    void Start()
+    {
+        Manager = GameObject.Find("GlobalEnemiesManager").GetComponent<GlobalEnemiesManager>();
+    }
     
-
     // Update is called once per frame
     void Update()
     {
+        Manager.CastlePosition = gameObject.transform.position;
         HpBar.fillAmount = HP / MaxHP;
         if (HP <= 0 && AlreadyGameOver == false)
         {

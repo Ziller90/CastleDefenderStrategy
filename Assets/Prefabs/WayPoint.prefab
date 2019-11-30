@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3873832249285833477}
   - component: {fileID: 3873832249285833479}
-  - component: {fileID: 3873832249285833478}
   m_Layer: 0
   m_Name: WayPoint
   m_TagString: Untagged
@@ -45,17 +44,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RouteNumber: 1
+  WayIndexNumber: 0
   RightTurner: 0
---- !u!135 &3873832249285833478
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3873832249285833476}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.530705
-  m_Center: {x: -0.015990734, y: 0, z: -0.010895312}
+  globalEnemiesManager: {fileID: 0}

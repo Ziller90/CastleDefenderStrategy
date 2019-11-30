@@ -5,18 +5,24 @@ using UnityEngine;
 public class WayPointScript : MonoBehaviour
 {
     public int RouteNumber;
+    public int WayIndexNumber;
     public bool RightTurner;
+    public GlobalEnemiesManager globalEnemiesManager;
      
-
-    // Update is called once per frame
-    void OnTriggerEnter(Collider col)
+    void Start ()
     {
-        if (col.gameObject.tag == "Enemy" && col.GetComponent<EnemyBehaviour>().RouteNumber == RouteNumber)
+        globalEnemiesManager = GameObject.Find("GlobalEnemiesManager").GetComponent<GlobalEnemiesManager>();
+    }
+    void Update ()
+    {
+        var EnemyToTurn = globalEnemiesManager.EnemyToTurn(gameObject.transform.position, RouteNumber, WayIndexNumber);
+        if (EnemyToTurn != null)
         {
             if (RightTurner == true)
-                col.GetComponent<EnemyBehaviour>().StartCoroutine("TurnRight");
+                EnemyToTurn.GetComponent<EnemyBehaviour>().TurnRight();
             if (RightTurner == false)
-                col.GetComponent<EnemyBehaviour>().StartCoroutine("TurnLeft");
+                EnemyToTurn.GetComponent<EnemyBehaviour>().TurnLeft();
+            EnemyToTurn.GetComponent<EnemyBehaviour>().WayIndex++;
         }
     }
 }

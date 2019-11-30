@@ -722,19 +722,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StandartEffect: {fileID: 3104413680072889188}
   GoldenEffect: {fileID: 4807393650122063890}
---- !u!65 &4390353339734909656
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8065455045034335679}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 21.02096, y: 5.948635, z: 21.096783}
-  m_Center: {x: 0.13362755, y: 2.474317, z: -0.16247548}
 --- !u!114 &4282181964902632643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -755,7 +742,7 @@ MonoBehaviour:
   NewArrow: {fileID: 0}
   TowerReloadingSpeed: 1.5
   TowerDamage: 5
-  TowerAttackDistance: 0
+  TowerAttackDistance: 2.5
   Enemy: {fileID: 0}
   Stats: {fileID: 7640520746749292979}
 --- !u!1001 &3224627397558812874

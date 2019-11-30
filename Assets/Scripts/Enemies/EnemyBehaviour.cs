@@ -33,6 +33,9 @@ public class EnemyBehaviour : MonoBehaviour
     public ParticleSystem HealingParticle;
     public bool Poisoned;
     public GameObject PoisonEffect;
+    public GlobalEnemiesManager globalEnemiesManager;
+    public float AttackRange;
+    public int WayIndex;
 
 
 
@@ -43,6 +46,9 @@ public class EnemyBehaviour : MonoBehaviour
 
     void Start()
     {
+        Enemy.transform.SetParent(null);
+        globalEnemiesManager = GameObject.Find("GlobalEnemiesManager").GetComponent<GlobalEnemiesManager>();
+        globalEnemiesManager.RegisterEnemy(gameObject);
         EnemyAnimator.SetFloat("Speed", NormalAnimationsSpeed);
         CameraViewPoint = GameObject.Find("CameraViewPoint");
         HP = MaxHP;
@@ -51,7 +57,20 @@ public class EnemyBehaviour : MonoBehaviour
         Castle = GameObject.FindGameObjectWithTag("Castle");
     }
 
-    // Update is called once per frame
+    void Update ()
+    {
+        if (globalEnemiesManager.CanEnemyAttackCastle(Enemy.transform.position, AttackRange))
+        {
+            if (EnemyId == "Infanity")
+                StartCoroutine("AttackCastle");
+            if (EnemyId == "General")
+                StartCoroutine("AttackCastle");
+            if (EnemyId == "Archer")
+                StartCoroutine("AttackDelay");
+            if (EnemyId == "Catapult")
+                StartCoroutine("AttackDelay");
+        }
+    }
     void FixedUpdate()
     {
         if (AlreadyDead == true)
@@ -68,7 +87,7 @@ public class EnemyBehaviour : MonoBehaviour
         }
         if (Go == true)
         {
-            gameObject.transform.position += transform.forward * speed;
+            Enemy.transform.position += transform.forward * speed;
         }
         HPBar.position = HPBarPoint.position;
         HPBar.LookAt(CameraViewPoint.transform);
@@ -99,14 +118,12 @@ public class EnemyBehaviour : MonoBehaviour
             HealingParticle.Play();
         }
     }
-    public IEnumerator TurnRight ()
+    public void TurnRight ()
     {
-        yield return new WaitForSeconds(0.25f);
         gameObject.transform.Rotate(0, 90, 0);
     }
-    public IEnumerator TurnLeft()
+    public void TurnLeft()
     {
-        yield return new WaitForSeconds(0.25f);
         gameObject.transform.Rotate(0, -90, 0);
     }
 
@@ -134,6 +151,7 @@ public class EnemyBehaviour : MonoBehaviour
     }
     public IEnumerator Death ()
     {
+        globalEnemiesManager.UnRegisterEnemy(gameObject);
         gameObject.GetComponent<EffectsResistance>().DieEffects();
         EnemyAnimator.SetBool("Dead", true);
         gameObject.GetComponent<BoxCollider>().enabled = false;
