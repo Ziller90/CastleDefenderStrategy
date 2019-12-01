@@ -16,13 +16,14 @@ public class CripsSpawner : MonoBehaviour
     public bool IsEmpty;
     public MessagesManager MessagesManager;
     bool AlreadyStartedCoroutine;
+    WayManager wayManager;
 
 
 
     void Start()
     {
+        wayManager = GameObject.Find("WayManager").GetComponent<WayManager>();
         MessagesManager = GameObject.FindGameObjectWithTag("Level").GetComponent<MessagesManager>();
-
     }
 
     // Update is called once per frame
@@ -50,6 +51,7 @@ public class CripsSpawner : MonoBehaviour
             GameObject NewCrip = Instantiate(Crips[SquadCounter], gameObject.transform.transform);
             NewEnemyController = NewCrip.transform.GetChild(1).gameObject.GetComponent<EnemyBehaviour>();
             NewEnemyController.RouteNumber = RoutesNumber[SquadCounter];
+            NewEnemyController.WayPoints = wayManager.Ways[NewEnemyController.RouteNumber].WayPoints;
             yield return new WaitForSeconds(SpawningTime[SquadCounter]);
         }
         SquadCounter++;

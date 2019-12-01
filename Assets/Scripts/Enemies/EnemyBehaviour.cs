@@ -36,6 +36,10 @@ public class EnemyBehaviour : MonoBehaviour
     public GlobalEnemiesManager globalEnemiesManager;
     public float AttackRange;
     public int WayIndex;
+    public Transform[] WayPoints;
+    Transform EnemyTransform;
+    WinScript winScript;
+    bool AlreadyAttack;
 
 
 
@@ -43,9 +47,21 @@ public class EnemyBehaviour : MonoBehaviour
 
 
 
-
+    public void Attack()
+    {
+      if (AlreadyAttack == false)
+        {
+            if (EnemyId == "Infanity" || EnemyId == "General")
+                StartCoroutine("AttackCastle");
+            if (EnemyId == "Archer" || EnemyId == "Catapult")
+                StartCoroutine("AttackDelay");
+        }
+    }
     void Start()
     {
+        winScript = GameObject.Find("WinManager").GetComponent<WinScript>();
+        winScript.Enemies.Add(gameObject);
+        EnemyTransform = Enemy.transform;
         Enemy.transform.SetParent(null);
         globalEnemiesManager = GameObject.Find("GlobalEnemiesManager").GetComponent<GlobalEnemiesManager>();
         globalEnemiesManager.RegisterEnemy(gameObject);
@@ -57,20 +73,6 @@ public class EnemyBehaviour : MonoBehaviour
         Castle = GameObject.FindGameObjectWithTag("Castle");
     }
 
-    void Update ()
-    {
-        if (globalEnemiesManager.CanEnemyAttackCastle(Enemy.transform.position, AttackRange))
-        {
-            if (EnemyId == "Infanity")
-                StartCoroutine("AttackCastle");
-            if (EnemyId == "General")
-                StartCoroutine("AttackCastle");
-            if (EnemyId == "Archer")
-                StartCoroutine("AttackDelay");
-            if (EnemyId == "Catapult")
-                StartCoroutine("AttackDelay");
-        }
-    }
     void FixedUpdate()
     {
         if (AlreadyDead == true)
@@ -87,7 +89,12 @@ public class EnemyBehaviour : MonoBehaviour
         }
         if (Go == true)
         {
-            Enemy.transform.position += transform.forward * speed;
+            EnemyTransform.position = Vector3.MoveTowards(EnemyTransform.position, WayPoints[WayIndex].position, speed);
+            if (EnemyTransform.position == WayPoints[WayIndex].position)
+            {
+                WayIndex++;
+                EnemyTransform.LookAt(WayPoints[WayIndex]);
+            }
         }
         HPBar.position = HPBarPoint.position;
         HPBar.LookAt(CameraViewPoint.transform);
@@ -151,6 +158,7 @@ public class EnemyBehaviour : MonoBehaviour
     }
     public IEnumerator Death ()
     {
+        winScript.Enemies.Remove(gameObject);
         globalEnemiesManager.UnRegisterEnemy(gameObject);
         gameObject.GetComponent<EffectsResistance>().DieEffects();
         EnemyAnimator.SetBool("Dead", true);

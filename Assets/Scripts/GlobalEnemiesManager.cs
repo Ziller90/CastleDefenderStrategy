@@ -19,7 +19,14 @@ public class GlobalEnemiesManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        for (int i = 0; i < EnemiesOnTheMap.Count; i++)
+        {
+            var EnemyBehaviour = EnemiesOnTheMap[i].GetComponent<EnemyBehaviour>();
+            if (Vector3.Distance(EnemiesOnTheMap[i].transform.position, CastlePosition) < EnemyBehaviour.AttackRange + CastleRadius)
+            {
+                EnemyBehaviour.Attack();
+            }
+        }
     }
     public void RegisterEnemy(GameObject Enemy)
     {
@@ -28,18 +35,6 @@ public class GlobalEnemiesManager : MonoBehaviour
     public void UnRegisterEnemy(GameObject Enemy)
     {
         EnemiesOnTheMap.Remove(Enemy);
-    }
-    public bool CanEnemyAttackCastle(Vector3 Enemy, float Range)
-    {
-        Distance = Vector3.Distance(Enemy, CastlePosition);
-        if (Vector3.Distance(Enemy, CastlePosition) < Range + CastleRadius)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
     }
     public GameObject EnemyToAttack(Vector3 TowerPosition, float AttackRange)
     {
@@ -72,17 +67,5 @@ public class GlobalEnemiesManager : MonoBehaviour
         {
             return false;
         }
-    }
-    public GameObject EnemyToTurn (Vector3 WayPoint, int RouteNumber, int WayPointIndex)
-    {
-        for (int i = 0; i < EnemiesOnTheMap.Count; i++)
-        {
-            var EnemyBehaviour = EnemiesOnTheMap[i].GetComponent<EnemyBehaviour>();
-            if (Vector3.Distance(EnemiesOnTheMap[i].transform.position, WayPoint) < 0.1f && EnemyBehaviour.RouteNumber == RouteNumber && EnemyBehaviour.WayIndex == WayPointIndex--)
-            {
-                return (EnemiesOnTheMap[i]);
-            }
-        }
-        return (null);
     }
 }

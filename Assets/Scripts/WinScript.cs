@@ -8,7 +8,7 @@ public class WinScript : MonoBehaviour
     public CripsSpawner[] Spawners;
     public bool AllpawnersAreEmpty;
     public bool Win;
-    public GameObject[] Enemies;
+    public List<GameObject> Enemies = new List<GameObject>();
     public GameObject WinPanel;
     public int CrystalsRewardForWin;
     bool AlreadyWon = false;
@@ -22,8 +22,7 @@ public class WinScript : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        Enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        if (Enemies.Length == 0)
+        if (Enemies.Count == 0)
         {
             NoEnemies = true;
         }
@@ -33,7 +32,7 @@ public class WinScript : MonoBehaviour
         }
 
         AllSpawnersAreEmpty();
-        if (AllpawnersAreEmpty == true && Enemies.Length == 0 && AlreadyWon == false && Castle.HP > 0) 
+        if (AllpawnersAreEmpty == true && Enemies.Count == 0 && AlreadyWon == false && Castle.HP > 0) 
         {
             Win = true;
             WinPanel.SetActive(true);

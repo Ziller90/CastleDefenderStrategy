@@ -31,10 +31,13 @@ public class ArchersTower : MonoBehaviour
         }
         else
         {
-            ArrowInstantiate();
             if (globalEnemiesManager.IsEnemyAttackAble(Enemy, gameObject.transform.position,TowerAttackDistance) == false)
             {
                 Enemy = null;
+            }
+            else
+            {
+                ArrowInstantiate();
             }
         }
         TowerDamage = Stats.Damage;

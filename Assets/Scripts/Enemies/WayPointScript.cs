@@ -2,27 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[ExecuteInEditMode]
 public class WayPointScript : MonoBehaviour
 {
     public int RouteNumber;
     public int WayIndexNumber;
-    public bool RightTurner;
-    public GlobalEnemiesManager globalEnemiesManager;
-     
+    public WayManager WayManager;
+
     void Start ()
     {
-        globalEnemiesManager = GameObject.Find("GlobalEnemiesManager").GetComponent<GlobalEnemiesManager>();
+        if (Application.isPlaying == true)
+        {
+            gameObject.GetComponent<WayPointScript>().enabled = false;
+        }
     }
     void Update ()
     {
-        var EnemyToTurn = globalEnemiesManager.EnemyToTurn(gameObject.transform.position, RouteNumber, WayIndexNumber);
-        if (EnemyToTurn != null)
-        {
-            if (RightTurner == true)
-                EnemyToTurn.GetComponent<EnemyBehaviour>().TurnRight();
-            if (RightTurner == false)
-                EnemyToTurn.GetComponent<EnemyBehaviour>().TurnLeft();
-            EnemyToTurn.GetComponent<EnemyBehaviour>().WayIndex++;
-        }
+       WayManager.Ways[RouteNumber].WayPoints[WayIndexNumber] = gameObject.transform;
     }
 }
