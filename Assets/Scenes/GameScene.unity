@@ -4376,7 +4376,6 @@ GameObject:
   - component: {fileID: 829179915}
   - component: {fileID: 829179914}
   - component: {fileID: 829179913}
-  - component: {fileID: 829179912}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -4384,19 +4383,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967294
   m_IsActive: 1
---- !u!65 &829179912
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 829179911}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &829179913
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4757,9 +4743,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7b02c1e98974384e9f0d02bf360a188, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EnemiesOnTheMap: []
   Distance: 0
   CastleRadius: 2.5
   CastlePosition: {x: 0, y: 0, z: 0}
+  EnemiesInAttackRange: []
 --- !u!4 &847490996
 Transform:
   m_ObjectHideFlags: 0
@@ -6812,6 +6800,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1141780646}
   - component: {fileID: 1141780645}
+  - component: {fileID: 1141780647}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -6875,7 +6864,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 2.75508e-40, z: -3.11e-43, w: -1.114e-42}
+  m_BoundingSphereOverride: {x: 0, y: 1.3e-44, z: 1.1754945e-38, w: 0.0050221197}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -6893,6 +6882,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &1141780647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1141780644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d59dcc1a48d00a469903df961afa66b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useInstancing: 1
 --- !u!224 &1142682186 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6543737670539176152, guid: 51fc87bc21cdcbf4e86d2808ad3ba6b4,

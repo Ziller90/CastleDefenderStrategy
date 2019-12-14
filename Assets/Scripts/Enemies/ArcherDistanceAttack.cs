@@ -10,6 +10,7 @@ public class ArcherDistanceAttack : MonoBehaviour
 
     public IEnumerator AttackDelay()
     {
+        Enemy.AlreadyAttack = true;
         float Delay = Random.Range(0f, 3.5f);
         yield return new WaitForSeconds(Delay);
         StartCoroutine("Attack");
@@ -21,7 +22,7 @@ public class ArcherDistanceAttack : MonoBehaviour
         {
             Enemy.Go = false;
             EnemyTransform.LookAt(Enemy.Castle.transform.position);
-            Enemy.EnemyAnimator.SetBool("Attack", true);
+            Enemy.AnimationIndex = 0;
             yield return new WaitForSeconds(1.3f);
             GameObject NewArrow = Instantiate(OrcArrow, gameObject.transform);
             NewArrow.GetComponent<OrcArrowScipt>().Castle = Enemy.Castle;

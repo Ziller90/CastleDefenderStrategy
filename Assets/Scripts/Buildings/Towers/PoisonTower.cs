@@ -17,8 +17,10 @@ public class PoisonTower : MonoBehaviour
     public BuildingStats Stats;
     public float EffectPower;
     public float EffectTime;
+    GlobalEnemiesManager globalEnemiesManager;
     void Start()
     {
+        globalEnemiesManager = GameObject.Find("GlobalEnemiesManager").GetComponent<GlobalEnemiesManager>();
         EffectPower = Stats.EffectPower;
         EffectTime = Stats.EffectTime;
     }
@@ -28,14 +30,15 @@ public class PoisonTower : MonoBehaviour
     {
         TowerDamage = Stats.Damage;
         TowerReloadingSpeed = Stats.ReloadingSpeed;
-    }
-    void OnTriggerStay (Collider Col)
-    {
-        if (Col.gameObject.tag == "Enemy")
+        if (Enemy == null || globalEnemiesManager.IsEnemyAttackAble(Enemy, gameObject.transform.position, TowerAttackDistance) == false || Enemy.GetComponent<EnemyBehaviour>().HP <= 0)
         {
-            Enemy = Col.gameObject;
+            Enemy = globalEnemiesManager.EnemyToAttack(gameObject.transform.position, TowerAttackDistance);
+        }
+        else
+        {
             PoisonInstantiate();
         }
+
     }
 
     void PoisonInstantiate ()

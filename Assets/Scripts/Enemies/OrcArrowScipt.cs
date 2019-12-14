@@ -24,7 +24,7 @@ public class OrcArrowScipt : MonoBehaviour
     }
     IEnumerator DamageDeliver ()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.1f);
         Castle.GetComponent<CastleScript>().DamageReceive(ArrowDamage, gameObject.transform.position);
         Destroy(gameObject);
     }

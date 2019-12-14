@@ -13,8 +13,11 @@ public class EffectBulletScript : MonoBehaviour
     public float EffectPower;
     public float EffectTime;
     public ParticleSystem FrozenParticle;
+    public MeshRenderer MeshRender;
+    public float TimeToUnEnableEffect;
 
-     
+
+
 
     // Update is called once per frame
     void FixedUpdate()
@@ -39,10 +42,9 @@ public class EffectBulletScript : MonoBehaviour
     }
     IEnumerator Destroing ()
     {
-        gameObject.GetComponent<MeshRenderer>().enabled = false;
-        gameObject.transform.GetChild(0).GetComponent<MeshRenderer>().enabled = false;
+        MeshRender.enabled = false;
         FrozenParticle.Play();
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(TimeToUnEnableEffect);
         Destroy(gameObject);
     }
 }

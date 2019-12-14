@@ -1197,7 +1197,7 @@ MonoBehaviour:
   NewPoison: {fileID: 0}
   TowerReloadingSpeed: 0
   TowerDamage: 0
-  TowerAttackDistance: 0
+  TowerAttackDistance: 2.5
   Enemy: {fileID: 0}
   Stats: {fileID: 7640520746749292979}
   EffectPower: 0

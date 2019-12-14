@@ -25,20 +25,13 @@ public class ArchersTower : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Enemy == null)
+        if (Enemy == null || globalEnemiesManager.IsEnemyAttackAble(Enemy, gameObject.transform.position, TowerAttackDistance) == false || Enemy.GetComponent<EnemyBehaviour>().HP <= 0)
         {
             Enemy = globalEnemiesManager.EnemyToAttack(gameObject.transform.position, TowerAttackDistance);
         }
         else
         {
-            if (globalEnemiesManager.IsEnemyAttackAble(Enemy, gameObject.transform.position,TowerAttackDistance) == false)
-            {
-                Enemy = null;
-            }
-            else
-            {
-                ArrowInstantiate();
-            }
+            ArrowInstantiate();
         }
         TowerDamage = Stats.Damage;
         TowerReloadingSpeed = Stats.ReloadingSpeed;

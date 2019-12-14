@@ -12,27 +12,30 @@ public class FrozenTowerScript : MonoBehaviour
     public GameObject NewBullet;
     public float TowerReloadingSpeed;
     public float TowerDamage;
+    public float TowerAttackDistance;
     public BuildingStats Stats;
     public float EffectPower;
     public float EffectTime;
+    GlobalEnemiesManager globalEnemiesManager;
+    public GameObject Enemy;
 
-     
-
-    // Update is called once per frame
-    void Update()
+    void Start()
     {
+        globalEnemiesManager = GameObject.Find("GlobalEnemiesManager").GetComponent<GlobalEnemiesManager>();
         TowerDamage = Stats.Damage;
         TowerReloadingSpeed = Stats.ReloadingSpeed;
         EffectPower = Stats.EffectPower;
         EffectTime = Stats.EffectTime;
-
-
     }
-    void OnTriggerStay(Collider Col)
+    void Update()
     {
-        if (Col.gameObject.tag == "Enemy")
+        if (Enemy == null || globalEnemiesManager.IsEnemyAttackAble(Enemy, gameObject.transform.position, TowerAttackDistance) == false || Enemy.GetComponent<EnemyBehaviour>().HP <= 0)
         {
-            EnemyPosition = Col.gameObject.transform.position;
+            Enemy = globalEnemiesManager.EnemyToAttack(gameObject.transform.position, TowerAttackDistance);
+        }
+        else
+        {
+            EnemyPosition = Enemy.transform.position;
             BulletInstantiate();
         }
     }

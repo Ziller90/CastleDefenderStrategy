@@ -229,7 +229,6 @@ GameObject:
   - component: {fileID: 2567021652833492361}
   - component: {fileID: 6671344899509781044}
   - component: {fileID: 2209432435371981878}
-  - component: {fileID: 5208058034236168812}
   m_Layer: 0
   m_Name: FrozenBullet
   m_TagString: Untagged
@@ -334,6 +333,8 @@ MonoBehaviour:
   EffectPower: 0
   EffectTime: 0
   FrozenParticle: {fileID: 8133014907341364610}
+  MeshRender: {fileID: 4886339344391184685}
+  TimeToUnEnableEffect: 1.5
 --- !u!54 &2209432435371981878
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -350,18 +351,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &5208058034236168812
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4886339344388931565}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5454974f7a785c94d855fe3c1e38a82c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &7710229064948800185
 PrefabInstance:
   m_ObjectHideFlags: 0

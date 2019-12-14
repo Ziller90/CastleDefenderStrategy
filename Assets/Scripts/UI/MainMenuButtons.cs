@@ -17,10 +17,20 @@ public class MainMenuButtons : MonoBehaviour
     public GameObject SettingsPanel;
     public GameObject MainButtons;
     public GameObject Shop;
+    public GameObject ShopOpenButton;
+
 
 
     void Awake()
     {
+        if (PlayerStats.CampaignProgressIndex > 5)
+        {
+            ShopOpenButton.SetActive(true);
+        }
+        else
+        {
+            ShopOpenButton.SetActive(false);
+        }
         Time.timeScale = 1;
         if (PlayerStats.CampaignProgressIndex == 0)
         {
@@ -35,6 +45,7 @@ public class MainMenuButtons : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             savingSystem.SavePlayerData();

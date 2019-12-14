@@ -62,14 +62,12 @@ public class EffectsResistance : MonoBehaviour
         FrozenEffectAnimator.gameObject.SetActive(true);
         FrozenEffectAnimator.SetBool("Freezed", true);
         Enemy.speed = Enemy.NormalSpeed * SpeedDeBuff;
-        Enemy.EnemyAnimator.SetFloat("Speed", SpeedDeBuff);
         LastFreezingTime = Time.time;
         FreezingTime = EffectTime;
     }
     public void FreezingEffectStop ()
     {
         Enemy.speed = Enemy.NormalSpeed;
-        Enemy.EnemyAnimator.SetFloat("Speed", Enemy.NormalAnimationsSpeed);
         FrozenEffectAnimator.SetBool("Freezed", false);
     }
 

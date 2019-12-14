@@ -252,6 +252,8 @@ MonoBehaviour:
   EffectPower: 0
   EffectTime: 0
   FrozenParticle: {fileID: 8133014907341364610}
+  MeshRender: {fileID: 4801861459745580048}
+  TimeToUnEnableEffect: 5
 --- !u!135 &348780041773949583
 SphereCollider:
   m_ObjectHideFlags: 0

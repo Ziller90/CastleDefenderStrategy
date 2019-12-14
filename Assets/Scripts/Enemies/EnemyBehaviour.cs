@@ -24,6 +24,8 @@ public class EnemyBehaviour : MonoBehaviour
     public int CrystalsKillReward;
     public int FrozenRecover;
     public Animator EnemyAnimator;
+    public AnimationInstancing.AnimationInstancing AnimationInstancing;
+
     public bool AlreadyDead = false;
     public int ProbabilytyOfCrystalsReward;
     public AudioSource Audio;
@@ -39,8 +41,8 @@ public class EnemyBehaviour : MonoBehaviour
     public Transform[] WayPoints;
     Transform EnemyTransform;
     WinScript winScript;
-    bool AlreadyAttack;
-
+    public bool AlreadyAttack;
+    public int AnimationIndex;
 
 
 
@@ -51,21 +53,23 @@ public class EnemyBehaviour : MonoBehaviour
     {
       if (AlreadyAttack == false)
         {
-            if (EnemyId == "Infanity" || EnemyId == "General")
+            if (EnemyId == "Infanity" || EnemyId == "General" || EnemyId == "Cavalry" || EnemyId == "Healer")
                 StartCoroutine("AttackCastle");
-            if (EnemyId == "Archer" || EnemyId == "Catapult")
-                StartCoroutine("AttackDelay");
+            if (EnemyId == "Archer")
+                gameObject.GetComponent<ArcherDistanceAttack>().StartCoroutine("AttackDelay");
         }
     }
     void Start()
     {
+        
+         AnimationIndex = 1;
         winScript = GameObject.Find("WinManager").GetComponent<WinScript>();
         winScript.Enemies.Add(gameObject);
         EnemyTransform = Enemy.transform;
         Enemy.transform.SetParent(null);
         globalEnemiesManager = GameObject.Find("GlobalEnemiesManager").GetComponent<GlobalEnemiesManager>();
         globalEnemiesManager.RegisterEnemy(gameObject);
-        EnemyAnimator.SetFloat("Speed", NormalAnimationsSpeed);
+        //EnemyAnimator.SetFloat("Speed", NormalAnimationsSpeed);
         CameraViewPoint = GameObject.Find("CameraViewPoint");
         HP = MaxHP;
         HPIndex = 1;
@@ -94,6 +98,21 @@ public class EnemyBehaviour : MonoBehaviour
             {
                 WayIndex++;
                 EnemyTransform.LookAt(WayPoints[WayIndex]);
+            }
+        }
+        if (EnemyId != "Cavalry" && EnemyId != "Healer")
+        {
+            switch (AnimationIndex)
+            {
+                case 1:
+                    AnimationInstancing.PlayAnimation("Run");
+                    break;
+                case 0:
+                    AnimationInstancing.PlayAnimation("Attack");
+                    break;
+                case 2:
+                    AnimationInstancing.PlayAnimation("Death");
+                    break;
             }
         }
         HPBar.position = HPBarPoint.position;
@@ -147,9 +166,11 @@ public class EnemyBehaviour : MonoBehaviour
             float Delay = Random.Range(0.1f, 0.7f);
             yield return new WaitForSeconds(Delay);
             Go = false;
-            EnemyAnimator.SetBool("Attack", true);
+            if (EnemyId == "Cavalry" || EnemyId == "Healer")
+                EnemyAnimator.SetBool("Attack", true);
+            else
+                AnimationIndex = 0;
             yield return new WaitForSeconds(0.5f);
-            StartCoroutine("AttackCastle");
         }
     }
     public void OnAttack ()
@@ -161,7 +182,10 @@ public class EnemyBehaviour : MonoBehaviour
         winScript.Enemies.Remove(gameObject);
         globalEnemiesManager.UnRegisterEnemy(gameObject);
         gameObject.GetComponent<EffectsResistance>().DieEffects();
-        EnemyAnimator.SetBool("Dead", true);
+        if (EnemyId == "Cavalry" || EnemyId == "Healer")
+            EnemyAnimator.SetBool("Dead", true);
+        else
+            AnimationIndex = 2;
         gameObject.GetComponent<BoxCollider>().enabled = false;
         GameObject Resourcesmanager = GameObject.Find("ResourcesManager");
         Resourcesmanager.GetComponent<ResourcesManager>().Gold = Resourcesmanager.GetComponent<ResourcesManager>().Gold + KillReward;
@@ -169,8 +193,9 @@ public class EnemyBehaviour : MonoBehaviour
         Go = false;
         HPBar.gameObject.SetActive(false);
         DeathSoundPlaying();
-        yield return new WaitForSeconds(4);
-        Destroy(Enemy);
+        yield return new WaitForSeconds(2);
+        Enemy.SetActive(false);
+
     }
     public void AddCrystals ()
     {

@@ -14,6 +14,7 @@ public class GameSarter : MonoBehaviour
 
     void Start()
     {
+        StartCoroutine(AnimationInstancing.AnimationManager.GetInstance().LoadAnimationAssetBundle(Application.streamingAssetsPath + "/AssetBundle/animationtexture"));
         MapLoader(LevelLoader.LevelToLoad);
     }
 

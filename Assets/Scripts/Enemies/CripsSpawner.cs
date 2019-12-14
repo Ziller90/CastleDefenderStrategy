@@ -16,7 +16,7 @@ public class CripsSpawner : MonoBehaviour
     public bool IsEmpty;
     public MessagesManager MessagesManager;
     bool AlreadyStartedCoroutine;
-    WayManager wayManager;
+    public WayManager wayManager;
 
 
 

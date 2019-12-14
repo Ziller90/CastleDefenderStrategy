@@ -14,24 +14,28 @@ public class CannonTower : MonoBehaviour
     public float TowerDamage;
     public float TowerAttackDistance;
     public BuildingStats Stats;
-     
+    public GameObject Enemy;
+    GlobalEnemiesManager globalEnemiesManager;
 
-    // Update is called once per frame
+    void Start()
+    {
+        globalEnemiesManager = GameObject.Find("GlobalEnemiesManager").GetComponent<GlobalEnemiesManager>();
+    }
     void Update()
     {
+        if (Enemy == null || globalEnemiesManager.IsEnemyAttackAble(Enemy, gameObject.transform.position, TowerAttackDistance) == false || Enemy.GetComponent<EnemyBehaviour>().HP <= 0)
+        {
+            Enemy = globalEnemiesManager.EnemyToAttack(gameObject.transform.position, TowerAttackDistance);
+        }
+        else
+        {
+            EnemyPosition = Enemy.transform.position;
+            BulletInstantiate();
+        }
         TowerDamage = Stats.Damage;
         TowerReloadingSpeed = Stats.ReloadingSpeed;
     }
-    void OnTriggerStay(Collider Col)
-    {
 
-        if (Col.gameObject.tag == "Enemy")
-        {
-            EnemyPosition = Col.gameObject.transform.position;
-            BulletInstantiate();
-        }
-
-    }
     void BulletInstantiate()
     {
         if (Reloaded == true)
