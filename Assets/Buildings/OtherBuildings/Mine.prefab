@@ -364,9 +364,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ResourceManager: {fileID: 0}
   MineResource: 1000
-  IncomeDelay: 5
-  IncomeSize: 5
+  IncomeDelay: 15
+  IncomeSize: 15
   GoldLeft: 0
+  GoldenCoin: {fileID: 6352572549226255353, guid: d0b83a32719d6404f8232fd7c67c368d,
+    type: 3}
 --- !u!65 &7250024589608565153
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -61,16 +61,14 @@ public class EnemyBehaviour : MonoBehaviour
     }
     void Start()
     {
-        
-         AnimationIndex = 1;
-        winScript = GameObject.Find("WinManager").GetComponent<WinScript>();
+        AnimationIndex = 1;
+        winScript = LinksContainer.instance.winScript;
         winScript.Enemies.Add(gameObject);
         EnemyTransform = Enemy.transform;
         Enemy.transform.SetParent(null);
-        globalEnemiesManager = GameObject.Find("GlobalEnemiesManager").GetComponent<GlobalEnemiesManager>();
+        globalEnemiesManager = LinksContainer.instance.globalEnemiesManager;
         globalEnemiesManager.RegisterEnemy(gameObject);
-        //EnemyAnimator.SetFloat("Speed", NormalAnimationsSpeed);
-        CameraViewPoint = GameObject.Find("CameraViewPoint");
+        CameraViewPoint = LinksContainer.instance.CameraViewPoint;
         HP = MaxHP;
         HPIndex = 1;
         Go = true;
@@ -187,8 +185,7 @@ public class EnemyBehaviour : MonoBehaviour
         else
             AnimationIndex = 2;
         gameObject.GetComponent<BoxCollider>().enabled = false;
-        GameObject Resourcesmanager = GameObject.Find("ResourcesManager");
-        Resourcesmanager.GetComponent<ResourcesManager>().Gold = Resourcesmanager.GetComponent<ResourcesManager>().Gold + KillReward;
+        LinksContainer.instance.resourcesManager.Gold = LinksContainer.instance.resourcesManager.Gold + KillReward;
         AddCrystals();
         Go = false;
         HPBar.gameObject.SetActive(false);

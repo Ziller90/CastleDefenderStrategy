@@ -11,7 +11,7 @@ public class SoundClient : MonoBehaviour
     {
         NewSource = gameObject.GetComponent<AudioSource>();
         SoundNormalVolume = NewSource.volume;
-        var SoundManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
+        var SoundManager = LinksContainer.instance.audioManager;
         NewSoundClient = gameObject.GetComponent<SoundClient>();
         SoundManager.SetNewSound(NewSoundClient);
     }

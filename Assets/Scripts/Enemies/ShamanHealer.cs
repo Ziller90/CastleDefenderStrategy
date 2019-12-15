@@ -23,11 +23,9 @@ public class ShamanHealer : MonoBehaviour
             Enemy.EnemyAnimator.SetBool("Heal", true);
             yield return new WaitForSeconds(1.33f);
             Enemy.EnemyAnimator.SetBool("Heal", false);
-
             Enemy.Go = true;
             StartCoroutine("Healing");
         }
-
     }
     public void Heal()
     {
@@ -39,7 +37,6 @@ public class ShamanHealer : MonoBehaviour
                 EnemiesToHeal[i].Heal(HealingPower);
             }
         }
-        StartCoroutine("Healing");
     }
     void OnTriggerEnter(Collider col)
     {

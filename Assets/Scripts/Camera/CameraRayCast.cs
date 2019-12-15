@@ -70,6 +70,16 @@ public class CameraRayCast : MonoBehaviour
     {
         for (int i = 0; i < hits.Length; i++)
         {
+            if (hits[i].collider.gameObject.tag == "Coin" && AlwaysDetected == false)
+            {
+                AlwaysDetected = true;
+                hits[i].collider.gameObject.GetComponent<Coin>().TakeCoin();
+                OldHitObject = hits[i].collider.gameObject;
+            }
+
+        }
+        for (int i = 0; i < hits.Length; i++)
+        {
             if (hits[i].collider.gameObject.tag == "Tower" && AlwaysDetected == false)
             {
                 AlwaysDetected = true;

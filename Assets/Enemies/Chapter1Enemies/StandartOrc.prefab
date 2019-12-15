@@ -140,7 +140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2885212619621661808
 Transform:
   m_ObjectHideFlags: 0
@@ -245,7 +245,7 @@ MonoBehaviour:
   KillReward: 2
   CrystalsKillReward: 1
   FrozenRecover: 30
-  EnemyAnimator: {fileID: 792327025380380009}
+  EnemyAnimator: {fileID: 0}
   AnimationInstancing: {fileID: 2790438649199153588}
   AlreadyDead: 0
   ProbabilytyOfCrystalsReward: 50
@@ -264,6 +264,7 @@ MonoBehaviour:
   AttackRange: 0
   WayIndex: 0
   WayPoints: []
+  AlreadyAttack: 0
   AnimationIndex: 0
 --- !u!23 &9094996152137279174
 MeshRenderer:
@@ -621,14 +622,9 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 9500000, guid: 39137e143153bfa40b27cc40e5a803b1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 39137e143153bfa40b27cc40e5a803b1, type: 3}
---- !u!95 &792327025380380009 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 9500000, guid: 39137e143153bfa40b27cc40e5a803b1,
-    type: 3}
-  m_PrefabInstance: {fileID: 792327025370970121}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &792327025370833585 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400056, guid: 39137e143153bfa40b27cc40e5a803b1,

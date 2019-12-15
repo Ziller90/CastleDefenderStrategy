@@ -14,6 +14,7 @@ TagManager:
   - Spawner
   - HighLightFrame
   - Level
+  - Coin
   layers:
   - Default
   - TransparentFX

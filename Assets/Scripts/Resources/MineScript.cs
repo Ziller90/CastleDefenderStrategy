@@ -9,6 +9,8 @@ public class MineScript : MonoBehaviour
     public float IncomeDelay;
     public int IncomeSize;
     public float GoldLeft;
+    public GameObject GoldenCoin;
+    bool CoinEnabled;
 
     void Start()
     {
@@ -22,15 +24,12 @@ public class MineScript : MonoBehaviour
         GoldLeft = MineResource;
     }
 
-    // Update is called once per frame
     IEnumerator GoldProduce ()
     {
-        for (int i = 0; i < MineResource; i++)
-        {
-            yield return new WaitForSeconds(IncomeDelay);
-            ResourceManager.Gold += IncomeSize;
-            GoldLeft -= IncomeSize;
-        }
-
+        yield return new WaitForSeconds(IncomeDelay);
+        GameObject NewCoin = Instantiate(GoldenCoin, gameObject.transform.position, Quaternion.identity);
+        Coin CoinManager = NewCoin.transform.GetChild(0).GetComponent<Coin>();
+        CoinManager.CoinCost = IncomeSize;
+        CoinManager.Mine = gameObject.GetComponent<MineScript>();
     }
 }
