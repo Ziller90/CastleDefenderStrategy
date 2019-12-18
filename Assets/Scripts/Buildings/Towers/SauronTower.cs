@@ -18,7 +18,7 @@ public class SauronTower : MonoBehaviour
 
     void Start()
     {
-        globalEnemiesManager = GameObject.Find("GlobalEnemiesManager").GetComponent<GlobalEnemiesManager>();
+        globalEnemiesManager = LinksContainer.instance.globalEnemiesManager;
     }
     void FixedUpdate()
     {

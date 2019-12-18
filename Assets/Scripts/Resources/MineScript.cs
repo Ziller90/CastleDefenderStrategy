@@ -19,7 +19,7 @@ public class MineScript : MonoBehaviour
             IncomeDelay++;
             IncomeSize = IncomeSize + 2;
         }
-        ResourceManager = GameObject.Find("ResourcesManager").GetComponent<ResourcesManager>();
+        ResourceManager = LinksContainer.instance.resourcesManager;
         StartCoroutine("GoldProduce");
         GoldLeft = MineResource;
     }

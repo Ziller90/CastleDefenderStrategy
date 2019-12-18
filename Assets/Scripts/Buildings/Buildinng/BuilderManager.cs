@@ -23,7 +23,7 @@ public class BuilderManager : MonoBehaviour
     void Start()
     {
         BuildingManager = GameObject.Find("BuildingManager").GetComponent<BuildingManager>();
-        ResourcesManager = GameObject.Find("ResourcesManager").GetComponent<ResourcesManager>();
+        ResourcesManager = LinksContainer.instance.resourcesManager;
 
 
     }

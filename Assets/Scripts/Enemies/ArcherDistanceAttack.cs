@@ -25,7 +25,7 @@ public class ArcherDistanceAttack : MonoBehaviour
             Enemy.AnimationIndex = 0;
             yield return new WaitForSeconds(1.3f);
             GameObject NewArrow = Instantiate(OrcArrow, gameObject.transform);
-            NewArrow.GetComponent<OrcArrowScipt>().Castle = Enemy.Castle;
+            NewArrow.GetComponent<OrcArrowScipt>().Castle = Enemy.Castle.gameObject;
             NewArrow.GetComponent<OrcArrowScipt>().ArrowDamage = Enemy.EnemyDamage;
             StartCoroutine("Attack");
         }

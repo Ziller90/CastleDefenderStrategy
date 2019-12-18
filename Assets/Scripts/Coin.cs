@@ -10,7 +10,7 @@ public class Coin : MonoBehaviour
 
     void Start()
     {
-        resourcesManager = GameObject.Find("ResourcesManager").GetComponent<ResourcesManager>();
+        resourcesManager = LinksContainer.instance.resourcesManager;
     }
 
     public void TakeCoin()

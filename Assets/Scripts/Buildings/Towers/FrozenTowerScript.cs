@@ -21,7 +21,7 @@ public class FrozenTowerScript : MonoBehaviour
 
     void Start()
     {
-        globalEnemiesManager = GameObject.Find("GlobalEnemiesManager").GetComponent<GlobalEnemiesManager>();
+        globalEnemiesManager = LinksContainer.instance.globalEnemiesManager;
         TowerDamage = Stats.Damage;
         TowerReloadingSpeed = Stats.ReloadingSpeed;
         EffectPower = Stats.EffectPower;

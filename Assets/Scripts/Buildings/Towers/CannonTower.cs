@@ -19,7 +19,7 @@ public class CannonTower : MonoBehaviour
 
     void Start()
     {
-        globalEnemiesManager = GameObject.Find("GlobalEnemiesManager").GetComponent<GlobalEnemiesManager>();
+        globalEnemiesManager = LinksContainer.instance.globalEnemiesManager;
     }
     void Update()
     {

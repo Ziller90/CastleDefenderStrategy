@@ -31,12 +31,12 @@ public class CastleScript : MonoBehaviour
         }
         PlayingUIElements = GameObject.Find("PlayingUIElements");
         HpBar = GameObject.Find("HPBar").GetComponent<Image>();
-        UIManager = GameObject.Find("GameUIManager").GetComponent<GameUIManager>();
+        UIManager = LinksContainer.instance.UIManager;
         HP = MaxHP;
     }
     void Start()
     {
-        Manager = GameObject.Find("GlobalEnemiesManager").GetComponent<GlobalEnemiesManager>();
+        Manager = LinksContainer.instance.globalEnemiesManager;
     }
     
     // Update is called once per frame

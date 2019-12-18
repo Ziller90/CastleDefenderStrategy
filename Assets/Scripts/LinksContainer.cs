@@ -9,6 +9,9 @@ public class LinksContainer : MonoBehaviour
     public GlobalEnemiesManager globalEnemiesManager;
     public GameObject CameraViewPoint;
     public AudioManager audioManager;
+    public GameObject Level;
+    public GameUIManager UIManager;
+    public CastleScript Castle;
     public static LinksContainer instance;
     public LinksContainer()
     {
@@ -21,7 +24,8 @@ public class LinksContainer : MonoBehaviour
 
     void Start()
     {
-        
+        Level = GameObject.FindGameObjectWithTag("Level");
+        Castle = GameObject.FindGameObjectWithTag("Castle").GetComponent<CastleScript>();
     }
 
     void Update()

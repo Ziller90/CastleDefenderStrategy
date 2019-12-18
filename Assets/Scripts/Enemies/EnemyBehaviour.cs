@@ -16,7 +16,7 @@ public class EnemyBehaviour : MonoBehaviour
     public Transform HPBar;
     public Transform HPBarPoint;
     public GameObject Enemy;
-    public GameObject Castle;
+    public CastleScript Castle;
     public bool Go;
     public float EnemyDamage;
     public string EnemyId;
@@ -57,6 +57,7 @@ public class EnemyBehaviour : MonoBehaviour
                 StartCoroutine("AttackCastle");
             if (EnemyId == "Archer")
                 gameObject.GetComponent<ArcherDistanceAttack>().StartCoroutine("AttackDelay");
+            AlreadyAttack = true;
         }
     }
     void Start()
@@ -72,7 +73,7 @@ public class EnemyBehaviour : MonoBehaviour
         HP = MaxHP;
         HPIndex = 1;
         Go = true;
-        Castle = GameObject.FindGameObjectWithTag("Castle");
+        Castle = LinksContainer.instance.Castle;
     }
 
     void FixedUpdate()
@@ -177,12 +178,14 @@ public class EnemyBehaviour : MonoBehaviour
     }
     public IEnumerator Death ()
     {
+        AlreadyDead = true;
         winScript.Enemies.Remove(gameObject);
         globalEnemiesManager.UnRegisterEnemy(gameObject);
         gameObject.GetComponent<EffectsResistance>().DieEffects();
         if (EnemyId == "Cavalry" || EnemyId == "Healer")
             EnemyAnimator.SetBool("Dead", true);
         else
+            Debug.Log("ItWorks");
             AnimationIndex = 2;
         gameObject.GetComponent<BoxCollider>().enabled = false;
         LinksContainer.instance.resourcesManager.Gold = LinksContainer.instance.resourcesManager.Gold + KillReward;
@@ -190,7 +193,7 @@ public class EnemyBehaviour : MonoBehaviour
         Go = false;
         HPBar.gameObject.SetActive(false);
         DeathSoundPlaying();
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1.5f);
         Enemy.SetActive(false);
 
     }

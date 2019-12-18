@@ -24,9 +24,9 @@ public class BuildingStats : MonoBehaviour
     bool HasGoldenBonus = false;
     void Start()
     {
-        ImprovingsAvaiableLevel = GameObject.FindGameObjectWithTag("Level").GetComponent<ImprovingsLevelsAvaiable>().ImprovingsAvaiableLevel;
-        UIManager = GameObject.Find("GameUIManager").GetComponent<GameUIManager>();
-        ResourceManager = GameObject.Find("ResourcesManager").GetComponent<ResourcesManager>();
+        ImprovingsAvaiableLevel = LinksContainer.instance.Level.GetComponent<ImprovingsLevelsAvaiable>().ImprovingsAvaiableLevel;
+        UIManager = LinksContainer.instance.UIManager;
+        ResourceManager = LinksContainer.instance.resourcesManager;
         Damage = BuildingCard.LevelUpDamageBonus[Currentlevel];
         ReloadingSpeed = BuildingCard.LevelUpReloadingSpeedBonus[Currentlevel];
         DamageType = BuildingCard.damageType;

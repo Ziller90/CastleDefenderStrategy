@@ -23,8 +23,8 @@ public class GameUIManager : MonoBehaviour
 
     void Start()
     {
-        MessageManager = GameObject.FindGameObjectWithTag("Level").GetComponent<MessagesManager>();
-        ImprovingAvaiableLevel = GameObject.FindGameObjectWithTag("Level").GetComponent<ImprovingsLevelsAvaiable>().ImprovingsAvaiableLevel;
+        MessageManager = LinksContainer.instance.Level.GetComponent<MessagesManager>();
+        ImprovingAvaiableLevel = LinksContainer.instance.Level.GetComponent<ImprovingsLevelsAvaiable>().ImprovingsAvaiableLevel;
     }
 
     // Update is called once per frame

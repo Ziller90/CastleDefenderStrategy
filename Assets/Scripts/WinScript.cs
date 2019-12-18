@@ -16,7 +16,7 @@ public class WinScript : MonoBehaviour
     CastleScript Castle;
     void Start()
     {
-        Castle = GameObject.FindGameObjectWithTag("Castle").GetComponent<CastleScript>();
+        Castle = LinksContainer.instance.Castle;
     }
 
     // Update is called once per frame

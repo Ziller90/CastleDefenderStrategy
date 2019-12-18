@@ -20,7 +20,7 @@ public class PoisonTower : MonoBehaviour
     GlobalEnemiesManager globalEnemiesManager;
     void Start()
     {
-        globalEnemiesManager = GameObject.Find("GlobalEnemiesManager").GetComponent<GlobalEnemiesManager>();
+        globalEnemiesManager = LinksContainer.instance.globalEnemiesManager;
         EffectPower = Stats.EffectPower;
         EffectTime = Stats.EffectTime;
     }

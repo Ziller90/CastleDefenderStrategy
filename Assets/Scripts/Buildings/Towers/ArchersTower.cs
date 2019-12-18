@@ -20,7 +20,7 @@ public class ArchersTower : MonoBehaviour
 
     void Start()
     {
-        globalEnemiesManager = GameObject.Find("GlobalEnemiesManager").GetComponent<GlobalEnemiesManager>();
+        globalEnemiesManager = LinksContainer.instance.globalEnemiesManager;
     }
     // Update is called once per frame
     void Update()

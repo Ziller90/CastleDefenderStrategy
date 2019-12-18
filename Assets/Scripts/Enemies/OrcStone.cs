@@ -10,7 +10,7 @@ public class OrcStone : MonoBehaviour
     public float TurningSpeed;
     void Start()
     {
-        Castle = GameObject.Find("Castle");
+        Castle = LinksContainer.instance.Castle.gameObject;
     }
 
     void FixedUpdate()

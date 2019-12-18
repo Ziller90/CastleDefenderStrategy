@@ -11963,6 +11963,9 @@ MonoBehaviour:
   globalEnemiesManager: {fileID: 847490995}
   CameraViewPoint: {fileID: 319295311}
   audioManager: {fileID: 622901365}
+  Level: {fileID: 0}
+  UIManager: {fileID: 50021479}
+  Castle: {fileID: 0}
 --- !u!4 &1883053883
 Transform:
   m_ObjectHideFlags: 0
