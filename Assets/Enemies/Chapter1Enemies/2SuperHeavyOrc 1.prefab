@@ -720,7 +720,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BloodParticles: {fileID: 4972330402271510118}
   LastDamageTime: 0
-  StopBloodDelay: 0.1
+  StopBloodDelay: 0.25
 --- !u!114 &3446844233811004196
 MonoBehaviour:
   m_ObjectHideFlags: 0

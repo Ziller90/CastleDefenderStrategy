@@ -7,6 +7,7 @@ public class BloodVisualisation : MonoBehaviour
     public ParticleSystem BloodParticles;
     public float LastDamageTime;
     public float StopBloodDelay;
+    bool CanBlood;
      
 
     // Update is called once per frame
@@ -14,19 +15,17 @@ public class BloodVisualisation : MonoBehaviour
     {
         if (Time.time - LastDamageTime > StopBloodDelay)
         {
-            HideParticles();
+            CanBlood = true;
         }
     }
     public void ShowParticles()
     {
-        LastDamageTime = Time.time;
-        if (BloodParticles.isPlaying == false)
+        if (CanBlood)
         {
+            LastDamageTime = Time.time;
+            CanBlood = false;
             BloodParticles.Play();
         }
     }
-    public void HideParticles()
-    {
-        BloodParticles.Stop();
-    }
+
 }

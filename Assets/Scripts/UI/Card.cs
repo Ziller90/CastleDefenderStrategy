@@ -17,7 +17,7 @@ public class Card : MonoBehaviour
     private ResourcesManager manager;
     void Start()
     {
-        manager = LinksContainer.instance.resourcesManager;
+        manager = GameObject.Find("ResourcesManager").GetComponent<ResourcesManager>();
         if (LinksContainer.instance.Level.GetComponent<BuildingsAvaiable>().BuildingAvaiable[CardID] == true)
         {
             gameObject.SetActive(true);

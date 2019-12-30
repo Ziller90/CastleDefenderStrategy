@@ -18,16 +18,22 @@ MonoBehaviour:
   AmountOfLevels: 2
   LevelUpPrice: 000000002800000032000000
   LevelUpDamageBonus:
-  - 4
-  - 2
+  - 5
   - 3
+  - 5
   LevelUpReloadingSpeedBonus:
   - 2
   - 0
   - 0
   SellCost: 280000003c00000050000000
-  LevelUpEffectTime: []
-  LevelUpEffectPower: []
+  LevelUpEffectTime:
+  - 0
+  - 0
+  - 0
+  LevelUpEffectPower:
+  - 0
+  - 0
+  - 0
   damageType: 0
   effectType: 3
   GoldenDamageBonus: 3

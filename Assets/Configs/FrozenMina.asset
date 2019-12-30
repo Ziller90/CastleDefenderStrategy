@@ -16,12 +16,24 @@ MonoBehaviour:
   GoldPrice: 25
   BuildingId: 2
   AmountOfLevels: 0
-  LevelUpPrice: 
-  LevelUpDamageBonus: []
-  LevelUpReloadingSpeedBonus: []
-  SellCost: 
-  LevelUpEffectTime: []
-  LevelUpEffectPower: []
+  LevelUpPrice: 000000000000000000000000
+  LevelUpDamageBonus:
+  - 0
+  - 0
+  - 0
+  LevelUpReloadingSpeedBonus:
+  - 0
+  - 0
+  - 0
+  SellCost: 000000000000000000000000
+  LevelUpEffectTime:
+  - 0
+  - 0
+  - 0
+  LevelUpEffectPower:
+  - 0
+  - 0
+  - 0
   damageType: 0
   effectType: 0
   GoldenDamageBonus: 0

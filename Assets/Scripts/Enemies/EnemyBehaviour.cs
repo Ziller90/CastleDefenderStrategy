@@ -43,6 +43,8 @@ public class EnemyBehaviour : MonoBehaviour
     WinScript winScript;
     public bool AlreadyAttack;
     public int AnimationIndex;
+    public bool FullFreezed;
+    public GameObject IceCube;
 
 
 
@@ -62,6 +64,7 @@ public class EnemyBehaviour : MonoBehaviour
     }
     void Start()
     {
+        IceCube.SetActive(false);
         AnimationIndex = 1;
         winScript = LinksContainer.instance.winScript;
         winScript.Enemies.Add(gameObject);
@@ -76,8 +79,18 @@ public class EnemyBehaviour : MonoBehaviour
         Castle = LinksContainer.instance.Castle;
     }
 
-    void FixedUpdate()
+    void Update()
     {
+        if (FullFreezed == true)
+        {
+            if (EnemyId != "Cavalry" && EnemyId != "Healer")
+                AnimationInstancing.Pause();
+            else
+            {
+                EnemyAnimator.speed = 0;
+            }
+
+        }
         if (AlreadyDead == true)
         {
             Poisoned = false;
@@ -92,14 +105,14 @@ public class EnemyBehaviour : MonoBehaviour
         }
         if (Go == true)
         {
-            EnemyTransform.position = Vector3.MoveTowards(EnemyTransform.position, WayPoints[WayIndex].position, speed);
+            EnemyTransform.position = Vector3.MoveTowards(EnemyTransform.position, WayPoints[WayIndex].position, speed * 50 * Time.deltaTime);
             if (EnemyTransform.position == WayPoints[WayIndex].position)
             {
                 WayIndex++;
                 EnemyTransform.LookAt(WayPoints[WayIndex]);
             }
         }
-        if (EnemyId != "Cavalry" && EnemyId != "Healer")
+        if (EnemyId != "Cavalry" && EnemyId != "Healer" && FullFreezed == false)
         {
             switch (AnimationIndex)
             {
@@ -242,5 +255,19 @@ public class EnemyBehaviour : MonoBehaviour
             yield return new WaitForSeconds(0.2f);
             StartCoroutine("Poison", Damage);
         }
+    }
+    public void FullFreeezeEnable()
+    {
+        FullFreezed = true;
+        Go = false;
+        IceCube.SetActive(true);
+    }
+    public void FullFreeezeDisable()
+    {
+        IceCube.SetActive(false);
+        FullFreezed = false;
+        Go = true;
+        if (EnemyId == "Cavalry" || EnemyId == "Healer")
+            EnemyAnimator.speed = 1;
     }
 }

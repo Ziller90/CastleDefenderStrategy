@@ -24,8 +24,6 @@ public class BuilderManager : MonoBehaviour
     {
         BuildingManager = GameObject.Find("BuildingManager").GetComponent<BuildingManager>();
         ResourcesManager = LinksContainer.instance.resourcesManager;
-
-
     }
 
     // Update is called once per frame

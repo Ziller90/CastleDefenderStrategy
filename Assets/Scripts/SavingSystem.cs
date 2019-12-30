@@ -22,6 +22,43 @@ public class SavingSystem : MonoBehaviour
     }
     public void SavePlayerData()
     {
+        if (ShopManager.GoldFever == true)
+        {
+            PlayerPrefs.SetInt("GoldFever", 1);
+        }
+        else
+        {
+            PlayerPrefs.SetInt("GoldFever", 0);
+        }
+
+        if (ShopManager.StartUpCapital == true)
+        {
+            PlayerPrefs.SetInt("StartUpCapital", 1);
+        }
+        else
+        {
+            PlayerPrefs.SetInt("StartUpCapital", 0);
+        }
+
+        if (ShopManager.StrongWalls == true)
+        {
+            PlayerPrefs.SetInt("StrongWalls", 1);
+        }
+        else
+        {
+            PlayerPrefs.SetInt("StrongWalls", 0);
+        }
+
+        if (ShopManager.SuperMine == true)
+        {
+            PlayerPrefs.SetInt("SuperMine", 1);
+        }
+        else
+        {
+            PlayerPrefs.SetInt("SuperMine", 0);
+        }
+
+
         PlayerPrefs.SetInt("CrystalsAmount", PlayerStats.Crystals);
         PlayerPrefs.SetInt("CampaignProgressIndex", PlayerStats.CampaignProgressIndex);
         if (AudioManager.SoundOn == true)
@@ -62,6 +99,42 @@ public class SavingSystem : MonoBehaviour
     }
     public void SetPlayerData()
     {
+        if (PlayerPrefs.GetInt("GoldFever") == 1)
+        {
+            ShopManager.GoldFever = true;
+        }
+        else
+        {
+            ShopManager.GoldFever = false;
+        }
+
+        if (PlayerPrefs.GetInt("StartUpCapital") == 1)
+        {
+            ShopManager.StartUpCapital = true;
+        }
+        else
+        {
+            ShopManager.StartUpCapital = false;
+        }
+
+        if (PlayerPrefs.GetInt("StrongWalls") == 1)
+        {
+            ShopManager.StrongWalls = true;
+        }
+        else
+        {
+            ShopManager.StrongWalls = false;
+        }
+
+        if (PlayerPrefs.GetInt("SuperMine") == 1)
+        {
+            ShopManager.SuperMine = true;
+        }
+        else
+        {
+            ShopManager.SuperMine = false;
+        }
+
         PlayerStats.Crystals = PlayerPrefs.GetInt("CrystalsAmount");
         PlayerStats.CampaignProgressIndex = PlayerPrefs.GetInt("CampaignProgressIndex");
         if (PlayerPrefs.GetInt("SoundIndex") == 1)

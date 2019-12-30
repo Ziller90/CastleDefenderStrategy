@@ -23,13 +23,14 @@ public class GameUIManager : MonoBehaviour
 
     void Start()
     {
-        MessageManager = LinksContainer.instance.Level.GetComponent<MessagesManager>();
-        ImprovingAvaiableLevel = LinksContainer.instance.Level.GetComponent<ImprovingsLevelsAvaiable>().ImprovingsAvaiableLevel;
+        MessageManager = GameObject.FindGameObjectWithTag("Level").GetComponent<MessagesManager>();
+        ImprovingAvaiableLevel = GameObject.FindGameObjectWithTag("Level").GetComponent<ImprovingsLevelsAvaiable>().ImprovingsAvaiableLevel;
     }
 
     // Update is called once per frame
     void Update()
     {
+
         if (Input.GetKeyDown(KeyCode.Escape) && Fader.fadeState == ScreenFader.FadeState.OutEnd)
         {
             ShowPauseMenu();

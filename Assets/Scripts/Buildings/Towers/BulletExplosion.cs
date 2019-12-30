@@ -20,11 +20,14 @@ public class BulletExplosion : MonoBehaviour
     }
     IEnumerator Explose (float Damage)
     {
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.1f);
         gameObject.GetComponent<AudioSource>().Play();
         for(int q = 0; q < AttackGoals.Count; q++)
         {
-            AttackGoals[q].GetComponent<DamageReciever>().DamageResistance(Damage, CardScriptableObject.DamageType.ExplosionDamage);
+            if (ShopManager.BigBalls == true)
+                AttackGoals[q].GetComponent<DamageReciever>().DamageResistance(Damage + 0.3f, CardScriptableObject.DamageType.ExplosionDamage);
+            else
+                AttackGoals[q].GetComponent<DamageReciever>().DamageResistance(Damage, CardScriptableObject.DamageType.ExplosionDamage);
         }
     }
 }

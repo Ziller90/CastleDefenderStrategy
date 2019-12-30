@@ -17,7 +17,7 @@ public class BuildingManager : MonoBehaviour
     public BuilderManager Manager;
     void Start()
     {
-        Manager = HighLightedCube.GetComponent<BuilderManager>();
+
     }
 
     public void ChangedHighLightedCube()

@@ -255,7 +255,7 @@ MonoBehaviour:
   MapPosition: {fileID: 920424849}
   Camera: {fileID: 0}
   NewMap: {fileID: 0}
-  TouchCamera: 1
+  TouchCamera: 0
 --- !u!114 &35459467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6864,7 +6864,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 1.4785519e-38, y: 1.0147822e-38, z: 3.67342e-40, w: 1.3591653e-38}
+  m_BoundingSphereOverride: {x: 0, y: 2.5e-44, z: 2.10633e-40, w: 1.05e-43}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -8547,7 +8547,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1531702211
 Transform:
   m_ObjectHideFlags: 0
@@ -9337,7 +9337,7 @@ PrefabInstance:
     - target: {fileID: 3419810620363318961, guid: 51fc87bc21cdcbf4e86d2808ad3ba6b4,
         type: 3}
       propertyPath: CardID
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2328768661980490772, guid: 51fc87bc21cdcbf4e86d2808ad3ba6b4,
         type: 3}
@@ -10545,7 +10545,7 @@ PrefabInstance:
     - target: {fileID: 3419810620363318961, guid: 51fc87bc21cdcbf4e86d2808ad3ba6b4,
         type: 3}
       propertyPath: CardID
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2328768661980490772, guid: 51fc87bc21cdcbf4e86d2808ad3ba6b4,
         type: 3}

@@ -16,15 +16,20 @@ public class BulletScript : MonoBehaviour
 
 
      
-
-    // Update is called once per frame
+    void Start()
+    {
+        if(ShopManager.BigBalls == true)
+        gameObject.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
+    }
     void FixedUpdate()
     {
-        gameObject.transform.position += transform.forward * speed;
-        Vector3 EnemyVector = Vector3.RotateTowards(transform.forward, (EnemyPosition - transform.position), 0.3f, 1F);
-        Quaternion EnemyQuaternion = Quaternion.LookRotation(EnemyVector);
-        gameObject.transform.rotation = Quaternion.Lerp(gameObject.transform.rotation, EnemyQuaternion, TurningSpeed * Time.deltaTime);
-        
+        if (AlwaysExploud == false)
+        {
+            gameObject.transform.position += transform.forward * speed;
+            Vector3 EnemyVector = Vector3.RotateTowards(transform.forward, (EnemyPosition - transform.position), 0.3f, 1F);
+            Quaternion EnemyQuaternion = Quaternion.LookRotation(EnemyVector);
+            gameObject.transform.rotation = Quaternion.Lerp(gameObject.transform.rotation, EnemyQuaternion, TurningSpeed * Time.deltaTime);
+        }
     }
     void OnTriggerEnter (Collider col)
     {
@@ -37,7 +42,6 @@ public class BulletScript : MonoBehaviour
     }
     IEnumerator Destroing ()
     {
-        yield return new WaitForSeconds(0.2f);
         gameObject.GetComponent<MeshRenderer>().enabled = false;
         ExplosionEffect.Play();
         yield return new WaitForSeconds(1f);

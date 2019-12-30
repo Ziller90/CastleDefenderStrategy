@@ -17,6 +17,7 @@ public class EffectsResistance : MonoBehaviour
     public float FreezingEffectModificator;
     public float BurningEffectModificator;
     public float PoisonEffectModificator;
+    bool FullFreeze;
 
 
     void Start()
@@ -59,14 +60,29 @@ public class EffectsResistance : MonoBehaviour
     }
     public void FreezingEffect (float SpeedDeBuff, float EffectTime)
     {
-        FrozenEffectAnimator.gameObject.SetActive(true);
-        FrozenEffectAnimator.SetBool("Freezed", true);
-        Enemy.speed = Enemy.NormalSpeed * SpeedDeBuff;
-        LastFreezingTime = Time.time;
-        FreezingTime = EffectTime;
+        if (SpeedDeBuff > 0 && FullFreeze == false)
+        {
+            FrozenEffectAnimator.gameObject.SetActive(true);
+            FrozenEffectAnimator.SetBool("Freezed", true);
+            Enemy.speed = Enemy.NormalSpeed * SpeedDeBuff;
+            LastFreezingTime = Time.time;
+            FreezingTime = EffectTime;
+        }
+        if (SpeedDeBuff == 0)
+        {
+            Enemy.FullFreeezeEnable();
+            FullFreeze = true;
+            LastFreezingTime = Time.time;
+            FreezingTime = EffectTime;
+        }
     }
     public void FreezingEffectStop ()
     {
+        if (FullFreeze == true)
+        {
+            Enemy.FullFreeezeDisable();
+            FullFreeze = false;
+        }
         Enemy.speed = Enemy.NormalSpeed;
         FrozenEffectAnimator.SetBool("Freezed", false);
     }

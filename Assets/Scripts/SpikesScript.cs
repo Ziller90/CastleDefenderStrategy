@@ -17,10 +17,10 @@ public class SpikesScript : MonoBehaviour
     public IEnumerator Attack (GameObject ObjectToAttack)
     {
         gameObject.transform.GetChild(0).GetComponent<Animator>().SetBool("Attack", true);
-        yield return new WaitForSeconds(0.4f);
+        yield return new WaitForSeconds(0.2f);
         if (ObjectToAttack != null)
         {
-            ObjectToAttack.gameObject.GetComponent<EnemyBehaviour>().HP = ObjectToAttack.gameObject.GetComponent<EnemyBehaviour>().HP - Damage;
+            ObjectToAttack.gameObject.GetComponent<DamageReciever>().DamageResistance(Damage, CardScriptableObject.DamageType.PenetrationDamage);
         }
         gameObject.transform.GetChild(0).GetComponent<Animator>().SetBool("Attack", false);
         yield return new WaitForSeconds(1f);

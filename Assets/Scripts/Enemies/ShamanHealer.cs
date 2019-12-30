@@ -16,14 +16,21 @@ public class ShamanHealer : MonoBehaviour
 
     IEnumerator Healing ()
     {
-        if (Enemy.EnemyAnimator.GetBool("Attack") != true)
+        if (Enemy.FullFreezed != true)
         {
-            yield return new WaitForSeconds(5);
-            Enemy.Go = false;
-            Enemy.EnemyAnimator.SetBool("Heal", true);
-            yield return new WaitForSeconds(1.33f);
-            Enemy.EnemyAnimator.SetBool("Heal", false);
-            Enemy.Go = true;
+            if (Enemy.EnemyAnimator.GetBool("Attack") != true)
+            {
+                yield return new WaitForSeconds(5);
+                Enemy.Go = false;
+                Enemy.EnemyAnimator.SetBool("Heal", true);
+                yield return new WaitForSeconds(1.33f);
+                Enemy.EnemyAnimator.SetBool("Heal", false);
+                Enemy.Go = true;
+                StartCoroutine("Healing");
+            }
+        }
+        else
+        {
             StartCoroutine("Healing");
         }
     }

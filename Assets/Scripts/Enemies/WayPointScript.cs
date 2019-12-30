@@ -13,11 +13,57 @@ public class WayPointScript : MonoBehaviour
     {
         if (Application.isPlaying == true)
         {
+            gameObject.transform.position = new Vector3(gameObject.transform.position.x, 0.746f , gameObject.transform.position.z);
             gameObject.GetComponent<WayPointScript>().enabled = false;
         }
     }
     void Update ()
     {
-       WayManager.Ways[RouteNumber].WayPoints[WayIndexNumber] = gameObject.transform;
+        if (Application.isPlaying == false)
+        {
+            switch (RouteNumber)
+            {
+                case 0:
+                    gameObject.transform.position = new Vector3(gameObject.transform.position.x, 0.5f, gameObject.transform.position.z);
+                    break;
+                case 1:
+                    gameObject.transform.position = new Vector3(gameObject.transform.position.x, 0.7f, gameObject.transform.position.z);
+                    break;
+                case 2:
+                    gameObject.transform.position = new Vector3(gameObject.transform.position.x, 0.9f, gameObject.transform.position.z);
+                    break;
+                case 3:
+                    gameObject.transform.position = new Vector3(gameObject.transform.position.x, 1.1f, gameObject.transform.position.z);
+                    break;
+                case 4:
+                    gameObject.transform.position = new Vector3(gameObject.transform.position.x, 1.3f, gameObject.transform.position.z);
+                    break;
+            }
+            WayManager.Ways[RouteNumber].WayPoints[WayIndexNumber] = gameObject.transform;
+        }
+    }
+    void OnDrawGizmos()
+    {
+        switch (RouteNumber)
+        {
+            case 0:
+                Gizmos.color = Color.white;
+                break;
+            case 1:
+                Gizmos.color = Color.red;
+                break;
+            case 2:
+                Gizmos.color = Color.blue;
+                break;
+            case 3:
+                Gizmos.color = Color.black;
+                break;
+            case 4:
+                Gizmos.color = Color.yellow;
+                break;
+        }
+        if (WayManager != null)
+            if(WayManager.Ways[RouteNumber].WayPoints[WayIndexNumber + 1] != null)
+        Gizmos.DrawLine(gameObject.transform.position, WayManager.Ways[RouteNumber].WayPoints[WayIndexNumber + 1].position);
     }
 }

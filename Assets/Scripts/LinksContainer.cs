@@ -24,8 +24,13 @@ public class LinksContainer : MonoBehaviour
 
     void Start()
     {
+        instance = this;
         Level = GameObject.FindGameObjectWithTag("Level");
         Castle = GameObject.FindGameObjectWithTag("Castle").GetComponent<CastleScript>();
+    }
+    void Awake ()
+    {
+        instance = this;
     }
 
     void Update()

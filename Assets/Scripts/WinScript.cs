@@ -16,7 +16,7 @@ public class WinScript : MonoBehaviour
     CastleScript Castle;
     void Start()
     {
-        Castle = LinksContainer.instance.Castle;
+        Castle = GameObject.FindGameObjectWithTag("Castle").GetComponent<CastleScript>();
     }
 
     // Update is called once per frame
@@ -58,5 +58,13 @@ public class WinScript : MonoBehaviour
             }
         }
     }
-
+    public void MomomentaryWin ()
+    {
+        Win = true;
+        WinPanel.SetActive(true);
+        PlayerStats.Crystals += CrystalsRewardForWin;
+        PlayerStats.CampaignProgressIndex++;
+        Music.StartCoroutine("StopMusic", 3);
+        AlreadyWon = true;
+    }
 }

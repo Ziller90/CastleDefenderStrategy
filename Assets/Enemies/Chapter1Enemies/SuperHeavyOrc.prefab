@@ -34,7 +34,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3265031966050462567
 Transform:
   m_ObjectHideFlags: 0
@@ -495,7 +495,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BloodParticles: {fileID: 4972330402271510118}
   LastDamageTime: 0
-  StopBloodDelay: 0.1
+  StopBloodDelay: 0.4
 --- !u!114 &3446844233811004196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -900,6 +900,16 @@ PrefabInstance:
         type: 3}
       propertyPath: CollisionModule.quality
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5132252811782190273, guid: 21045979fc136424ca78c0df278a8ca7,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5132252811782190273, guid: 21045979fc136424ca78c0df278a8ca7,
+        type: 3}
+      propertyPath: looping
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21045979fc136424ca78c0df278a8ca7, type: 3}
@@ -1313,7 +1323,7 @@ PrefabInstance:
     - target: {fileID: 7596861254763900275, guid: 98a95064ac270cd4385065918577f370,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.14410396
+      value: 0.174
       objectReference: {fileID: 0}
     - target: {fileID: 7596861254763900275, guid: 98a95064ac270cd4385065918577f370,
         type: 3}
@@ -1368,12 +1378,17 @@ PrefabInstance:
     - target: {fileID: 7596861254763900275, guid: 98a95064ac270cd4385065918577f370,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.037106138
+      value: 0.05235676
       objectReference: {fileID: 0}
     - target: {fileID: 7596861254763900275, guid: 98a95064ac270cd4385065918577f370,
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.00010841815
+      objectReference: {fileID: 0}
+    - target: {fileID: 6151245050188568039, guid: 98a95064ac270cd4385065918577f370,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 6.2924
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98a95064ac270cd4385065918577f370, type: 3}

@@ -14,14 +14,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BuildingImage: {fileID: 2800000, guid: d7b7278c74df9a24aa5e2ae92d3a888f, type: 3}
   GoldPrice: 50
-  BuildingId: 6
+  BuildingId: 0
   AmountOfLevels: 0
-  LevelUpPrice: 
-  LevelUpDamageBonus: []
-  LevelUpReloadingSpeedBonus: []
-  SellCost: 
-  LevelUpEffectTime: []
-  LevelUpEffectPower: []
+  LevelUpPrice: 000000000000000000000000
+  LevelUpDamageBonus:
+  - 0
+  - 0
+  - 0
+  LevelUpReloadingSpeedBonus:
+  - 0
+  - 0
+  - 0
+  SellCost: 000000000000000000000000
+  LevelUpEffectTime:
+  - 0
+  - 0
+  - 0
+  LevelUpEffectPower:
+  - 0
+  - 0
+  - 0
   damageType: 0
   effectType: 0
   GoldenDamageBonus: 0

@@ -6,7 +6,11 @@ public class BuildingsAvaiable : MonoBehaviour
 {
     public bool[] BuildingAvaiable;
 
-
-    // Update is called once per frame
-
+    void Start ()
+    {
+        if (ShopManager.Spikes == true)
+        {
+            BuildingAvaiable[5] = true;
+        }
+    }
 }
