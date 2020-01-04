@@ -6,6 +6,7 @@ public class EffectsResistance : MonoBehaviour
 {
     EnemyBehaviour Enemy;
     public Animator FrozenEffectAnimator;
+    public ParticleSystem FireParticles;
     float LastFreezingTime;
     float LastBurningTime;
     float LastPoisonEffectTime;
@@ -37,6 +38,10 @@ public class EffectsResistance : MonoBehaviour
         {
             Enemy.Poisoned = false;
         }
+        if (LastBurningTime != 0 && Time.time - LastBurningTime > BurningTime)
+        {
+            StopBurning();
+        }
 
     }
     public void EffectCast(CardScriptableObject.EffectType EffectType, float EffectPower, float EffectTime)
@@ -49,7 +54,9 @@ public class EffectsResistance : MonoBehaviour
         }
         if (EffectType == CardScriptableObject.EffectType.BurningEffect)
         {
-
+            EffectPower = EffectPower * BurningEffectModificator;
+            EffectTime = EffectTime * BurningEffectModificator;
+            BurningEffect(EffectPower, EffectTime);
         }
         if (EffectType == CardScriptableObject.EffectType.PoisonEffect)
         {
@@ -96,6 +103,19 @@ public class EffectsResistance : MonoBehaviour
             LastPoisonEffectTime = Time.time;
             PoisonTime = EffectTime;
         }
+    }
+    void BurningEffect(float Damage, float EffectTime)
+    {
+        FireParticles.Play();
+        Enemy.Burning = true;
+        Enemy.StartCoroutine("Burn", Damage);
+        LastBurningTime = Time.time;
+        BurningTime = EffectTime;
+    }
+    void StopBurning()
+    {
+        FireParticles.Stop();
+        Enemy.Burning = false;
     }
     public void DieEffects()
     {

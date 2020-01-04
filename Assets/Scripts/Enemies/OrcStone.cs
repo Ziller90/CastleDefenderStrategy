@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class OrcStone : MonoBehaviour
 {
-    public GameObject Castle;
+    public CastleScript Castle;
     public float Speed;
     public float StoneDamage;
     public float TurningSpeed;
+
     void Start()
     {
-        Castle = LinksContainer.instance.Castle.gameObject;
+        Castle = LinksContainer.instance.Castle;
     }
 
     void FixedUpdate()
@@ -30,7 +31,7 @@ public class OrcStone : MonoBehaviour
     IEnumerator DamageDeliver ()
     {
         yield return new WaitForSeconds(0.5f);
-        Castle.GetComponent<CastleScript>().HP = Castle.GetComponent<CastleScript>().HP - StoneDamage;
-        Destroy(gameObject);
+        Castle.DamageReceive(StoneDamage, gameObject.transform.position);
+        Destroy(gameObject,2);
     }
 }

@@ -50,7 +50,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Castle: {fileID: 0}
   Speed: 0.1
-  ArrowDamage: 1
+  ArrowDamage: 0.5
 --- !u!65 &6772555166722691139
 BoxCollider:
   m_ObjectHideFlags: 0

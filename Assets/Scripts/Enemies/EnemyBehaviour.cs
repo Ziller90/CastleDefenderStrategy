@@ -34,6 +34,7 @@ public class EnemyBehaviour : MonoBehaviour
     public AudioClip[] DeathAudioClips;
     public ParticleSystem HealingParticle;
     public bool Poisoned;
+    public bool Burning;
     public GameObject PoisonEffect;
     public GlobalEnemiesManager globalEnemiesManager;
     public float AttackRange;
@@ -59,6 +60,8 @@ public class EnemyBehaviour : MonoBehaviour
                 StartCoroutine("AttackCastle");
             if (EnemyId == "Archer")
                 gameObject.GetComponent<ArcherDistanceAttack>().StartCoroutine("AttackDelay");
+            if (EnemyId == "Catapult")
+                gameObject.GetComponent<CatapultDistanceAttack>().StartCoroutine("AttackDelay");
             AlreadyAttack = true;
         }
     }
@@ -83,7 +86,7 @@ public class EnemyBehaviour : MonoBehaviour
     {
         if (FullFreezed == true)
         {
-            if (EnemyId != "Cavalry" && EnemyId != "Healer")
+            if (EnemyId != "Cavalry" && EnemyId != "Healer" && EnemyId != "Catapult")
                 AnimationInstancing.Pause();
             else
             {
@@ -112,7 +115,7 @@ public class EnemyBehaviour : MonoBehaviour
                 EnemyTransform.LookAt(WayPoints[WayIndex]);
             }
         }
-        if (EnemyId != "Cavalry" && EnemyId != "Healer" && FullFreezed == false)
+        if (EnemyId != "Cavalry" && EnemyId != "Healer" && EnemyId != "Catapult" && FullFreezed == false)
         {
             switch (AnimationIndex)
             {
@@ -178,7 +181,7 @@ public class EnemyBehaviour : MonoBehaviour
             float Delay = Random.Range(0.1f, 0.7f);
             yield return new WaitForSeconds(Delay);
             Go = false;
-            if (EnemyId == "Cavalry" || EnemyId == "Healer")
+            if (EnemyId == "Cavalry" || EnemyId == "Healer" || EnemyId == "Catapult")
                 EnemyAnimator.SetBool("Attack", true);
             else
                 AnimationIndex = 0;
@@ -195,7 +198,7 @@ public class EnemyBehaviour : MonoBehaviour
         winScript.Enemies.Remove(gameObject);
         globalEnemiesManager.UnRegisterEnemy(gameObject);
         gameObject.GetComponent<EffectsResistance>().DieEffects();
-        if (EnemyId == "Cavalry" || EnemyId == "Healer")
+        if (EnemyId == "Cavalry" || EnemyId == "Healer" || EnemyId == "Catapult")
             EnemyAnimator.SetBool("Dead", true);
         else
             Debug.Log("ItWorks");
@@ -254,6 +257,15 @@ public class EnemyBehaviour : MonoBehaviour
             HP = HP - Damage * 0.2f;
             yield return new WaitForSeconds(0.2f);
             StartCoroutine("Poison", Damage);
+        }
+    }
+    public IEnumerator Burn(float Damage)
+    {
+        if (Burning == true)
+        {
+            HP = HP - Damage * 0.2f;
+            yield return new WaitForSeconds(0.2f);
+            StartCoroutine("Burn", Damage);
         }
     }
     public void FullFreeezeEnable()

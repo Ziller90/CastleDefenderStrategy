@@ -16,29 +16,25 @@ public class CatapultDistanceAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Enemy.EnemyAnimator.GetCurrentAnimatorStateInfo(0).IsName("Orc_catapult_03_attack") && AlreadyAttacked == false)
-        {
-            AlreadyAttacked = true;
-        }
+       
     }
     public IEnumerator AttackDelay()
     {
         float Delay = Random.Range(0f, 3.5f);
         yield return new WaitForSeconds(Delay);
-        StartCoroutine("Attack");
+        Attack();
     }
-    public IEnumerator Attack ()
+    public void Attack ()
     {
         if (gameObject.GetComponent<EnemyBehaviour>().AlreadyDead == false)
         {
-           
             Enemy.Go = false;
             EnemyTransform.LookAt(Enemy.Castle.transform.position);
             Enemy.EnemyAnimator.SetBool("Attack", true);
-            yield return new WaitForSeconds(ReloadingSpeed);
-            ReloadingSpeed = 1.55f;
-            GameObject NewArrow = Instantiate(CatapultStone, CatapultStoneAppearPoint);
-            StartCoroutine("Attack");
         }
+    }
+    public void Shot()
+    {
+        GameObject NewStone = Instantiate(CatapultStone, CatapultStoneAppearPoint);
     }
 }

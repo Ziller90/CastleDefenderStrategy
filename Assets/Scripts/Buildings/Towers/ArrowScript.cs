@@ -9,8 +9,13 @@ public class ArrowScript : MonoBehaviour
     public float Speed;
     public float Damage;
     public Transform ArrowSpawnPoint;
+    public GameObject FireParticles;
     void Start()
     {
+        if (ShopManager.BurningArrows == true)
+        {
+            FireParticles.SetActive(true);
+        }
         StartCoroutine("Look");
     }
 
@@ -23,12 +28,16 @@ public class ArrowScript : MonoBehaviour
         if (col.gameObject.tag == "Enemy")
         {
             col.gameObject.GetComponent<DamageReciever>().DamageResistance(Damage, CardScriptableObject.DamageType.PenetrationDamage);
+            if (ShopManager.BurningArrows == true)
+            {
+                col.gameObject.GetComponent<EffectsResistance>().EffectCast(CardScriptableObject.EffectType.BurningEffect, 1.5f, 5);
+            }
             Destroy(gameObject);
         }
     }
     IEnumerator Look()
     {
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < 20; i++)
         {
             if (Enemy.GetComponent<EnemyBehaviour>().AlreadyDead == false)
             {

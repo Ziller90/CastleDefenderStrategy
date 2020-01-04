@@ -27,16 +27,25 @@ public class WayPointScript : MonoBehaviour
                     gameObject.transform.position = new Vector3(gameObject.transform.position.x, 0.5f, gameObject.transform.position.z);
                     break;
                 case 1:
-                    gameObject.transform.position = new Vector3(gameObject.transform.position.x, 0.7f, gameObject.transform.position.z);
+                    gameObject.transform.position = new Vector3(gameObject.transform.position.x, 0.6f, gameObject.transform.position.z);
                     break;
                 case 2:
-                    gameObject.transform.position = new Vector3(gameObject.transform.position.x, 0.9f, gameObject.transform.position.z);
+                    gameObject.transform.position = new Vector3(gameObject.transform.position.x, 0.7f, gameObject.transform.position.z);
                     break;
                 case 3:
-                    gameObject.transform.position = new Vector3(gameObject.transform.position.x, 1.1f, gameObject.transform.position.z);
+                    gameObject.transform.position = new Vector3(gameObject.transform.position.x, 0.8f, gameObject.transform.position.z);
                     break;
                 case 4:
-                    gameObject.transform.position = new Vector3(gameObject.transform.position.x, 1.3f, gameObject.transform.position.z);
+                    gameObject.transform.position = new Vector3(gameObject.transform.position.x, 0.9f, gameObject.transform.position.z);
+                    break;
+                case 5:
+                    gameObject.transform.position = new Vector3(gameObject.transform.position.x, 1.0f, gameObject.transform.position.z);
+                    break;
+                case 6:
+                    gameObject.transform.position = new Vector3(gameObject.transform.position.x, 1.1f, gameObject.transform.position.z);
+                    break;
+                case 7:
+                    gameObject.transform.position = new Vector3(gameObject.transform.position.x, 1.2f, gameObject.transform.position.z);
                     break;
             }
             WayManager.Ways[RouteNumber].WayPoints[WayIndexNumber] = gameObject.transform;
@@ -60,6 +69,15 @@ public class WayPointScript : MonoBehaviour
                 break;
             case 4:
                 Gizmos.color = Color.yellow;
+                break;
+            case 5:
+                Gizmos.color = Color.green;
+                break;
+            case 6:
+                Gizmos.color = Color.grey;
+                break;
+            case 7:
+                Gizmos.color = Color.magenta;
                 break;
         }
         if (WayManager != null)

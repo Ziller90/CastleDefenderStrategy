@@ -90,7 +90,6 @@ Transform:
   m_Children:
   - {fileID: 5581680930556515241}
   - {fileID: 2633191083438752235}
-  - {fileID: 6470522620393425540}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -260,6 +259,7 @@ Transform:
   - {fileID: 4855590947266000519}
   - {fileID: 6367109903381862605}
   - {fileID: 3719735004583974258}
+  - {fileID: 6470522620393425540}
   m_Father: {fileID: 978745455792918395}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -322,6 +322,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 6ae8967592468d64f91a5d9756733cd6, type: 3}
   HealingParticle: {fileID: 4855590947266000518}
   Poisoned: 0
+  Burning: 0
   PoisonEffect: {fileID: 6367109903381862642}
   globalEnemiesManager: {fileID: 0}
   AttackRange: 0
@@ -511,6 +512,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FrozenEffectAnimator: {fileID: 1529897823369640100}
+  FireParticles: {fileID: 6470522620374028228}
   FreezingEffectModificator: 1
   BurningEffectModificator: 1
   PoisonEffectModificator: 1
@@ -702,7 +704,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 978745455792918395}
+    m_TransformParent: {fileID: 2633191083438752235}
     m_Modifications:
     - target: {fileID: 8733185181818900282, guid: 10d56700935a36c4b9c4954ca12b2710,
         type: 3}
@@ -717,12 +719,12 @@ PrefabInstance:
     - target: {fileID: 8733185181818737434, guid: 10d56700935a36c4b9c4954ca12b2710,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.194
+      value: 0.225
       objectReference: {fileID: 0}
     - target: {fileID: 8733185181818737434, guid: 10d56700935a36c4b9c4954ca12b2710,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.088
+      value: 0.20487209
       objectReference: {fileID: 0}
     - target: {fileID: 8733185181818737434, guid: 10d56700935a36c4b9c4954ca12b2710,
         type: 3}
@@ -747,7 +749,7 @@ PrefabInstance:
     - target: {fileID: 8733185181818737434, guid: 10d56700935a36c4b9c4954ca12b2710,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8733185181818737434, guid: 10d56700935a36c4b9c4954ca12b2710,
         type: 3}
@@ -764,16 +766,42 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8733185181818737434, guid: 10d56700935a36c4b9c4954ca12b2710,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4.2516913
+      objectReference: {fileID: 0}
+    - target: {fileID: 8733185181818737434, guid: 10d56700935a36c4b9c4954ca12b2710,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.243946
+      objectReference: {fileID: 0}
+    - target: {fileID: 8733185181818737434, guid: 10d56700935a36c4b9c4954ca12b2710,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 4.2617745
+      objectReference: {fileID: 0}
     - target: {fileID: 8733185181838136922, guid: 10d56700935a36c4b9c4954ca12b2710,
         type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
       value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 8733185181838136922, guid: 10d56700935a36c4b9c4954ca12b2710,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10d56700935a36c4b9c4954ca12b2710, type: 3}
 --- !u!4 &6470522620393425540 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8733185181818737434, guid: 10d56700935a36c4b9c4954ca12b2710,
+    type: 3}
+  m_PrefabInstance: {fileID: 2376048671128869278}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &6470522620374028228 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 8733185181838136922, guid: 10d56700935a36c4b9c4954ca12b2710,
     type: 3}
   m_PrefabInstance: {fileID: 2376048671128869278}
   m_PrefabAsset: {fileID: 0}
