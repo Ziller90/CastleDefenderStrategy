@@ -40,27 +40,37 @@ public class CameraRayCast : MonoBehaviour
     }
     void Update()
     {
-
         if (Input.GetMouseButtonDown(0) && IsOverUI() == false)
         {
-            if (OldHitObject != null && OldHitObject.tag == "Cube")
-            {
-                OldHitObject.GetComponent<BuilderManager>().CubeRemoveHightLighting();
-            }
-            if (OldHitObject != null && OldHitObject.tag == "Tower")
-            {
-                OldHitObject.GetComponent<BuildingStats>().BuildingHighLightRemove();
-            }
-            if (OldHitObject != null && OldHitObject.tag == "Mine")
-            {
-                OldHitObject.GetComponent<MineInfoPanel>().HidePanel();
-            }
-
+            bool InteractableObject = false;
             CameraRay = Camera.main.ScreenPointToRay(Input.mousePosition);
             Debug.DrawRay(CameraRay.origin, CameraRay.direction * 30, Color.yellow);
             hits = Physics.RaycastAll(CameraRay);
             if (hits.Length > 0)
             {
+                for (int i = 0; i < hits.Length; i++)
+                {
+                    if (hits[i].collider.gameObject.tag == "Coin" || hits[i].collider.gameObject.tag == "Crystal")
+                    {
+                        InteractableObject = true;
+                    }
+                }
+                if (InteractableObject == false)
+                {
+                    if (OldHitObject != null && OldHitObject.tag == "Castle")
+                    {
+
+                    }
+                    if (OldHitObject != null && OldHitObject.tag == "Cube")
+                    {
+                        OldHitObject.GetComponent<BuilderManager>().CubeRemoveHightLighting();
+                    }
+                    if (OldHitObject != null && OldHitObject.tag == "Tower")
+                    {
+                        Debug.Log("Nowerr");
+                        OldHitObject.GetComponent<BuildingStats>().BuildingHighLightRemove();
+                    }
+                }
                 DetectedObjectsManager();
             }
             
@@ -74,6 +84,23 @@ public class CameraRayCast : MonoBehaviour
             {
                 AlwaysDetected = true;
                 hits[i].collider.gameObject.GetComponent<Coin>().TakeCoin();
+            }
+
+        }
+        for (int i = 0; i < hits.Length; i++)
+        {
+            if (hits[i].collider.gameObject.tag == "Crystal" && AlwaysDetected == false)
+            {
+                AlwaysDetected = true;
+                hits[i].collider.gameObject.GetComponent<Crystal>().TakeCoin();
+            }
+
+        }
+        for (int i = 0; i < hits.Length; i++)
+        {
+            if (hits[i].collider.gameObject.tag == "Castle" && AlwaysDetected == false)
+            {
+                AlwaysDetected = true;
                 OldHitObject = hits[i].collider.gameObject;
             }
 

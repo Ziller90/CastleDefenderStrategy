@@ -24,10 +24,17 @@ public class TouchCamera : MonoBehaviour
     float oldTouchDistance;
     float OldDistance;
 
+
     public int XStop;
     public int ZStop;
+    public float XStopToUse;
+    public float ZStopToUse;
+    public float ModificatorForPlus;
+    public float ModificatorForMinus;
 
-     
+
+
+
     IEnumerator Wait(float Time)
     {
         Waited = false;
@@ -37,6 +44,21 @@ public class TouchCamera : MonoBehaviour
     
     void Update()
     {
+        if (camera.fieldOfView > 60)
+        {
+            XStopToUse = XStop - ((camera.fieldOfView - 60) * ModificatorForPlus);
+            ZStopToUse = ZStop - ((camera.fieldOfView - 60) * ModificatorForPlus);
+        }
+        if (camera.fieldOfView < 60)
+        {
+            XStopToUse = XStop + ((60 - camera.fieldOfView) * ModificatorForMinus);
+            ZStopToUse = ZStop + ((60 - camera.fieldOfView) * ModificatorForMinus);
+        }
+        if (camera.fieldOfView == 60)
+        {
+            XStopToUse = XStop;
+            ZStopToUse = ZStop;
+        }
 
         if (isFreezed == false)
         {
@@ -63,7 +85,7 @@ public class TouchCamera : MonoBehaviour
                 camera.fieldOfView += deltaMagnitudeDiff * perspectiveZoomSpeed;
 
                 // Clamp the field of view to make sure it's between 0 and 180.
-                camera.fieldOfView = Mathf.Clamp(camera.fieldOfView, 30f, 75f);
+                camera.fieldOfView = Mathf.Clamp(camera.fieldOfView, 30f, 65f);
                 StartCoroutine("Wait", 0.2f);
             }
             else if (Input.touchCount == 1 && Waited == true)
@@ -92,21 +114,21 @@ public class TouchCamera : MonoBehaviour
     }
     void LateUpdate()
     {
-        if (gameObject.transform.position.x > XStop)
+        if (gameObject.transform.position.x > XStopToUse)
         {
-            gameObject.transform.position = new Vector3(XStop, gameObject.transform.position.y, gameObject.transform.position.z);
+            gameObject.transform.position = new Vector3(XStopToUse, gameObject.transform.position.y, gameObject.transform.position.z);
         }
-        if (gameObject.transform.position.x < -XStop)
+        if (gameObject.transform.position.x < -XStopToUse)
         {
-            gameObject.transform.position = new Vector3(-XStop, gameObject.transform.position.y, gameObject.transform.position.z);
+            gameObject.transform.position = new Vector3(-XStopToUse, gameObject.transform.position.y, gameObject.transform.position.z);
         }
-        if (gameObject.transform.position.z > ZStop)
+        if (gameObject.transform.position.z > ZStopToUse)
         {
-            gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, ZStop);
+            gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, ZStopToUse);
         }
-        if (gameObject.transform.position.z < -ZStop)
+        if (gameObject.transform.position.z < -ZStopToUse)
         {
-            gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, -ZStop);
+            gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, -ZStopToUse);
         }
     }
 

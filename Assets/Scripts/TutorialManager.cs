@@ -18,6 +18,7 @@ public class TutorialManager : MonoBehaviour
     public GameObject ArrowTowerArcherCard;
     public GameObject ArrowBelowMomey;
     public GameObject ArrowUnderBombTower;
+    public GameObject ArrowGoldenCoin;
     public GameObject TaskTextObj;
     public Text TaskText;
     public Text TaskTextBlack;
@@ -48,6 +49,7 @@ public class TutorialManager : MonoBehaviour
 
     void Start()
     {
+        StartCoroutine(AnimationInstancing.AnimationManager.GetInstance().LoadAnimationAssetBundle(Application.streamingAssetsPath + "/AssetBundle/animationtexture"));
         Time.timeScale = 1;
 
         DoNotTouchPanel.SetActive(true);
@@ -66,7 +68,10 @@ public class TutorialManager : MonoBehaviour
     {
         TaskTextBlack.text = TaskText.text;
         GameObject[] Towers = GameObject.FindGameObjectsWithTag("Tower");
-
+        if (GameObject.FindGameObjectWithTag("Crystal") != null)
+        {
+            Destroy(GameObject.FindGameObjectWithTag("Crystal"));
+        }
         if (Spawner3.GetComponent<CripsSpawner>().IsEmpty == true && WinManager.NoEnemies == true && AlreadyWin2 == false)
         {
             Music.StartCoroutine("StopMusic", 3);
@@ -119,11 +124,12 @@ public class TutorialManager : MonoBehaviour
         }
         if (Towers.Length > 1 && AlreadyFinded == false)
         {
+            TowersCards[1].SetActive(false);
             ArrowTowerArcherCard.SetActive(false);
             TaskText.text = ConsoleMessages[6].GetTranslatedText();
             TowersCards[1].GetComponent<Button>().interactable = false;
             Spawner1.SetActive(true);
-            DoNotTouchPanel.SetActive(true);
+            
             TouchCameraC.isFreezed = false;
             StartCoroutine("CameraUsing");
             AlreadyFinded = true;
@@ -136,7 +142,7 @@ public class TutorialManager : MonoBehaviour
             TaskText.text = ConsoleMessages[1].GetTranslatedText();
             AlreadyHighlighted = true;
         }
-        if (GoldenCube1.GetComponent<BuilderManager>().BuildingFiled == 2 && AlreadyStarted == false)
+        if (GoldenCube1.GetComponent<BuilderManager>().BuildingFiled == 2 && AlreadyStarted == false) // когда появилась шахта
         {
             GoldenCube1.GetComponent<Animator>().enabled = false;
             StartCoroutine("AboutResources");
@@ -182,10 +188,21 @@ public class TutorialManager : MonoBehaviour
     }
     IEnumerator AboutResources()
     {
+        yield return new WaitForSeconds(0.5f);
+        MineScript Mine = GameObject.Find("Mine(Clone)").GetComponent<MineScript>();
+        Mine.MomentaryGoldProduce();
+        Mine.StopAllCoroutines();
         Destroy(GameObject.FindGameObjectWithTag("HighLightFrame"));
         TaskText.text = ConsoleMessages[2].GetTranslatedText();
         ArrowUnderGoldenMineCard.SetActive(false);
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2f);
+        TaskText.text = ConsoleMessages[15].GetTranslatedText();
+        ArrowGoldenCoin.SetActive(true);
+        DoNotTouchPanel.SetActive(false);
+    }
+    IEnumerator GoldenCoinTook()
+    {
+        ArrowGoldenCoin.SetActive(false);
         TaskText.text = ConsoleMessages[3].GetTranslatedText();
         ArrowBelowMomey.SetActive(true);
         yield return new WaitForSeconds(5f);
@@ -194,6 +211,8 @@ public class TutorialManager : MonoBehaviour
         PlayUIElements.SetActive(false);
         Messages[2].SetActive(true);
     }
+
+    
     public void NextArchersTowerMessage()
     {
         TaskTextObj.SetActive(true);
@@ -262,6 +281,7 @@ public class TutorialManager : MonoBehaviour
         Messages[5].SetActive(true);
         PlayUIElements.SetActive(false);
         PlayerStats.CampaignProgressIndex = 1;
+        SavingSystem.SavePlayerData();
     }
     public void NextWin()
     {

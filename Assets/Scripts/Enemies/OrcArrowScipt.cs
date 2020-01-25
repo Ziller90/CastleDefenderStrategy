@@ -7,6 +7,7 @@ public class OrcArrowScipt : MonoBehaviour
     public GameObject Castle;
     public float Speed;
     public float ArrowDamage;
+    public float MinimuDistance;
 
      
 
@@ -14,10 +15,7 @@ public class OrcArrowScipt : MonoBehaviour
     {
         gameObject.transform.position += transform.forward * Speed;
         gameObject.transform.LookAt(Castle.transform.position);
-    }
-    void OnTriggerEnter(Collider col)
-    {
-        if (col.gameObject.tag == "Castle")
+        if (Vector3.Distance(gameObject.transform.position, Castle.transform.position) < MinimuDistance)
         {
             StartCoroutine("DamageDeliver");
         }
@@ -26,6 +24,7 @@ public class OrcArrowScipt : MonoBehaviour
     {
         yield return new WaitForSeconds(0.1f);
         Castle.GetComponent<CastleScript>().DamageReceive(ArrowDamage, gameObject.transform.position);
+        Castle.GetComponent<CastleScript>().HitSound(gameObject.GetComponent<AttackSounds>().AttackSound);
         Destroy(gameObject);
     }
 }

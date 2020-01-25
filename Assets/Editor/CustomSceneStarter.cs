@@ -75,6 +75,11 @@ public class CustomSceneStarter : Editor
     {
         PlayerStats.CampaignProgressIndex = 8;
     }
+    [MenuItem("Tools/ClearPlayerProgress", false, 1)]
+    public static void ClearProgress()
+    {
+        PlayerPrefs.DeleteAll();
+    }
 
 #endif
 

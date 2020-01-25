@@ -15,6 +15,7 @@ TagManager:
   - HighLightFrame
   - Level
   - Coin
+  - Crystal
   layers:
   - Default
   - TransparentFX

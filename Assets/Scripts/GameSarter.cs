@@ -11,11 +11,13 @@ public class GameSarter : MonoBehaviour
     public GameObject Camera;
     public GameObject NewMap;
     public bool TouchCamera;
+    public GameObject StartOrc;
 
     void Start()
     {
         StartCoroutine(AnimationInstancing.AnimationManager.GetInstance().LoadAnimationAssetBundle(Application.streamingAssetsPath + "/AssetBundle/animationtexture"));
         MapLoader(LevelLoader.LevelToLoad);
+        Instantiate(StartOrc, new Vector3(1000, 1000, 1000), Quaternion.identity);
     }
 
     // Update is called once per frame

@@ -4863,6 +4863,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Frozen: 1
   Particle: {fileID: 5160767015773924813}
+  globalEnemiesManager: {fileID: 0}
+  RangeOfExplosion: 3
 --- !u!65 &7066526263378043241
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4886,7 +4888,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 523e4c697ddfc1a498d84abcc89a87b4, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 181b85915eec368489ff4a72e66a94f7, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -4894,7 +4896,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 103
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -5109,6 +5111,7 @@ MonoBehaviour:
   Lamp: {fileID: 2697570129692658202}
   Damage: 1
   Frozen: 1
+  RangeOfDetection: 0.5
 --- !u!65 &5484599401994758677
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -8,8 +8,13 @@ public class MinaEnemyDetector : MonoBehaviour
     public float Damage;
     public bool Frozen;
     bool AlreadyFinded = false;
+    GlobalEnemiesManager globalEnemiesManager;
+    public float RangeOfDetection;
      
-
+    void Start()
+    {
+        globalEnemiesManager = LinksContainer.instance.globalEnemiesManager;
+    }
     // Update is called once per frame
     void Update()
     {
@@ -18,10 +23,7 @@ public class MinaEnemyDetector : MonoBehaviour
         else
         gameObject.GetComponent<MeshRenderer>().material.color = Color.Lerp(Color.blue, Color.white, Mathf.PingPong(Time.time, 0.3f));
 
-    }
-    public void OnTriggerEnter(Collider col)
-    {
-        if (col.gameObject.tag == "Enemy" && AlreadyFinded == false)
+        if (globalEnemiesManager.IsEnemyInRadius(gameObject.transform.position, RangeOfDetection) && AlreadyFinded == false)
         {
             StartCoroutine("MinaDelay");
             AlreadyFinded = true;

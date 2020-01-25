@@ -67,16 +67,19 @@ public class ShopManager : MonoBehaviour
     {
         if (PlayerStats.Crystals - Prices[ProductIndex] >= 0)
         {
+            gameObject.GetComponent<AudioSource>().Play();
             PlayerStats.Crystals -= Prices[ProductIndex];
             BuyButtons[ProductIndex].interactable = false;
             SoldOut[ProductIndex].SetActive(true);
             SetImprovement(ProductIndex);
         }
+        else
+        {
+            gameObject.transform.GetChild(0).GetComponent<AudioSource>().Play();
+        }
     }
     void Start()
     {
-        ShopAcessLevel = 3;
-        PlayerStats.Crystals = 10000;
         PageIndex = 1;
     }
     void SetImprovement(int ImprovementIndex)

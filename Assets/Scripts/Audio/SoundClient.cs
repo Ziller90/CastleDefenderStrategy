@@ -7,7 +7,8 @@ public class SoundClient : MonoBehaviour
     float SoundNormalVolume;
     SoundClient NewSoundClient;
     AudioSource NewSource;
-    void Awake ()
+   
+    void Start()
     {
         NewSource = gameObject.GetComponent<AudioSource>();
         SoundNormalVolume = NewSource.volume;

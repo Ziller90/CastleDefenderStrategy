@@ -7,29 +7,22 @@ public class MineExplosion : MonoBehaviour
     List<GameObject> AttackGoals = new List<GameObject>();
     public bool Frozen;
     public ParticleSystem Particle;
+    public GlobalEnemiesManager globalEnemiesManager;
+    public float RangeOfExplosion;
     void Start()
     {
+        globalEnemiesManager = LinksContainer.instance.globalEnemiesManager;
         if (ShopManager.SuperMine == true)
         {
             gameObject.GetComponent<BoxCollider>().size = gameObject.GetComponent<BoxCollider>().size * 2;
         }
     }
 
-    // Update is called once per frame
-    public void OnTriggerEnter(Collider col)
+    void Update()
     {
-        if (col.gameObject.tag == "Enemy" && AttackGoals.Count <= 6)
-        {
-            AttackGoals.Add(col.gameObject);
-        }
+        AttackGoals = globalEnemiesManager.EnemiesInRadius(gameObject.transform.position, RangeOfExplosion);
     }
-    public void OnTriggerExit(Collider col)
-    {
-        if (col.gameObject.tag == "Enemy")
-        {
-            AttackGoals.Remove(col.gameObject);
-        }
-    }
+
     public void Explose(float Damage)
     {
         gameObject.GetComponent<AudioSource>().Play();

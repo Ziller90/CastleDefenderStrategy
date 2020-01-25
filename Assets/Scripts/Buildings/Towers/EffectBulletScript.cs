@@ -15,6 +15,8 @@ public class EffectBulletScript : MonoBehaviour
     public ParticleSystem FrozenParticle;
     public MeshRenderer MeshRender;
     public float TimeToUnEnableEffect;
+    public float Groundheightlevel;
+
 
 
 
@@ -29,17 +31,14 @@ public class EffectBulletScript : MonoBehaviour
             Quaternion EnemyQuaternion = Quaternion.LookRotation(EnemyVector);
             gameObject.transform.rotation = Quaternion.Lerp(gameObject.transform.rotation, EnemyQuaternion, TurningSpeed * Time.deltaTime);
         }
-
-    }
-    void OnTriggerEnter (Collider col)
-    {
-        if ((col.gameObject.tag == "Cube") && AlwaysExploud == false)
+        if (gameObject.transform.position.y < Groundheightlevel && AlwaysExploud == false)
         {
             StartCoroutine("Destroing");
             ExplosionArea.GetComponent<EffectBulletExplosion>().Explose(Damage, EffectPower, EffectTime);
             AlwaysExploud = true;
         }
     }
+
     IEnumerator Destroing ()
     {
         MeshRender.enabled = false;

@@ -8,6 +8,9 @@ public class OrcStone : MonoBehaviour
     public float Speed;
     public float StoneDamage;
     public float TurningSpeed;
+    public float MinimuDistance;
+    bool AlreadyAttacked = false;
+
 
     void Start()
     {
@@ -20,18 +23,18 @@ public class OrcStone : MonoBehaviour
         Vector3 EnemyVector = Vector3.RotateTowards(transform.forward, (Castle.transform.position - transform.position), 0.3f, 1F);
         Quaternion EnemyQuaternion = Quaternion.LookRotation(EnemyVector);
         gameObject.transform.rotation = Quaternion.Lerp(gameObject.transform.rotation, EnemyQuaternion, TurningSpeed * Time.deltaTime);
-    }
-    void OnTriggerEnter(Collider col)
-    {
-        if (col.gameObject.tag == "Castle")
+
+        if (Vector3.Distance(gameObject.transform.position, Castle.transform.position) < MinimuDistance && AlreadyAttacked == false)
         {
             StartCoroutine("DamageDeliver");
+            AlreadyAttacked = true;
         }
     }
     IEnumerator DamageDeliver ()
     {
         yield return new WaitForSeconds(0.5f);
         Castle.DamageReceive(StoneDamage, gameObject.transform.position);
+        Castle.HitSound(gameObject.GetComponent<AttackSounds>().AttackSound);
         Destroy(gameObject,2);
     }
 }

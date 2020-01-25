@@ -9,21 +9,55 @@ public class MainMenuButtons : MonoBehaviour
 {
     bool FirstTimeInGame = true;
     public SavingSystem savingSystem;
+    public ShopManager ShopMgr;
     public GameObject LoadingText;
     public Text Loading;
     public LanguageText PlayButtonTranslation;
+    public LanguageText PlayButtonTranslationShadow;
     public Translation NewGame;
     public Translation ContinueGame;
     public GameObject SettingsPanel;
     public GameObject MainButtons;
     public GameObject Shop;
     public GameObject ShopOpenButton;
+    public GameObject NewThingsMark;
+    public static bool ABwasLoaded;
+    public static bool  AlreadySeeNewThingsLevel6;
+    int NumberOfNewThings;
 
 
+    void Start()
+    {
+        ShopMgr.ShopAcessLevel = 1;
+        if (PlayerStats.CampaignProgressIndex >= 6)
+        {
+            ShopMgr.ShopAcessLevel = 2;
+        }
+        if (PlayerStats.CampaignProgressIndex >= 9)
+        {
+            ShopMgr.ShopAcessLevel = 3;
+        }
+        if (PlayerStats.CampaignProgressIndex >= 6 && AlreadySeeNewThingsLevel6 == false)
+        {
+            NewThingsMark.SetActive(true);
+            NumberOfNewThings = 1;
+        }
+    }
+    public void SeeIfNewThings()
+    {
+        if (NewThingsMark.activeSelf == true)
+        {
+            if (NumberOfNewThings == 1)
+            {
+                AlreadySeeNewThingsLevel6 = true;
+                NewThingsMark.SetActive(false);
+            }
+        }
 
+    }
     void Awake()
     {
-        if (PlayerStats.CampaignProgressIndex > 5)
+        if (PlayerStats.CampaignProgressIndex > 2)
         {
             ShopOpenButton.SetActive(true);
         }
@@ -35,10 +69,13 @@ public class MainMenuButtons : MonoBehaviour
         if (PlayerStats.CampaignProgressIndex == 0)
         {
             PlayButtonTranslation.Translation = NewGame;
+            PlayButtonTranslationShadow.Translation = NewGame;
+
         }
         else
         {
             PlayButtonTranslation.Translation = ContinueGame;
+            PlayButtonTranslationShadow.Translation = ContinueGame;
         }
     }
 
@@ -48,13 +85,12 @@ public class MainMenuButtons : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            savingSystem.SavePlayerData();
+            SavingSystem.SavePlayerData();
             Application.Quit();
         }
         if (Input.GetKeyDown(KeyCode.Home))
         {
-            savingSystem.SavePlayerData();
-            Application.Quit();
+            SavingSystem.SavePlayerData();
         }
     }
     public void ShopButton()
@@ -73,11 +109,12 @@ public class MainMenuButtons : MonoBehaviour
     }
     public void QuitButton()
     {
-        savingSystem.SavePlayerData();
+        SavingSystem.SavePlayerData();
         Application.Quit();
     }
     public void PlayButton ()
     {
+        Debug.Log(PlayerStats.CampaignProgressIndex);
         if (PlayerStats.CampaignProgressIndex == 0)
         {
             StartCoroutine("Fading", 5);

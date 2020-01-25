@@ -22,9 +22,13 @@ public class ResourcesManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (PlayerStats.Crystals > 9999)
+        {
+            PlayerStats.Crystals = 9999;
+        }
         if (PlayerStats.Crystals - OldCrystals > 0)
         {
-            CrystalsAnimator.SetTrigger("MoreGold");
+            CrystalsAnimator.SetTrigger("MoreCoins");
         }
         OldCrystals = PlayerStats.Crystals;
 
@@ -33,6 +37,7 @@ public class ResourcesManager : MonoBehaviour
             CoinAnimator.SetTrigger("MoreCoins");
         }
         OldGold = Gold;
+
         CrystlasText.text = "" + PlayerStats.Crystals;
         GoldText.text = "" + Gold;
     }

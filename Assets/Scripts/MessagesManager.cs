@@ -7,7 +7,6 @@ using UnityEngine.UI;
 public class MessagesManager : MonoBehaviour
 {
     public GameObject[] Messages;
-    public GameObject MessagesBox;
     MusicManager Music;
     GameObject PlayingUIElements;
     int CurrentMessageNumber;
@@ -17,11 +16,7 @@ public class MessagesManager : MonoBehaviour
     public bool HideUIPlayElements;
     void Awake ()
     {
-        MessagesBox = GameObject.Find("MessageBox");
-        for (int i = 0; i < MessagesBox.transform.childCount; i++)
-        {
-            MessagesBox.transform.GetChild(i).gameObject.SetActive(false);
-        }
+
     }
     void Start()
     {
@@ -50,6 +45,7 @@ public class MessagesManager : MonoBehaviour
     }
     public void ShowNewMessageButton (int MessageNumber)
     {
+        Debug.Log("fefef " + MessageNumber);
         NewMessageButton.SetActive(true);
         MessageButtonMessageNumber = MessageNumber;
     }
@@ -58,6 +54,7 @@ public class MessagesManager : MonoBehaviour
         NewMessageButton.SetActive(false);
         ShowMessage(MessageButtonMessageNumber);
         CurrentMessageNumber = MessageButtonMessageNumber;
+        Debug.Log("Bitton  " + CurrentMessageNumber);
         StartCoroutine("StopTimeAfterMessage");
     }
     public IEnumerator StartMessage(float Time)

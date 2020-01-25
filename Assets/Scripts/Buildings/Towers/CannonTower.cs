@@ -20,6 +20,7 @@ public class CannonTower : MonoBehaviour
     void Start()
     {
         globalEnemiesManager = LinksContainer.instance.globalEnemiesManager;
+
     }
     void Update()
     {
@@ -33,6 +34,7 @@ public class CannonTower : MonoBehaviour
             BulletInstantiate();
         }
         TowerDamage = Stats.Damage;
+
         TowerReloadingSpeed = Stats.ReloadingSpeed;
     }
 

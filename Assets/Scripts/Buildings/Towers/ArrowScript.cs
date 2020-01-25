@@ -5,13 +5,16 @@ using UnityEngine;
 public class ArrowScript : MonoBehaviour
 {
     public GameObject Enemy;
+    public Transform EnemyTransform;
     public float ArrowPosition;
     public float Speed;
     public float Damage;
     public Transform ArrowSpawnPoint;
     public GameObject FireParticles;
+    public float MinimumDistance;
     void Start()
     {
+        EnemyTransform = Enemy.transform;
         if (ShopManager.BurningArrows == true)
         {
             FireParticles.SetActive(true);
@@ -22,19 +25,17 @@ public class ArrowScript : MonoBehaviour
     void FixedUpdate()
     {
         gameObject.transform.position += transform.forward * Speed;
-    }
-    void OnTriggerEnter(Collider col)
-    {
-        if (col.gameObject.tag == "Enemy")
+        if (Vector3.Distance(gameObject.transform.position, EnemyTransform.position) < MinimumDistance)
         {
-            col.gameObject.GetComponent<DamageReciever>().DamageResistance(Damage, CardScriptableObject.DamageType.PenetrationDamage);
+            Enemy.GetComponent<DamageReciever>().DamageResistance(Damage, CardScriptableObject.DamageType.PenetrationDamage);
             if (ShopManager.BurningArrows == true)
             {
-                col.gameObject.GetComponent<EffectsResistance>().EffectCast(CardScriptableObject.EffectType.BurningEffect, 1.5f, 5);
+                Enemy.gameObject.GetComponent<EffectsResistance>().EffectCast(CardScriptableObject.EffectType.BurningEffect, 1.5f, 5);
             }
             Destroy(gameObject);
         }
     }
+
     IEnumerator Look()
     {
         for (int i = 0; i < 20; i++)

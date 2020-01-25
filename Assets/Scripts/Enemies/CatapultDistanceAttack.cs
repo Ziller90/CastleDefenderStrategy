@@ -10,6 +10,7 @@ public class CatapultDistanceAttack : MonoBehaviour
     public Transform CatapultStoneAppearPoint;
     public bool AlreadyAttacked;
     public float ReloadingSpeed;
+    public AudioSource Audio;
 
      
 
@@ -20,7 +21,7 @@ public class CatapultDistanceAttack : MonoBehaviour
     }
     public IEnumerator AttackDelay()
     {
-        float Delay = Random.Range(0f, 3.5f);
+        float Delay = Random.Range(0f, 20f);
         yield return new WaitForSeconds(Delay);
         Attack();
     }
@@ -35,6 +36,8 @@ public class CatapultDistanceAttack : MonoBehaviour
     }
     public void Shot()
     {
+        Audio.Play();
         GameObject NewStone = Instantiate(CatapultStone, CatapultStoneAppearPoint);
+        NewStone.transform.parent = null;
     }
 }

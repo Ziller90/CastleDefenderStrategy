@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2097789614104134347
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8396979099752854314}
+  m_Layer: 0
+  m_Name: ArrowSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8396979099752854314
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2097789614104134347}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.397, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2633191083438752235}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2669349996163212439
 GameObject:
   m_ObjectHideFlags: 0
@@ -122,7 +152,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.9999999, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5066523911249043403
+--- !u!114 &812157548275696584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3126433391130229788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0454c9a4857fb6043b50fe1786b3edc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4706721800823180319
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -240,6 +282,7 @@ GameObject:
   - component: {fileID: 7640035405910405812}
   - component: {fileID: 8782862173874522409}
   - component: {fileID: 5650920237496004716}
+  - component: {fileID: 5917579667617577177}
   m_Layer: 0
   m_Name: EnemyBehaviour
   m_TagString: Enemy
@@ -266,6 +309,7 @@ Transform:
   - {fileID: 6237609738950363234}
   - {fileID: 7657290619179469543}
   - {fileID: 317647016594507628}
+  - {fileID: 8396979099752854314}
   m_Father: {fileID: 978745455792918395}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -353,7 +397,7 @@ MonoBehaviour:
   CrystalsKillReward: 1
   FrozenRecover: 30
   EnemyAnimator: {fileID: 3126433391137640362}
-  AnimationInstancing: {fileID: 5066523911249043403}
+  AnimationInstancing: {fileID: 4706721800823180319}
   AlreadyDead: 0
   ProbabilytyOfCrystalsReward: 50
   Audio: {fileID: 788857830790517168}
@@ -392,6 +436,7 @@ MonoBehaviour:
   EnemyTransform: {fileID: 2633191083438752235}
   OrcArrow: {fileID: 5966920317397732215, guid: cef529c9b4c692f45b5c33d2b1b7cd34,
     type: 3}
+  ArrowSpawnPoint: {fileID: 8396979099752854314}
 --- !u!82 &788857830790517168
 AudioSource:
   m_ObjectHideFlags: 0
@@ -535,6 +580,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FrozenEffectAnimator: {fileID: 9135903102550870647}
   FireParticles: {fileID: 317647016613904940}
+  FrozenSpikes: {fileID: 5354090527345990546}
   FreezingEffectModificator: 1
   BurningEffectModificator: 1
   PoisonEffectModificator: 1
@@ -550,6 +596,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5454974f7a785c94d855fe3c1e38a82c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5917579667617577177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9068311631442063823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d40d7ce07b7d484468c64699c5328c61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GreenCrystal: {fileID: 6352572549226255353, guid: dfe17df01a43e9e448f6a57513e4f74d,
+    type: 3}
+  BlueCrystal: {fileID: 6352572549226255353, guid: 433a6a478e044e44cbe8d6df5831d1fd,
+    type: 3}
+  RedCrystal: {fileID: 6352572549226255353, guid: 231d33e1d3432fb45a25c8584a1a0686,
+    type: 3}
+  EnemyValue: 5
+  ProbabilytyOfGreenCrystal: 60
+  ProbabilytyOfBlueCrystal: 35
+  ProbabilityOfRedCrystal: 5
+  ProbabilityOfCrystalDrop: 5
 --- !u!1001 &912750338846685327
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -854,15 +923,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21045979fc136424ca78c0df278a8ca7, type: 3}
---- !u!4 &5445926333082504271 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5132252811782190272, guid: 21045979fc136424ca78c0df278a8ca7,
-    type: 3}
-  m_PrefabInstance: {fileID: 912750338846685327}
-  m_PrefabAsset: {fileID: 0}
 --- !u!198 &5445926333082504270 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 5132252811782190273, guid: 21045979fc136424ca78c0df278a8ca7,
+    type: 3}
+  m_PrefabInstance: {fileID: 912750338846685327}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5445926333082504271 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5132252811782190272, guid: 21045979fc136424ca78c0df278a8ca7,
     type: 3}
   m_PrefabInstance: {fileID: 912750338846685327}
   m_PrefabAsset: {fileID: 0}
@@ -1039,15 +1108,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc886a2a8c4899e4fba28111d6be3a63, type: 3}
---- !u!1 &3126433391130229788 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100054, guid: fc886a2a8c4899e4fba28111d6be3a63,
-    type: 3}
-  m_PrefabInstance: {fileID: 3126433391130262218}
-  m_PrefabAsset: {fileID: 0}
 --- !u!95 &3126433391137640362 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 9500000, guid: fc886a2a8c4899e4fba28111d6be3a63,
+    type: 3}
+  m_PrefabInstance: {fileID: 3126433391130262218}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3126433391130229788 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100054, guid: fc886a2a8c4899e4fba28111d6be3a63,
     type: 3}
   m_PrefabInstance: {fileID: 3126433391130262218}
   m_PrefabAsset: {fileID: 0}
@@ -1246,15 +1315,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98a95064ac270cd4385065918577f370, type: 3}
---- !u!4 &3164140960196345888 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 304845437661059881, guid: 98a95064ac270cd4385065918577f370,
-    type: 3}
-  m_PrefabInstance: {fileID: 3445902698068302601}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5097853985101624954 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7596861254763900275, guid: 98a95064ac270cd4385065918577f370,
+    type: 3}
+  m_PrefabInstance: {fileID: 3445902698068302601}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3164140960196345888 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 304845437661059881, guid: 98a95064ac270cd4385065918577f370,
     type: 3}
   m_PrefabInstance: {fileID: 3445902698068302601}
   m_PrefabAsset: {fileID: 0}

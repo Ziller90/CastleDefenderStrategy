@@ -56,6 +56,7 @@ public class BuildingStats : MonoBehaviour
     }
     public void BuildingHighLightRemove()
     {
+        Debug.Log("Hide");
         UIManager.HideDestroyButton();
         UIManager.HideImproveButton();
         AttackZone.SetActive(false);

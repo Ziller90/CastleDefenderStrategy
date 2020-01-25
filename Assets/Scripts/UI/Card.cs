@@ -17,7 +17,7 @@ public class Card : MonoBehaviour
     private ResourcesManager manager;
     void Start()
     {
-        manager = GameObject.Find("ResourcesManager").GetComponent<ResourcesManager>();
+        manager = LinksContainer.instance.resourcesManager;
         if (LinksContainer.instance.Level.GetComponent<BuildingsAvaiable>().BuildingAvaiable[CardID] == true)
         {
             gameObject.SetActive(true);
@@ -26,7 +26,7 @@ public class Card : MonoBehaviour
         {
             gameObject.SetActive(false);
         }
-        BuildingManager = GameObject.Find("BuildingManager").GetComponent<BuildingManager>();
+        BuildingManager = LinksContainer.instance.buildingManager.GetComponent<BuildingManager>();
         BuildingID = CardInfo.BuildingId;
         GoldPrice.text = (" " + CardInfo.GoldPrice);
         BuildingImage.texture = CardInfo.BuildingImage;

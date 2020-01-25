@@ -22,7 +22,7 @@ public class BuilderManager : MonoBehaviour
     public bool IsHighLighted;
     void Start()
     {
-        BuildingManager = GameObject.Find("BuildingManager").GetComponent<BuildingManager>();
+        BuildingManager = LinksContainer.instance.buildingManager;
         ResourcesManager = LinksContainer.instance.resourcesManager;
     }
 

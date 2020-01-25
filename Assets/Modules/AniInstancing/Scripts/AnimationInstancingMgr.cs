@@ -20,6 +20,7 @@ namespace AnimationInstancing
         // array[index base on texture][package index][instance index]
         public class InstanceData
         {
+            
             public List<Matrix4x4[]>[] worldMatrix;
             public List<float[]>[] frameIndex;
             public List<float[]>[] preFrameIndex;
@@ -105,7 +106,6 @@ namespace AnimationInstancing
         {
             boundingSphere = new BoundingSphere[5000];
             InitializeCullingGroup();
-            cameraTransform = Camera.main.transform;
             aniInstancingList = new List<AnimationInstancing>(1000);
             if (SystemInfo.graphicsDeviceType == UnityEngine.Rendering.GraphicsDeviceType.OpenGLES2)
             {
@@ -134,6 +134,7 @@ namespace AnimationInstancing
 
         void Update()
         {
+            cameraTransform = Camera.main.transform;
             ApplyBoneMatrix();
             Render();
         }

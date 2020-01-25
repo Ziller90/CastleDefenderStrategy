@@ -68,4 +68,45 @@ public class GlobalEnemiesManager : MonoBehaviour
             return false;
         }
     }
+    public bool IsEnemyInRadius(Vector3 ObjectPosition, float Range)
+    {
+        for (int i = 0; i < EnemiesOnTheMap.Count; i++)
+        {
+            if (ObjectPosition.x + Range > EnemiesOnTheMap[i].transform.position.x &&
+                ObjectPosition.x - Range < EnemiesOnTheMap[i].transform.position.x &&
+                ObjectPosition.y + Range > EnemiesOnTheMap[i].transform.position.y &&
+                ObjectPosition.y - Range < EnemiesOnTheMap[i].transform.position.y &&
+                ObjectPosition.z + Range > EnemiesOnTheMap[i].transform.position.z &&
+                ObjectPosition.z - Range < EnemiesOnTheMap[i].transform.position.z)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+    public List<GameObject> EnemiesInRadius(Vector3 ObjectPosition, float Range)
+    {
+        List<GameObject> EnemiesDetected = new List<GameObject>();
+        for (int i = 0; i < EnemiesOnTheMap.Count; i++)
+        {
+            if (ObjectPosition.x + Range > EnemiesOnTheMap[i].transform.position.x &&
+                ObjectPosition.x - Range < EnemiesOnTheMap[i].transform.position.x &&
+                ObjectPosition.y + Range > EnemiesOnTheMap[i].transform.position.y &&
+                ObjectPosition.y - Range < EnemiesOnTheMap[i].transform.position.y &&
+                ObjectPosition.z + Range > EnemiesOnTheMap[i].transform.position.z &&
+                ObjectPosition.z - Range < EnemiesOnTheMap[i].transform.position.z)
+            {
+                EnemiesDetected.Add(EnemiesOnTheMap[i]);
+            }
+        }
+        if (EnemiesDetected != null)
+        {
+            return EnemiesDetected;
+        }
+        else
+        {
+            return null;
+        }
+    }
+
 }

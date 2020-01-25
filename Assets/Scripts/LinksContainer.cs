@@ -11,6 +11,7 @@ public class LinksContainer : MonoBehaviour
     public AudioManager audioManager;
     public GameObject Level;
     public GameUIManager UIManager;
+    public BuildingManager buildingManager;
     public CastleScript Castle;
     public static LinksContainer instance;
     public LinksContainer()

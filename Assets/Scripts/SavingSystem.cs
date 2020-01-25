@@ -12,16 +12,20 @@ public class SavingSystem : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            gameObject.GetComponent<SavingSystem>().SavePlayerData();
+            SavePlayerData();
         }
         if (Input.GetKeyDown(KeyCode.Home))
         {
-            gameObject.GetComponent<SavingSystem>().SavePlayerData();
+            SavePlayerData();
         }
 
     }
-    public void SavePlayerData()
+    public static void SavePlayerData()
     {
+        if (MainMenuButtons.AlreadySeeNewThingsLevel6 == true)
+        {
+            PlayerPrefs.SetInt("AlreadySeeNewThingsLevel6", 1);
+        }
         if (ShopManager.GoldFever == true)
         {
             PlayerPrefs.SetInt("GoldFever", 1);
@@ -99,6 +103,11 @@ public class SavingSystem : MonoBehaviour
     }
     public void SetPlayerData()
     {
+        PlayerStats.DifficultyLevelIndex = PlayerPrefs.GetInt("DifficultyLevel");
+        if (PlayerPrefs.GetInt("AlreadySeeNewThingsLevel6") == 1)
+        {
+            MainMenuButtons.AlreadySeeNewThingsLevel6 = true;
+        }
         if (PlayerPrefs.GetInt("GoldFever") == 1)
         {
             ShopManager.GoldFever = true;
@@ -176,10 +185,12 @@ public class SavingSystem : MonoBehaviour
     }
     public void SetPlayerStartSetting()
     {
+        QualitySettings.SetQualityLevel(2);
         PlayerStats.Crystals = 0;
         PlayerStats.CampaignProgressIndex = 0;
         AudioManager.SoundOn = true;
         MusicManager.MusicPlaying = true;
+
         if (Application.systemLanguage == SystemLanguage.English)
         {
             GlobalLanguageManager.Language = GlobalLanguageManager.GloabalLanguage.English;
@@ -201,4 +212,5 @@ public class SavingSystem : MonoBehaviour
             GlobalLanguageManager.Language = GlobalLanguageManager.GloabalLanguage.Spanish;
         }
     }
+    
 }

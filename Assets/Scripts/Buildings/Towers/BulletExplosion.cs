@@ -5,24 +5,20 @@ using UnityEngine;
 public class BulletExplosion : MonoBehaviour
 {
     List<GameObject> AttackGoals = new List <GameObject>();
+    public GlobalEnemiesManager globalEnemiesManager;
+    public float RangeOfExplosion;
     int i = 0;
-
-     
-
-    // Update is called once per frame
-
-    public void OnTriggerEnter (Collider col)
+    void Start()
     {
-        if (col.gameObject.tag == "Enemy")
-        {
-             AttackGoals.Add(col.gameObject);
-        }
+        globalEnemiesManager = LinksContainer.instance.globalEnemiesManager;
     }
+
     IEnumerator Explose (float Damage)
     {
         yield return new WaitForSeconds(0.1f);
         gameObject.GetComponent<AudioSource>().Play();
-        for(int q = 0; q < AttackGoals.Count; q++)
+        AttackGoals = globalEnemiesManager.EnemiesInRadius(gameObject.transform.position, RangeOfExplosion);
+        for (int q = 0; q < AttackGoals.Count; q++)
         {
             if (ShopManager.BigBalls == true)
                 AttackGoals[q].GetComponent<DamageReciever>().DamageResistance(Damage + 0.3f, CardScriptableObject.DamageType.ExplosionDamage);

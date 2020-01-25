@@ -67,6 +67,7 @@ public class EnemyBehaviour : MonoBehaviour
     }
     void Start()
     {
+
         IceCube.SetActive(false);
         AnimationIndex = 1;
         winScript = LinksContainer.instance.winScript;
@@ -76,6 +77,21 @@ public class EnemyBehaviour : MonoBehaviour
         globalEnemiesManager = LinksContainer.instance.globalEnemiesManager;
         globalEnemiesManager.RegisterEnemy(gameObject);
         CameraViewPoint = LinksContainer.instance.CameraViewPoint;
+        if (PlayerStats.CampaignProgressIndex > 0)
+        {
+            switch (PlayerStats.DifficultyLevelIndex)
+            {
+                case 1:
+                    MaxHP = MaxHP * 0.6f;
+                    break;
+                case 2:
+                    MaxHP = MaxHP * 1f;
+                    break;
+                case 3:
+                    MaxHP = MaxHP * 2f;
+                    break;
+            }
+        }
         HP = MaxHP;
         HPIndex = 1;
         Go = true;
@@ -191,6 +207,7 @@ public class EnemyBehaviour : MonoBehaviour
     public void OnAttack ()
     {
         Castle.GetComponent<CastleScript>().DamageReceive(EnemyDamage, gameObject.transform.position);
+        Castle.GetComponent<CastleScript>().HitSound(gameObject.GetComponent<AttackSounds>().AttackSound);
     }
     public IEnumerator Death ()
     {
@@ -205,21 +222,13 @@ public class EnemyBehaviour : MonoBehaviour
             AnimationIndex = 2;
         gameObject.GetComponent<BoxCollider>().enabled = false;
         LinksContainer.instance.resourcesManager.Gold = LinksContainer.instance.resourcesManager.Gold + KillReward;
-        AddCrystals();
         Go = false;
         HPBar.gameObject.SetActive(false);
         DeathSoundPlaying();
+        gameObject.GetComponent<CrystalsManager>().IfCrystalsDrop();
         yield return new WaitForSeconds(1.5f);
         Enemy.SetActive(false);
 
-    }
-    public void AddCrystals ()
-    {
-        int rand = Random.Range(1, 101);
-        if (rand <= ProbabilytyOfCrystalsReward)
-        {
-            PlayerStats.Crystals += CrystalsKillReward;
-        }
     }
     public void DeathSoundPlaying ()
     {

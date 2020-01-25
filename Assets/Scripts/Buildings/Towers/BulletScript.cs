@@ -13,13 +13,13 @@ public class BulletScript : MonoBehaviour
     public bool AlwaysExploud;
     public ParticleSystem ExplosionEffect;
     public ParticleSystem ExplosionEffect2;
+    public float Groundheightlevel;
 
 
-     
     void Start()
     {
-        if(ShopManager.BigBalls == true)
-        gameObject.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
+        if (ShopManager.BigBalls == true)
+            gameObject.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
     }
     void FixedUpdate()
     {
@@ -30,17 +30,14 @@ public class BulletScript : MonoBehaviour
             Quaternion EnemyQuaternion = Quaternion.LookRotation(EnemyVector);
             gameObject.transform.rotation = Quaternion.Lerp(gameObject.transform.rotation, EnemyQuaternion, TurningSpeed * Time.deltaTime);
         }
-    }
-    void OnTriggerEnter (Collider col)
-    {
-        if (col.gameObject.tag == "Cube" && AlwaysExploud == false)
+        if (gameObject.transform.position.y < Groundheightlevel && AlwaysExploud == false)
         {
             StartCoroutine("Destroing");
             ExplosionArea.GetComponent<BulletExplosion>().StartCoroutine("Explose", Damage);
             AlwaysExploud = true;
         }
     }
-    IEnumerator Destroing ()
+    IEnumerator Destroing()
     {
         gameObject.GetComponent<MeshRenderer>().enabled = false;
         ExplosionEffect.Play();

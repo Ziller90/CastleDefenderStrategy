@@ -18,7 +18,7 @@ public class CastleScript : MonoBehaviour
     public Transform CastlePosition;
     public float CastleWidth = 5;
     bool AlreadyGameOver = false;
-    public AudioClip[] HitSounds;
+
     public AudioSource AudioSource;
     bool CanPlay = true;
     GlobalEnemiesManager Manager;
@@ -66,7 +66,6 @@ public class CastleScript : MonoBehaviour
     {
         HP -= Damage;
         ShowParticleEffect(EnemyPosition);
-        HitSound();
     }
     public void ShowParticleEffect (Vector3 EnemyPosition)
     {
@@ -76,7 +75,7 @@ public class CastleScript : MonoBehaviour
         NewParticle.transform.LookAt(EnemyPosition);
         Destroy(NewParticle, 2);
     }
-    public void HitSound()
+    public void HitSound(AudioClip[] HitSounds)
     {
         if (AudioSource.isPlaying == false && CanPlay == true)
         {
@@ -88,7 +87,7 @@ public class CastleScript : MonoBehaviour
     }
     IEnumerator Wait()
     {
-        yield return new WaitForSeconds(0.7f);
+        yield return new WaitForSeconds(0.2f);
         CanPlay = true;
     }
     IEnumerator StopTime()

@@ -7,21 +7,18 @@ public class EffectBulletExplosion : MonoBehaviour
     List<GameObject> AttackGoals = new List <GameObject>();
     int i = 0;
     public CardScriptableObject.EffectType EffectType;
-     
-
-    // Update is called once per frame
-
-    public void OnTriggerEnter (Collider col)
+    public GlobalEnemiesManager globalEnemiesManager;
+    public float RangeOfExplosion;
+    void Start()
     {
-        if (col.gameObject.tag == "Enemy")
-        {
-             AttackGoals.Add(col.gameObject);
-        }
+        globalEnemiesManager = LinksContainer.instance.globalEnemiesManager;
     }
+
     public void Explose (float Damage, float EffectPower, float EffectTime)
     {
         gameObject.GetComponent<AudioSource>().Play();
-        for(int q = 0; q < AttackGoals.Count; q++)
+        AttackGoals = globalEnemiesManager.EnemiesInRadius(gameObject.transform.position, RangeOfExplosion);
+        for (int q = 0; q < AttackGoals.Count; q++)
         {
             AttackGoals[q].GetComponent<DamageReciever>().DamageResistance(Damage, CardScriptableObject.DamageType.ExplosionDamage);
             if (EffectType == CardScriptableObject.EffectType.FreezingEffect)

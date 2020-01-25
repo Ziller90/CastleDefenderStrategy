@@ -219,7 +219,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &259898182821300083
 Transform:
   m_ObjectHideFlags: 0
@@ -634,7 +634,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2669349996163212439}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.589, z: 0}
+  m_LocalPosition: {x: 0, y: 1.634, z: 0}
   m_LocalScale: {x: 3.468489, y: 3.4684885, z: 3.468489}
   m_Children: []
   m_Father: {fileID: 2633191083438752235}
@@ -2241,8 +2241,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2379331425751505760}
   - component: {fileID: 2745024610380149237}
-  - component: {fileID: 2111173831729149302}
-  - component: {fileID: 1517266085212736967}
   m_Layer: 0
   m_Name: Healing
   m_TagString: Untagged
@@ -2279,35 +2277,8 @@ MonoBehaviour:
   EnemiesToHeal: []
   HealingPower: 5
   Enemy: {fileID: 7601015049251427021}
---- !u!65 &2111173831729149302
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7810115934011873898}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 16.78751, y: 1.9815961, z: 16.787514}
-  m_Center: {x: -0.019891448, y: 0.4907981, z: 0.019877475}
---- !u!54 &1517266085212736967
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7810115934011873898}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  globalEnemiesManager: {fileID: 0}
+  RangeOfHealing: 3
 --- !u!1 &7855498063784022161
 GameObject:
   m_ObjectHideFlags: 0
@@ -2939,7 +2910,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2633191083438752235}
-  - component: {fileID: 3857302918625144713}
   - component: {fileID: 7601015049251427021}
   - component: {fileID: 9094996152137279174}
   - component: {fileID: 8311976433722050525}
@@ -2947,6 +2917,8 @@ GameObject:
   - component: {fileID: 3962511312635011090}
   - component: {fileID: 3515830912565457220}
   - component: {fileID: 1932563640640128094}
+  - component: {fileID: 5099485705138500734}
+  - component: {fileID: 167667006427183886}
   m_Layer: 0
   m_Name: EnemyBehaviour
   m_TagString: Enemy
@@ -2977,19 +2949,6 @@ Transform:
   m_Father: {fileID: 978745455792918395}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &3857302918625144713
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9068311631442063823}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &7601015049251427021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3227,9 +3186,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FrozenEffectAnimator: {fileID: 1738286580674378303}
   FireParticles: {fileID: 7853914678320584521}
-  FreezingEffectModificator: 1
-  BurningEffectModificator: 1
-  PoisonEffectModificator: 1
+  FrozenSpikes: {fileID: 5206853625372427810}
+  FreezingEffectModificator: 0
+  BurningEffectModificator: 0
+  PoisonEffectModificator: 0
 --- !u!114 &1932563640640128094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3242,6 +3202,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5454974f7a785c94d855fe3c1e38a82c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5099485705138500734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9068311631442063823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d40d7ce07b7d484468c64699c5328c61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GreenCrystal: {fileID: 6352572549226255353, guid: dfe17df01a43e9e448f6a57513e4f74d,
+    type: 3}
+  BlueCrystal: {fileID: 6352572549226255353, guid: 433a6a478e044e44cbe8d6df5831d1fd,
+    type: 3}
+  RedCrystal: {fileID: 6352572549226255353, guid: 231d33e1d3432fb45a25c8584a1a0686,
+    type: 3}
+  EnemyValue: 25
+  ProbabilytyOfGreenCrystal: 60
+  ProbabilytyOfBlueCrystal: 35
+  ProbabilityOfRedCrystal: 5
+  ProbabilityOfCrystalDrop: 15
+--- !u!114 &167667006427183886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9068311631442063823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7e3610f4d68ede4191aab1237c3d055, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AttackSound:
+  - {fileID: 8300000, guid: c1cd4b03a7675294cb87dd9b0d7d70c3, type: 3}
+  - {fileID: 8300000, guid: fe33700a8fc72cc4abcb4ac7a02f77e7, type: 3}
+  - {fileID: 8300000, guid: b2030de74a8075f4b941866d419d3f88, type: 3}
+  - {fileID: 8300000, guid: b24e487d7b1f99b4bac775cb80f4158a, type: 3}
+  - {fileID: 8300000, guid: e4fa152382d10ec42ac6c959fdda288d, type: 3}
 --- !u!1 &9216230497234065569
 GameObject:
   m_ObjectHideFlags: 0
@@ -3855,15 +3856,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e52a4a7891ae52c43ba55be833b385e4, type: 3}
---- !u!1 &1506181724671167570 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4579260695966347115, guid: e52a4a7891ae52c43ba55be833b385e4,
-    type: 3}
-  m_PrefabInstance: {fileID: 3128811086544806713}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2502965191250230849 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 709198810977246584, guid: e52a4a7891ae52c43ba55be833b385e4,
+    type: 3}
+  m_PrefabInstance: {fileID: 3128811086544806713}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1506181724671167570 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4579260695966347115, guid: e52a4a7891ae52c43ba55be833b385e4,
     type: 3}
   m_PrefabInstance: {fileID: 3128811086544806713}
   m_PrefabAsset: {fileID: 0}

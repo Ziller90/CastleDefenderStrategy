@@ -34,11 +34,7 @@ public class WinScript : MonoBehaviour
         AllSpawnersAreEmpty();
         if (AllpawnersAreEmpty == true && Enemies.Count == 0 && AlreadyWon == false && Castle.HP > 0) 
         {
-            Win = true;
-            WinPanel.SetActive(true);
-            PlayerStats.Crystals += CrystalsRewardForWin;
-            PlayerStats.CampaignProgressIndex++;
-            Music.StartCoroutine("StopMusic", 3);
+            StartCoroutine("WinWindowShow");
             AlreadyWon = true;
         }
       
@@ -64,6 +60,17 @@ public class WinScript : MonoBehaviour
         WinPanel.SetActive(true);
         PlayerStats.Crystals += CrystalsRewardForWin;
         PlayerStats.CampaignProgressIndex++;
+        Music.StartCoroutine("StopMusic", 3);
+        AlreadyWon = true;
+    }
+    IEnumerator WinWindowShow()
+    {
+        yield return new WaitForSeconds(2);
+        Win = true;
+        WinPanel.SetActive(true);
+        PlayerStats.Crystals += CrystalsRewardForWin;
+        PlayerStats.CampaignProgressIndex++;
+        SavingSystem.SavePlayerData();
         Music.StartCoroutine("StopMusic", 3);
         AlreadyWon = true;
     }

@@ -11,7 +11,7 @@ public class Cubemaker : MonoBehaviour
     public GameObject Cube;
     public GameObject Grid;
     public bool ChangeCube = false;
-    void Start ()
+    void Awake ()
     {
         if (Application.isPlaying == true)
         {

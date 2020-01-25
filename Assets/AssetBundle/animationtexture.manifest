@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 3446862104
+CRC: 3434929988
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 020d384483f05c013ccb897c0d4e1a19
+    Hash: a195ea39364a1e34831cdadac5db25b8
   TypeTreeHash:
     serializedVersion: 2
     Hash: 5ad585dd02dfb5016c0dad519eab8f49
@@ -17,6 +17,6 @@ Assets:
 - Assets/AnimationTexture/Orc_SM_light_infantry.bytes
 - Assets/AnimationTexture/Orc_SM_heavy_infantry.bytes
 - Assets/AnimationTexture/Orc_SM_spearman.bytes
+- Assets/AnimationTexture/Orc_heavy_infantry.bytes
 - Assets/AnimationTexture/Orc_shaman.bytes
-- Assets/AnimationTexture/Orc_archer.bytes
 Dependencies: []

@@ -17,7 +17,7 @@ public class MineScript : MonoBehaviour
         if (ShopManager.GoldFever == true)
         {
             IncomeDelay++;
-            IncomeSize = IncomeSize + 2;
+            IncomeSize = IncomeSize + 5;
         }
         ResourceManager = LinksContainer.instance.resourcesManager;
         StartCoroutine("GoldProduce");
@@ -29,6 +29,14 @@ public class MineScript : MonoBehaviour
         yield return new WaitForSeconds(IncomeDelay);
         GameObject NewCoin = Instantiate(GoldenCoin, gameObject.transform.position, Quaternion.identity);
         Coin CoinManager = NewCoin.transform.GetChild(0).GetComponent<Coin>();
+        CoinManager.CoinCost = IncomeSize;
+        CoinManager.Mine = gameObject.GetComponent<MineScript>();
+    }
+    public void MomentaryGoldProduce()
+    {
+        GameObject NewCoin = Instantiate(GoldenCoin, gameObject.transform.position, Quaternion.identity);
+        Coin CoinManager = NewCoin.transform.GetChild(0).GetComponent<Coin>();
+        CoinManager.IsTutorial = true;
         CoinManager.CoinCost = IncomeSize;
         CoinManager.Mine = gameObject.GetComponent<MineScript>();
     }

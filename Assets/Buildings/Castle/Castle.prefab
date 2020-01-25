@@ -3446,15 +3446,6 @@ MonoBehaviour:
     type: 3}
   CastlePosition: {fileID: 2876791432721487591}
   CastleWidth: 3
-  HitSounds:
-  - {fileID: 8300000, guid: c1cd4b03a7675294cb87dd9b0d7d70c3, type: 3}
-  - {fileID: 8300000, guid: fe33700a8fc72cc4abcb4ac7a02f77e7, type: 3}
-  - {fileID: 8300000, guid: 5c35c40d10b45484d9efaa2867e85b9a, type: 3}
-  - {fileID: 8300000, guid: ed86fa927f26d1b489958541d0a4deb7, type: 3}
-  - {fileID: 8300000, guid: 18e5540a440def14c9993cb7e3082509, type: 3}
-  - {fileID: 8300000, guid: b2030de74a8075f4b941866d419d3f88, type: 3}
-  - {fileID: 8300000, guid: b24e487d7b1f99b4bac775cb80f4158a, type: 3}
-  - {fileID: 8300000, guid: e4fa152382d10ec42ac6c959fdda288d, type: 3}
   AudioSource: {fileID: 7809593223345762314}
 --- !u!82 &7809593223345762314
 AudioSource:
@@ -3560,11 +3551,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3872912895721056068}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 13.099966, y: 6.2777176, z: 13.118315}
-  m_Center: {x: 1.0003481, y: 1.558836, z: 0.16501045}
+  m_Size: {x: 10.278917, y: 6.566145, z: 10.314432}
+  m_Center: {x: 1.1967335, y: 1.7030497, z: 0.17304039}
 --- !u!114 &4007106427124420323
 MonoBehaviour:
   m_ObjectHideFlags: 0

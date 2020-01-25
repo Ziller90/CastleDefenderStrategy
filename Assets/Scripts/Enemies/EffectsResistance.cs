@@ -7,6 +7,7 @@ public class EffectsResistance : MonoBehaviour
     EnemyBehaviour Enemy;
     public Animator FrozenEffectAnimator;
     public ParticleSystem FireParticles;
+    public GameObject FrozenSpikes;
     float LastFreezingTime;
     float LastBurningTime;
     float LastPoisonEffectTime;
@@ -67,8 +68,13 @@ public class EffectsResistance : MonoBehaviour
     }
     public void FreezingEffect (float SpeedDeBuff, float EffectTime)
     {
+        if (FreezingEffectModificator == 0)
+        {
+            return;
+        }
         if (SpeedDeBuff > 0 && FullFreeze == false)
         {
+            FrozenSpikes.SetActive(true);
             FrozenEffectAnimator.gameObject.SetActive(true);
             FrozenEffectAnimator.SetBool("Freezed", true);
             Enemy.speed = Enemy.NormalSpeed * SpeedDeBuff;
@@ -96,6 +102,10 @@ public class EffectsResistance : MonoBehaviour
 
     public void PoisonEffect(float Damage, float EffectTime)
     {
+        if (PoisonEffectModificator == 0)
+        {
+            return;
+        }
         if (Enemy.Poisoned == false)
         {
             Enemy.Poisoned = true;
@@ -106,6 +116,10 @@ public class EffectsResistance : MonoBehaviour
     }
     void BurningEffect(float Damage, float EffectTime)
     {
+        if (BurningEffectModificator == 0)
+        {
+            return;
+        }
         FireParticles.Play();
         Enemy.Burning = true;
         Enemy.StartCoroutine("Burn", Damage);

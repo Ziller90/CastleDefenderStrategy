@@ -59,7 +59,8 @@ public class CripsSpawner : MonoBehaviour
     }
     IEnumerator ButtonShowing()
     {
-        yield return new WaitForSeconds(3);
+        Debug.Log("Problem " + MessageTrigger[SquadCounter]);
+        yield return new WaitForSeconds(0.1f);
         MessagesManager.ShowNewMessageButton(MessageTrigger[SquadCounter]);
     }
 }

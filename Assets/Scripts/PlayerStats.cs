@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerStats : MonoBehaviour
 {
     public static int Crystals;
+    public static int DifficultyLevelIndex;
     public static int CampaignProgressIndex = 0;
     public static bool StartCapitalOpened = false;
 
