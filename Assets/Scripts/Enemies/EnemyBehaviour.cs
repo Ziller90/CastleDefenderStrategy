@@ -82,10 +82,10 @@ public class EnemyBehaviour : MonoBehaviour
             switch (PlayerStats.DifficultyLevelIndex)
             {
                 case 1:
-                    MaxHP = MaxHP * 0.6f;
+                    MaxHP = MaxHP * 0.7f;
                     break;
                 case 2:
-                    MaxHP = MaxHP * 1f;
+                    MaxHP = MaxHP * 1.2f;
                     break;
                 case 3:
                     MaxHP = MaxHP * 2f;
@@ -194,7 +194,7 @@ public class EnemyBehaviour : MonoBehaviour
     {
         if (AlreadyDead == false)
         {
-            float Delay = Random.Range(0.1f, 0.7f);
+            float Delay = Random.Range(0.3f, 0.4f);
             yield return new WaitForSeconds(Delay);
             Go = false;
             if (EnemyId == "Cavalry" || EnemyId == "Healer" || EnemyId == "Catapult")

@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class WinScript : MonoBehaviour
 {
@@ -14,9 +16,12 @@ public class WinScript : MonoBehaviour
     bool AlreadyWon = false;
     public bool NoEnemies;
     CastleScript Castle;
+    public Text CrystalsForWin;
+    public Text CrystalsForWinShad;
     void Start()
     {
         Castle = GameObject.FindGameObjectWithTag("Castle").GetComponent<CastleScript>();
+
     }
 
     // Update is called once per frame
@@ -71,6 +76,8 @@ public class WinScript : MonoBehaviour
         PlayerStats.Crystals += CrystalsRewardForWin;
         PlayerStats.CampaignProgressIndex++;
         SavingSystem.SavePlayerData();
+        CrystalsForWin.text = CrystalsRewardForWin.ToString();
+        CrystalsForWinShad.text = CrystalsRewardForWin.ToString();
         Music.StartCoroutine("StopMusic", 3);
         AlreadyWon = true;
     }
