@@ -188,14 +188,14 @@ public class TutorialManager : MonoBehaviour
     }
     IEnumerator AboutResources()
     {
-        yield return new WaitForSeconds(0.5f);
         MineScript Mine = GameObject.Find("Mine(Clone)").GetComponent<MineScript>();
-        Mine.MomentaryGoldProduce();
-        Mine.StopAllCoroutines();
         Destroy(GameObject.FindGameObjectWithTag("HighLightFrame"));
         TaskText.text = ConsoleMessages[2].GetTranslatedText();
+        yield return new WaitForSeconds(1);
+        Mine.MomentaryGoldProduce();
+        Mine.StopAllCoroutines();
         ArrowUnderGoldenMineCard.SetActive(false);
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(0.9f);
         TaskText.text = ConsoleMessages[15].GetTranslatedText();
         ArrowGoldenCoin.SetActive(true);
         DoNotTouchPanel.SetActive(false);
