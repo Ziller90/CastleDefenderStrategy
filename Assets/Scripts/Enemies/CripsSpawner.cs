@@ -22,6 +22,7 @@ public class CripsSpawner : MonoBehaviour
 
     void Start()
     {
+        gameObject.transform.position = new Vector3(gameObject.transform.position.x, 0.746f, gameObject.transform.position.z);
         wayManager = GameObject.Find("WayManager").GetComponent<WayManager>();
         MessagesManager = GameObject.FindGameObjectWithTag("Level").GetComponent<MessagesManager>();
     }

@@ -65,14 +65,16 @@ public class CastleScript : MonoBehaviour
     public void DamageReceive(float Damage, Vector3 EnemyPosition)
     {
         HP -= Damage;
-        ShowParticleEffect(EnemyPosition);
+        ShowParticleEffect(EnemyPosition, Damage);
     }
-    public void ShowParticleEffect (Vector3 EnemyPosition)
+    public void ShowParticleEffect (Vector3 EnemyPosition, float Damage)
     {
         Vector3 Normilized = (EnemyPosition - CastlePosition.position).normalized;
         Vector3 EffectPosition = (Normilized * CastleWidth / 2) + CastlePosition.position;
         var NewParticle = Instantiate(CastleDamageParticleEffect, EffectPosition, Quaternion.identity);
-        NewParticle.transform.LookAt(EnemyPosition);
+        float Scale = 0.12f * Damage;
+        Scale = Mathf.Clamp(Scale, 0.06f, 0.25f);
+        NewParticle.transform.localScale = new Vector3(Scale, Scale, Scale);
         Destroy(NewParticle, 2);
     }
     public void HitSound(AudioClip[] HitSounds)

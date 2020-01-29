@@ -49,7 +49,7 @@ MonoBehaviour:
   Castle: {fileID: 0}
   Speed: 0.08
   StoneDamage: 1
-  TurningSpeed: 4
+  TurningSpeed: 3
   MinimuDistance: 3
 --- !u!114 &2297887886324063779
 MonoBehaviour:
