@@ -327,7 +327,7 @@ MonoBehaviour:
   Burning: 0
   PoisonEffect: {fileID: 6367109903381862642}
   globalEnemiesManager: {fileID: 0}
-  AttackRange: 0
+  AttackRange: 0.3
   WayIndex: 0
   WayPoints: []
   AlreadyAttack: 0
@@ -659,11 +659,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: -0.2031288
       objectReference: {fileID: 0}
-    - target: {fileID: 7652641550217627703, guid: 1838b077c9898ca43b680746376c1e41,
-        type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8663528096171481664, guid: 1838b077c9898ca43b680746376c1e41,
         type: 3}
       propertyPath: playOnAwake
@@ -729,6 +724,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: c388b512389e83b45bbf758d31f8458d, type: 2}
+    - target: {fileID: 7652641550217627703, guid: 1838b077c9898ca43b680746376c1e41,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1838b077c9898ca43b680746376c1e41, type: 3}
 --- !u!1 &6367109903381862642 stripped
@@ -1027,11 +1027,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: -0.2284277
       objectReference: {fileID: 0}
-    - target: {fileID: 7652641550217627703, guid: 1838b077c9898ca43b680746376c1e41,
-        type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8663528096171481664, guid: 1838b077c9898ca43b680746376c1e41,
         type: 3}
       propertyPath: playOnAwake
@@ -1042,6 +1037,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 40224544e5418184ca3469e4c2d203f0, type: 2}
+    - target: {fileID: 7652641550217627703, guid: 1838b077c9898ca43b680746376c1e41,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1838b077c9898ca43b680746376c1e41, type: 3}
 --- !u!4 &4855590947266000519 stripped
@@ -1244,11 +1244,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.258512
-      objectReference: {fileID: 0}
-    - target: {fileID: 5132252811782190334, guid: 21045979fc136424ca78c0df278a8ca7,
-        type: 3}
-      propertyPath: m_ApplyActiveColorSpace
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5132252811782190273, guid: 21045979fc136424ca78c0df278a8ca7,
         type: 3}
@@ -1473,6 +1468,11 @@ PrefabInstance:
     - target: {fileID: 5132252811782190273, guid: 21045979fc136424ca78c0df278a8ca7,
         type: 3}
       propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5132252811782190334, guid: 21045979fc136424ca78c0df278a8ca7,
+        type: 3}
+      propertyPath: m_ApplyActiveColorSpace
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

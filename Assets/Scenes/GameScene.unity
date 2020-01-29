@@ -2208,7 +2208,6 @@ GameObject:
   - component: {fileID: 499174071}
   - component: {fileID: 499174073}
   - component: {fileID: 499174072}
-  - component: {fileID: 499174074}
   m_Layer: 5
   m_Name: Text (1)
   m_TagString: Untagged
@@ -2233,7 +2232,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -1.6666747, y: 0.8333287}
-  m_SizeDelta: {x: 500, y: 496.29}
+  m_SizeDelta: {x: 600, y: 496.29}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &499174072
 MonoBehaviour:
@@ -2277,19 +2276,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 499174070}
   m_CullTransparentMesh: 0
---- !u!114 &499174074
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 499174070}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55fa0ed1fe36a644b94dafc2931e83e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Translation: {fileID: 11400000, guid: 69ed376e2e9beaa458c96eaf6aac3d05, type: 2}
 --- !u!1 &508460537
 GameObject:
   m_ObjectHideFlags: 0
@@ -2457,8 +2443,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.2, y: -14.5}
-  m_SizeDelta: {x: 500, y: 496.29}
+  m_AnchoredPosition: {x: -1.2, y: -27}
+  m_SizeDelta: {x: 600, y: 496.29}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &527101110
 MonoBehaviour:
@@ -2511,10 +2497,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 527101108}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55fa0ed1fe36a644b94dafc2931e83e7, type: 3}
+  m_Script: {fileID: 11500000, guid: 6671abff52c95cc4cbbed33ebe781b4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Translation: {fileID: 11400000, guid: 69ed376e2e9beaa458c96eaf6aac3d05, type: 2}
+  Messages:
+  - {fileID: 11400000, guid: 5b5b97ca2ea3631499d26c6a03dc5c30, type: 2}
+  - {fileID: 11400000, guid: a138b84a799984642a2f2257048266a8, type: 2}
+  - {fileID: 11400000, guid: 773bdfd68c6cc4c40b0aeee980424d79, type: 2}
+  - {fileID: 11400000, guid: 6bfce211bf9c98e43a03747f535b3e58, type: 2}
+  - {fileID: 11400000, guid: e0d766c1ab358f947a785f1a90a4e6fe, type: 2}
+  - {fileID: 11400000, guid: 69ed376e2e9beaa458c96eaf6aac3d05, type: 2}
+  Text: {fileID: 527101110}
+  TextShadow: {fileID: 499174072}
 --- !u!224 &550360178 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6543737670539176152, guid: 51fc87bc21cdcbf4e86d2808ad3ba6b4,
@@ -3204,7 +3198,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0, y: -125}
+  m_AnchoredPosition: {x: -0, y: -155}
   m_SizeDelta: {x: 250, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &659919825
@@ -7327,7 +7321,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 9.40396e-37, y: 1.4069198e-37, z: 9.1835e-41, w: 1.8458935e-38}
+  m_BoundingSphereOverride: {x: 4.359798e+27, y: 947942.56, z: 1.0230485e-38, w: 6.69867e+31}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
