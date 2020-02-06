@@ -3005,6 +3005,8 @@ MonoBehaviour:
   AnimationIndex: 0
   FullFreezed: 0
   IceCube: {fileID: 1546031947037936565}
+  MinStopTime: 2
+  MaxStopTime: 4
 --- !u!23 &9094996152137279174
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3955,11 +3957,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: -0.21530393
       objectReference: {fileID: 0}
-    - target: {fileID: 7652641550217627703, guid: 1838b077c9898ca43b680746376c1e41,
-        type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8663528096171481664, guid: 1838b077c9898ca43b680746376c1e41,
         type: 3}
       propertyPath: playOnAwake
@@ -4025,6 +4022,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: c388b512389e83b45bbf758d31f8458d, type: 2}
+    - target: {fileID: 7652641550217627703, guid: 1838b077c9898ca43b680746376c1e41,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1838b077c9898ca43b680746376c1e41, type: 3}
 --- !u!4 &2787742866892573005 stripped
@@ -4121,11 +4123,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: -0.21969432
       objectReference: {fileID: 0}
-    - target: {fileID: 7652641550217627703, guid: 1838b077c9898ca43b680746376c1e41,
-        type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8663528096171481664, guid: 1838b077c9898ca43b680746376c1e41,
         type: 3}
       propertyPath: playOnAwake
@@ -4136,6 +4133,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 40224544e5418184ca3469e4c2d203f0, type: 2}
+    - target: {fileID: 7652641550217627703, guid: 1838b077c9898ca43b680746376c1e41,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1838b077c9898ca43b680746376c1e41, type: 3}
 --- !u!4 &2141952106268266380 stripped

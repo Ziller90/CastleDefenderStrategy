@@ -46,6 +46,9 @@ public class EnemyBehaviour : MonoBehaviour
     public int AnimationIndex;
     public bool FullFreezed;
     public GameObject IceCube;
+    public float MinStopTime;
+    public float MaxStopTime;
+
 
 
 
@@ -67,6 +70,8 @@ public class EnemyBehaviour : MonoBehaviour
     }
     void Start()
     {
+        MinStopTime = MinStopTime * 0.1f;
+        MaxStopTime = MaxStopTime * 0.1f;
 
         IceCube.SetActive(false);
         AnimationIndex = 1;
@@ -194,7 +199,7 @@ public class EnemyBehaviour : MonoBehaviour
     {
         if (AlreadyDead == false)
         {
-            float Delay = Random.Range(0.3f, 0.4f);
+            float Delay = Random.Range(MinStopTime, MaxStopTime);
             yield return new WaitForSeconds(Delay);
             Go = false;
             if (EnemyId == "Cavalry" || EnemyId == "Healer" || EnemyId == "Catapult")
@@ -220,7 +225,6 @@ public class EnemyBehaviour : MonoBehaviour
         else
             Debug.Log("ItWorks");
             AnimationIndex = 2;
-        gameObject.GetComponent<BoxCollider>().enabled = false;
         LinksContainer.instance.resourcesManager.Gold = LinksContainer.instance.resourcesManager.Gold + KillReward;
         Go = false;
         HPBar.gameObject.SetActive(false);

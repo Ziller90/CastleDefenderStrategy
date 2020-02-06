@@ -33,6 +33,7 @@ public class PoisonTower : MonoBehaviour
         if (Enemy == null || globalEnemiesManager.IsEnemyAttackAble(Enemy, gameObject.transform.position, TowerAttackDistance) == false || Enemy.GetComponent<EnemyBehaviour>().HP <= 0)
         {
             Enemy = globalEnemiesManager.EnemyToAttack(gameObject.transform.position, TowerAttackDistance);
+            EnemyPosition = Enemy.transform;
         }
         else
         {
@@ -46,7 +47,7 @@ public class PoisonTower : MonoBehaviour
         if (Reloaded == true)
         {
             NewPoison = Instantiate(Poison, PoisonSpawnPoint.transform);
-            NewPoison.GetComponent<EffectBulletScript>().EnemyPosition = Enemy.transform.position;
+            NewPoison.GetComponent<EffectBulletScript>().EnemyPosition = new Vector3(EnemyPosition.position.x, 0, EnemyPosition.position.z);
             NewPoison.GetComponent<EffectBulletScript>().Damage = TowerDamage;
             NewPoison.GetComponent<EffectBulletScript>().EffectPower = EffectPower;
             NewPoison.GetComponent<EffectBulletScript>().EffectTime = EffectTime;

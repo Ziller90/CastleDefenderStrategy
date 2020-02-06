@@ -449,6 +449,8 @@ MonoBehaviour:
   AnimationIndex: 0
   FullFreezed: 0
   IceCube: {fileID: 8582059512111680227}
+  MinStopTime: 1
+  MaxStopTime: 3
 --- !u!23 &9094996152137279174
 MeshRenderer:
   m_ObjectHideFlags: 0

@@ -420,6 +420,8 @@ MonoBehaviour:
   AnimationIndex: 0
   FullFreezed: 0
   IceCube: {fileID: 2913557919346622378}
+  MinStopTime: 2
+  MaxStopTime: 3
 --- !u!114 &4443324730294417978
 MonoBehaviour:
   m_ObjectHideFlags: 0

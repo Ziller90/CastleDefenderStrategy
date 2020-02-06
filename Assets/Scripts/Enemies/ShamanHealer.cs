@@ -9,13 +9,21 @@ public class ShamanHealer : MonoBehaviour
     public EnemyBehaviour Enemy;
     public GlobalEnemiesManager globalEnemiesManager;
     public float RangeOfHealing;
+    bool AleradyStopped;
 
     void Start()
     {
         globalEnemiesManager = LinksContainer.instance.globalEnemiesManager;
         StartCoroutine("Healing");
     }
-
+    void Update()
+    {
+        if ((Enemy.EnemyAnimator.GetBool("Attack") == true || Enemy.EnemyAnimator.GetBool("Dead") == true) && AleradyStopped == false)
+        {
+            StopCoroutine("Healing");
+            AleradyStopped = true;
+        }
+    }
     // Update is called once per frame
 
     IEnumerator Healing ()

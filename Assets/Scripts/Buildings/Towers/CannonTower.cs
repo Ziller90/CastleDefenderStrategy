@@ -28,6 +28,8 @@ public class CannonTower : MonoBehaviour
         {
             Enemy = globalEnemiesManager.EnemyToAttack(gameObject.transform.position, TowerAttackDistance);
         }
+
+
         else
         {
             EnemyPosition = Enemy.transform.position;
@@ -43,7 +45,7 @@ public class CannonTower : MonoBehaviour
         if (Reloaded == true)
         {
             NewBullet = Instantiate(Bullet, BulletSpawnPoint.transform);
-            NewBullet.GetComponent<BulletScript>().EnemyPosition = EnemyPosition;
+            NewBullet.GetComponent<BulletScript>().EnemyPosition = new Vector3 (EnemyPosition.x, 0, EnemyPosition.z);
             NewBullet.GetComponent<BulletScript>().Damage = TowerDamage;
             Reloaded = false;
             StartCoroutine("Reloading");

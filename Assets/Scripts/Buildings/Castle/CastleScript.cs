@@ -73,7 +73,7 @@ public class CastleScript : MonoBehaviour
         Vector3 EffectPosition = (Normilized * CastleWidth / 2) + CastlePosition.position;
         var NewParticle = Instantiate(CastleDamageParticleEffect, EffectPosition, Quaternion.identity);
         float Scale = 0.12f * Damage;
-        Scale = Mathf.Clamp(Scale, 0.06f, 0.25f);
+        Scale = Mathf.Clamp(Scale, 0.06f, 0.22f);
         NewParticle.transform.localScale = new Vector3(Scale, Scale, Scale);
         Destroy(NewParticle, 2);
     }

@@ -74,8 +74,8 @@ public class GlobalEnemiesManager : MonoBehaviour
         {
             if (ObjectPosition.x + Range > EnemiesOnTheMap[i].transform.position.x &&
                 ObjectPosition.x - Range < EnemiesOnTheMap[i].transform.position.x &&
-                ObjectPosition.y + Range > EnemiesOnTheMap[i].transform.position.y &&
-                ObjectPosition.y - Range < EnemiesOnTheMap[i].transform.position.y &&
+                //ObjectPosition.y + Range > EnemiesOnTheMap[i].transform.position.y &&
+                //ObjectPosition.y - Range < EnemiesOnTheMap[i].transform.position.y &&
                 ObjectPosition.z + Range > EnemiesOnTheMap[i].transform.position.z &&
                 ObjectPosition.z - Range < EnemiesOnTheMap[i].transform.position.z)
             {

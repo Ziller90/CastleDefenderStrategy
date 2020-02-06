@@ -57,6 +57,11 @@ public class CameraRayCast : MonoBehaviour
                 }
                 if (InteractableObject == false)
                 {
+                    if (OldHitObject != null && OldHitObject.tag == "Tower")
+                    {
+                        Debug.Log("Nowerr");
+                        OldHitObject.GetComponent<BuildingStats>().BuildingHighLightRemove();
+                    }
                     if (OldHitObject != null && OldHitObject.tag == "Castle")
                     {
 
@@ -65,11 +70,7 @@ public class CameraRayCast : MonoBehaviour
                     {
                         OldHitObject.GetComponent<BuilderManager>().CubeRemoveHightLighting();
                     }
-                    if (OldHitObject != null && OldHitObject.tag == "Tower")
-                    {
-                        Debug.Log("Nowerr");
-                        OldHitObject.GetComponent<BuildingStats>().BuildingHighLightRemove();
-                    }
+                   
                 }
                 DetectedObjectsManager();
             }
@@ -98,15 +99,6 @@ public class CameraRayCast : MonoBehaviour
         }
         for (int i = 0; i < hits.Length; i++)
         {
-            if (hits[i].collider.gameObject.tag == "Castle" && AlwaysDetected == false)
-            {
-                AlwaysDetected = true;
-                OldHitObject = hits[i].collider.gameObject;
-            }
-
-        }
-        for (int i = 0; i < hits.Length; i++)
-        {
             if (hits[i].collider.gameObject.tag == "Tower" && AlwaysDetected == false)
             {
                 AlwaysDetected = true;
@@ -115,6 +107,16 @@ public class CameraRayCast : MonoBehaviour
             }
 
         }
+        for (int i = 0; i < hits.Length; i++)
+        {
+            if (hits[i].collider.gameObject.tag == "Castle" && AlwaysDetected == false)
+            {
+                AlwaysDetected = true;
+                OldHitObject = hits[i].collider.gameObject;
+            }
+
+        }
+        
 
         for (int i = 0; i < hits.Length; i++)
         {

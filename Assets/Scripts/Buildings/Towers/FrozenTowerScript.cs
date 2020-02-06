@@ -44,7 +44,7 @@ public class FrozenTowerScript : MonoBehaviour
         if (Reloaded == true)
         {
             NewBullet = Instantiate(Bullet, BulletSpawnPoint.transform);
-            NewBullet.GetComponent<EffectBulletScript>().EnemyPosition = EnemyPosition;
+            NewBullet.GetComponent<EffectBulletScript>().EnemyPosition = new Vector3(EnemyPosition.x, 0, EnemyPosition.z); 
             NewBullet.GetComponent<EffectBulletScript>().Damage = TowerDamage;
             NewBullet.GetComponent<EffectBulletScript>().EffectPower = EffectPower;
             NewBullet.GetComponent<EffectBulletScript>().EffectTime = EffectTime;
