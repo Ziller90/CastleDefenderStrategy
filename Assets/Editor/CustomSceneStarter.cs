@@ -80,6 +80,11 @@ public class CustomSceneStarter : Editor
     {
         PlayerPrefs.DeleteAll();
     }
+    [MenuItem("Tools/+1000 Crystals", false, 1)]
+    public static void AddCrystals()
+    {
+        PlayerStats.Crystals = PlayerStats.Crystals + 1000;
+    }
 
 #endif
 

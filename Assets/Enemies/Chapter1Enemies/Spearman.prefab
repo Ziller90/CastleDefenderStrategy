@@ -309,8 +309,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RouteNumber: 1
-  NormalSpeed: 0.018
-  speed: 0.018
+  NormalSpeed: 0.017
+  speed: 0.017
   MaxHP: 20
   HP: 20
   HPLine: {fileID: 7275952419879569420}
@@ -323,7 +323,7 @@ MonoBehaviour:
   Enemy: {fileID: 4419810252268241588}
   Castle: {fileID: 0}
   Go: 0
-  EnemyDamage: 3
+  EnemyDamage: 2
   EnemyId: Infanity
   KillReward: 6
   CrystalsKillReward: 0

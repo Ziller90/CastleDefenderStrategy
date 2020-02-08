@@ -2978,7 +2978,7 @@ MonoBehaviour:
   Go: 0
   EnemyDamage: 1
   EnemyId: Healer
-  KillReward: 2
+  KillReward: 20
   CrystalsKillReward: 1
   FrozenRecover: 30
   EnemyAnimator: {fileID: 1674736086981063231}

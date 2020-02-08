@@ -16,8 +16,7 @@ public class MineScript : MonoBehaviour
     {
         if (ShopManager.GoldFever == true)
         {
-            IncomeDelay++;
-            IncomeSize = IncomeSize + 5;
+            IncomeSize = IncomeSize + 3;
         }
         ResourceManager = LinksContainer.instance.resourcesManager;
         StartCoroutine("GoldProduce");

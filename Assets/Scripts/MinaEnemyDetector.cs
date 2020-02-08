@@ -14,6 +14,11 @@ public class MinaEnemyDetector : MonoBehaviour
     void Start()
     {
         globalEnemiesManager = LinksContainer.instance.globalEnemiesManager;
+        if (ShopManager.SuperMine == true)
+        {
+            Debug.Log("Mine");
+            RangeOfDetection = RangeOfDetection * 1.5f;
+        }
     }
     // Update is called once per frame
     void Update()

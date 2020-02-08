@@ -422,7 +422,7 @@ MonoBehaviour:
   Go: 0
   EnemyDamage: 10
   EnemyId: General
-  KillReward: 15
+  KillReward: 100
   CrystalsKillReward: 50
   FrozenRecover: 30
   EnemyAnimator: {fileID: 7706583930150975558}
