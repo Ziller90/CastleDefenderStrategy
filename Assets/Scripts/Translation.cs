@@ -28,12 +28,12 @@ public class Translation : ScriptableObject
             return EnglishVersion;
         else if (GlobalLanguageManager.Language == GlobalLanguageManager.GloabalLanguage.Russian)
             return RussianVersion;
-        else if (GlobalLanguageManager.Language == GlobalLanguageManager.GloabalLanguage.Japan)
-            return JapanVersion;
-        else if (GlobalLanguageManager.Language == GlobalLanguageManager.GloabalLanguage.Korean)
-            return KoreanVersion;
-        else if (GlobalLanguageManager.Language == GlobalLanguageManager.GloabalLanguage.Spanish)
-            return SpanishVersion;
+        //else if (GlobalLanguageManager.Language == GlobalLanguageManager.GloabalLanguage.Japan)
+        //    return JapanVersion;
+        //else if (GlobalLanguageManager.Language == GlobalLanguageManager.GloabalLanguage.Korean)
+        //    return KoreanVersion;
+        //else if (GlobalLanguageManager.Language == GlobalLanguageManager.GloabalLanguage.Spanish)
+        //    return SpanishVersion;
         else
             return "#####";
     }

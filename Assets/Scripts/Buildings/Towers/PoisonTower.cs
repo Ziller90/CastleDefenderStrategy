@@ -47,10 +47,10 @@ public class PoisonTower : MonoBehaviour
         if (Reloaded == true)
         {
             NewPoison = Instantiate(Poison, PoisonSpawnPoint.transform);
-            NewPoison.GetComponent<EffectBulletScript>().EnemyPosition = new Vector3(EnemyPosition.position.x, 0, EnemyPosition.position.z);
-            NewPoison.GetComponent<EffectBulletScript>().Damage = TowerDamage;
-            NewPoison.GetComponent<EffectBulletScript>().EffectPower = EffectPower;
-            NewPoison.GetComponent<EffectBulletScript>().EffectTime = EffectTime;
+            NewPoison.GetComponent<PlagueBullet>().EnemyPosition = new Vector3(EnemyPosition.position.x, 0, EnemyPosition.position.z);
+            NewPoison.GetComponent<PlagueBullet>().Damage = TowerDamage;
+            NewPoison.GetComponent<PlagueBullet>().EffectPower = EffectPower;
+            NewPoison.GetComponent<PlagueBullet>().EffectTime = EffectTime;
             Reloaded = false;
             StartCoroutine("Reloading");
         }

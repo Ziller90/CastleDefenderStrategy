@@ -367,6 +367,9 @@ MonoBehaviour:
   IceCube: {fileID: 8171184270728381852}
   MinStopTime: 2
   MaxStopTime: 4
+  StandartMaterial: {fileID: 2100000, guid: adebc4a0d66adc04e8b1aeec86b3e9d6, type: 2}
+  DarkVersionMaterial: {fileID: 2100000, guid: 89c1e12e00ec1194994f0cb6e3a0e331, type: 2}
+  Renderer: {fileID: 792327025384535001}
 --- !u!23 &9094996152137279174
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -764,26 +767,36 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.4225711
       objectReference: {fileID: 0}
-    - target: {fileID: 9500000, guid: 39137e143153bfa40b27cc40e5a803b1, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 0dead28f645fcbd478e255ff92e8ec86, type: 2}
     - target: {fileID: 13700048, guid: 39137e143153bfa40b27cc40e5a803b1, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 13700048, guid: 39137e143153bfa40b27cc40e5a803b1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: adebc4a0d66adc04e8b1aeec86b3e9d6, type: 2}
+    - target: {fileID: 9500000, guid: 39137e143153bfa40b27cc40e5a803b1, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 0dead28f645fcbd478e255ff92e8ec86, type: 2}
     m_RemovedComponents:
     - {fileID: 9500000, guid: 39137e143153bfa40b27cc40e5a803b1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 39137e143153bfa40b27cc40e5a803b1, type: 3}
---- !u!1 &792327025370873567 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100054, guid: 39137e143153bfa40b27cc40e5a803b1,
+--- !u!137 &792327025384535001 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 13700048, guid: 39137e143153bfa40b27cc40e5a803b1,
     type: 3}
   m_PrefabInstance: {fileID: 792327025370970121}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &792327025370833585 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400056, guid: 39137e143153bfa40b27cc40e5a803b1,
+    type: 3}
+  m_PrefabInstance: {fileID: 792327025370970121}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &792327025370873567 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100054, guid: 39137e143153bfa40b27cc40e5a803b1,
     type: 3}
   m_PrefabInstance: {fileID: 792327025370970121}
   m_PrefabAsset: {fileID: 0}
@@ -1200,6 +1213,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: -0.21969557
       objectReference: {fileID: 0}
+    - target: {fileID: 7652641550217627703, guid: 1838b077c9898ca43b680746376c1e41,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8663528096171481664, guid: 1838b077c9898ca43b680746376c1e41,
         type: 3}
       propertyPath: playOnAwake
@@ -1210,11 +1228,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 40224544e5418184ca3469e4c2d203f0, type: 2}
-    - target: {fileID: 7652641550217627703, guid: 1838b077c9898ca43b680746376c1e41,
-        type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1838b077c9898ca43b680746376c1e41, type: 3}
 --- !u!4 &5958307686823917858 stripped
@@ -1313,15 +1326,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e52a4a7891ae52c43ba55be833b385e4, type: 3}
---- !u!4 &2502965191250230849 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 709198810977246584, guid: e52a4a7891ae52c43ba55be833b385e4,
-    type: 3}
-  m_PrefabInstance: {fileID: 3128811086544806713}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1506181724671167570 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4579260695966347115, guid: e52a4a7891ae52c43ba55be833b385e4,
+    type: 3}
+  m_PrefabInstance: {fileID: 3128811086544806713}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2502965191250230849 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 709198810977246584, guid: e52a4a7891ae52c43ba55be833b385e4,
     type: 3}
   m_PrefabInstance: {fileID: 3128811086544806713}
   m_PrefabAsset: {fileID: 0}
@@ -1412,6 +1425,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: -0.21531019
       objectReference: {fileID: 0}
+    - target: {fileID: 7652641550217627703, guid: 1838b077c9898ca43b680746376c1e41,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8663528096171481664, guid: 1838b077c9898ca43b680746376c1e41,
         type: 3}
       propertyPath: playOnAwake
@@ -1477,11 +1495,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: c388b512389e83b45bbf758d31f8458d, type: 2}
-    - target: {fileID: 7652641550217627703, guid: 1838b077c9898ca43b680746376c1e41,
-        type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1838b077c9898ca43b680746376c1e41, type: 3}
 --- !u!1 &3876579963085924582 stripped
@@ -1578,15 +1591,15 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 3.4286199
       objectReference: {fileID: 0}
-    - target: {fileID: 8733185181838136922, guid: 10d56700935a36c4b9c4954ca12b2710,
-        type: 3}
-      propertyPath: playOnAwake
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8733185181838176250, guid: 10d56700935a36c4b9c4954ca12b2710,
         type: 3}
       propertyPath: m_RenderMode
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8733185181838136922, guid: 10d56700935a36c4b9c4954ca12b2710,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10d56700935a36c4b9c4954ca12b2710, type: 3}

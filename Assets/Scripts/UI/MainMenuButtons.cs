@@ -12,6 +12,9 @@ public class MainMenuButtons : MonoBehaviour
     public ShopManager ShopMgr;
     public GameObject LoadingText;
     public Text Loading;
+    public Text LevelNumber;
+    public Text LevelNumberShadow;
+
     public LanguageText PlayButtonTranslation;
     public LanguageText PlayButtonTranslationShadow;
     public Translation NewGame;
@@ -22,13 +25,44 @@ public class MainMenuButtons : MonoBehaviour
     public GameObject ShopOpenButton;
     public GameObject NewThingsMark;
     public static bool ABwasLoaded;
+    public int NumberOfChapter = 0;
+    public int NumberOfLevelOfChapter = 0;
     public static bool  AlreadySeeNewThingsLevel6;
+    public GameObject AuthoresPanel;
     int NumberOfNewThings;
 
 
     void Start()
     {
-        ShopMgr.ShopAcessLevel = 1;
+       
+
+        if (PlayerStats.CampaignProgressIndex < 5)
+        {
+            NumberOfChapter = 1;
+        }
+        if (PlayerStats.CampaignProgressIndex < 10 && PlayerStats.CampaignProgressIndex > 5)
+        {
+            NumberOfChapter = 2;
+        }
+        if (PlayerStats.CampaignProgressIndex == 10)
+        {
+            NumberOfChapter = 3;
+        }
+        if (NumberOfChapter == 1)
+        {
+            NumberOfLevelOfChapter = PlayerStats.CampaignProgressIndex;
+        }
+        if (NumberOfChapter == 2)
+        {
+            NumberOfLevelOfChapter = PlayerStats.CampaignProgressIndex - 5;
+        }
+        if (NumberOfChapter == 3)
+        {
+            NumberOfLevelOfChapter = 1;
+        }
+        LevelNumberUpdateInfo();
+
+        ShopMgr.ShopAcessLevel = 2;
         if (PlayerStats.CampaignProgressIndex >= 6)
         {
             ShopMgr.ShopAcessLevel = 2;
@@ -42,6 +76,16 @@ public class MainMenuButtons : MonoBehaviour
             NewThingsMark.SetActive(true);
             NumberOfNewThings = 1;
         }
+    }
+    public void ShowAuthors()
+    {
+        MainButtons.SetActive(false);
+        AuthoresPanel.SetActive(true);
+    }
+    public void HideAuthors()
+    {
+        AuthoresPanel.SetActive(false);
+        MainButtons.SetActive(true);
     }
     public void SeeIfNewThings()
     {
@@ -79,10 +123,13 @@ public class MainMenuButtons : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
+    public void LevelNumberUpdateInfo()
+    {
+        LevelNumber.text = LevelNumber.text + "  " + NumberOfChapter + " - " + NumberOfLevelOfChapter;
+        LevelNumberShadow.text = LevelNumberShadow.text + "  " + NumberOfChapter + " - " + NumberOfLevelOfChapter;
+    }
     void Update()
     {
-
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             SavingSystem.SavePlayerData();
@@ -133,6 +180,11 @@ public class MainMenuButtons : MonoBehaviour
         SceneManager.LoadSceneAsync(SceneToLoad);
         LoadingText.SetActive(true);
         gameObject.GetComponent<ScreenFader>().enabled = false;
+    }
+    public void GoToTyler()
+    {
+        SavingSystem.SavePlayerData();
+        Application.OpenURL("https://tylercunningham.bandcamp.com/");
     }
 
 }

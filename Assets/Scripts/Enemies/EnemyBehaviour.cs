@@ -48,6 +48,9 @@ public class EnemyBehaviour : MonoBehaviour
     public GameObject IceCube;
     public float MinStopTime;
     public float MaxStopTime;
+    public Material StandartMaterial;
+    public Material DarkVersionMaterial;
+    public SkinnedMeshRenderer Renderer;
 
 
 
@@ -55,6 +58,16 @@ public class EnemyBehaviour : MonoBehaviour
 
 
 
+    void Awake()
+    {
+        if (Renderer != null)
+        {
+            if (LinksContainer.instance.Level.GetComponent<MapSetting>().LevelNumber >= 10)
+            {
+                Renderer.material = DarkVersionMaterial;
+            }
+        }
+    }
     public void Attack()
     {
       if (AlreadyAttack == false)

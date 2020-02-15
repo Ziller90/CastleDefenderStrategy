@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class LanguageText : MonoBehaviour
 {
     Text Text;
+    public bool isEditableInPlayMode;
     public Translation Translation;
     void Awake ()
     {
@@ -17,8 +18,11 @@ public class LanguageText : MonoBehaviour
      
     void Update()
     {
-        Text = gameObject.GetComponent<Text>();
-        Text.text = Translation.GetTranslatedText();
+        if (isEditableInPlayMode == false)
+        {
+            Text = gameObject.GetComponent<Text>();
+            Text.text = Translation.GetTranslatedText();
+        }
     }
     public void ChangeLanguage ()
     {

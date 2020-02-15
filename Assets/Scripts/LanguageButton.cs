@@ -20,18 +20,18 @@ public class LanguageButton : MonoBehaviour
         {
             ButtonImage.texture = Flags[1];
         }
-        else if (GlobalLanguageManager.Language == GlobalLanguageManager.GloabalLanguage.Japan)
-        {
-            ButtonImage.texture = Flags[2];
-        }
-        else if (GlobalLanguageManager.Language == GlobalLanguageManager.GloabalLanguage.Korean)
-        {
-            ButtonImage.texture = Flags[3];;
-        }
-        else if (GlobalLanguageManager.Language == GlobalLanguageManager.GloabalLanguage.Spanish)
-        {
-            ButtonImage.texture = Flags[4];
-        }
+        //else if (GlobalLanguageManager.Language == GlobalLanguageManager.GloabalLanguage.Japan)
+        //{
+        //    ButtonImage.texture = Flags[2];
+        //}
+        //else if (GlobalLanguageManager.Language == GlobalLanguageManager.GloabalLanguage.Korean)
+        //{
+        //    ButtonImage.texture = Flags[3];;
+        //}
+        //else if (GlobalLanguageManager.Language == GlobalLanguageManager.GloabalLanguage.Spanish)
+        //{
+        //    ButtonImage.texture = Flags[4];
+        //}
     }
 
     // Update is called once per frame
@@ -42,22 +42,22 @@ public class LanguageButton : MonoBehaviour
             ButtonImage.texture = Flags[1];
             GlobalLanguageManager.Language = GlobalLanguageManager.GloabalLanguage.Russian;
         }
+        //else if (GlobalLanguageManager.Language == GlobalLanguageManager.GloabalLanguage.Russian)
+        //{
+        //    ButtonImage.texture = Flags[2];
+        //    GlobalLanguageManager.Language = GlobalLanguageManager.GloabalLanguage.Japan;
+        //}
+        //else if (GlobalLanguageManager.Language == GlobalLanguageManager.GloabalLanguage.Japan)
+        //{
+        //    ButtonImage.texture = Flags[3];
+        //    GlobalLanguageManager.Language = GlobalLanguageManager.GloabalLanguage.Korean;
+        //}
+        //else if (GlobalLanguageManager.Language == GlobalLanguageManager.GloabalLanguage.Korean)
+        //{
+        //    ButtonImage.texture = Flags[4];
+        //    GlobalLanguageManager.Language = GlobalLanguageManager.GloabalLanguage.Spanish;
+        //}
         else if (GlobalLanguageManager.Language == GlobalLanguageManager.GloabalLanguage.Russian)
-        {
-            ButtonImage.texture = Flags[2];
-            GlobalLanguageManager.Language = GlobalLanguageManager.GloabalLanguage.Japan;
-        }
-        else if (GlobalLanguageManager.Language == GlobalLanguageManager.GloabalLanguage.Japan)
-        {
-            ButtonImage.texture = Flags[3];
-            GlobalLanguageManager.Language = GlobalLanguageManager.GloabalLanguage.Korean;
-        }
-        else if (GlobalLanguageManager.Language == GlobalLanguageManager.GloabalLanguage.Korean)
-        {
-            ButtonImage.texture = Flags[4];
-            GlobalLanguageManager.Language = GlobalLanguageManager.GloabalLanguage.Spanish;
-        }
-        else if (GlobalLanguageManager.Language == GlobalLanguageManager.GloabalLanguage.Spanish)
         {
             ButtonImage.texture = Flags[0];
             GlobalLanguageManager.Language = GlobalLanguageManager.GloabalLanguage.English;

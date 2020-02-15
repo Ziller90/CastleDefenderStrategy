@@ -87,18 +87,18 @@ public class SavingSystem : MonoBehaviour
             case GlobalLanguageManager.GloabalLanguage.English:
                 PlayerPrefs.SetInt("LanguageIndex", 1);
                 break;
-            case GlobalLanguageManager.GloabalLanguage.Japan:
-                PlayerPrefs.SetInt("LanguageIndex", 2);
-                break;
-            case GlobalLanguageManager.GloabalLanguage.Korean:
-                PlayerPrefs.SetInt("LanguageIndex", 3);
-                break;
+            //case GlobalLanguageManager.GloabalLanguage.Japan:
+            //    PlayerPrefs.SetInt("LanguageIndex", 2);
+            //    break;
+            //case GlobalLanguageManager.GloabalLanguage.Korean:
+            //    PlayerPrefs.SetInt("LanguageIndex", 3);
+            //    break;
             case GlobalLanguageManager.GloabalLanguage.Russian:
                 PlayerPrefs.SetInt("LanguageIndex", 4);
                 break;
-            case GlobalLanguageManager.GloabalLanguage.Spanish:
-                PlayerPrefs.SetInt("LanguageIndex", 5);
-                break;
+            //case GlobalLanguageManager.GloabalLanguage.Spanish:
+            //    PlayerPrefs.SetInt("LanguageIndex", 5);
+            //    break;
         }
     }
     public void SetPlayerData()
@@ -168,18 +168,18 @@ public class SavingSystem : MonoBehaviour
             case 1:
                 GlobalLanguageManager.Language = GlobalLanguageManager.GloabalLanguage.English;
                 break;
-            case 2:
-                GlobalLanguageManager.Language = GlobalLanguageManager.GloabalLanguage.Japan;
-                break;
-            case 3:
-                GlobalLanguageManager.Language = GlobalLanguageManager.GloabalLanguage.Korean;
-                break;
+            //case 2:
+            //    GlobalLanguageManager.Language = GlobalLanguageManager.GloabalLanguage.Japan;
+            //    break;
+            //case 3:
+            //    GlobalLanguageManager.Language = GlobalLanguageManager.GloabalLanguage.Korean;
+            //    break;
             case 4:
                 GlobalLanguageManager.Language = GlobalLanguageManager.GloabalLanguage.Russian;
                 break;
-            case 5:
-                GlobalLanguageManager.Language = GlobalLanguageManager.GloabalLanguage.Spanish;
-                break;
+            //case 5:
+            //    GlobalLanguageManager.Language = GlobalLanguageManager.GloabalLanguage.Spanish;
+            //    break;
 
         }
     }
@@ -196,22 +196,22 @@ public class SavingSystem : MonoBehaviour
         {
             GlobalLanguageManager.Language = GlobalLanguageManager.GloabalLanguage.English;
         }
-        if (Application.systemLanguage == SystemLanguage.Japanese)
-        {
-            GlobalLanguageManager.Language = GlobalLanguageManager.GloabalLanguage.Japan;
-        }
-        if (Application.systemLanguage == SystemLanguage.Korean)
-        {
-            GlobalLanguageManager.Language = GlobalLanguageManager.GloabalLanguage.Korean;
-        }
-        if (Application.systemLanguage == SystemLanguage.Russian)
+        //if (Application.systemLanguage == SystemLanguage.Japanese)
+        //{
+        //    GlobalLanguageManager.Language = GlobalLanguageManager.GloabalLanguage.Japan;
+        //}
+        //if (Application.systemLanguage == SystemLanguage.Korean)
+        //{
+        //    GlobalLanguageManager.Language = GlobalLanguageManager.GloabalLanguage.Korean;
+        //}
+        //if (Application.systemLanguage == SystemLanguage.Russian)
         {
             GlobalLanguageManager.Language = GlobalLanguageManager.GloabalLanguage.Russian;
         }
-        if (Application.systemLanguage == SystemLanguage.Spanish)
-        {
-            GlobalLanguageManager.Language = GlobalLanguageManager.GloabalLanguage.Spanish;
-        }
+        //if (Application.systemLanguage == SystemLanguage.Spanish)
+        //{
+        //    GlobalLanguageManager.Language = GlobalLanguageManager.GloabalLanguage.Spanish;
+        //}
     }
     
 }

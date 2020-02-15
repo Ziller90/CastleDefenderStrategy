@@ -85,6 +85,20 @@ public class CustomSceneStarter : Editor
     {
         PlayerStats.Crystals = PlayerStats.Crystals + 1000;
     }
+    [MenuItem("Tools/SetFinalPreference", false, 1)]
+    public static void FinalPreference()
+    {
+        PlayerStats.CampaignProgressIndex = 10;
+        ShopManager.BigBalls = true;
+        ShopManager.BurningArrows = true;
+        ShopManager.FullFreeze = true;
+        ShopManager.GoldFever = true;
+        ShopManager.Spikes = true;
+        ShopManager.StartUpCapital = true;
+        ShopManager.StrongWalls = true;
+        ShopManager.SuperMine = true;
+
+    }
 
 #endif
 

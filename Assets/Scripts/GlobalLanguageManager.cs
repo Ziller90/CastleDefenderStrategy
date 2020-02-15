@@ -6,7 +6,7 @@ public class GlobalLanguageManager : MonoBehaviour
 {
     public enum GloabalLanguage
     {
-       English, Russian, Japan, Korean, Spanish
+       English, Russian, /*Japan, Korean, Spanish*/
     }
     public static GloabalLanguage Language;
 
