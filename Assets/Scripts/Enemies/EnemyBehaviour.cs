@@ -83,18 +83,6 @@ public class EnemyBehaviour : MonoBehaviour
     }
     void Start()
     {
-        MinStopTime = MinStopTime * 0.1f;
-        MaxStopTime = MaxStopTime * 0.1f;
-
-        IceCube.SetActive(false);
-        AnimationIndex = 1;
-        winScript = LinksContainer.instance.winScript;
-        winScript.Enemies.Add(gameObject);
-        EnemyTransform = Enemy.transform;
-        Enemy.transform.SetParent(null);
-        globalEnemiesManager = LinksContainer.instance.globalEnemiesManager;
-        globalEnemiesManager.RegisterEnemy(gameObject);
-        CameraViewPoint = LinksContainer.instance.CameraViewPoint;
         if (PlayerStats.CampaignProgressIndex > 0)
         {
             switch (PlayerStats.DifficultyLevelIndex)
@@ -110,6 +98,18 @@ public class EnemyBehaviour : MonoBehaviour
                     break;
             }
         }
+        MinStopTime = MinStopTime * 0.1f;
+        MaxStopTime = MaxStopTime * 0.1f;
+
+        IceCube.SetActive(false);
+        AnimationIndex = 1;
+        winScript = LinksContainer.instance.winScript;
+        winScript.Enemies.Add(gameObject);
+        EnemyTransform = Enemy.transform;
+        Enemy.transform.SetParent(null);
+        globalEnemiesManager = LinksContainer.instance.globalEnemiesManager;
+        globalEnemiesManager.RegisterEnemy(gameObject);
+        CameraViewPoint = LinksContainer.instance.CameraViewPoint;
         HP = MaxHP;
         HPIndex = 1;
         Go = true;

@@ -26,7 +26,7 @@ public class BuildingManager : MonoBehaviour
         if (Manager.CubeTypeIndex == 1)
         {
             FieldBuildings.SetActive(true);
-            RoadBuildings.SetActive(true);
+            RoadBuildings.SetActive(false);
             GoldenBuildings.SetActive(false);
         }
         if (Manager.CubeTypeIndex == 2)

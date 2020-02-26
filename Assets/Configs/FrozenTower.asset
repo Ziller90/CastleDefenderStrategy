@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf38c5c0a374be428df77629206090f, type: 3}
   m_Name: FrozenTower
   m_EditorClassIdentifier: 
-  BuildingImage: {fileID: 2800000, guid: b95f3a8ba5cbb444d90dd58b92673db8, type: 3}
+  BuildingImage: {fileID: 2800000, guid: 41256c78cdb94e64497c02008e7b3b25, type: 3}
   GoldPrice: 100
   BuildingId: 4
   AmountOfLevels: 2

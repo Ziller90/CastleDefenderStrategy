@@ -24,6 +24,7 @@ public class FlameThrower : MonoBehaviour
     bool Flaming;
     int CountToStopFire;
     public GameObject Flamer;
+    public AudioSource FlameLoop;
 
 
     void Start()
@@ -31,13 +32,13 @@ public class FlameThrower : MonoBehaviour
         globalEnemiesManager = LinksContainer.instance.globalEnemiesManager;
         Flamer.SetActive(false);
     }
-    void Update()
+    void FixedUpdate()
     {
         TowerDamage = Stats.Damage;
         TowerReloadingSpeed = Stats.ReloadingSpeed;
         if (Enemy == null || globalEnemiesManager.IsEnemyAttackAble(Enemy, gameObject.transform.position, TowerAttackDistance) == false || Enemy.GetComponent<EnemyBehaviour>().HP <= 0)
         {
-            if (CountToStopFire == 100)
+            if (CountToStopFire == 50)
             {
                 Flaming = false;
                 StartCoroutine("FlameOff");
@@ -75,6 +76,7 @@ public class FlameThrower : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         Fire.Play();
+        FlameLoop.Play();
         yield return new WaitForSeconds(0.5f);
         Flamer.SetActive(true);
     }
@@ -83,5 +85,6 @@ public class FlameThrower : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
         Flamer.SetActive(false);
         Fire.Stop();
+        FlameLoop.Pause();
     }
 }

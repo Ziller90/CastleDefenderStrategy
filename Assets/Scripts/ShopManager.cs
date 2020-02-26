@@ -42,6 +42,15 @@ public class ShopManager : MonoBehaviour
 
     void Awake()
     {
+        PlayerStats.CampaignProgressIndex = 10;
+        ShopManager.BigBalls = true;
+        ShopManager.BurningArrows = true;
+        ShopManager.FullFreeze = true;
+        ShopManager.GoldFever = true;
+        ShopManager.Spikes = true;
+        ShopManager.StartUpCapital = true;
+        ShopManager.StrongWalls = true;
+        ShopManager.SuperMine = true;
         if (StrongWalls == true)
         {
             BuyButtons[0].interactable = false;
@@ -62,6 +71,30 @@ public class ShopManager : MonoBehaviour
             BuyButtons[3].interactable = false;
             SoldOut[3].SetActive(true);
         }
+
+
+        if (BurningArrows == true)
+        {
+            BuyButtons[4].interactable = false;
+            SoldOut[4].SetActive(true);
+        }
+        if (BigBalls == true)
+        {
+            BuyButtons[5].interactable = false;
+            SoldOut[5].SetActive(true);
+        }
+        if (FullFreeze == true)
+        {
+            BuyButtons[6].interactable = false;
+            SoldOut[6].SetActive(true);
+        }
+        if (Spikes == true)
+        {
+            BuyButtons[7].interactable = false;
+            SoldOut[7].SetActive(true);
+        }
+
+
     }
     public void BuyProduct (int ProductIndex)
     {

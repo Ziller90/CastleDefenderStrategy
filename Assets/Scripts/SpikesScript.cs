@@ -6,24 +6,32 @@ public class SpikesScript : MonoBehaviour
 {
     public float Damage;
     public bool Reloaded;
-    void OnTriggerStay (Collider col)
+    public float RangeOfDetection;
+    public float ReloadingTime;
+    GlobalEnemiesManager globalEnemiesManager;
+    void Start()
     {
-        if (col.gameObject.tag == "Enemy" && Reloaded == true)
+        globalEnemiesManager = LinksContainer.instance.globalEnemiesManager;
+    }
+
+    void Update()
+    {
+        if (globalEnemiesManager.IsEnemyInRadius(gameObject.transform.position, RangeOfDetection) && Reloaded == true)
         {
-            StartCoroutine("Attack", col.gameObject);
+            StartCoroutine("Attack");
             Reloaded = false;
         }
     }
-    public IEnumerator Attack (GameObject ObjectToAttack)
+    public IEnumerator Attack ()
     {
         gameObject.transform.GetChild(0).GetComponent<Animator>().SetBool("Attack", true);
         yield return new WaitForSeconds(0.2f);
-        if (ObjectToAttack != null)
+        if (globalEnemiesManager.EnemyToAttack(gameObject.transform.position, RangeOfDetection) != null)
         {
-            ObjectToAttack.gameObject.GetComponent<DamageReciever>().DamageResistance(Damage, CardScriptableObject.DamageType.PenetrationDamage);
+             globalEnemiesManager.EnemyToAttack(gameObject.transform.position, RangeOfDetection).GetComponent<DamageReciever>().DamageResistance(Damage, CardScriptableObject.DamageType.PenetrationDamage);
         }
         gameObject.transform.GetChild(0).GetComponent<Animator>().SetBool("Attack", false);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(ReloadingTime);
         Reloaded = true;
     }
 }

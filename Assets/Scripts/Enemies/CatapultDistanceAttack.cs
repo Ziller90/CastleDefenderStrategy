@@ -21,7 +21,7 @@ public class CatapultDistanceAttack : MonoBehaviour
     }
     public IEnumerator AttackDelay()
     {
-        float Delay = Random.Range(0f, 20f);
+        float Delay = Random.Range(0f, 13f);
         yield return new WaitForSeconds(Delay);
         Attack();
     }

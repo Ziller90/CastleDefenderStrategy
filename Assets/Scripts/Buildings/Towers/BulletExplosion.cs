@@ -11,6 +11,8 @@ public class BulletExplosion : MonoBehaviour
     void Start()
     {
         globalEnemiesManager = LinksContainer.instance.globalEnemiesManager;
+        if (ShopManager.BigBalls == true)
+            RangeOfExplosion = RangeOfExplosion * 1.5f;
     }
 
     IEnumerator Explose (float Damage)

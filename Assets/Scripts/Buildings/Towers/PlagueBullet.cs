@@ -17,6 +17,7 @@ public class PlagueBullet : MonoBehaviour
     public Transform PlaguePiece;
     public float TimeToUnEnableEffect;
     public float Groundheightlevel;
+    public AudioSource Mud;
 
 
 
@@ -49,11 +50,13 @@ public class PlagueBullet : MonoBehaviour
     }
     IEnumerator Growing()
     {
-        yield return new WaitForSeconds(0.5f);
-        for (int i = 0; i < 60; i++)
+        Mud.Play();
+        yield return new WaitForSeconds(0.2f);
+        gameObject.GetComponent<AudioSource>().Play();
+        for (int i = 0; i < 40; i++)
         {
             yield return new WaitForSeconds(0.02f);
-            PlaguePiece.localScale = new Vector3(PlaguePiece.localScale.x + 0.004f, PlaguePiece.localScale.y + 0.004f, PlaguePiece.localScale.z + 0.004f);
+            PlaguePiece.localScale = new Vector3(PlaguePiece.localScale.x + 0.005f, PlaguePiece.localScale.y + 0.005f, PlaguePiece.localScale.z + 0.005f);
         }
         StartCoroutine("Destroing");
     }

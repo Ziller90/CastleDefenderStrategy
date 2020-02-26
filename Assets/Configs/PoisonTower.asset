@@ -22,7 +22,7 @@ MonoBehaviour:
   - 0.5
   - 1
   LevelUpReloadingSpeedBonus:
-  - 2
+  - 3
   - -0.5
   - -0.5
   SellCost: 280000003c00000050000000

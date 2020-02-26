@@ -20,6 +20,7 @@ public class BulletScript : MonoBehaviour
     {
         if (ShopManager.BigBalls == true)
             gameObject.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
+           
     }
     void FixedUpdate()
     {

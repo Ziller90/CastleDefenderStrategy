@@ -61,6 +61,39 @@ public class SavingSystem : MonoBehaviour
         {
             PlayerPrefs.SetInt("SuperMine", 0);
         }
+        if (ShopManager.BigBalls == true)
+        {
+            PlayerPrefs.SetInt("BigBalls", 1);
+        }
+        else
+        {
+            PlayerPrefs.SetInt("BigBalls", 0);
+        }
+        if (ShopManager.BurningArrows == true)
+        {
+            PlayerPrefs.SetInt("BurningArrows", 1);
+        }
+        else
+        {
+            PlayerPrefs.SetInt("BurningArrows", 0);
+        }
+        if (ShopManager.FullFreeze == true)
+        {
+            PlayerPrefs.SetInt("FullFreeze", 1);
+        }
+        else
+        {
+            PlayerPrefs.SetInt("FullFreeze", 0);
+        }
+        if (ShopManager.Spikes == true)
+        {
+            PlayerPrefs.SetInt("Spikes", 1);
+        }
+        else
+        {
+            PlayerPrefs.SetInt("Spikes", 0);
+        }
+
 
 
         PlayerPrefs.SetInt("CrystalsAmount", PlayerStats.Crystals);
@@ -142,6 +175,38 @@ public class SavingSystem : MonoBehaviour
         else
         {
             ShopManager.SuperMine = false;
+        }
+        if (PlayerPrefs.GetInt("BigBalls") == 1)
+        {
+            ShopManager.BigBalls = true;
+        }
+        else
+        {
+            ShopManager.BigBalls = false;
+        }
+        if (PlayerPrefs.GetInt("BurningArrows") == 1)
+        {
+            ShopManager.BurningArrows = true;
+        }
+        else
+        {
+            ShopManager.BurningArrows = false;
+        }
+        if (PlayerPrefs.GetInt("FullFreeze") == 1)
+        {
+            ShopManager.FullFreeze = true;
+        }
+        else
+        {
+            ShopManager.FullFreeze = false;
+        }
+        if (PlayerPrefs.GetInt("Spikes") == 1)
+        {
+            ShopManager.Spikes = true;
+        }
+        else
+        {
+            ShopManager.Spikes = false;
         }
 
         PlayerStats.Crystals = PlayerPrefs.GetInt("CrystalsAmount");

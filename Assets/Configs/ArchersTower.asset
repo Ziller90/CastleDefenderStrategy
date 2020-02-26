@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf38c5c0a374be428df77629206090f, type: 3}
   m_Name: ArchersTower
   m_EditorClassIdentifier: 
-  BuildingImage: {fileID: 2800000, guid: 8c7d9568f4f0ffc478b0447520836bc8, type: 3}
+  BuildingImage: {fileID: 2800000, guid: a4ad76e489e17ba45b8133695fdbd091, type: 3}
   GoldPrice: 75
   BuildingId: 1
   AmountOfLevels: 2

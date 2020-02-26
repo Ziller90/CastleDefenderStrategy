@@ -191,6 +191,7 @@ MonoBehaviour:
   - {fileID: 3627186018734139144, guid: d7b9f8011a46c9543ba180cdb55fcc50, type: 3}
   - {fileID: 6791168615514283296, guid: 27f43bea482b9aa42a7083cb3b06580f, type: 3}
   - {fileID: 5909910951541165008, guid: 801e362c62392dc4b8d3dee5a43b37d3, type: 3}
+  - {fileID: 5443486789310978349, guid: e352810de7be8c14db95b0491b9bb6e3, type: 3}
   HighLightFrame: {fileID: 134362943185089884, guid: 1a7e6b617f2abf946b6af5354c48010a,
     type: 3}
   HighlightFramepoint: {fileID: 2435286213796147436}
@@ -267,7 +268,7 @@ PrefabInstance:
     - target: {fileID: 2300000, guid: dc09b7fdd0db0bd499b52f8862b84c83, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 83781fdf94b64194e802edfa0a20d2b9, type: 2}
+      objectReference: {fileID: 2100000, guid: e767b69b49e023b47ba70d6a543a30d2, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc09b7fdd0db0bd499b52f8862b84c83, type: 3}
 --- !u!1 &5038900379014971336 stripped

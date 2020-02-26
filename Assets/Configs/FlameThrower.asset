@@ -12,31 +12,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf38c5c0a374be428df77629206090f, type: 3}
   m_Name: FlameThrower
   m_EditorClassIdentifier: 
-  BuildingImage: {fileID: 2800000, guid: 65a585423d1181141a2fa9754f17e9e5, type: 3}
-  GoldPrice: 150
+  BuildingImage: {fileID: 2800000, guid: c1459e1a0b921bb4a8c7a48bc7672007, type: 3}
+  GoldPrice: 200
   BuildingId: 6
   AmountOfLevels: 2
-  LevelUpPrice: 000000005a0000007d000000
+  LevelUpPrice: 000000006400000096000000
   LevelUpDamageBonus:
-  - 0.3
-  - 0.5
-  - 1
+  - 0.025
+  - 0.01
+  - 0.015
   LevelUpReloadingSpeedBonus:
-  - 2
-  - -0.5
-  - -0.5
-  SellCost: 78000000aa000000fa000000
+  - 0
+  - 0
+  - 0
+  SellCost: 96000000c8000000fa000000
   LevelUpEffectTime:
-  - 30
-  - 50
-  - 90
+  - 5
+  - 10
+  - 15
   LevelUpEffectPower:
-  - 0.5
-  - 0.5
-  - 0.5
+  - 1.5
+  - 1.5
+  - 2.5
   damageType: 1
   effectType: 2
-  GoldenDamageBonus: 0.3
+  GoldenDamageBonus: 0.01
   GoldenAttackDistanceBonus: 1
   GoldenReloadingSpeedBonus: -0.5
   GoldenSpeedDeBuffBonus: 0

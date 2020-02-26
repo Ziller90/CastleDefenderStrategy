@@ -72,8 +72,10 @@ public class EffectsResistance : MonoBehaviour
         {
             return;
         }
+        StopBurning();
         if (SpeedDeBuff > 0 && FullFreeze == false)
         {
+
             FrozenSpikes.SetActive(true);
             FrozenEffectAnimator.gameObject.SetActive(true);
             FrozenEffectAnimator.SetBool("Freezed", true);
@@ -120,7 +122,9 @@ public class EffectsResistance : MonoBehaviour
         {
             return;
         }
+        FreezingEffectStop();
         FireParticles.Play();
+        FireParticles.gameObject.GetComponent<AudioSource>().Play();
         Enemy.Burning = true;
         Enemy.StartCoroutine("Burn", Damage);
         LastBurningTime = Time.time;
@@ -129,6 +133,7 @@ public class EffectsResistance : MonoBehaviour
     void StopBurning()
     {
         FireParticles.Stop();
+        FireParticles.gameObject.GetComponent<AudioSource>().Stop();
         Enemy.Burning = false;
     }
     public void DieEffects()

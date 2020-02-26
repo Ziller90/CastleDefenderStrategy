@@ -28,9 +28,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2462732366316093060}
-  - component: {fileID: 5948501928952625569}
   - component: {fileID: 1189288589054718374}
-  - component: {fileID: 6912942134012939554}
   m_Layer: 0
   m_Name: Spikes
   m_TagString: Untagged
@@ -53,19 +51,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &5948501928952625569
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5115748256209622629}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 0.759274, z: 1}
-  m_Center: {x: 0, y: 0.37036204, z: 0}
 --- !u!114 &1189288589054718374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78,24 +63,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0d6491ceaa089442937b67a7d76f813, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 5
+  Damage: 10
   Reloaded: 1
---- !u!54 &6912942134012939554
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5115748256209622629}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  RangeOfDetection: 0.5
+  ReloadingTime: 2
 --- !u!1001 &426859381000636608
 PrefabInstance:
   m_ObjectHideFlags: 0
