@@ -18,10 +18,13 @@ public class SavingSystem : MonoBehaviour
         {
             SavePlayerData();
         }
-
     }
     public static void SavePlayerData()
     {
+        if (PlayerStats.GameWasFinished == true)
+        {
+            PlayerPrefs.SetInt("GameWasFinished", 1);
+        }
         if (MainMenuButtons.AlreadySeeNewThingsLevel6 == true)
         {
             PlayerPrefs.SetInt("AlreadySeeNewThingsLevel6", 1);
@@ -137,6 +140,10 @@ public class SavingSystem : MonoBehaviour
     public void SetPlayerData()
     {
         PlayerStats.DifficultyLevelIndex = PlayerPrefs.GetInt("DifficultyLevel");
+        if (PlayerPrefs.GetInt("GameWasFinished") == 1)
+        {
+            PlayerStats.GameWasFinished = true;
+        }
         if (PlayerPrefs.GetInt("AlreadySeeNewThingsLevel6") == 1)
         {
             MainMenuButtons.AlreadySeeNewThingsLevel6 = true;

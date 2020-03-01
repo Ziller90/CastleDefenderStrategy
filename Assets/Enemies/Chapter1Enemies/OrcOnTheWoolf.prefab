@@ -336,6 +336,9 @@ MonoBehaviour:
   IceCube: {fileID: 5034133928906143949}
   MinStopTime: 1
   MaxStopTime: 2
+  StandartMaterial: {fileID: 0}
+  DarkVersionMaterial: {fileID: 0}
+  Renderer: {fileID: 0}
 --- !u!23 &9094996152137279174
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -482,7 +485,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ee3fb3003ddc5b449911b068a414de3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MagicDamageModificator: 0.5
+  MagicDamageModificator: 0.4
   PenetrationDamageModificator: 1.5
   ExplosionDamageModificator: 1.5
   Enemy: {fileID: 0}
@@ -661,6 +664,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: -0.2031288
       objectReference: {fileID: 0}
+    - target: {fileID: 7652641550217627703, guid: 1838b077c9898ca43b680746376c1e41,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8663528096171481664, guid: 1838b077c9898ca43b680746376c1e41,
         type: 3}
       propertyPath: playOnAwake
@@ -726,11 +734,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: c388b512389e83b45bbf758d31f8458d, type: 2}
-    - target: {fileID: 7652641550217627703, guid: 1838b077c9898ca43b680746376c1e41,
-        type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1838b077c9898ca43b680746376c1e41, type: 3}
 --- !u!1 &6367109903381862642 stripped
@@ -1029,6 +1032,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: -0.2284277
       objectReference: {fileID: 0}
+    - target: {fileID: 7652641550217627703, guid: 1838b077c9898ca43b680746376c1e41,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8663528096171481664, guid: 1838b077c9898ca43b680746376c1e41,
         type: 3}
       propertyPath: playOnAwake
@@ -1039,11 +1047,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 40224544e5418184ca3469e4c2d203f0, type: 2}
-    - target: {fileID: 7652641550217627703, guid: 1838b077c9898ca43b680746376c1e41,
-        type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1838b077c9898ca43b680746376c1e41, type: 3}
 --- !u!4 &4855590947266000519 stripped

@@ -8,6 +8,7 @@ public class PlayerStats : MonoBehaviour
     public static int DifficultyLevelIndex;
     public static int CampaignProgressIndex = 0;
     public static bool StartCapitalOpened = false;
+    public static bool GameWasFinished;
 
 
     // Update is called once per frame

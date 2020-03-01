@@ -61,24 +61,38 @@ public class WinScript : MonoBehaviour
     }
     public void MomomentaryWin ()
     {
-        Win = true;
-        WinPanel.SetActive(true);
-        PlayerStats.Crystals += CrystalsRewardForWin;
-        PlayerStats.CampaignProgressIndex++;
-        Music.StartCoroutine("StopMusic", 3);
-        AlreadyWon = true;
+        if (PlayerStats.CampaignProgressIndex == 10)
+        {
+            GameObject.Find("FireWorks").GetComponent<FinalWinScript>().StartCoroutine("SalutStarts");
+        }
+        else
+        {
+            Win = true;
+            WinPanel.SetActive(true);
+            PlayerStats.Crystals += CrystalsRewardForWin;
+            PlayerStats.CampaignProgressIndex++;
+            Music.StartCoroutine("StopMusic", 3);
+            AlreadyWon = true;
+        }
     }
     IEnumerator WinWindowShow()
     {
-        yield return new WaitForSeconds(2);
-        Win = true;
-        WinPanel.SetActive(true);
-        PlayerStats.Crystals += CrystalsRewardForWin;
-        PlayerStats.CampaignProgressIndex++;
-        SavingSystem.SavePlayerData();
-        CrystalsForWin.text = CrystalsRewardForWin.ToString();
-        CrystalsForWinShad.text = CrystalsRewardForWin.ToString();
-        Music.StartCoroutine("StopMusic", 3);
-        AlreadyWon = true;
+        if (PlayerStats.CampaignProgressIndex == 10)
+        {
+            GameObject.Find("FireWorks").GetComponent<FinalWinScript>().StartCoroutine("SalutStarts");
+        }
+        else
+        {
+            yield return new WaitForSeconds(2);
+            Win = true;
+            WinPanel.SetActive(true);
+            PlayerStats.Crystals += CrystalsRewardForWin;
+            PlayerStats.CampaignProgressIndex++;
+            SavingSystem.SavePlayerData();
+            CrystalsForWin.text = CrystalsRewardForWin.ToString();
+            CrystalsForWinShad.text = CrystalsRewardForWin.ToString();
+            Music.StartCoroutine("StopMusic", 3);
+            AlreadyWon = true;
+        }
     }
 }

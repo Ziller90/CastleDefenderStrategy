@@ -13,6 +13,7 @@ public class LinksContainer : MonoBehaviour
     public GameUIManager UIManager;
     public BuildingManager buildingManager;
     public CastleScript Castle;
+    public MusicManager musicManager;
     public static LinksContainer instance;
     public LinksContainer()
     {

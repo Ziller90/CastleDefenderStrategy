@@ -10566,8 +10566,8 @@ MonoBehaviour:
   RouteNumber: 1
   NormalSpeed: 0.007
   speed: 0.007
-  MaxHP: 1000
-  HP: 1000
+  MaxHP: 1100
+  HP: 1100
   HPLine: {fileID: 7987297209160385316}
   NewHPIndex: 0
   HPIndex: 0
@@ -10666,7 +10666,7 @@ MonoBehaviour:
   FireParticles: {fileID: 6499788216887249628}
   FrozenSpikes: {fileID: 1718516725396555720}
   FreezingEffectModificator: 1
-  BurningEffectModificator: 1
+  BurningEffectModificator: 2
   PoisonEffectModificator: 1
 --- !u!114 &507919815555552280
 MonoBehaviour:
@@ -10680,9 +10680,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ee3fb3003ddc5b449911b068a414de3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MagicDamageModificator: 1.5
-  PenetrationDamageModificator: 1.5
-  ExplosionDamageModificator: 0.5
+  MagicDamageModificator: 1
+  PenetrationDamageModificator: 1
+  ExplosionDamageModificator: 1
   Enemy: {fileID: 7601015049251427021}
   FinalDamage: 0
   DamageVisual: {fileID: 4571565494090632494}

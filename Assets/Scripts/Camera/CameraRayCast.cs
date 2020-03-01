@@ -93,7 +93,7 @@ public class CameraRayCast : MonoBehaviour
             if (hits[i].collider.gameObject.tag == "Crystal" && AlwaysDetected == false)
             {
                 AlwaysDetected = true;
-                hits[i].collider.gameObject.GetComponent<Crystal>().TakeCoin();
+                hits[i].collider.gameObject.GetComponent<Diamond>().TakeCoin();
             }
 
         }

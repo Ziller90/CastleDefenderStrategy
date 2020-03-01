@@ -97,9 +97,7 @@ public class CustomSceneStarter : Editor
         ShopManager.StartUpCapital = true;
         ShopManager.StrongWalls = true;
         ShopManager.SuperMine = true;
-
     }
-
 #endif
 
 }

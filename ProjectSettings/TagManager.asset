@@ -16,6 +16,7 @@ TagManager:
   - Level
   - Coin
   - Crystal
+  - TouchCameraContr
   layers:
   - Default
   - TransparentFX

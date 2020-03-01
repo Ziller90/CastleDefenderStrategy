@@ -30,12 +30,16 @@ public class MainMenuButtons : MonoBehaviour
     public static bool  AlreadySeeNewThingsLevel6;
     public GameObject AuthoresPanel;
     int NumberOfNewThings;
+    public GameObject Crown;
 
 
     void Start()
     {
        
-
+        if (PlayerStats.GameWasFinished == true)
+        {
+            Crown.SetActive(true);
+        }
         if (PlayerStats.CampaignProgressIndex < 5)
         {
             NumberOfChapter = 1;
@@ -186,5 +190,10 @@ public class MainMenuButtons : MonoBehaviour
         SavingSystem.SavePlayerData();
         Application.OpenURL("https://tylercunningham.bandcamp.com/");
     }
-
+    public void ERASEPROGRESS()
+    {
+        PlayerPrefs.DeleteAll();
+        SceneManager.LoadScene(0);
+    }
+ 
 }

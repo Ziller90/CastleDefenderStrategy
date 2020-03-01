@@ -229,6 +229,7 @@ public class EnemyBehaviour : MonoBehaviour
     }
     public IEnumerator Death ()
     {
+        StopCoroutine("AttackCastle");
         AlreadyDead = true;
         winScript.Enemies.Remove(gameObject);
         globalEnemiesManager.UnRegisterEnemy(gameObject);
@@ -304,8 +305,21 @@ public class EnemyBehaviour : MonoBehaviour
     {
         IceCube.SetActive(false);
         FullFreezed = false;
-        Go = true;
-        if (EnemyId == "Cavalry" || EnemyId == "Healer")
+        if (AlreadyAttack == true)
+        {
             EnemyAnimator.speed = 1;
+            if (EnemyId == "Infanity" || EnemyId == "General" || EnemyId == "Cavalry" || EnemyId == "Healer")
+                StartCoroutine("AttackCastle");
+            if (EnemyId == "Archer")
+                gameObject.GetComponent<ArcherDistanceAttack>().Attack();
+            if (EnemyId == "Catapult")
+                gameObject.GetComponent<CatapultDistanceAttack>().Attack();
+        }
+        else
+        {
+            Go = true;
+            if (EnemyId == "Cavalry" || EnemyId == "Healer" || EnemyId == "Catapult")
+                EnemyAnimator.speed = 1;
+        }
     }
 }

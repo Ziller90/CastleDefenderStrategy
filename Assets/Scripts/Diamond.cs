@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Crystal : MonoBehaviour
+public class Diamond : MonoBehaviour
 {
     public int CrystalCost;
     public int SecondsToDisappear;
