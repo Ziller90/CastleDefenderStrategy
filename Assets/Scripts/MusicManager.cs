@@ -9,6 +9,7 @@ public class MusicManager : MonoBehaviour
     public AudioClip[] MusicClips;
     private AudioSource AudioSource;
     public static bool MusicPlaying = true;
+    public bool MusicChanging;
     public Sprite Texture1;
     public Sprite Texture2;
     public Image image;
@@ -25,6 +26,22 @@ public class MusicManager : MonoBehaviour
             image.sprite = Texture2;
             AudioSource.enabled = false;
         }
+        if (MusicChanging == true)
+        {
+            if (LinksContainer.instance.gameSarter.CurrentLevelCampaignIndex < 6)
+            {
+                AudioSource.clip = MusicClips[0];
+            }
+            if (LinksContainer.instance.gameSarter.CurrentLevelCampaignIndex > 5 && LinksContainer.instance.gameSarter.CurrentLevelCampaignIndex < 10)
+            {
+                AudioSource.clip = MusicClips[1];
+            }
+            if (LinksContainer.instance.gameSarter.CurrentLevelCampaignIndex == 10)
+            {
+                AudioSource.clip = MusicClips[2];
+            }
+        }
+        AudioSource.Play();
     }
 
     // Update is called once per frame

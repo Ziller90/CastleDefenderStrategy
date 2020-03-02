@@ -348,6 +348,7 @@ MonoBehaviour:
   TouchCamera: 1
   StartOrc: {fileID: 4419810252268241588, guid: f837bd0071d609044aaa72a12632cc65,
     type: 3}
+  CurrentLevelCampaignIndex: 0
 --- !u!114 &35459467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1153,7 +1154,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u041C\u0415\u041D\u042E"
+  m_Text: MENU
 --- !u!222 &110330680
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2808,7 +2809,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.000030517578}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -700.05426, y: -352.97888}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &525259537
@@ -3915,7 +3916,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 20dbbb9f727fd754cba409a193eb99c3, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 0.497
   m_Pitch: 1
@@ -4027,7 +4028,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bb5207b2cd63a3458b9edd357f292ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MusicClips: []
+  MusicClips:
+  - {fileID: 8300000, guid: 20dbbb9f727fd754cba409a193eb99c3, type: 3}
+  - {fileID: 8300000, guid: a6ded691dd7c34e46add9a7a5637dc7d, type: 3}
+  - {fileID: 8300000, guid: 4200f4ad7b88a5e44bc427c1ee6c0b51, type: 3}
+  MusicChanging: 1
   Texture1: {fileID: 21300000, guid: 82e5f8de88a381449aa5aa33dff4eafe, type: 3}
   Texture2: {fileID: 21300000, guid: eeb07b897f270684ca0f57b98cc761a6, type: 3}
   image: {fileID: 926271279}
@@ -4858,7 +4863,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dd219ac2bff62648a6ae1c651c2eb5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  KeySafeArea: 97
+  KeySafeArea: 290
 --- !u!1 &785567174
 GameObject:
   m_ObjectHideFlags: 0
@@ -8454,7 +8459,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: NaN, z: 0, w: 25738.25}
+  m_BoundingSphereOverride: {x: 1.13942e-40, y: 6e-44, z: 0, w: 6e-45}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -10079,7 +10084,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u041C\u0415\u041D\u042E"
+  m_Text: MENU
 --- !u!222 &1388215691
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14605,6 +14610,7 @@ MonoBehaviour:
   buildingManager: {fileID: 2123613573}
   Castle: {fileID: 0}
   musicManager: {fileID: 684491704}
+  gameSarter: {fileID: 35459466}
 --- !u!4 &1883053883
 Transform:
   m_ObjectHideFlags: 0
@@ -14655,7 +14661,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000030517578, y: 0.000030517578}
+  m_AnchoredPosition: {x: 0.000030517578, y: 0.000061035156}
   m_SizeDelta: {x: 700.05426, y: 352.97888}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1927029598

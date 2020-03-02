@@ -12,6 +12,7 @@ public class GameSarter : MonoBehaviour
     public GameObject NewMap;
     public bool TouchCamera;
     public GameObject StartOrc;
+    public int CurrentLevelCampaignIndex;
 
     void Start()
     {
@@ -26,7 +27,7 @@ public class GameSarter : MonoBehaviour
         NewMap = Instantiate(Config.CamapaignMaps[MapID], MapPosition.position, Quaternion.identity);
         NewMap.GetComponent<MapSetting>().SetUseTouchCamera(TouchCamera);
         NewMap.transform.Rotate(0, NewMap.GetComponent<MapSetting>().Rotate,0);
-
+        CurrentLevelCampaignIndex = MapID;
     }
     public void GameReloader ()
     {
