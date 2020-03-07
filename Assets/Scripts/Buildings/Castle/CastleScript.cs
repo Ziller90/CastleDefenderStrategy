@@ -18,10 +18,10 @@ public class CastleScript : MonoBehaviour
     public Transform CastlePosition;
     public float CastleWidth = 5;
     bool AlreadyGameOver = false;
-
     public AudioSource AudioSource;
     bool CanPlay = true;
     GlobalEnemiesManager Manager;
+    public AdsManager adsManager;
     void Awake()
     {
         if (ShopManager.StrongWalls == true)

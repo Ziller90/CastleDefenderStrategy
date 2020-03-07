@@ -27,6 +27,8 @@ public class WinScript : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        CrystalsForWin.text = "+" + CrystalsRewardForWin.ToString();
+        CrystalsForWinShad.text = "+" + CrystalsRewardForWin.ToString();
         if (Enemies.Count == 0)
         {
             NoEnemies = true;
@@ -61,7 +63,7 @@ public class WinScript : MonoBehaviour
     }
     public void MomomentaryWin ()
     {
-        if (PlayerStats.CampaignProgressIndex == 10)
+        if (LinksContainer.instance.gameSarter.CurrentLevelCampaignIndex == 10)
         {
             GameObject.Find("FireWorks").GetComponent<FinalWinScript>().StartCoroutine("SalutStarts");
         }
@@ -69,30 +71,30 @@ public class WinScript : MonoBehaviour
         {
             Win = true;
             WinPanel.SetActive(true);
-            PlayerStats.Crystals += CrystalsRewardForWin;
-            PlayerStats.CampaignProgressIndex++;
+            PlayerStats.CampaignProgressIndex = LinksContainer.instance.gameSarter.CurrentLevelCampaignIndex + 1;
             Music.StartCoroutine("StopMusic", 3);
             AlreadyWon = true;
         }
     }
     IEnumerator WinWindowShow()
     {
-        if (PlayerStats.CampaignProgressIndex == 10)
+        if (LinksContainer.instance.gameSarter.CurrentLevelCampaignIndex == 10)
         {
             GameObject.Find("FireWorks").GetComponent<FinalWinScript>().StartCoroutine("SalutStarts");
+            PlayerStats.CampaignProgressIndex = LinksContainer.instance.gameSarter.CurrentLevelCampaignIndex + 1;
         }
         else
         {
             yield return new WaitForSeconds(2);
             Win = true;
             WinPanel.SetActive(true);
-            PlayerStats.Crystals += CrystalsRewardForWin;
-            PlayerStats.CampaignProgressIndex++;
             SavingSystem.SavePlayerData();
-            CrystalsForWin.text = CrystalsRewardForWin.ToString();
-            CrystalsForWinShad.text = CrystalsRewardForWin.ToString();
             Music.StartCoroutine("StopMusic", 3);
             AlreadyWon = true;
         }
+    }
+    public void GiveRewardToPlayer()
+    {
+        PlayerStats.Crystals = PlayerStats.Crystals + CrystalsRewardForWin;
     }
 }

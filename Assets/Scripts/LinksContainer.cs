@@ -15,6 +15,7 @@ public class LinksContainer : MonoBehaviour
     public CastleScript Castle;
     public MusicManager musicManager;
     public GameSarter gameSarter;
+    public AdsManager adsManager;
     public static LinksContainer instance;
 
     public LinksContainer()

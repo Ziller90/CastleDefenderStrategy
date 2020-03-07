@@ -49,6 +49,8 @@ public class CripsSpawner : MonoBehaviour
         }
         for (CripsCounter = 0; CripsCounter < AmountOFCrips[SquadCounter]; CripsCounter++)
         {
+            float Rand = Random.Range(0, 0.1f);
+            yield return new WaitForSeconds(Rand);
             GameObject NewCrip = Instantiate(Crips[SquadCounter], gameObject.transform.transform);
             NewEnemyController = NewCrip.transform.GetChild(1).gameObject.GetComponent<EnemyBehaviour>();
             NewEnemyController.RouteNumber = RoutesNumber[SquadCounter];

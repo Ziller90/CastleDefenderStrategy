@@ -8,9 +8,9 @@ public class CrystalsManager : MonoBehaviour
     public GameObject BlueCrystal;
     public GameObject RedCrystal;
     public int EnemyValue;
-    public int ProbabilytyOfGreenCrystal;
-    public int ProbabilytyOfBlueCrystal;
-    public int ProbabilityOfRedCrystal;
+    int ProbabilytyOfGreenCrystal;
+    int ProbabilytyOfBlueCrystal;
+    int ProbabilityOfRedCrystal;
 
 
 
@@ -18,8 +18,8 @@ public class CrystalsManager : MonoBehaviour
     void Start()
     {
         ProbabilytyOfGreenCrystal = 65;
-        ProbabilytyOfBlueCrystal = 33;
-        ProbabilityOfRedCrystal = 2;
+        ProbabilytyOfBlueCrystal = 35;
+        ProbabilityOfRedCrystal = 0;
     }
 
     // Update is called once per frame

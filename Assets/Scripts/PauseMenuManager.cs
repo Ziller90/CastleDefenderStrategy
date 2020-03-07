@@ -9,6 +9,7 @@ public class PauseMenuManager : MonoBehaviour
     public GameObject PausePanel;
     public GameObject SettingsPanel;
     public PauseResumeScript Pauser;
+    public AdsManager adsManager;
      
 
     // Update is called once per frame
@@ -24,8 +25,7 @@ public class PauseMenuManager : MonoBehaviour
     }
     public void ReStart ()
     {
-        Time.timeScale = 1;
-        SceneManager.LoadScene(3);
+        adsManager.ShowGameOverAd();
     }
     public void Resume()
     {

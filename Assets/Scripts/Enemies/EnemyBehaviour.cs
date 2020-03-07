@@ -83,7 +83,7 @@ public class EnemyBehaviour : MonoBehaviour
     }
     void Start()
     {
-        if (PlayerStats.CampaignProgressIndex > 0)
+        if (LinksContainer.instance.gameSarter.CurrentLevelCampaignIndex > 0)
         {
             switch (PlayerStats.DifficultyLevelIndex)
             {
