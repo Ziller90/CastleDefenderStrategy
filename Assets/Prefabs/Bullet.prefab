@@ -105,6 +105,7 @@ MonoBehaviour:
   ExplosionEffect: {fileID: 9148246680113285428}
   ExplosionEffect2: {fileID: 0}
   Groundheightlevel: 0.7
+  Shop: {fileID: 11400000, guid: a3abf333e73bf584b9ec28e262a628f9, type: 2}
 --- !u!82 &4052728956567286287
 AudioSource:
   m_ObjectHideFlags: 0
@@ -260,6 +261,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   globalEnemiesManager: {fileID: 0}
   RangeOfExplosion: 1.5
+  Shop: {fileID: 11400000, guid: a3abf333e73bf584b9ec28e262a628f9, type: 2}
 --- !u!82 &1239066448967721197
 AudioSource:
   m_ObjectHideFlags: 0

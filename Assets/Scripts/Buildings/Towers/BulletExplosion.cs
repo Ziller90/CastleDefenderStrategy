@@ -8,10 +8,12 @@ public class BulletExplosion : MonoBehaviour
     public GlobalEnemiesManager globalEnemiesManager;
     public float RangeOfExplosion;
     int i = 0;
+    public ShopProductsScriptableObject Shop;
+
     void Start()
     {
         globalEnemiesManager = LinksContainer.instance.globalEnemiesManager;
-        if (ShopManager.BigBalls == true)
+        if (Shop.GetProductPurchaseState("BigBalls") == true)
             RangeOfExplosion = RangeOfExplosion * 1.5f;
     }
 
@@ -22,7 +24,7 @@ public class BulletExplosion : MonoBehaviour
         AttackGoals = globalEnemiesManager.EnemiesInRadius(gameObject.transform.position, RangeOfExplosion);
         for (int q = 0; q < AttackGoals.Count; q++)
         {
-            if (ShopManager.BigBalls == true)
+            if (Shop.GetProductPurchaseState("BigBalls") == true)
                 AttackGoals[q].GetComponent<DamageReciever>().DamageResistance(Damage + 0.3f, CardScriptableObject.DamageType.ExplosionDamage);
             else
                 AttackGoals[q].GetComponent<DamageReciever>().DamageResistance(Damage, CardScriptableObject.DamageType.ExplosionDamage);

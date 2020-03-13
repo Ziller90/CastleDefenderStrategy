@@ -26,13 +26,14 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
     public GameObject AdConsole;
     public Text AdConsoleText;
     public Text AdConsoleTextShadow;
-    public string AdError;
-    public string PleaseWatchAdFull;
-    public string ThanksForWhatching;
+    public Translation AdError;
+    public Translation PleaseWatchAdFull;
+    public Translation ThanksForWhatching;
 
 
     void Start()
     {
+        
         AdConsole.SetActive(false);
         Advertisement.AddListener(this);
         Advertisement.Initialize(gameId, false);
@@ -66,16 +67,18 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
             if (showResult == ShowResult.Finished)
             {
                 HideAdButton();
+                winScript.GiveRewardToPlayer();
                 winScript.CrystalsRewardForWin = winScript.CrystalsRewardForWin * 2;
-                StartCoroutine(ShowConsole(ThanksForWhatching, Color.yellow));
+                StartCoroutine(ShowConsole(ThanksForWhatching.GetTranslatedText(), Color.yellow));
+                SavingSystem.SavePlayerData();
             }
             if (showResult == ShowResult.Skipped)
             {
-                StartCoroutine(ShowConsole(PleaseWatchAdFull, Color.red));
+                StartCoroutine(ShowConsole(PleaseWatchAdFull.GetTranslatedText(), Color.red));
             }
             if (showResult == ShowResult.Failed)
             {
-                StartCoroutine(ShowConsole(AdError, Color.red));
+                StartCoroutine(ShowConsole(AdError.GetTranslatedText(), Color.red));
             }
             Time.timeScale = 1;
         }
@@ -112,7 +115,7 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
         AdConsoleText.color = TextColor;
         AdConsoleText.text = Text;
         AdConsoleTextShadow.text = Text;
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(5f);
         AdConsole.SetActive(false);
     }
 }

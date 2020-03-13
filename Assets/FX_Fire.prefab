@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8733185181838136922}
   - component: {fileID: 8733185181838176250}
   - component: {fileID: 3337986250685260295}
+  - component: {fileID: 9183721191539506043}
   m_Layer: 0
   m_Name: FX_Fire
   m_TagString: Untagged
@@ -4859,3 +4860,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &9183721191539506043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8733185181818900282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5454974f7a785c94d855fe3c1e38a82c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

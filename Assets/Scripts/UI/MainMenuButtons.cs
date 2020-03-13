@@ -14,6 +14,7 @@ public class MainMenuButtons : MonoBehaviour
     public Text Loading;
     public Text LevelNumber;
     public Text LevelNumberShadow;
+    public GameObject LevelsPanel;
 
     public LanguageText PlayButtonTranslation;
     public LanguageText PlayButtonTranslationShadow;
@@ -39,46 +40,52 @@ public class MainMenuButtons : MonoBehaviour
         if (PlayerStats.GameWasFinished == true)
         {
             Crown.SetActive(true);
-        }
-        if (PlayerStats.CampaignProgressIndex < 5)
-        {
-            NumberOfChapter = 1;
-        }
-        if (PlayerStats.CampaignProgressIndex < 10 && PlayerStats.CampaignProgressIndex > 5)
-        {
-            NumberOfChapter = 2;
-        }
-        if (PlayerStats.CampaignProgressIndex == 10)
-        {
             NumberOfChapter = 3;
-        }
-        if (NumberOfChapter == 1)
-        {
-            NumberOfLevelOfChapter = PlayerStats.CampaignProgressIndex;
-        }
-        if (NumberOfChapter == 2)
-        {
-            NumberOfLevelOfChapter = PlayerStats.CampaignProgressIndex - 5;
-        }
-        if (NumberOfChapter == 3)
-        {
             NumberOfLevelOfChapter = 1;
-        }
-        LevelNumberUpdateInfo();
-
-        ShopMgr.ShopAcessLevel = 2;
-        if (PlayerStats.CampaignProgressIndex >= 6)
-        {
             ShopMgr.ShopAcessLevel = 2;
         }
-        if (PlayerStats.CampaignProgressIndex >= 9)
+        if (PlayerStats.GameWasFinished == false)
         {
-            ShopMgr.ShopAcessLevel = 3;
-        }
-        if (PlayerStats.CampaignProgressIndex >= 6 && AlreadySeeNewThingsLevel6 == false)
-        {
-            NewThingsMark.SetActive(true);
-            NumberOfNewThings = 1;
+            if (PlayerStats.CampaignProgressIndex < 5)
+            {
+                NumberOfChapter = 1;
+            }
+            if (PlayerStats.CampaignProgressIndex < 10 && PlayerStats.CampaignProgressIndex > 5)
+            {
+                NumberOfChapter = 2;
+            }
+            if (PlayerStats.CampaignProgressIndex == 10)
+            {
+                NumberOfChapter = 3;
+            }
+            if (NumberOfChapter == 1)
+            {
+                NumberOfLevelOfChapter = PlayerStats.CampaignProgressIndex;
+            }
+            if (NumberOfChapter == 2)
+            {
+                NumberOfLevelOfChapter = PlayerStats.CampaignProgressIndex - 5;
+            }
+            if (NumberOfChapter == 3)
+            {
+                NumberOfLevelOfChapter = 1;
+            }
+            LevelNumberUpdateInfo();
+
+            ShopMgr.ShopAcessLevel = 1;
+            if (PlayerStats.CampaignProgressIndex >= 6)
+            {
+                ShopMgr.ShopAcessLevel = 2;
+            }
+            //if (PlayerStats.CampaignProgressIndex >= 9)
+            //{
+            //    ShopMgr.ShopAcessLevel = 3;
+            //}
+            if (PlayerStats.CampaignProgressIndex >= 6 && AlreadySeeNewThingsLevel6 == false)
+            {
+                NewThingsMark.SetActive(true);
+                NumberOfNewThings = 1;
+            }
         }
     }
     public void ShowAuthors()
@@ -165,16 +172,24 @@ public class MainMenuButtons : MonoBehaviour
     }
     public void PlayButton ()
     {
-        Debug.Log(PlayerStats.CampaignProgressIndex);
-        if (PlayerStats.CampaignProgressIndex == 0)
+        if (PlayerStats.GameWasFinished == false)
         {
-            StartCoroutine("Fading", 5);
+            Debug.Log(PlayerStats.CampaignProgressIndex);
+            if (PlayerStats.CampaignProgressIndex == 0)
+            {
+                StartCoroutine("Fading", 5);
+            }
+            else
+            {
+                StartCoroutine("Fading", 3);
+                LevelLoader.LevelToLoad = PlayerStats.CampaignProgressIndex;
+                gameObject.GetComponent<LevelLoader>().LoadLevel(PlayerStats.CampaignProgressIndex);
+            }
         }
         else
         {
-            StartCoroutine("Fading", 3);
-            LevelLoader.LevelToLoad = PlayerStats.CampaignProgressIndex;
-            gameObject.GetComponent<LevelLoader>().LoadLevel(PlayerStats.CampaignProgressIndex);
+            LevelsPanel.SetActive(true);
+            MainButtons.SetActive(false);
         }
     }
     IEnumerator Fading (int SceneToLoad)

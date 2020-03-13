@@ -17,6 +17,7 @@ public class CripsSpawner : MonoBehaviour
     public MessagesManager MessagesManager;
     bool AlreadyStartedCoroutine;
     public WayManager wayManager;
+    public bool StartedSpawning;
 
 
 
@@ -42,7 +43,12 @@ public class CripsSpawner : MonoBehaviour
     }
     IEnumerator SquadLoader ()
     {
+        if (SquadCounter == 0)
+        {
+            yield return new WaitForSeconds(1f);
+        }
         yield return new WaitForSeconds(SquadTime[SquadCounter]);
+        StartedSpawning = true;
         if (MessageTrigger[SquadCounter] > 0)
         {
             StartCoroutine("ButtonShowing");

@@ -12,10 +12,12 @@ public class ArrowScript : MonoBehaviour
     public Transform ArrowSpawnPoint;
     public GameObject FireParticles;
     public float MinimumDistance;
+    public ShopProductsScriptableObject Shop;
+
     void Start()
     {
         EnemyTransform = Enemy.transform;
-        if (ShopManager.BurningArrows == true)
+        if (Shop.GetProductPurchaseState("BurningArrows") == true)
         {
             FireParticles.SetActive(true);
         }
@@ -28,7 +30,7 @@ public class ArrowScript : MonoBehaviour
         if (Vector3.Distance(gameObject.transform.position, EnemyTransform.position) < MinimumDistance)
         {
             Enemy.GetComponent<DamageReciever>().DamageResistance(Damage, CardScriptableObject.DamageType.PenetrationDamage);
-            if (ShopManager.BurningArrows == true)
+            if (Shop.GetProductPurchaseState("BurningArrows") == true)
             {
                 Enemy.gameObject.GetComponent<EffectsResistance>().EffectCast(CardScriptableObject.EffectType.BurningEffect, 1.5f, 5);
             }

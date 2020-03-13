@@ -83,7 +83,9 @@ public class EnemyBehaviour : MonoBehaviour
     }
     void Start()
     {
-        if (LinksContainer.instance.gameSarter.CurrentLevelCampaignIndex > 0)
+        CameraViewPoint = LinksContainer.instance.CameraViewPoint;
+
+        if (PlayerStats.CampaignProgressIndex > 0)
         {
             switch (PlayerStats.DifficultyLevelIndex)
             {
@@ -109,7 +111,6 @@ public class EnemyBehaviour : MonoBehaviour
         Enemy.transform.SetParent(null);
         globalEnemiesManager = LinksContainer.instance.globalEnemiesManager;
         globalEnemiesManager.RegisterEnemy(gameObject);
-        CameraViewPoint = LinksContainer.instance.CameraViewPoint;
         HP = MaxHP;
         HPIndex = 1;
         Go = true;

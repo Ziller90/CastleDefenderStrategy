@@ -9499,6 +9499,7 @@ GameObject:
   - component: {fileID: 3392351840391756154}
   - component: {fileID: 2115690106131088681}
   - component: {fileID: 3593120138377331167}
+  - component: {fileID: 4088653875397666883}
   m_Layer: 0
   m_Name: flamethrower2
   m_TagString: Untagged
@@ -9572,7 +9573,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f6bddb5a1bb0e76499f6500968e53217, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.303
+  m_Volume: 0.153
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -9656,6 +9657,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4088653875397666883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1823772987521207145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5454974f7a785c94d855fe3c1e38a82c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1875708896750842307
 GameObject:
   m_ObjectHideFlags: 0

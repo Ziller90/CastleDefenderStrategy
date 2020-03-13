@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7641385210037569802}
   - component: {fileID: -8073197553391161001}
+  - component: {fileID: 5097326545386893086}
   m_Layer: 0
   m_Name: Diamond_2
   m_TagString: Untagged
@@ -128,6 +129,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5097326545386893086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6352572549226255353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5454974f7a785c94d855fe3c1e38a82c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7480571763274394108
 GameObject:
   m_ObjectHideFlags: 0
@@ -143,6 +156,7 @@ GameObject:
   - component: {fileID: 3980175616008705420}
   - component: {fileID: 2029210848922264388}
   - component: {fileID: 5336842152699954295}
+  - component: {fileID: 8273982256534344695}
   m_Layer: 0
   m_Name: ForestCoin
   m_TagString: Crystal
@@ -255,7 +269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d23d37bba0fc6ba448bcd1e73ebb60ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CrystalCost: 1
+  CrystalCost: 3
   SecondsToDisappear: 0
 --- !u!82 &5336842152699954295
 AudioSource:
@@ -353,6 +367,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8273982256534344695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7480571763274394108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5454974f7a785c94d855fe3c1e38a82c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8946098541558927753
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -9,10 +9,11 @@ public class MineExplosion : MonoBehaviour
     public ParticleSystem Particle;
     public GlobalEnemiesManager globalEnemiesManager;
     public float RangeOfExplosion;
+    public ShopProductsScriptableObject Shop;
     void Start()
     {
         globalEnemiesManager = LinksContainer.instance.globalEnemiesManager;
-        if (ShopManager.SuperMine == true)
+        if (Shop.GetProductPurchaseState("SuperMine") == true)
         {
             gameObject.GetComponent<BoxCollider>().size = gameObject.GetComponent<BoxCollider>().size * 2;
         }
@@ -34,9 +35,9 @@ public class MineExplosion : MonoBehaviour
                     AttackGoals[q].GetComponent<DamageReciever>().DamageResistance(Damage, CardScriptableObject.DamageType.ExplosionDamage);
                 else
                 {
-                    if (ShopManager.FullFreeze == true)
+                    if (Shop.GetProductPurchaseState("FullFreeze") == true)
                     {
-                        AttackGoals[q].GetComponent<EffectsResistance>().EffectCast(CardScriptableObject.EffectType.FreezingEffect, 0, 10);
+                        AttackGoals[q].GetComponent<EffectsResistance>().EffectCast(CardScriptableObject.EffectType.FreezingEffect, 0, 7);
                         AttackGoals[q].GetComponent<DamageReciever>().DamageResistance(Damage, CardScriptableObject.DamageType.ExplosionDamage);
                     }
                     else

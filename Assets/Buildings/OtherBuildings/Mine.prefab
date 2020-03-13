@@ -370,6 +370,7 @@ MonoBehaviour:
   GoldLeft: 0
   GoldenCoin: {fileID: 6352572549226255353, guid: d0b83a32719d6404f8232fd7c67c368d,
     type: 3}
+  Shop: {fileID: 11400000, guid: a3abf333e73bf584b9ec28e262a628f9, type: 2}
 --- !u!65 &7250024589608565153
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -3447,6 +3447,8 @@ MonoBehaviour:
   CastlePosition: {fileID: 2876791432721487591}
   CastleWidth: 3
   AudioSource: {fileID: 7809593223345762314}
+  adsManager: {fileID: 0}
+  Shop: {fileID: 11400000, guid: a3abf333e73bf584b9ec28e262a628f9, type: 2}
 --- !u!82 &7809593223345762314
 AudioSource:
   m_ObjectHideFlags: 0

@@ -4825,6 +4825,7 @@ GameObject:
   - component: {fileID: 7153780194218545898}
   - component: {fileID: 4247752285171639275}
   - component: {fileID: 609252129632376905}
+  - component: {fileID: 7051240857547332312}
   m_Layer: 0
   m_Name: FrozenMina
   m_TagString: Untagged
@@ -4865,6 +4866,7 @@ MonoBehaviour:
   Particle: {fileID: 5160767015773924813}
   globalEnemiesManager: {fileID: 0}
   RangeOfExplosion: 3
+  Shop: {fileID: 11400000, guid: a3abf333e73bf584b9ec28e262a628f9, type: 2}
 --- !u!65 &7066526263378043241
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5015,6 +5017,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &7051240857547332312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7114406476314116194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5454974f7a785c94d855fe3c1e38a82c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8489721357891585301
 GameObject:
   m_ObjectHideFlags: 0
@@ -5112,6 +5126,7 @@ MonoBehaviour:
   Damage: 1
   Frozen: 1
   RangeOfDetection: 0.5
+  Shop: {fileID: 11400000, guid: a3abf333e73bf584b9ec28e262a628f9, type: 2}
 --- !u!65 &5484599401994758677
 BoxCollider:
   m_ObjectHideFlags: 0

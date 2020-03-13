@@ -19,18 +19,76 @@ public class GameUIManager : MonoBehaviour
     MessagesManager MessageManager;
     int ImprovingAvaiableLevel;
     public ScreenFader Fader;
+    public GameObject PlayingUIElements;
+    public GameObject ShopPanel;
+    public GameObject ShopOpenButton;
+    public ShopManager ShopMgr;
+    public GameObject NewThingsMark;
+    public GameSarter gameSarter;
+    int NumberOfNewThings;
+
+
 
 
     void Start()
     {
         MessageManager = GameObject.FindGameObjectWithTag("Level").GetComponent<MessagesManager>();
         ImprovingAvaiableLevel = GameObject.FindGameObjectWithTag("Level").GetComponent<ImprovingsLevelsAvaiable>().ImprovingsAvaiableLevel;
-    }
 
+        ShopMgr.ShopAcessLevel = 1;
+        if (gameSarter.CurrentLevelCampaignIndex >= 6)
+        {
+            ShopMgr.ShopAcessLevel = 2;
+        }
+        //if (gameSarter.CurrentLevelCampaignIndex >= 9)
+        //{
+        //    ShopMgr.ShopAcessLevel = 3;
+        //}
+        if (gameSarter.CurrentLevelCampaignIndex >= 6 && MainMenuButtons.AlreadySeeNewThingsLevel6 == false)
+        {
+            NewThingsMark.SetActive(true);
+            NumberOfNewThings = 1;
+        }
+        if (PlayerStats.GameWasFinished == false)
+        {
+            if (LinksContainer.instance.Level.GetComponent<MapSetting>().LevelNumber > 2)
+            {
+                ShopOpenButton.SetActive(true);
+            }
+            else
+            {
+                ShopOpenButton.SetActive(false);
+            }
+        }
+        else
+        {
+            ShopOpenButton.SetActive(true);
+        }
+       
+    }
+    private void Awake()
+    {
+      
+    }
+    public void SeeIfNewThings()
+    {
+        if (NewThingsMark.activeSelf == true)
+        {
+            if (NumberOfNewThings == 1)
+            {
+                MainMenuButtons.AlreadySeeNewThingsLevel6 = true;
+                NewThingsMark.SetActive(false);
+            }
+        }
+
+    }
     // Update is called once per frame
     void Update()
     {
-
+        if (LinksContainer.instance.Level.GetComponent<MapSetting>().MainSpawner.StartedSpawning == true)
+        {
+            ShopOpenButton.SetActive(false);
+        }
         if (Input.GetKeyDown(KeyCode.Escape) && Fader.fadeState == ScreenFader.FadeState.OutEnd)
         {
             ShowPauseMenu();
@@ -103,5 +161,10 @@ public class GameUIManager : MonoBehaviour
     public void ShowButtonMessage()
     {
         MessageManager.ShowNewMessageButtonOnClick();
+    }
+    public void ShowShopPanel()
+    {
+        PlayingUIElements.SetActive(false);
+        ShopPanel.SetActive(true);
     }
 }

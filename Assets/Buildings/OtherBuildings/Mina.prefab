@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7153780194218545898}
   - component: {fileID: 4247752285171639275}
   - component: {fileID: 6401990002559146580}
+  - component: {fileID: 4296138407047488435}
   m_Layer: 0
   m_Name: Mina
   m_TagString: Untagged
@@ -53,6 +54,7 @@ MonoBehaviour:
   Particle: {fileID: 8553715380423860631}
   globalEnemiesManager: {fileID: 0}
   RangeOfExplosion: 2
+  Shop: {fileID: 11400000, guid: a3abf333e73bf584b9ec28e262a628f9, type: 2}
 --- !u!82 &7153780194218545898
 AudioSource:
   m_ObjectHideFlags: 0
@@ -190,6 +192,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &4296138407047488435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7114406476314116194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5454974f7a785c94d855fe3c1e38a82c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7997427208993800665
 GameObject:
   m_ObjectHideFlags: 0
@@ -5096,6 +5110,7 @@ MonoBehaviour:
   Damage: 7
   Frozen: 0
   RangeOfDetection: 0.5
+  Shop: {fileID: 11400000, guid: a3abf333e73bf584b9ec28e262a628f9, type: 2}
 --- !u!1 &8610380770739727562
 GameObject:
   m_ObjectHideFlags: 0

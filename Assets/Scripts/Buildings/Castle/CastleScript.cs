@@ -22,9 +22,11 @@ public class CastleScript : MonoBehaviour
     bool CanPlay = true;
     GlobalEnemiesManager Manager;
     public AdsManager adsManager;
+    public ShopProductsScriptableObject Shop;
+
     void Awake()
     {
-        if (ShopManager.StrongWalls == true)
+        if (Shop.GetProductPurchaseState("StrongWalls") == true)
         {
             MaxHP = MaxHP * 1.5f;
             HP = HP * 1.5f;

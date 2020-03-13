@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 3980175616008705420}
   - component: {fileID: 1805114932709984911}
   - component: {fileID: 3885837794782431491}
+  - component: {fileID: 2859295760841974653}
   m_Layer: 0
   m_Name: ForestCoin
   m_TagString: Coin
@@ -256,3 +257,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2859295760841974653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7480571763274394108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5454974f7a785c94d855fe3c1e38a82c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

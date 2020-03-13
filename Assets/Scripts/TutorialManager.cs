@@ -280,6 +280,7 @@ public class TutorialManager : MonoBehaviour
         yield return new WaitForSeconds(1);
         Messages[5].SetActive(true);
         PlayUIElements.SetActive(false);
+        PlayerStats.Crystals = PlayerStats.Crystals + 10;
         PlayerStats.CampaignProgressIndex = 1;
         SavingSystem.SavePlayerData();
     }
@@ -287,5 +288,9 @@ public class TutorialManager : MonoBehaviour
     {
         LevelLoader.LevelToLoad = 1;
         SceneManager.LoadScene(3);
+    }
+    public void Restart()
+    {
+        SceneManager.LoadScene(5);
     }
 }

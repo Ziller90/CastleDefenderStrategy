@@ -1132,6 +1132,7 @@ GameObject:
   m_Component:
   - component: {fileID: 978745455792918395}
   - component: {fileID: 858525319563154939}
+  - component: {fileID: 8083501911994108049}
   m_Layer: 0
   m_Name: Golem
   m_TagString: Untagged
@@ -1256,6 +1257,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8083501911994108049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4419810252268241588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5454974f7a785c94d855fe3c1e38a82c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5154452540663554387
 GameObject:
   m_ObjectHideFlags: 0
@@ -10828,9 +10841,6 @@ MonoBehaviour:
   RedCrystal: {fileID: 6352572549226255353, guid: 231d33e1d3432fb45a25c8584a1a0686,
     type: 3}
   EnemyValue: 100
-  ProbabilytyOfGreenCrystal: 60
-  ProbabilytyOfBlueCrystal: 35
-  ProbabilityOfRedCrystal: 5
   ProbabilityOfCrystalDrop: 100
 --- !u!114 &4412167841319192978
 MonoBehaviour:
@@ -11534,15 +11544,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e52a4a7891ae52c43ba55be833b385e4, type: 3}
---- !u!4 &4561399541837068042 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 709198810977246584, guid: e52a4a7891ae52c43ba55be833b385e4,
-    type: 3}
-  m_PrefabInstance: {fileID: 3934681769290132082}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &654712374871524633 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4579260695966347115, guid: e52a4a7891ae52c43ba55be833b385e4,
+    type: 3}
+  m_PrefabInstance: {fileID: 3934681769290132082}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4561399541837068042 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 709198810977246584, guid: e52a4a7891ae52c43ba55be833b385e4,
     type: 3}
   m_PrefabInstance: {fileID: 3934681769290132082}
   m_PrefabAsset: {fileID: 0}

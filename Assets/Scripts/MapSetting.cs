@@ -19,6 +19,7 @@ public class MapSetting : MonoBehaviour
     public int LevelNumber;
     public int Rotate;
     public CripsSpawner MainSpawner;
+    public ShopProductsScriptableObject Shop;
 
 
     public void SetUseTouchCamera(bool UsingTouchCamera)
@@ -27,7 +28,7 @@ public class MapSetting : MonoBehaviour
     }
     void Start()
     {
-        if (ShopManager.StartUpCapital == true)
+        if (Shop.GetProductPurchaseState("StartUpCapital") == true)
         {
             StartGold = StartGold + 50;
         }

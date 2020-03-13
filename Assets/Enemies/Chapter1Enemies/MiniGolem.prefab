@@ -937,6 +937,7 @@ GameObject:
   m_Component:
   - component: {fileID: 978745455792918395}
   - component: {fileID: 858525319563154939}
+  - component: {fileID: 8392504906829432507}
   m_Layer: 0
   m_Name: MiniGolem
   m_TagString: Untagged
@@ -1059,6 +1060,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8392504906829432507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4419810252268241588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5454974f7a785c94d855fe3c1e38a82c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5154452540663554387
 GameObject:
   m_ObjectHideFlags: 0
@@ -10631,9 +10644,6 @@ MonoBehaviour:
   RedCrystal: {fileID: 6352572549226255353, guid: 231d33e1d3432fb45a25c8584a1a0686,
     type: 3}
   EnemyValue: 100
-  ProbabilytyOfGreenCrystal: 60
-  ProbabilytyOfBlueCrystal: 35
-  ProbabilityOfRedCrystal: 5
   ProbabilityOfCrystalDrop: 100
 --- !u!114 &4412167841319192978
 MonoBehaviour:
@@ -11241,15 +11251,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10d56700935a36c4b9c4954ca12b2710, type: 3}
---- !u!4 &6499788216906649500 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8733185181818737434, guid: 10d56700935a36c4b9c4954ca12b2710,
-    type: 3}
-  m_PrefabInstance: {fileID: 2522406483832822918}
-  m_PrefabAsset: {fileID: 0}
 --- !u!198 &6499788216887249628 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 8733185181838136922, guid: 10d56700935a36c4b9c4954ca12b2710,
+    type: 3}
+  m_PrefabInstance: {fileID: 2522406483832822918}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6499788216906649500 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8733185181818737434, guid: 10d56700935a36c4b9c4954ca12b2710,
     type: 3}
   m_PrefabInstance: {fileID: 2522406483832822918}
   m_PrefabAsset: {fileID: 0}
@@ -11448,15 +11458,15 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 40224544e5418184ca3469e4c2d203f0, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1838b077c9898ca43b680746376c1e41, type: 3}
---- !u!198 &2270947412302614385 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 8663528096171481664, guid: 1838b077c9898ca43b680746376c1e41,
-    type: 3}
-  m_PrefabInstance: {fileID: 7475709597115290929}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2270947412302614384 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8663528096171481665, guid: 1838b077c9898ca43b680746376c1e41,
+    type: 3}
+  m_PrefabInstance: {fileID: 7475709597115290929}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &2270947412302614385 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 8663528096171481664, guid: 1838b077c9898ca43b680746376c1e41,
     type: 3}
   m_PrefabInstance: {fileID: 7475709597115290929}
   m_PrefabAsset: {fileID: 0}

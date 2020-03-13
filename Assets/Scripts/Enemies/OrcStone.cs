@@ -32,7 +32,7 @@ public class OrcStone : MonoBehaviour
     }
     IEnumerator DamageDeliver ()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.01f);
         Castle.DamageReceive(StoneDamage, gameObject.transform.position);
         Castle.HitSound(gameObject.GetComponent<AttackSounds>().AttackSound);
         Destroy(gameObject,2);

@@ -28,17 +28,18 @@ public class MusicManager : MonoBehaviour
         }
         if (MusicChanging == true)
         {
-            if (LinksContainer.instance.gameSarter.CurrentLevelCampaignIndex < 6)
+            if (LinksContainer.instance.Level.GetComponent<MapSetting>().LevelNumber < 6)
             {
                 AudioSource.clip = MusicClips[0];
             }
-            if (LinksContainer.instance.gameSarter.CurrentLevelCampaignIndex > 5 && LinksContainer.instance.gameSarter.CurrentLevelCampaignIndex < 10)
+            if (LinksContainer.instance.Level.GetComponent<MapSetting>().LevelNumber > 5 && LinksContainer.instance.Level.GetComponent<MapSetting>().LevelNumber < 10)
             {
                 AudioSource.clip = MusicClips[1];
             }
-            if (LinksContainer.instance.gameSarter.CurrentLevelCampaignIndex == 10)
+            if (LinksContainer.instance.Level.GetComponent<MapSetting>().LevelNumber == 10)
             {
                 AudioSource.clip = MusicClips[2];
+                AudioSource.volume = 0.65f;
             }
         }
         AudioSource.Play();

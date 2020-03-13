@@ -89,14 +89,11 @@ public class CustomSceneStarter : Editor
     public static void FinalPreference()
     {
         PlayerStats.CampaignProgressIndex = 10;
-        ShopManager.BigBalls = true;
-        ShopManager.BurningArrows = true;
-        ShopManager.FullFreeze = true;
-        ShopManager.GoldFever = true;
-        ShopManager.Spikes = true;
-        ShopManager.StartUpCapital = true;
-        ShopManager.StrongWalls = true;
-        ShopManager.SuperMine = true;
+    }
+    [MenuItem("Tools/SetGameWasFinished", false, 1)]
+    public static void Finished()
+    {
+        PlayerStats.GameWasFinished = true;
     }
 #endif
 

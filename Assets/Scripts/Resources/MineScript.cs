@@ -10,11 +10,12 @@ public class MineScript : MonoBehaviour
     public int IncomeSize;
     public float GoldLeft;
     public GameObject GoldenCoin;
+    public ShopProductsScriptableObject Shop;
     bool CoinEnabled;
 
     void Start()
     {
-        if (ShopManager.GoldFever == true)
+        if (Shop.GetProductPurchaseState("GoldFever") == true)
         {
             IncomeSize = IncomeSize + 3;
         }

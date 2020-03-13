@@ -29,75 +29,8 @@ public class SavingSystem : MonoBehaviour
         {
             PlayerPrefs.SetInt("AlreadySeeNewThingsLevel6", 1);
         }
-        if (ShopManager.GoldFever == true)
-        {
-            PlayerPrefs.SetInt("GoldFever", 1);
-        }
-        else
-        {
-            PlayerPrefs.SetInt("GoldFever", 0);
-        }
 
-        if (ShopManager.StartUpCapital == true)
-        {
-            PlayerPrefs.SetInt("StartUpCapital", 1);
-        }
-        else
-        {
-            PlayerPrefs.SetInt("StartUpCapital", 0);
-        }
-
-        if (ShopManager.StrongWalls == true)
-        {
-            PlayerPrefs.SetInt("StrongWalls", 1);
-        }
-        else
-        {
-            PlayerPrefs.SetInt("StrongWalls", 0);
-        }
-
-        if (ShopManager.SuperMine == true)
-        {
-            PlayerPrefs.SetInt("SuperMine", 1);
-        }
-        else
-        {
-            PlayerPrefs.SetInt("SuperMine", 0);
-        }
-        if (ShopManager.BigBalls == true)
-        {
-            PlayerPrefs.SetInt("BigBalls", 1);
-        }
-        else
-        {
-            PlayerPrefs.SetInt("BigBalls", 0);
-        }
-        if (ShopManager.BurningArrows == true)
-        {
-            PlayerPrefs.SetInt("BurningArrows", 1);
-        }
-        else
-        {
-            PlayerPrefs.SetInt("BurningArrows", 0);
-        }
-        if (ShopManager.FullFreeze == true)
-        {
-            PlayerPrefs.SetInt("FullFreeze", 1);
-        }
-        else
-        {
-            PlayerPrefs.SetInt("FullFreeze", 0);
-        }
-        if (ShopManager.Spikes == true)
-        {
-            PlayerPrefs.SetInt("Spikes", 1);
-        }
-        else
-        {
-            PlayerPrefs.SetInt("Spikes", 0);
-        }
-
-
+        PlayerPrefs.SetString("BoughtProducts", JsonUtility.ToJson(ShopProductsScriptableObject.BoughtProducts));
 
         PlayerPrefs.SetInt("CrystalsAmount", PlayerStats.Crystals);
         PlayerPrefs.SetInt("CampaignProgressIndex", PlayerStats.CampaignProgressIndex);
@@ -139,6 +72,7 @@ public class SavingSystem : MonoBehaviour
     }
     public void SetPlayerData()
     {
+        ShopProductsScriptableObject.BoughtProducts = JsonUtility.FromJson<List<string>>(PlayerPrefs.GetString("BoughtProducts"));
         PlayerStats.DifficultyLevelIndex = PlayerPrefs.GetInt("DifficultyLevel");
         if (PlayerPrefs.GetInt("GameWasFinished") == 1)
         {
@@ -148,73 +82,7 @@ public class SavingSystem : MonoBehaviour
         {
             MainMenuButtons.AlreadySeeNewThingsLevel6 = true;
         }
-        if (PlayerPrefs.GetInt("GoldFever") == 1)
-        {
-            ShopManager.GoldFever = true;
-        }
-        else
-        {
-            ShopManager.GoldFever = false;
-        }
-
-        if (PlayerPrefs.GetInt("StartUpCapital") == 1)
-        {
-            ShopManager.StartUpCapital = true;
-        }
-        else
-        {
-            ShopManager.StartUpCapital = false;
-        }
-
-        if (PlayerPrefs.GetInt("StrongWalls") == 1)
-        {
-            ShopManager.StrongWalls = true;
-        }
-        else
-        {
-            ShopManager.StrongWalls = false;
-        }
-
-        if (PlayerPrefs.GetInt("SuperMine") == 1)
-        {
-            ShopManager.SuperMine = true;
-        }
-        else
-        {
-            ShopManager.SuperMine = false;
-        }
-        if (PlayerPrefs.GetInt("BigBalls") == 1)
-        {
-            ShopManager.BigBalls = true;
-        }
-        else
-        {
-            ShopManager.BigBalls = false;
-        }
-        if (PlayerPrefs.GetInt("BurningArrows") == 1)
-        {
-            ShopManager.BurningArrows = true;
-        }
-        else
-        {
-            ShopManager.BurningArrows = false;
-        }
-        if (PlayerPrefs.GetInt("FullFreeze") == 1)
-        {
-            ShopManager.FullFreeze = true;
-        }
-        else
-        {
-            ShopManager.FullFreeze = false;
-        }
-        if (PlayerPrefs.GetInt("Spikes") == 1)
-        {
-            ShopManager.Spikes = true;
-        }
-        else
-        {
-            ShopManager.Spikes = false;
-        }
+        
 
         PlayerStats.Crystals = PlayerPrefs.GetInt("CrystalsAmount");
         PlayerStats.CampaignProgressIndex = PlayerPrefs.GetInt("CampaignProgressIndex");
@@ -257,8 +125,11 @@ public class SavingSystem : MonoBehaviour
     }
     public void SetPlayerStartSetting()
     {
+        ShopProductsScriptableObject.BoughtProducts.Clear();
+
         QualitySettings.SetQualityLevel(2);
         PlayerStats.Crystals = 0;
+        PlayerStats.DifficultyLevelIndex = 2;
         PlayerStats.DifficultyLevelIndex = 2;
         PlayerStats.CampaignProgressIndex = 0;
         AudioManager.SoundOn = true;

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CrystalsEarned
   m_EditorClassIdentifier: 
   EnglishVersion: 'Crystals Earned:'
-  RussianVersion: "\u0417\u0430\u0440\u0430\u0431\u043E\u0442\u0430\u043D\u043E \u043A\u0440\u0438\u0441\u0442\u0430\u043B\u043E\u0432:"
+  RussianVersion: "\u0417\u0430\u0440\u0430\u0431\u043E\u0442\u0430\u043D\u043E \u043A\u0440\u0438\u0441\u0442\u0430\u043B\u043B\u043E\u0432:"
   JapanVersion: 
   KoreanVersion: 
   SpanishVersion: 

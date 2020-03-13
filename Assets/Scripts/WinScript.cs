@@ -63,7 +63,7 @@ public class WinScript : MonoBehaviour
     }
     public void MomomentaryWin ()
     {
-        if (LinksContainer.instance.gameSarter.CurrentLevelCampaignIndex == 10)
+        if (LinksContainer.instance.Level.GetComponent<MapSetting>().LevelNumber == 10)
         {
             GameObject.Find("FireWorks").GetComponent<FinalWinScript>().StartCoroutine("SalutStarts");
         }
@@ -71,7 +71,10 @@ public class WinScript : MonoBehaviour
         {
             Win = true;
             WinPanel.SetActive(true);
-            PlayerStats.CampaignProgressIndex = LinksContainer.instance.gameSarter.CurrentLevelCampaignIndex + 1;
+            if (PlayerStats.GameWasFinished == false)
+            {
+                PlayerStats.CampaignProgressIndex = LinksContainer.instance.Level.GetComponent<MapSetting>().LevelNumber + 1;
+            }
             Music.StartCoroutine("StopMusic", 3);
             AlreadyWon = true;
         }
@@ -88,8 +91,9 @@ public class WinScript : MonoBehaviour
             yield return new WaitForSeconds(2);
             Win = true;
             WinPanel.SetActive(true);
-            SavingSystem.SavePlayerData();
             Music.StartCoroutine("StopMusic", 3);
+            GiveRewardToPlayer();
+            SavingSystem.SavePlayerData();
             AlreadyWon = true;
         }
     }

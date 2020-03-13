@@ -5,10 +5,12 @@ using UnityEngine;
 public class BuildingsAvaiable : MonoBehaviour
 {
     public bool[] BuildingAvaiable;
+    public ShopProductsScriptableObject Shop;
+
 
     void Start ()
     {
-        if (ShopManager.Spikes == true)
+        if (Shop.GetProductPurchaseState("Spikes") == true)
         {
             BuildingAvaiable[5] = true;
         }

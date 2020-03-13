@@ -14,11 +14,13 @@ public class BulletScript : MonoBehaviour
     public ParticleSystem ExplosionEffect;
     public ParticleSystem ExplosionEffect2;
     public float Groundheightlevel;
+    public ShopProductsScriptableObject Shop;
+
 
 
     void Start()
     {
-        if (ShopManager.BigBalls == true)
+        if (Shop.GetProductPurchaseState("BigBalls") == true)
             gameObject.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
            
     }

@@ -94,6 +94,7 @@ MonoBehaviour:
   ArrowSpawnPoint: {fileID: 0}
   FireParticles: {fileID: 9172519449332480230}
   MinimumDistance: 0.2
+  Shop: {fileID: 11400000, guid: a3abf333e73bf584b9ec28e262a628f9, type: 2}
 --- !u!82 &3864202395342966911
 AudioSource:
   m_ObjectHideFlags: 0

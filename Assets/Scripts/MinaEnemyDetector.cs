@@ -10,11 +10,13 @@ public class MinaEnemyDetector : MonoBehaviour
     bool AlreadyFinded = false;
     GlobalEnemiesManager globalEnemiesManager;
     public float RangeOfDetection;
-     
+    public ShopProductsScriptableObject Shop;
+
+
     void Start()
     {
         globalEnemiesManager = LinksContainer.instance.globalEnemiesManager;
-        if (ShopManager.SuperMine == true)
+        if (Shop.GetProductPurchaseState("SuperMine") == true)
         {
             Debug.Log("Mine");
             RangeOfDetection = RangeOfDetection * 1.5f;
@@ -39,7 +41,7 @@ public class MinaEnemyDetector : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
         Lamp.localPosition = new Vector3(Lamp.localPosition.x, 0.211f, Lamp.localPosition.z);
         yield return new WaitForSeconds(1.5f);
-        if (ShopManager.SuperMine == true)
+        if (Shop.GetProductPurchaseState("SuperMine") == true)
         {
             yield return new WaitForSeconds(0.5f);
         }
