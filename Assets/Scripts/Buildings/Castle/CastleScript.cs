@@ -24,8 +24,9 @@ public class CastleScript : MonoBehaviour
     public AdsManager adsManager;
     public ShopProductsScriptableObject Shop;
 
-    void Awake()
+    void Start()
     {
+        Manager = LinksContainer.instance.globalEnemiesManager;
         if (Shop.GetProductPurchaseState("StrongWalls") == true)
         {
             MaxHP = MaxHP * 1.5f;
@@ -36,11 +37,6 @@ public class CastleScript : MonoBehaviour
         UIManager = LinksContainer.instance.UIManager;
         HP = MaxHP;
     }
-    void Start()
-    {
-        Manager = LinksContainer.instance.globalEnemiesManager;
-    }
-    
     // Update is called once per frame
     void Update()
     {

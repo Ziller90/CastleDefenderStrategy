@@ -26,12 +26,12 @@ public class LevelsPanelScript : MonoBehaviour
     {
         if (PlayerStats.GameWasFinished == true)
         {
-            levelLoader.LoadLevel(LevelIndex);
+            LevelLoader.LevelToLoad = LevelIndex;
         }
         else
         {
             PlayerStats.CampaignProgressIndex = LevelIndex;
-            levelLoader.LoadLevel(LevelIndex);
+            LevelLoader.LevelToLoad = LevelIndex;
         }
         mainMenuButtons.StartCoroutine("Fading", 3);
     }

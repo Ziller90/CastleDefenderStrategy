@@ -20,7 +20,7 @@ public class WinScript : MonoBehaviour
     public Text CrystalsForWinShad;
     void Start()
     {
-        Castle = GameObject.FindGameObjectWithTag("Castle").GetComponent<CastleScript>();
+        Castle = LinksContainer.instance.Castle;
 
     }
 

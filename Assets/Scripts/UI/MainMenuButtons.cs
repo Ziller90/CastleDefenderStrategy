@@ -26,52 +26,30 @@ public class MainMenuButtons : MonoBehaviour
     public GameObject ShopOpenButton;
     public GameObject NewThingsMark;
     public static bool ABwasLoaded;
-    public int NumberOfChapter = 0;
-    public int NumberOfLevelOfChapter = 0;
     public static bool  AlreadySeeNewThingsLevel6;
     public GameObject AuthoresPanel;
     int NumberOfNewThings;
     public GameObject Crown;
+    public Text NumberOfLevel;
+    public Text NumberOfLevelShadow;
+    public GameObject LevelNumberTexts;
+    public GameObject TutorialText;
+    public Translation LevelText;
+
+
+
 
 
     void Start()
     {
-       
+
         if (PlayerStats.GameWasFinished == true)
         {
             Crown.SetActive(true);
-            NumberOfChapter = 3;
-            NumberOfLevelOfChapter = 1;
             ShopMgr.ShopAcessLevel = 2;
         }
         if (PlayerStats.GameWasFinished == false)
         {
-            if (PlayerStats.CampaignProgressIndex < 5)
-            {
-                NumberOfChapter = 1;
-            }
-            if (PlayerStats.CampaignProgressIndex < 10 && PlayerStats.CampaignProgressIndex > 5)
-            {
-                NumberOfChapter = 2;
-            }
-            if (PlayerStats.CampaignProgressIndex == 10)
-            {
-                NumberOfChapter = 3;
-            }
-            if (NumberOfChapter == 1)
-            {
-                NumberOfLevelOfChapter = PlayerStats.CampaignProgressIndex;
-            }
-            if (NumberOfChapter == 2)
-            {
-                NumberOfLevelOfChapter = PlayerStats.CampaignProgressIndex - 5;
-            }
-            if (NumberOfChapter == 3)
-            {
-                NumberOfLevelOfChapter = 1;
-            }
-            LevelNumberUpdateInfo();
-
             ShopMgr.ShopAcessLevel = 1;
             if (PlayerStats.CampaignProgressIndex >= 6)
             {
@@ -134,13 +112,18 @@ public class MainMenuButtons : MonoBehaviour
         }
     }
 
-    public void LevelNumberUpdateInfo()
-    {
-        LevelNumber.text = LevelNumber.text + "  " + NumberOfChapter + " - " + NumberOfLevelOfChapter;
-        LevelNumberShadow.text = LevelNumberShadow.text + "  " + NumberOfChapter + " - " + NumberOfLevelOfChapter;
-    }
     void Update()
     {
+        if (PlayerStats.CampaignProgressIndex != 0)
+        {
+            NumberOfLevel.text = "" + LevelText.GetTranslatedText() + PlayerStats.CampaignProgressIndex.ToString();
+            NumberOfLevelShadow.text = "" + LevelText.GetTranslatedText() + PlayerStats.CampaignProgressIndex.ToString();
+        }
+        else
+        {
+            LevelNumberTexts.SetActive(false);
+            TutorialText.SetActive(true);
+        } 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             SavingSystem.SavePlayerData();
@@ -163,7 +146,8 @@ public class MainMenuButtons : MonoBehaviour
     }
     public void DeveloperMenu()
     {
-        SceneManager.LoadScene(2);
+        LevelsPanel.SetActive(true);
+        MainButtons.SetActive(false);
     }
     public void QuitButton()
     {

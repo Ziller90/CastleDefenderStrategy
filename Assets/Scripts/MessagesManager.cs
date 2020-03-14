@@ -20,9 +20,9 @@ public class MessagesManager : MonoBehaviour
     }
     void Start()
     {
-        NewMessageButton = GameObject.Find("NewMessageButton");
+        NewMessageButton = LinksContainer.instance.NewMessageButton;
+        PlayingUIElements = LinksContainer.instance.PlayingUIElements;
         NewMessageButton.SetActive(false);
-        PlayingUIElements = GameObject.Find("PlayingUIElements");
         if (HaveStartMessage)
         {
             StartCoroutine("StartMessage", 2);

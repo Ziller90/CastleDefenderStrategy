@@ -17,6 +17,9 @@ public class LinksContainer : MonoBehaviour
     public GameSarter gameSarter;
     public AdsManager adsManager;
     public static LinksContainer instance;
+    public GameObject NewMessageButton;
+    public GameObject PlayingUIElements;
+
 
     public LinksContainer()
     {

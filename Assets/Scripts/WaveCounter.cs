@@ -13,7 +13,7 @@ public class WaveCounter : MonoBehaviour
 
     void Start()
     {
-        mapSetting = GameObject.FindGameObjectWithTag("Level").GetComponent<MapSetting>();
+        mapSetting = LinksContainer.instance.Level.GetComponent<MapSetting>();
         MainSpawner = mapSetting.MainSpawner;
         StartCoroutine("BattleBeforeFight");
     }
