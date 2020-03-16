@@ -5,7 +5,7 @@ using UnityEngine;
 public class SavingSystem : MonoBehaviour
 {
 
-     
+    public ShopProductsScriptableObject Shop;
 
     // Update is called once per frame
     void Update()
@@ -29,7 +29,6 @@ public class SavingSystem : MonoBehaviour
         {
             PlayerPrefs.SetInt("AlreadySeeNewThingsLevel6", 1);
         }
-
         PlayerPrefs.SetString("BoughtProducts", JsonUtility.ToJson(ShopProductsScriptableObject.BoughtProducts));
 
         PlayerPrefs.SetInt("CrystalsAmount", PlayerStats.Crystals);

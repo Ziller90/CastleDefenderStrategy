@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class LinksContainer : MonoBehaviour
 {
@@ -19,6 +21,7 @@ public class LinksContainer : MonoBehaviour
     public static LinksContainer instance;
     public GameObject NewMessageButton;
     public GameObject PlayingUIElements;
+    public Image HpBar;
 
 
     public LinksContainer()

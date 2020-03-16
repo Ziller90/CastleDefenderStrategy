@@ -1,6 +1,8 @@
 ﻿using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
 [InitializeOnLoad]
 public class CustomSceneStarter : Editor
@@ -94,6 +96,11 @@ public class CustomSceneStarter : Editor
     public static void Finished()
     {
         PlayerStats.GameWasFinished = true;
+    }
+    [MenuItem("Tools/SetPurchases", false, 1)]
+    public static void SetPurchases()
+    {
+        ShopProductsScriptableObject.BoughtProducts = JsonUtility.FromJson<List<string>>(PlayerPrefs.GetString("BoughtProducts"));
     }
 #endif
 

@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class ShopManager : MonoBehaviour
 {
-    public ShopProductsScriptableObject shopProductsScriptableObject;
     public GameObject Shop;
     public GameObject MainButtons;
     public GameObject Page1;

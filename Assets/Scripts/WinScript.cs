@@ -92,6 +92,10 @@ public class WinScript : MonoBehaviour
             Win = true;
             WinPanel.SetActive(true);
             Music.StartCoroutine("StopMusic", 3);
+            if (PlayerStats.GameWasFinished == false)
+            {
+                PlayerStats.CampaignProgressIndex++;
+            }
             GiveRewardToPlayer();
             SavingSystem.SavePlayerData();
             AlreadyWon = true;

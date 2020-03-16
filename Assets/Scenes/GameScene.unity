@@ -22835,6 +22835,7 @@ MonoBehaviour:
   adsManager: {fileID: 1678111867}
   NewMessageButton: {fileID: 462711797}
   PlayingUIElements: {fileID: 1569240287}
+  HpBar: {fileID: 1113161521}
 --- !u!4 &1883053883
 Transform:
   m_ObjectHideFlags: 0

@@ -4,6 +4,7 @@ using UnityEngine;
 
 
 [CreateAssetMenu(fileName = "NewProductsList", menuName = "ProductsList")]
+
 public class ShopProductsScriptableObject : ScriptableObject
 {
     public List<ProductInfoScriptableObject> ProductsList = new List<ProductInfoScriptableObject>();
@@ -13,7 +14,6 @@ public class ShopProductsScriptableObject : ScriptableObject
     {
 
     }
-
     // Update is called once per frame
     void Update()
     {

@@ -32,8 +32,8 @@ public class CastleScript : MonoBehaviour
             MaxHP = MaxHP * 1.5f;
             HP = HP * 1.5f;
         }
-        PlayingUIElements = GameObject.Find("PlayingUIElements");
-        HpBar = GameObject.Find("HPBar").GetComponent<Image>();
+        PlayingUIElements = LinksContainer.instance.PlayingUIElements;
+        HpBar = LinksContainer.instance.HpBar;
         UIManager = LinksContainer.instance.UIManager;
         HP = MaxHP;
     }
