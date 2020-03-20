@@ -158,7 +158,6 @@ public class MainMenuButtons : MonoBehaviour
     {
         if (PlayerStats.GameWasFinished == false)
         {
-            Debug.Log(PlayerStats.CampaignProgressIndex);
             if (PlayerStats.CampaignProgressIndex == 0)
             {
                 StartCoroutine("Fading", 5);
@@ -167,7 +166,6 @@ public class MainMenuButtons : MonoBehaviour
             {
                 StartCoroutine("Fading", 3);
                 LevelLoader.LevelToLoad = PlayerStats.CampaignProgressIndex;
-                gameObject.GetComponent<LevelLoader>().LoadLevel(PlayerStats.CampaignProgressIndex);
             }
         }
         else
@@ -178,11 +176,13 @@ public class MainMenuButtons : MonoBehaviour
     }
     IEnumerator Fading (int SceneToLoad)
     {
+        AsyncOperation AO = SceneManager.LoadSceneAsync(SceneToLoad);
+        AO.allowSceneActivation = false;
         gameObject.GetComponent<ScreenFader>().fadeState = ScreenFader.FadeState.In;
         yield return new WaitForSeconds(1.5f);
-        SceneManager.LoadSceneAsync(SceneToLoad);
         LoadingText.SetActive(true);
         gameObject.GetComponent<ScreenFader>().enabled = false;
+        AO.allowSceneActivation = true;
     }
     public void GoToTyler()
     {

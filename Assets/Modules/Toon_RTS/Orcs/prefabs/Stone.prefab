@@ -26,8 +26,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1997482932613563879}
   m_LocalRotation: {x: -0.10465446, y: -0, z: -0, w: 0.9945087}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.2083, y: 2.2083, z: 2.2083}
+  m_LocalPosition: {x: 0, y: -0.715, z: -3.36}
+  m_LocalScale: {x: 2.3617768, y: 2.3617768, z: 2.3617768}
   m_Children:
   - {fileID: 6346185691060516099}
   - {fileID: 5962698886587667706}
@@ -49,7 +49,7 @@ MonoBehaviour:
   Castle: {fileID: 0}
   Speed: 0.08
   StoneDamage: 1
-  TurningSpeed: 3
+  TurningSpeed: 2
   MinimuDistance: 3
 --- !u!114 &2297887886324063779
 MonoBehaviour:
@@ -350,8 +350,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.15
-      minScalar: 0.1
+      scalar: 0.25
+      minScalar: 0.2
       maxCurve:
         serializedVersion: 2
         m_Curve:

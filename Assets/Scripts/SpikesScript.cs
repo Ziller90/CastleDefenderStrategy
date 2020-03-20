@@ -28,7 +28,8 @@ public class SpikesScript : MonoBehaviour
         yield return new WaitForSeconds(0.2f);
         if (globalEnemiesManager.EnemyToAttack(gameObject.transform.position, RangeOfDetection) != null)
         {
-             globalEnemiesManager.EnemyToAttack(gameObject.transform.position, RangeOfDetection).GetComponent<DamageReciever>().DamageResistance(Damage, CardScriptableObject.DamageType.PenetrationDamage);
+            gameObject.GetComponent<AudioSource>().Play();
+            globalEnemiesManager.EnemyToAttack(gameObject.transform.position, RangeOfDetection).GetComponent<DamageReciever>().DamageResistance(Damage, CardScriptableObject.DamageType.PenetrationDamage);
         }
         gameObject.transform.GetChild(0).GetComponent<Animator>().SetBool("Attack", false);
         yield return new WaitForSeconds(ReloadingTime);

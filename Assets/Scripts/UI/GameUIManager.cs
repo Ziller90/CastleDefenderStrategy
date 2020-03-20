@@ -14,8 +14,11 @@ public class GameUIManager : MonoBehaviour
     public GameObject PausePanel;
     public ResourcesManager Manager;
     public Text ImprovingCost;
+    public Text ImprovingCostShadow;
     public Text SellCost;
+    public Text SellCostShadow;
     public Text CurrentLevel;
+    public Text CurrentLevelShadow;
     MessagesManager MessageManager;
     int ImprovingAvaiableLevel;
     public ScreenFader Fader;
@@ -26,6 +29,11 @@ public class GameUIManager : MonoBehaviour
     public GameObject NewThingsMark;
     public GameSarter gameSarter;
     int NumberOfNewThings;
+    public Translation Level;
+    public Translation Sell;
+    public Translation MAX;
+
+
 
 
 
@@ -88,6 +96,7 @@ public class GameUIManager : MonoBehaviour
         if (LinksContainer.instance.Level.GetComponent<MapSetting>().MainSpawner.StartedSpawning == true)
         {
             ShopOpenButton.SetActive(false);
+            NewThingsMark.SetActive(false);
         }
         if (Input.GetKeyDown(KeyCode.Escape) && Fader.fadeState == ScreenFader.FadeState.OutEnd)
         {
@@ -96,18 +105,23 @@ public class GameUIManager : MonoBehaviour
         if (BuildingToImprove != null)
         {
             SellCost.text = "" + BuildingToImprove.BuildingCard.SellCost[BuildingToImprove.Currentlevel];
+            SellCostShadow.text = "" + BuildingToImprove.BuildingCard.SellCost[BuildingToImprove.Currentlevel];
 
             if (BuildingToImprove.BuildingCard.AmountOfLevels == BuildingToImprove.Currentlevel || BuildingToImprove.Currentlevel + 1 == ImprovingAvaiableLevel)
             {
                 ImprovingCost.text = "MAX";
-                CurrentLevel.text = "LEVEL " + (BuildingToImprove.Currentlevel + 1);
+                ImprovingCostShadow.text = "MAX";
+                CurrentLevel.text = Level.GetTranslatedText() + (BuildingToImprove.Currentlevel + 1);
+                CurrentLevelShadow.text = Level.GetTranslatedText() + (BuildingToImprove.Currentlevel + 1);
                 BuidlingImproveButton.GetComponent<Button>().interactable = false;
             }
             else
             {
                 BuidlingImproveButton.GetComponent<Button>().interactable = true;
-                CurrentLevel.text = "LEVEL " + (BuildingToImprove.Currentlevel + 1);
+                CurrentLevel.text = Level.GetTranslatedText() + (BuildingToImprove.Currentlevel + 2);
+                CurrentLevelShadow.text = Level.GetTranslatedText() + (BuildingToImprove.Currentlevel + 2);
                 ImprovingCost.text = "" + BuildingToImprove.BuildingCard.LevelUpPrice[BuildingToImprove.Currentlevel + 1];
+                ImprovingCostShadow.text = "" + BuildingToImprove.BuildingCard.LevelUpPrice[BuildingToImprove.Currentlevel + 1];
             }
         }
 

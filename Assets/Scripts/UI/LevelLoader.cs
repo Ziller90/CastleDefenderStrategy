@@ -13,6 +13,6 @@ public class LevelLoader : MonoBehaviour
     {
         LevelToLoad = LevelIndex;
         yield return new WaitForSeconds(0.1f);
-        SceneManager.LoadScene(3);
+        SceneManager.LoadSceneAsync(3);
     }
 }

@@ -5109,7 +5109,7 @@ MonoBehaviour:
   Lamp: {fileID: 2697570129692658202}
   Damage: 7
   Frozen: 0
-  RangeOfDetection: 0.5
+  RangeOfDetection: 0.7
   Shop: {fileID: 11400000, guid: a3abf333e73bf584b9ec28e262a628f9, type: 2}
 --- !u!1 &8610380770739727562
 GameObject:

@@ -29,7 +29,7 @@ public class SavingSystem : MonoBehaviour
         {
             PlayerPrefs.SetInt("AlreadySeeNewThingsLevel6", 1);
         }
-        PlayerPrefs.SetString("BoughtProducts", JsonUtility.ToJson(ShopProductsScriptableObject.BoughtProducts));
+        PlayerPrefs.SetString("BoughtProducts", JsonUtility.ToJson(ShopProductsScriptableObject.purchases));
 
         PlayerPrefs.SetInt("CrystalsAmount", PlayerStats.Crystals);
         PlayerPrefs.SetInt("CampaignProgressIndex", PlayerStats.CampaignProgressIndex);
@@ -71,7 +71,7 @@ public class SavingSystem : MonoBehaviour
     }
     public void SetPlayerData()
     {
-        ShopProductsScriptableObject.BoughtProducts = JsonUtility.FromJson<List<string>>(PlayerPrefs.GetString("BoughtProducts"));
+        ShopProductsScriptableObject.purchases = JsonUtility.FromJson<ShopProductsScriptableObject.Purchases>(PlayerPrefs.GetString("BoughtProducts"));
         PlayerStats.DifficultyLevelIndex = PlayerPrefs.GetInt("DifficultyLevel");
         if (PlayerPrefs.GetInt("GameWasFinished") == 1)
         {
@@ -124,8 +124,7 @@ public class SavingSystem : MonoBehaviour
     }
     public void SetPlayerStartSetting()
     {
-        ShopProductsScriptableObject.BoughtProducts.Clear();
-
+        ShopProductsScriptableObject.purchases.BoughtProducts.Clear();
         QualitySettings.SetQualityLevel(2);
         PlayerStats.Crystals = 0;
         PlayerStats.DifficultyLevelIndex = 2;

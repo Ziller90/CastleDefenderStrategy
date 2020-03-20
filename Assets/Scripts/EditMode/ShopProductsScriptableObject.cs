@@ -8,26 +8,30 @@ using UnityEngine;
 public class ShopProductsScriptableObject : ScriptableObject
 {
     public List<ProductInfoScriptableObject> ProductsList = new List<ProductInfoScriptableObject>();
-    public static List<string> BoughtProducts = new List<string>();
     void Start()
-
     {
 
+    }
+    public static Purchases purchases = new Purchases();
+    [System.Serializable]
+    public class Purchases
+    {
+        public List<string> BoughtProducts = new List<string>();
     }
     // Update is called once per frame
     void Update()
     {
 
-    }
+    } 
     public void NewPurchase(string ProductId)
     {
-        BoughtProducts.Add(ProductId);
+        purchases.BoughtProducts.Add(ProductId);
     }
     public bool GetProductPurchaseState(string ProductId)
     {
-        for (int i = 0; i < BoughtProducts.Count; i++)
+        for (int i = 0; i < purchases.BoughtProducts.Count; i++)
         {
-            if (BoughtProducts[i] == ProductId)
+            if (purchases.BoughtProducts[i] == ProductId)
             {
                 return true;
             }

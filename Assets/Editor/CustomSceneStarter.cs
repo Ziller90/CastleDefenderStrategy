@@ -100,7 +100,7 @@ public class CustomSceneStarter : Editor
     [MenuItem("Tools/SetPurchases", false, 1)]
     public static void SetPurchases()
     {
-        ShopProductsScriptableObject.BoughtProducts = JsonUtility.FromJson<List<string>>(PlayerPrefs.GetString("BoughtProducts"));
+       
     }
 #endif
 
