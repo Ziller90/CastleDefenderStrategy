@@ -70,6 +70,7 @@ public class BuildingStats : MonoBehaviour
             if (ResourceManager.Gold >= BuildingCard.LevelUpPrice[Currentlevel + 1])
             {
                 Currentlevel++;
+                gameObject.GetComponent<BuildingEffectVisualization>().ActivateGoldEffect();
                 ResourceManager.Gold = ResourceManager.Gold - BuildingCard.LevelUpPrice[Currentlevel];
                 Damage = Damage + BuildingCard.LevelUpDamageBonus[Currentlevel];
                 ReloadingSpeed = ReloadingSpeed + BuildingCard.LevelUpReloadingSpeedBonus[Currentlevel];

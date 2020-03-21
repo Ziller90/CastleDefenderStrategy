@@ -35,14 +35,13 @@ public class MainMenuButtons : MonoBehaviour
     public GameObject LevelNumberTexts;
     public GameObject TutorialText;
     public Translation LevelText;
-
+    public AsyncOperation AO;
 
 
 
 
     void Start()
     {
-
         if (PlayerStats.GameWasFinished == true)
         {
             Crown.SetActive(true);
@@ -176,7 +175,7 @@ public class MainMenuButtons : MonoBehaviour
     }
     IEnumerator Fading (int SceneToLoad)
     {
-        AsyncOperation AO = SceneManager.LoadSceneAsync(SceneToLoad);
+        AO = SceneManager.LoadSceneAsync(SceneToLoad);
         AO.allowSceneActivation = false;
         gameObject.GetComponent<ScreenFader>().fadeState = ScreenFader.FadeState.In;
         yield return new WaitForSeconds(1.5f);

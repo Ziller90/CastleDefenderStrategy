@@ -11,7 +11,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 07315dd9aba95e54f8fd210634b2bcba, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.508
   m_Pitch: 1
   Loop: 0
@@ -1063,8 +1063,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e72cc9427d46aba45b8816b42b1bb257, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StandartEffect: {fileID: 2402462156708423414}
-  GoldenEffect: {fileID: 387075363603912180}
+  StandartEffect: {fileID: 2402462156708423368}
+  GoldenEffect: {fileID: 387075363603912138}
 --- !u!1 &6979047309129144720
 GameObject:
   m_ObjectHideFlags: 0
@@ -1772,17 +1772,28 @@ PrefabInstance:
       propertyPath: InitialModule.startSize.scalar
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 564421391112721296, guid: 675eae0134aaf384cb72d151ef68de8b,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 675eae0134aaf384cb72d151ef68de8b, type: 3}
+--- !u!1 &387075363603912180 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 564421391112721326, guid: 675eae0134aaf384cb72d151ef68de8b,
+    type: 3}
+  m_PrefabInstance: {fileID: 182977142085994074}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &387075363603912139 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 564421391112721297, guid: 675eae0134aaf384cb72d151ef68de8b,
     type: 3}
   m_PrefabInstance: {fileID: 182977142085994074}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &387075363603912180 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 564421391112721326, guid: 675eae0134aaf384cb72d151ef68de8b,
+--- !u!198 &387075363603912138 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 564421391112721296, guid: 675eae0134aaf384cb72d151ef68de8b,
     type: 3}
   m_PrefabInstance: {fileID: 182977142085994074}
   m_PrefabAsset: {fileID: 0}
@@ -1893,11 +1904,16 @@ PrefabInstance:
       propertyPath: ShapeModule.radiusThickness
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 564421391112721296, guid: 675eae0134aaf384cb72d151ef68de8b,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 675eae0134aaf384cb72d151ef68de8b, type: 3}
---- !u!1 &2402462156708423414 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 564421391112721326, guid: 675eae0134aaf384cb72d151ef68de8b,
+--- !u!198 &2402462156708423368 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 564421391112721296, guid: 675eae0134aaf384cb72d151ef68de8b,
     type: 3}
   m_PrefabInstance: {fileID: 2774913196032226648}
   m_PrefabAsset: {fileID: 0}

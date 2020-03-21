@@ -4,21 +4,28 @@ using UnityEngine;
 
 public class BuildingEffectVisualization : MonoBehaviour
 {
-    public GameObject StandartEffect;
-    public GameObject GoldenEffect;
+    public ParticleSystem StandartEffect;
+    public ParticleSystem GoldenEffect;
 
     void Start()
     {
         if (gameObject.GetComponent<BuildingStats>().FilledCube.GetComponent<BuilderManager>().CubeTypeIndex == 2)
         {
-            StandartEffect.SetActive(false);
+            ActivateGoldEffect();
         }
         else
         {
-            GoldenEffect.SetActive(false);
+            ActivateStandartEffect();
         }
     }
-
-    // Update is called once per frame
+    public void ActivateGoldEffect()
+    {
+        GoldenEffect.Play();
+        GoldenEffect.gameObject.GetComponent<AudioSource>().Play();
+    }
+    public void ActivateStandartEffect()
+    {
+        StandartEffect.Play();
+    }
 
 }

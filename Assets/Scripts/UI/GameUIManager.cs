@@ -31,7 +31,15 @@ public class GameUIManager : MonoBehaviour
     int NumberOfNewThings;
     public Translation Level;
     public Translation Sell;
-    public Translation MAX;
+    public GameObject ImproveButtonBlack;
+    public GameObject LevelUpCostString;
+    public GameObject MAX;
+    public GameObject Lock;
+    public GameObject Star;
+    public GameObject ArrowsUp;
+
+
+
 
 
 
@@ -106,18 +114,47 @@ public class GameUIManager : MonoBehaviour
         {
             SellCost.text = "" + BuildingToImprove.BuildingCard.SellCost[BuildingToImprove.Currentlevel];
             SellCostShadow.text = "" + BuildingToImprove.BuildingCard.SellCost[BuildingToImprove.Currentlevel];
-
-            if (BuildingToImprove.BuildingCard.AmountOfLevels == BuildingToImprove.Currentlevel || BuildingToImprove.Currentlevel + 1 == ImprovingAvaiableLevel)
+            if (BuildingToImprove.BuildingCard.BuildingId == 2)
             {
-                ImprovingCost.text = "MAX";
-                ImprovingCostShadow.text = "MAX";
-                CurrentLevel.text = Level.GetTranslatedText() + (BuildingToImprove.Currentlevel + 1);
-                CurrentLevelShadow.text = Level.GetTranslatedText() + (BuildingToImprove.Currentlevel + 1);
-                BuidlingImproveButton.GetComponent<Button>().interactable = false;
+                BuidlingImproveButton.SetActive(false);
             }
             else
             {
-                BuidlingImproveButton.GetComponent<Button>().interactable = true;
+                BuidlingImproveButton.SetActive(true);
+            }
+            if (BuildingToImprove.BuildingCard.AmountOfLevels == BuildingToImprove.Currentlevel || BuildingToImprove.Currentlevel + 1 == ImprovingAvaiableLevel)
+            {
+                ImproveButtonBlack.SetActive(true);
+                LevelUpCostString.SetActive(false);
+                MAX.SetActive(true);
+                ArrowsUp.SetActive(false);
+                if (BuildingToImprove.Currentlevel == 1)
+                {
+                    Lock.SetActive(true);
+                }
+                if (BuildingToImprove.Currentlevel == 2)
+                {
+                    Star.SetActive(true);
+                }
+                CurrentLevel.text = Level.GetTranslatedText() + (BuildingToImprove.Currentlevel + 1);
+                CurrentLevelShadow.text = Level.GetTranslatedText() + (BuildingToImprove.Currentlevel + 1);
+                ImproveButtonBlack.SetActive(true);
+            }
+            else
+            {
+                if (BuildingToImprove.BuildingCard.LevelUpPrice[BuildingToImprove.Currentlevel + 1] > Manager.Gold)
+                {
+                    ImproveButtonBlack.SetActive(true);
+                }
+                else
+                {
+                    ImproveButtonBlack.SetActive(false);
+                }
+                Lock.SetActive(false);
+                Star.SetActive(false);
+                ArrowsUp.SetActive(true);
+                MAX.SetActive(false);
+                LevelUpCostString.SetActive(true);
                 CurrentLevel.text = Level.GetTranslatedText() + (BuildingToImprove.Currentlevel + 2);
                 CurrentLevelShadow.text = Level.GetTranslatedText() + (BuildingToImprove.Currentlevel + 2);
                 ImprovingCost.text = "" + BuildingToImprove.BuildingCard.LevelUpPrice[BuildingToImprove.Currentlevel + 1];

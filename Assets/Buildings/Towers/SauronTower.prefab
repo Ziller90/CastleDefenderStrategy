@@ -88,8 +88,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e72cc9427d46aba45b8816b42b1bb257, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StandartEffect: {fileID: 8577120854142406143}
-  GoldenEffect: {fileID: 5966135616502098868}
+  StandartEffect: {fileID: 8577120854142406081}
+  GoldenEffect: {fileID: 5966135616502098826}
 --- !u!1 &3898636879723561169
 GameObject:
   m_ObjectHideFlags: 0
@@ -416,7 +416,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 07315dd9aba95e54f8fd210634b2bcba, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.504
   m_Pitch: 1
   Loop: 0
@@ -798,6 +798,11 @@ PrefabInstance:
       propertyPath: InitialModule.startSize.scalar
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 564421391112721296, guid: 675eae0134aaf384cb72d151ef68de8b,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 675eae0134aaf384cb72d151ef68de8b, type: 3}
 --- !u!1 &5966135616502098868 stripped
@@ -809,6 +814,12 @@ GameObject:
 --- !u!4 &5966135616502098827 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 564421391112721297, guid: 675eae0134aaf384cb72d151ef68de8b,
+    type: 3}
+  m_PrefabInstance: {fileID: 6133554115072899098}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &5966135616502098826 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 564421391112721296, guid: 675eae0134aaf384cb72d151ef68de8b,
     type: 3}
   m_PrefabInstance: {fileID: 6133554115072899098}
   m_PrefabAsset: {fileID: 0}
@@ -1040,17 +1051,22 @@ PrefabInstance:
       propertyPath: ShapeModule.radiusThickness
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 564421391112721296, guid: 675eae0134aaf384cb72d151ef68de8b,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 675eae0134aaf384cb72d151ef68de8b, type: 3}
---- !u!1 &8577120854142406143 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 564421391112721326, guid: 675eae0134aaf384cb72d151ef68de8b,
-    type: 3}
-  m_PrefabInstance: {fileID: 8132717777898643025}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8577120854142406080 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 564421391112721297, guid: 675eae0134aaf384cb72d151ef68de8b,
+    type: 3}
+  m_PrefabInstance: {fileID: 8132717777898643025}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &8577120854142406081 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 564421391112721296, guid: 675eae0134aaf384cb72d151ef68de8b,
     type: 3}
   m_PrefabInstance: {fileID: 8132717777898643025}
   m_PrefabAsset: {fileID: 0}
