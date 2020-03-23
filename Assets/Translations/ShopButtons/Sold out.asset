@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90fd2ae2a6113bc4b96fbae95793b5ed, type: 3}
   m_Name: Sold out
   m_EditorClassIdentifier: 
-  EnglishVersion: SOLD OUT
-  RussianVersion: "\u041F\u0420\u041E\u0414\u0410\u041D\u041E"
+  EnglishVersion: BOUGHT
+  RussianVersion: "\u041A\u0423\u041F\u041B\u0415\u041D\u041E"
   JapanVersion: 
   KoreanVersion: 
   SpanishVersion: 

@@ -23,13 +23,16 @@ public class MessagesManager : MonoBehaviour
         NewMessageButton = LinksContainer.instance.NewMessageButton;
         PlayingUIElements = LinksContainer.instance.PlayingUIElements;
         NewMessageButton.SetActive(false);
-        if (HaveStartMessage)
+        if (PlayerStats.GameWasFinished == false)
         {
-            StartCoroutine("StartMessage", 2);
-        }
-        if (HideUIPlayElements == true)
-        {
-            HideUI();
+            if (HaveStartMessage)
+            {
+                StartCoroutine("StartMessage", 2);
+            }
+            if (HideUIPlayElements == true)
+            {
+                HideUI();
+            }
         }
     }
 

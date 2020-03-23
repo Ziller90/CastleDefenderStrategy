@@ -10382,8 +10382,8 @@ MonoBehaviour:
   RouteNumber: 1
   NormalSpeed: 0.015
   speed: 0.015
-  MaxHP: 300
-  HP: 300
+  MaxHP: 250
+  HP: 250
   HPLine: {fileID: 7987297209160385316}
   NewHPIndex: 0
   HPIndex: 0
@@ -10396,7 +10396,7 @@ MonoBehaviour:
   Go: 0
   EnemyDamage: 5
   EnemyId: Healer
-  KillReward: 500
+  KillReward: 75
   CrystalsKillReward: 50
   FrozenRecover: 30
   EnemyAnimator: {fileID: 4025379249481682341}
@@ -10644,7 +10644,7 @@ MonoBehaviour:
   RedCrystal: {fileID: 6352572549226255353, guid: 231d33e1d3432fb45a25c8584a1a0686,
     type: 3}
   EnemyValue: 100
-  ProbabilityOfCrystalDrop: 100
+  ProbabilityOfCrystalDrop: 20
 --- !u!114 &4412167841319192978
 MonoBehaviour:
   m_ObjectHideFlags: 0

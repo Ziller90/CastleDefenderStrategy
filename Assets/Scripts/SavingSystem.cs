@@ -128,7 +128,6 @@ public class SavingSystem : MonoBehaviour
         QualitySettings.SetQualityLevel(2);
         PlayerStats.Crystals = 0;
         PlayerStats.DifficultyLevelIndex = 2;
-        PlayerStats.DifficultyLevelIndex = 2;
         PlayerStats.CampaignProgressIndex = 0;
         AudioManager.SoundOn = true;
         MusicManager.MusicPlaying = true;

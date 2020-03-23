@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SuperMine
   m_EditorClassIdentifier: 
   ImprovementName: {fileID: 11400000, guid: f2bf1dd0cefd444458f47330e2071667, type: 2}
-  ImprovementDescription: {fileID: 11400000, guid: 10c7c708b75bb1f419d393f298af3e3c,
+  ImprovementDescription: {fileID: 11400000, guid: 020f5a68a3de45b4b8e1acc0f77cfb94,
     type: 2}
   ImprovementImage: {fileID: 21300000, guid: e6a30e8c03da99747a21e2763d6e9e8f, type: 3}
   ID: SuperMine

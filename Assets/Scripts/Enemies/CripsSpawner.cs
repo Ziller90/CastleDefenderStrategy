@@ -51,6 +51,7 @@ public class CripsSpawner : MonoBehaviour
         StartedSpawning = true;
         if (MessageTrigger[SquadCounter] > 0)
         {
+            if (PlayerStats.GameWasFinished == false)
             StartCoroutine("ButtonShowing");
         }
         for (CripsCounter = 0; CripsCounter < AmountOFCrips[SquadCounter]; CripsCounter++)

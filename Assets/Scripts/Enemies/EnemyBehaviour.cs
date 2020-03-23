@@ -93,10 +93,10 @@ public class EnemyBehaviour : MonoBehaviour
                     MaxHP = MaxHP * 0.7f;
                     break;
                 case 2:
-                    MaxHP = MaxHP * 1.2f;
+                    MaxHP = MaxHP * 1.1f;
                     break;
                 case 3:
-                    MaxHP = MaxHP * 2f;
+                    MaxHP = MaxHP * 1.7f;
                     break;
             }
         }

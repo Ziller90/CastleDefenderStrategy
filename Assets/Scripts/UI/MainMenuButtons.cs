@@ -36,6 +36,7 @@ public class MainMenuButtons : MonoBehaviour
     public GameObject TutorialText;
     public Translation LevelText;
     public AsyncOperation AO;
+    public GameObject LevelSelection;
 
 
 
@@ -46,6 +47,8 @@ public class MainMenuButtons : MonoBehaviour
         {
             Crown.SetActive(true);
             ShopMgr.ShopAcessLevel = 2;
+            LevelNumberTexts.SetActive(false);
+            LevelSelection.SetActive(true);
         }
         if (PlayerStats.GameWasFinished == false)
         {
@@ -54,10 +57,7 @@ public class MainMenuButtons : MonoBehaviour
             {
                 ShopMgr.ShopAcessLevel = 2;
             }
-            //if (PlayerStats.CampaignProgressIndex >= 9)
-            //{
-            //    ShopMgr.ShopAcessLevel = 3;
-            //}
+
             if (PlayerStats.CampaignProgressIndex >= 6 && AlreadySeeNewThingsLevel6 == false)
             {
                 NewThingsMark.SetActive(true);

@@ -15,10 +15,7 @@ public class Difficulty : MonoBehaviour
 
     void Start()
     {
-        if (PlayerStats.DifficultyLevelIndex == 0)
-        {
-            PlayerStats.DifficultyLevelIndex = 2;
-        }
+
         if (PlayerStats.DifficultyLevelIndex == 1)
         {
             EasyB.interactable = false;

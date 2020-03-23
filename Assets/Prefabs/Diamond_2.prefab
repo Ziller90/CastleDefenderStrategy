@@ -269,7 +269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d23d37bba0fc6ba448bcd1e73ebb60ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CrystalCost: 3
+  CrystalCost: 1
   SecondsToDisappear: 0
 --- !u!82 &5336842152699954295
 AudioSource:

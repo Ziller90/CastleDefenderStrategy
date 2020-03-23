@@ -27,6 +27,7 @@ public class MineExplosion : MonoBehaviour
     public void Explose(float Damage)
     {
         gameObject.GetComponent<AudioSource>().Play();
+        Particle.Play();
         for (int q = 0; q < AttackGoals.Count; q++)
         {
             if (AttackGoals[q] != null)
@@ -46,7 +47,6 @@ public class MineExplosion : MonoBehaviour
                         AttackGoals[q].GetComponent<DamageReciever>().DamageResistance(Damage, CardScriptableObject.DamageType.ExplosionDamage);
                     }
                 }
-                Particle.Play();
             }
         }
         gameObject.transform.GetChild(0).GetComponent<MeshRenderer>().enabled = false;

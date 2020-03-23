@@ -19,7 +19,7 @@ public class CrystalsManager : MonoBehaviour
     {
         ProbabilytyOfGreenCrystal = 65;
         ProbabilytyOfBlueCrystal = 35;
-        ProbabilityOfRedCrystal = 0;
+        ProbabilityOfRedCrystal = -5;
     }
 
     // Update is called once per frame

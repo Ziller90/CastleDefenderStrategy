@@ -118,10 +118,6 @@ public class GameUIManager : MonoBehaviour
             {
                 BuidlingImproveButton.SetActive(false);
             }
-            else
-            {
-                BuidlingImproveButton.SetActive(true);
-            }
             if (BuildingToImprove.BuildingCard.AmountOfLevels == BuildingToImprove.Currentlevel || BuildingToImprove.Currentlevel + 1 == ImprovingAvaiableLevel)
             {
                 ImproveButtonBlack.SetActive(true);
