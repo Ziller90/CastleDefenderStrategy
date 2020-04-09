@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 959ed0e76165e804a817fad75da89c78, type: 3}
+  m_Name: WayBuildings
+  m_EditorClassIdentifier: 
+  Buildings:
+  - {fileID: 5115748256209622629, guid: 8b68a5047bda77444a256dfab130afdd, type: 3}
+  - {fileID: 7114406476314116194, guid: dac4a0830afb78b4caa5bb996823e568, type: 3}
+  - {fileID: 7114406476314116194, guid: 8111e91ce8fba274c80bab25c1fc791e, type: 3}

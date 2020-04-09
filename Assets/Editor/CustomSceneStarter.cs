@@ -91,6 +91,7 @@ public class CustomSceneStarter : Editor
     public static void FinalPreference()
     {
         PlayerStats.CampaignProgressIndex = 10;
+        ShopProductsScriptableObject.purchases.BoughtProducts.Add("Spikes");
     }
     [MenuItem("Tools/SetGameWasFinished", false, 1)]
     public static void Finished()

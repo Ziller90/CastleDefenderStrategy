@@ -24,12 +24,17 @@ public class SpikesScript : MonoBehaviour
     }
     public IEnumerator Attack ()
     {
+
         gameObject.transform.GetChild(0).GetComponent<Animator>().SetBool("Attack", true);
         yield return new WaitForSeconds(0.2f);
+        gameObject.GetComponent<AudioSource>().Play();
         if (globalEnemiesManager.EnemyToAttack(gameObject.transform.position, RangeOfDetection) != null)
         {
-            gameObject.GetComponent<AudioSource>().Play();
-            globalEnemiesManager.EnemyToAttack(gameObject.transform.position, RangeOfDetection).GetComponent<DamageReciever>().DamageResistance(Damage, CardScriptableObject.DamageType.PenetrationDamage);
+            var EnemiesToAttack = globalEnemiesManager.EnemiesInRadius(gameObject.transform.position, RangeOfDetection);
+            for (int i = 0; i < Mathf.Clamp(EnemiesToAttack.Count, 0, 3); i++)
+            {
+                EnemiesToAttack[i].GetComponent<DamageReciever>().DamageResistance(Damage, CardScriptableObject.DamageType.PenetrationDamage);
+            }
         }
         gameObject.transform.GetChild(0).GetComponent<Animator>().SetBool("Attack", false);
         yield return new WaitForSeconds(ReloadingTime);

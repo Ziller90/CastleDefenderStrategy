@@ -67,7 +67,7 @@ MonoBehaviour:
   Damage: 20
   Reloaded: 1
   RangeOfDetection: 0.5
-  ReloadingTime: 2
+  ReloadingTime: 1.5
 --- !u!82 &8105822494524220457
 AudioSource:
   m_ObjectHideFlags: 0
@@ -234,7 +234,7 @@ PrefabInstance:
     - target: {fileID: 2300000, guid: 49955a22335b8e64b803d2c89f6d8e55, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6ec7f5ad77022d54b8ef15712ce7cbf5, type: 2}
+      objectReference: {fileID: 2100000, guid: 679b2d53a3ec8874ba78330905a5fe60, type: 2}
     m_RemovedComponents:
     - {fileID: 9500000, guid: 49955a22335b8e64b803d2c89f6d8e55, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 49955a22335b8e64b803d2c89f6d8e55, type: 3}

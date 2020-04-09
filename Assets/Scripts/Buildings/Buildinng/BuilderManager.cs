@@ -24,6 +24,14 @@ public class BuilderManager : MonoBehaviour
     {
         BuildingManager = LinksContainer.instance.buildingManager;
         ResourcesManager = LinksContainer.instance.resourcesManager;
+        if (CubeTypeIndex == 2 || CubeTypeIndex == 1)
+        {
+            Buildings = BuildingManager.BuildingsForField.Buildings;
+        }
+        if (CubeTypeIndex == 3)
+        {
+            Buildings = BuildingManager.BuildingsForWay.Buildings;
+        }
     }
 
     // Update is called once per frame

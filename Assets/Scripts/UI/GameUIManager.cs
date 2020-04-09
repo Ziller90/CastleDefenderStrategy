@@ -37,6 +37,9 @@ public class GameUIManager : MonoBehaviour
     public GameObject Lock;
     public GameObject Star;
     public GameObject ArrowsUp;
+    public GameObject ShowInterfaceIdenButton;
+    public GameObject HideInterfaceButton;
+
 
 
 
@@ -48,6 +51,10 @@ public class GameUIManager : MonoBehaviour
 
     void Start()
     {
+        if (Debug.isDebugBuild)
+        {
+            HideInterfaceButton.SetActive(true);
+        }
         MessageManager = GameObject.FindGameObjectWithTag("Level").GetComponent<MessagesManager>();
         ImprovingAvaiableLevel = GameObject.FindGameObjectWithTag("Level").GetComponent<ImprovingsLevelsAvaiable>().ImprovingsAvaiableLevel;
 
@@ -167,6 +174,16 @@ public class GameUIManager : MonoBehaviour
     public void ShowImproveButton()
     {
         BuidlingImproveButton.SetActive(true);
+    }
+    public void HideInterface()
+    {
+        PlayingUIElements.SetActive(false);
+        ShowInterfaceIdenButton.SetActive(true);
+    }
+    public void ShowInterface()
+    {
+        PlayingUIElements.SetActive(true);
+        ShowInterfaceIdenButton.SetActive(false);
     }
 
     public void HideDestroyButton()

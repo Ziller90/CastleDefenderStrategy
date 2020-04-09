@@ -10382,8 +10382,8 @@ MonoBehaviour:
   RouteNumber: 1
   NormalSpeed: 0.015
   speed: 0.015
-  MaxHP: 250
-  HP: 250
+  MaxHP: 150
+  HP: 150
   HPLine: {fileID: 7987297209160385316}
   NewHPIndex: 0
   HPIndex: 0

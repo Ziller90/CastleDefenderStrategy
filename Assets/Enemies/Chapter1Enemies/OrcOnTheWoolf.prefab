@@ -487,7 +487,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MagicDamageModificator: 0.4
   PenetrationDamageModificator: 1.5
-  ExplosionDamageModificator: 1.5
+  ExplosionDamageModificator: 1.7
   Enemy: {fileID: 0}
   FinalDamage: 0
   DamageVisual: {fileID: 2965620520752337226}
@@ -555,9 +555,6 @@ MonoBehaviour:
   RedCrystal: {fileID: 6352572549226255353, guid: 231d33e1d3432fb45a25c8584a1a0686,
     type: 3}
   EnemyValue: 5
-  ProbabilytyOfGreenCrystal: 60
-  ProbabilytyOfBlueCrystal: 35
-  ProbabilityOfRedCrystal: 5
   ProbabilityOfCrystalDrop: 10
 --- !u!114 &1506644630822972460
 MonoBehaviour:

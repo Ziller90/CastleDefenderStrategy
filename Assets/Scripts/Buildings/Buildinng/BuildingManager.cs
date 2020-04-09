@@ -13,6 +13,9 @@ public class BuildingManager : MonoBehaviour
     public GameObject RoadBuildings;
     public GameObject FieldBuildings;
     public GameObject GoldenBuildings;
+    public BuidlingsConfig BuildingsForField;
+    public BuidlingsConfig BuildingsForWay;
+
 
     public BuilderManager Manager;
     void Start()

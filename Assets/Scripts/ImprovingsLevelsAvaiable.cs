@@ -6,5 +6,11 @@ public class ImprovingsLevelsAvaiable : MonoBehaviour
 {
     public int ImprovingsAvaiableLevel;
 
-    // Update is called once per frame
+    void Start()
+    {
+        if (PlayerStats.GameWasFinished == true)
+        {
+            ImprovingsAvaiableLevel = 3;
+        }
+    }
 }

@@ -37,6 +37,7 @@ public class MainMenuButtons : MonoBehaviour
     public Translation LevelText;
     public AsyncOperation AO;
     public GameObject LevelSelection;
+    public GameObject ThanksPanel;
 
 
 
@@ -74,6 +75,16 @@ public class MainMenuButtons : MonoBehaviour
     {
         AuthoresPanel.SetActive(false);
         MainButtons.SetActive(true);
+    }
+    public void ShowThanksForPlaying()
+    {
+        MainButtons.SetActive(false);
+        ThanksPanel.SetActive(true);
+    }
+    public void HideThanksForPlaying()
+    {
+        MainButtons.SetActive(true);
+        ThanksPanel.SetActive(false);
     }
     public void SeeIfNewThings()
     {

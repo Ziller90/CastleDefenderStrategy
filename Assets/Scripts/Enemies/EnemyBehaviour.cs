@@ -83,12 +83,13 @@ public class EnemyBehaviour : MonoBehaviour
     }
     void Start()
     {
-        CameraViewPoint = LinksContainer.instance.CameraViewPoint;
-
         if (PlayerStats.CampaignProgressIndex > 0)
         {
             switch (PlayerStats.DifficultyLevelIndex)
             {
+                case 0:
+                    MaxHP = MaxHP * 1.1f;
+                    break;
                 case 1:
                     MaxHP = MaxHP * 0.7f;
                     break;
@@ -100,6 +101,7 @@ public class EnemyBehaviour : MonoBehaviour
                     break;
             }
         }
+        CameraViewPoint = LinksContainer.instance.CameraViewPoint;
         MinStopTime = MinStopTime * 0.1f;
         MaxStopTime = MaxStopTime * 0.1f;
 

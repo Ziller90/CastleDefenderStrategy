@@ -10,9 +10,20 @@ public class BuildingsAvaiable : MonoBehaviour
 
     void Start ()
     {
+        if (PlayerStats.GameWasFinished == true)
+        {
+            for (int i = 0; i < BuildingAvaiable.Length; i++ )
+            {
+                BuildingAvaiable[i] = true;
+            }
+        }
         if (Shop.GetProductPurchaseState("Spikes") == true)
         {
             BuildingAvaiable[5] = true;
+        }
+        else
+        {
+            BuildingAvaiable[5] = false;
         }
     }
 }

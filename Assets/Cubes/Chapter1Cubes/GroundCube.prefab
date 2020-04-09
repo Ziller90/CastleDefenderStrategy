@@ -189,6 +189,8 @@ MonoBehaviour:
   - {fileID: 2991281259419329068, guid: 7a8bb2ef1a13be74cacff4f15898fc3f, type: 3}
   - {fileID: 3627186018734139144, guid: d7b9f8011a46c9543ba180cdb55fcc50, type: 3}
   - {fileID: 6791168615514283296, guid: 27f43bea482b9aa42a7083cb3b06580f, type: 3}
+  - {fileID: 6791168615514283296, guid: 27f43bea482b9aa42a7083cb3b06580f, type: 3}
+  - {fileID: 6791168615514283296, guid: 27f43bea482b9aa42a7083cb3b06580f, type: 3}
   HighLightFrame: {fileID: 134362943185089884, guid: 1a7e6b617f2abf946b6af5354c48010a,
     type: 3}
   HighlightFramepoint: {fileID: 4339650058808710536}
