@@ -11,10 +11,11 @@ using UnityEngine.UI;
 
 public class AdsManager : MonoBehaviour, IUnityAdsListener
 {
+    private string gameId;
 #if UNITY_IOS
-    private string gameId = "3243302";
+    gameId = "3243302";
 #elif UNITY_ANDROID
-    private string gameId = "3243303";
+    gameId = "3243303";
 #endif
     public string GameOverVideo = "video";
     public string WinRewardedVideo = "rewardedVideo";
