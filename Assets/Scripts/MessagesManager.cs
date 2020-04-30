@@ -8,12 +8,12 @@ public class MessagesManager : MonoBehaviour
 {
     public GameObject[] Messages;
     MusicManager Music;
-    GameObject PlayingUIElements;
     int CurrentMessageNumber;
     GameObject NewMessageButton;
     int MessageButtonMessageNumber;
     public bool HaveStartMessage;
     public bool HideUIPlayElements;
+    GameUIManager gameUIManager;
     void Awake ()
     {
 
@@ -21,7 +21,6 @@ public class MessagesManager : MonoBehaviour
     void Start()
     {
         NewMessageButton = LinksContainer.instance.NewMessageButton;
-        PlayingUIElements = LinksContainer.instance.PlayingUIElements;
         NewMessageButton.SetActive(false);
         if (PlayerStats.GameWasFinished == false)
         {
@@ -84,12 +83,11 @@ public class MessagesManager : MonoBehaviour
     }
     public void HideUI()
     {
-        PlayingUIElements.SetActive(false);
+        gameUIManager.PlayingUIElements.SetActive(false);
     }
     public void ShowUI()
     {
-        PlayingUIElements.SetActive(true);
-
+        gameUIManager.PlayingUIElements.SetActive(true);
     }
 
 }

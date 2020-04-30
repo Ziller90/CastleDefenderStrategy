@@ -33,6 +33,7 @@ public class PoisonTower : MonoBehaviour
         if (Enemy == null || globalEnemiesManager.IsEnemyAttackAble(Enemy, gameObject.transform.position, TowerAttackDistance) == false || Enemy.GetComponent<EnemyBehaviour>().HP <= 0)
         {
             Enemy = globalEnemiesManager.EnemyToAttack(gameObject.transform.position, TowerAttackDistance);
+            if (Enemy != null)
             EnemyPosition = Enemy.transform;
         }
         else

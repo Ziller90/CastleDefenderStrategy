@@ -51,6 +51,7 @@ public class GameUIManager : MonoBehaviour
 
     void Start()
     {
+        PlayingUIElements = LinksContainer.instance.PlayingUIElements;
         if (Debug.isDebugBuild)
         {
             HideInterfaceButton.SetActive(true);

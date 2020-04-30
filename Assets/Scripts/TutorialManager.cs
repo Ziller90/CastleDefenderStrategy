@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 
 public class TutorialManager : MonoBehaviour
 {
-    public GameObject PlayUIElements;
+    public GameObject PlayingUIElements;
     public GameObject[] Messages;
     public Transform CameraStartPositipn;
     public Transform MainCamera;
@@ -46,15 +46,15 @@ public class TutorialManager : MonoBehaviour
 
 
 
-
     void Start()
     {
+        PlayingUIElements = LinksContainer.instance.PlayingUIElements;
         StartCoroutine(AnimationInstancing.AnimationManager.GetInstance().LoadAnimationAssetBundle(Application.streamingAssetsPath + "/AssetBundle/animationtexture"));
         Time.timeScale = 1;
 
         DoNotTouchPanel.SetActive(true);
         TouchCameraC.isFreezed = true;
-        PlayUIElements.SetActive(false);
+        PlayingUIElements.SetActive(false);
         StartCoroutine(ShowMessage(0, 1.8f));
         TowersCards[0].SetActive(false);
         TowersCards[1].SetActive(false);
@@ -81,7 +81,7 @@ public class TutorialManager : MonoBehaviour
         if (Spawner2.GetComponent<CripsSpawner>().IsEmpty == true && WinManager.NoEnemies == true && AlreadyShowed == false)
         {
             Messages[4].SetActive(true);
-            PlayUIElements.SetActive(false);
+            PlayingUIElements.SetActive(false);
             AlreadyShowed = true;
         }
         if (GoldenCube2.GetComponent<BuilderManager>().BuildingFiled == 0 && AlreadyBuilded == false)
@@ -95,7 +95,7 @@ public class TutorialManager : MonoBehaviour
         }
         if (OrcsOnTheMap == true && WinManager.NoEnemies == true && AlreadyWin1 == false)
         {
-            PlayUIElements.SetActive(false);
+            PlayingUIElements.SetActive(false);
             Messages[3].SetActive(true);
             AlreadyWin1 = true;
         }
@@ -136,7 +136,7 @@ public class TutorialManager : MonoBehaviour
         }
         if (GoldenCube1.GetComponent<BuilderManager>().IsHighLighted == true && AlreadyHighlighted == false)
         {
-            DoNotTouchPanel.SetActive(true);
+            DoNotTouchPanel.SetActive(false);
             TowersCards[4].SetActive(true);
             ArrowUnderGoldenMineCard.SetActive(true);
             TaskText.text = ConsoleMessages[1].GetTranslatedText();
@@ -162,7 +162,7 @@ public class TutorialManager : MonoBehaviour
     }
     public void NextFinalTipMessage()
     {
-        PlayUIElements.SetActive(true);
+        PlayingUIElements.SetActive(true);
         Messages[4].SetActive(false);
         Spawner3.SetActive(true);
         TowersCards[0].SetActive(true);
@@ -181,7 +181,7 @@ public class TutorialManager : MonoBehaviour
     {
         DoNotTouchPanel.SetActive(false);
         Messages[1].SetActive(false);
-        PlayUIElements.SetActive(true);
+        PlayingUIElements.SetActive(true);
         GoldenCube1.GetComponent<Animator>().enabled = true;
         TaskTextObj.SetActive(true);
         TaskText.text = ConsoleMessages[0].GetTranslatedText();
@@ -208,7 +208,7 @@ public class TutorialManager : MonoBehaviour
         yield return new WaitForSeconds(5f);
         TaskTextObj.SetActive(false);
         ArrowBelowMomey.SetActive(false);
-        PlayUIElements.SetActive(false);
+        PlayingUIElements.SetActive(false);
         Messages[2].SetActive(true);
     }
 
@@ -216,7 +216,7 @@ public class TutorialManager : MonoBehaviour
     public void NextArchersTowerMessage()
     {
         TaskTextObj.SetActive(true);
-        PlayUIElements.SetActive(true);
+        PlayingUIElements.SetActive(true);
         Messages[2].SetActive(false);
         TowersCards[1].SetActive(true);
         TaskText.text = ConsoleMessages[4].GetTranslatedText();
@@ -226,7 +226,7 @@ public class TutorialManager : MonoBehaviour
     public void NextFirstWinMessage()
     {
         Messages[3].SetActive(false);
-        PlayUIElements.SetActive(true);
+        PlayingUIElements.SetActive(true);
         StartCoroutine("BombTowerOnGoldenCell");
     }
     IEnumerator CameraUsing()
@@ -279,7 +279,7 @@ public class TutorialManager : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         Messages[5].SetActive(true);
-        PlayUIElements.SetActive(false);
+        PlayingUIElements.SetActive(false);
         PlayerStats.Crystals = PlayerStats.Crystals + 10;
         PlayerStats.CampaignProgressIndex = 1;
         SavingSystem.SavePlayerData();

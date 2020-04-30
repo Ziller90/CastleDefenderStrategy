@@ -38,13 +38,23 @@ public class MainMenuButtons : MonoBehaviour
     public AsyncOperation AO;
     public GameObject LevelSelection;
     public GameObject ThanksPanel;
+    public GameObject EraseProgressPanel;
+    public int CounterToResetProgress;
+    public Translation Left;
+    public Translation Clicks;
+    public Text ClicksLeftToEraseProgress;
+
 
 
 
 
     void Start()
     {
-        if (PlayerStats.GameWasFinished == true)
+        if (PlayerStats.DifficultyLevelIndex == 0)
+        {
+            PlayerStats.DifficultyLevelIndex = 2;
+        }
+         if (PlayerStats.GameWasFinished == true)
         {
             Crown.SetActive(true);
             ShopMgr.ShopAcessLevel = 2;
@@ -203,6 +213,28 @@ public class MainMenuButtons : MonoBehaviour
     {
         PlayerPrefs.DeleteAll();
         SceneManager.LoadScene(0);
+    }
+    public void ProgressResettingPanel()
+    {
+        EraseProgressPanel.SetActive(true);
+        SettingsPanel.SetActive(false);
+    }
+    public void YESResetProgress()
+    {
+        ClicksLeftToEraseProgress.gameObject.SetActive(true);
+        CounterToResetProgress--;
+        ClicksLeftToEraseProgress.text = Left.GetTranslatedText() + " " + CounterToResetProgress.ToString() + " " + Clicks.GetTranslatedText();
+        if (CounterToResetProgress == 0)
+        {
+            ERASEPROGRESS();
+        }
+    }
+    public void NOEraseProgress()
+    {
+        CounterToResetProgress = 5;
+        ClicksLeftToEraseProgress.gameObject.SetActive(false);
+        EraseProgressPanel.SetActive(false);
+        SettingsPanel.SetActive(true);
     }
  
 }

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90fd2ae2a6113bc4b96fbae95793b5ed, type: 3}
   m_Name: EraseProgress
   m_EditorClassIdentifier: 
-  EnglishVersion: Erase progress
+  EnglishVersion: Reset progress
   RussianVersion: "\u0421\u0442\u0435\u0440\u0435\u0442\u044C \u043F\u0440\u043E\u0433\u0440\u0435\u0441\u0441"
   JapanVersion: 
   KoreanVersion: 

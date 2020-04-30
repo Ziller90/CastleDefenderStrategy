@@ -13,7 +13,6 @@ public class CastleScript : MonoBehaviour
     public GameObject GameOverMassage;
     public GameUIManager UIManager;
     public Image HpBar;
-    public GameObject PlayingUIElements;
     public GameObject CastleDamageParticleEffect;
     public Transform CastlePosition;
     public float CastleWidth = 5;
@@ -32,7 +31,6 @@ public class CastleScript : MonoBehaviour
             MaxHP = MaxHP * 1.5f;
             HP = HP * 1.5f;
         }
-        PlayingUIElements = LinksContainer.instance.PlayingUIElements;
         HpBar = LinksContainer.instance.HpBar;
         UIManager = LinksContainer.instance.UIManager;
         HP = MaxHP;
@@ -51,7 +49,7 @@ public class CastleScript : MonoBehaviour
     }
     void GameOver ()
     {
-        PlayingUIElements.SetActive(false);
+        UIManager.PlayingUIElements.SetActive(false);
         UIManager.ShowGameOverScreen();
         StartCoroutine("StopTime");
 

@@ -12,11 +12,6 @@ using UnityEngine.UI;
 public class AdsManager : MonoBehaviour, IUnityAdsListener
 {
     private string gameId;
-#if UNITY_IOS
-    gameId = "3243302";
-#elif UNITY_ANDROID
-    gameId = "3243303";
-#endif
     public string GameOverVideo = "video";
     public string WinRewardedVideo = "rewardedVideo";
     public WinScript winScript;
@@ -30,11 +25,12 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
     public Translation AdError;
     public Translation PleaseWatchAdFull;
     public Translation ThanksForWhatching;
-
+    public bool RewardedVideoWasShown;
+    public GameSarter gameStarter;
 
     void Start()
     {
-        
+        gameId = "3243303";
         AdConsole.SetActive(false);
         Advertisement.AddListener(this);
         Advertisement.Initialize(gameId, false);
@@ -49,6 +45,18 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
     void Update()
     {
 
+    }
+    public void ShowShortAd()
+    {
+        if (RewardedVideoWasShown == false)
+        {
+            Time.timeScale = 0;
+            Advertisement.Show(GameOverVideo);
+        }
+        else
+        {
+            gameStarter.NextMission();
+        }
     }
     public void ShowGameOverAd()
     {
@@ -68,6 +76,7 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
             if (showResult == ShowResult.Finished)
             {
                 HideAdButton();
+                RewardedVideoWasShown = true;
                 winScript.GiveRewardToPlayer();
                 winScript.CrystalsRewardForWin = winScript.CrystalsRewardForWin * 2;
                 StartCoroutine(ShowConsole(ThanksForWhatching.GetTranslatedText(), Color.yellow));
@@ -85,11 +94,18 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
         }
         else if (placementId == GameOverVideo)
         {
-            Debug.Log("ItWasGameOver");
-
-            GameOverPanel.SetActive(false);
-            Time.timeScale = 1;
-            SceneManager.LoadScene(3);
+            if (winScript.Win == false)
+            {
+                Debug.Log("ItWasGameOver");
+                GameOverPanel.SetActive(false);
+                Time.timeScale = 1;
+                SceneManager.LoadScene(3);
+            }
+            else
+            {
+                Time.timeScale = 1;
+                gameStarter.NextMission();
+            }
         }
     }
     public void OnUnityAdsDidError(string message)

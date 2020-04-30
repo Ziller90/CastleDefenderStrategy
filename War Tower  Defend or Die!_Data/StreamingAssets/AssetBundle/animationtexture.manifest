@@ -1,0 +1,23 @@
+ManifestFileVersion: 0
+CRC: 1898990431
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 2f0c75c7601f9e2c0850763036159479
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 5ad585dd02dfb5016c0dad519eab8f49
+HashAppended: 0
+ClassTypes:
+- Class: 49
+  Script: {instanceID: 0}
+Assets:
+- Assets/AnimationTexture/Orc_SM_light_cavalry.bytes
+- Assets/AnimationTexture/Skeleton.bytes
+- Assets/AnimationTexture/Orc_SM_archer.bytes
+- Assets/AnimationTexture/Orc_SM_light_infantry.bytes
+- Assets/AnimationTexture/Orc_SM_heavy_infantry.bytes
+- Assets/AnimationTexture/Orc_SM_spearman.bytes
+- Assets/AnimationTexture/Orc_heavy_infantry.bytes
+- Assets/AnimationTexture/Orc_shaman.bytes
+Dependencies: []
