@@ -28,28 +28,29 @@ public class MapSetting : MonoBehaviour
     }
     void Start()
     {
+        LinksContainer.instance.Level = gameObject;
         if (Shop.GetProductPurchaseState("StartUpCapital") == true)
         {
             StartGold = StartGold + 50;
         }
-        Camera = GameObject.Find("MainCamera").GetComponent<RTS_Cam.RTS_Camera>();
-        GameObject.Find("WinManager").GetComponent<WinScript>().Spawners = Spawners;
-        GameObject.Find("WinManager").GetComponent<WinScript>().CrystalsRewardForWin = CrystalsRewardForWin;
-        GameObject.Find("ResourcesManager").GetComponent<ResourcesManager>().Gold = StartGold;
+        Camera = LinksContainer.instance.RTSCamera.GetComponent<RTS_Cam.RTS_Camera>();
+        LinksContainer.instance.winScript.Spawners = Spawners;
+        LinksContainer.instance.winScript.CrystalsRewardForWin = CrystalsRewardForWin;
+        LinksContainer.instance.resourcesManager.Gold = StartGold;
         if (PlayerStats.StartCapitalOpened == true)
         {
-            GameObject.Find("ResourcesManager").GetComponent<ResourcesManager>().Gold += 30;
+            LinksContainer.instance.resourcesManager.GetComponent<ResourcesManager>().Gold += 30;
         }
 
         if (UseTouchCamera == true)
         {
-            touchCamera = GameObject.Find("Camera").GetComponent<TouchCamera>();
+            touchCamera = LinksContainer.instance.TouchCamera.GetComponent<TouchCamera>();
             touchCamera.XStop = CameraFieldSizeX;
             touchCamera.ZStop = CameraFieldSizeY;
         }
         else
         {
-            Camera = GameObject.Find("MainCamera").GetComponent<RTS_Cam.RTS_Camera>();
+            Camera = LinksContainer.instance.RTSCamera.GetComponent<RTS_Cam.RTS_Camera>();
             Camera.limitX = CameraFieldSizeX;
             Camera.limitY = CameraFieldSizeY;
         }

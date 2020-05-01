@@ -13,7 +13,7 @@ public class CameraRayCast : MonoBehaviour
     BuildingManager buildingManager;
     void Start()
     {
-        buildingManager = GameObject.Find("BuildingManager").GetComponent<BuildingManager>();
+        buildingManager = LinksContainer.instance.buildingManager.GetComponent<BuildingManager>();
     }
 
     public static bool IsOverUI()

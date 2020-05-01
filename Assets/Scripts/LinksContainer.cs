@@ -22,7 +22,10 @@ public class LinksContainer : MonoBehaviour
     public GameObject NewMessageButton;
     public GameObject PlayingUIElements;
     public Image HpBar;
-
+    public GameObject RTSCamera;
+    public GameObject TouchCamera;
+    public GameObject CameraControl;
+    public WayManager wayManager;
 
     public LinksContainer()
     {

@@ -21,22 +21,21 @@ public class GameSarter : MonoBehaviour
         Instantiate(StartOrc, new Vector3(1000, 1000, 1000), Quaternion.identity);
     }
 
-    // Update is called once per frame
-    void MapLoader (int MapID)
+    void MapLoader(int MapID)
     {
+        var watch = System.Diagnostics.Stopwatch.StartNew();
         NewMap = Instantiate(Config.CamapaignMaps[MapID], MapPosition.position, Quaternion.identity);
         NewMap.GetComponent<MapSetting>().SetUseTouchCamera(TouchCamera);
-        NewMap.SetActive(true);
-        //NewMap.transform.Rotate(0, NewMap.GetComponent<MapSetting>().Rotate,0);
-
         CurrentLevelCampaignIndex = MapID;
+        watch.Stop();
+        Debug.Log("MapLoader" + watch.ElapsedMilliseconds);
     }
-    public void GameReloader ()
+    public void GameReloader()
     {
         Time.timeScale = 1;
         SceneManager.LoadScene(1);
     }
-    public void NextMission ()
+    public void NextMission()
     {
         LevelLoader.LevelToLoad = NewMap.GetComponent<MapSetting>().LevelNumber + 1;
         SceneManager.LoadScene(3);

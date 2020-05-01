@@ -25,6 +25,7 @@ public class CastleScript : MonoBehaviour
 
     void Start()
     {
+        LinksContainer.instance.Castle = gameObject.GetComponent<CastleScript>();
         Manager = LinksContainer.instance.globalEnemiesManager;
         if (Shop.GetProductPurchaseState("StrongWalls") == true)
         {

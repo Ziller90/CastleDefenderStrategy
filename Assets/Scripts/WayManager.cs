@@ -15,7 +15,7 @@ public class WayManager : MonoBehaviour
 
     void Start()
     {
-        
+        LinksContainer.instance.wayManager = gameObject.GetComponent<WayManager>();
     }
     // Update is called once per frame
     void Update()

@@ -20,8 +20,8 @@ public class FinalWinScript : MonoBehaviour
     bool MoveCamera;
     void Start()
     {
-        Camera = GameObject.FindGameObjectWithTag("TouchCameraContr").transform;
-        UIElements = GameObject.Find("PlayingUIElements");
+        Camera = LinksContainer.instance.CameraControl.transform;
+        UIElements = LinksContainer.instance.PlayingUIElements;
     }
 
     void Update()

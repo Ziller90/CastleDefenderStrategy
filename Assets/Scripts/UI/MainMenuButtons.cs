@@ -196,13 +196,14 @@ public class MainMenuButtons : MonoBehaviour
     }
     IEnumerator Fading (int SceneToLoad)
     {
-        AO = SceneManager.LoadSceneAsync(SceneToLoad);
-        AO.allowSceneActivation = false;
+        //AO = SceneManager.LoadSceneAsync(SceneToLoad);
+        //AO.allowSceneActivation = false;
         gameObject.GetComponent<ScreenFader>().fadeState = ScreenFader.FadeState.In;
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(1.4f);
         LoadingText.SetActive(true);
         gameObject.GetComponent<ScreenFader>().enabled = false;
-        AO.allowSceneActivation = true;
+        SceneManager.LoadScene(SceneToLoad);
+        //AO.allowSceneActivation = true;
     }
     public void GoToTyler()
     {

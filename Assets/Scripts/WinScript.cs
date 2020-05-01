@@ -81,6 +81,7 @@ public class WinScript : MonoBehaviour
     }
     IEnumerator WinWindowShow()
     {
+        var watch = System.Diagnostics.Stopwatch.StartNew();
         if (LinksContainer.instance.gameSarter.CurrentLevelCampaignIndex == 10)
         {
             GameObject.Find("FireWorks").GetComponent<FinalWinScript>().StartCoroutine("SalutStarts");
@@ -100,6 +101,7 @@ public class WinScript : MonoBehaviour
             SavingSystem.SavePlayerData();
             AlreadyWon = true;
         }
+        Debug.Log("GameUIManager " + watch.ElapsedMilliseconds);
     }
     public void GiveRewardToPlayer()
     {

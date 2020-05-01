@@ -56,8 +56,8 @@ public class GameUIManager : MonoBehaviour
         {
             HideInterfaceButton.SetActive(true);
         }
-        MessageManager = GameObject.FindGameObjectWithTag("Level").GetComponent<MessagesManager>();
-        ImprovingAvaiableLevel = GameObject.FindGameObjectWithTag("Level").GetComponent<ImprovingsLevelsAvaiable>().ImprovingsAvaiableLevel;
+        MessageManager = LinksContainer.instance.Level.GetComponent<MessagesManager>();
+        ImprovingAvaiableLevel = LinksContainer.instance.Level.GetComponent<ImprovingsLevelsAvaiable>().ImprovingsAvaiableLevel;
 
         ShopMgr.ShopAcessLevel = 1;
         if (gameSarter.CurrentLevelCampaignIndex >= 6)
@@ -88,11 +88,6 @@ public class GameUIManager : MonoBehaviour
         {
             ShopOpenButton.SetActive(true);
         }
-       
-    }
-    private void Awake()
-    {
-      
     }
     public void SeeIfNewThings()
     {
