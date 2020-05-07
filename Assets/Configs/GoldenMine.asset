@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf38c5c0a374be428df77629206090f, type: 3}
   m_Name: GoldenMine
   m_EditorClassIdentifier: 
-  BuildingImage: {fileID: 2800000, guid: 0f6150576be21124da048eb7e2a9d418, type: 3}
+  BuildingImage: {fileID: 2800000, guid: 26be4e3ecdd714546bfe2811737373e4, type: 3}
   GoldPrice: 50
   BuildingId: 2
   AmountOfLevels: 0

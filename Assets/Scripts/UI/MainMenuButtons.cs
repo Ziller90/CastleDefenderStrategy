@@ -43,8 +43,7 @@ public class MainMenuButtons : MonoBehaviour
     public Translation Left;
     public Translation Clicks;
     public Text ClicksLeftToEraseProgress;
-
-
+    public ConfigScriptableObject Config;
 
 
 

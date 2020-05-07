@@ -12,7 +12,6 @@ public class GameSarter : MonoBehaviour
     public GameObject NewMap;
     public bool TouchCamera;
     public GameObject StartOrc;
-    public int CurrentLevelCampaignIndex;
 
     void Start()
     {
@@ -26,7 +25,6 @@ public class GameSarter : MonoBehaviour
         var watch = System.Diagnostics.Stopwatch.StartNew();
         NewMap = Instantiate(Config.CamapaignMaps[MapID], MapPosition.position, Quaternion.identity);
         NewMap.GetComponent<MapSetting>().SetUseTouchCamera(TouchCamera);
-        CurrentLevelCampaignIndex = MapID;
         watch.Stop();
         Debug.Log("MapLoader" + watch.ElapsedMilliseconds);
     }

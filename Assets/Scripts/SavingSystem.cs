@@ -124,6 +124,7 @@ public class SavingSystem : MonoBehaviour
     }
     public void SetPlayerStartSetting()
     {
+        PlayerStats.GameWasFinished = false;
         ShopProductsScriptableObject.purchases.BoughtProducts.Clear();
         QualitySettings.SetQualityLevel(2);
         PlayerStats.Crystals = 0;

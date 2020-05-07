@@ -82,10 +82,10 @@ public class WinScript : MonoBehaviour
     IEnumerator WinWindowShow()
     {
         var watch = System.Diagnostics.Stopwatch.StartNew();
-        if (LinksContainer.instance.gameSarter.CurrentLevelCampaignIndex == 10)
+        if (PlayerStats.CampaignProgressIndex == 10)
         {
             GameObject.Find("FireWorks").GetComponent<FinalWinScript>().StartCoroutine("SalutStarts");
-            PlayerStats.CampaignProgressIndex = LinksContainer.instance.gameSarter.CurrentLevelCampaignIndex + 1;
+            PlayerStats.CampaignProgressIndex = PlayerStats.CampaignProgressIndex + 1;
         }
         else
         {

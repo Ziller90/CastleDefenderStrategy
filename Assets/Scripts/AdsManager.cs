@@ -105,6 +105,7 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
             {
                 Time.timeScale = 1;
                 gameStarter.NextMission();
+
             }
         }
     }

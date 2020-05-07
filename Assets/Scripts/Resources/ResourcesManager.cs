@@ -8,6 +8,8 @@ public class ResourcesManager : MonoBehaviour
     public int Gold;
     public Text GoldText;
     public Text CrystlasText;
+    public Text GoldTextShad;
+    public Text CrystlasTextShad;
     public Animator CoinAnimator;
     public Animator CrystalsAnimator;
 
@@ -40,5 +42,7 @@ public class ResourcesManager : MonoBehaviour
 
         CrystlasText.text = "" + PlayerStats.Crystals;
         GoldText.text = "" + Gold;
+        CrystlasTextShad.text = "" + PlayerStats.Crystals;
+        GoldTextShad.text = "" + Gold;
     }
 }

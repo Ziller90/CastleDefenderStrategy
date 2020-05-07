@@ -43,6 +43,7 @@ public class TutorialManager : MonoBehaviour
     public WinScript WinManager;
     public Translation[] ConsoleMessages;
     public MusicManager Music;
+    public ConfigScriptableObject Config;
 
 
 

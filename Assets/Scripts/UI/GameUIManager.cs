@@ -60,7 +60,7 @@ public class GameUIManager : MonoBehaviour
         ImprovingAvaiableLevel = LinksContainer.instance.Level.GetComponent<ImprovingsLevelsAvaiable>().ImprovingsAvaiableLevel;
 
         ShopMgr.ShopAcessLevel = 1;
-        if (gameSarter.CurrentLevelCampaignIndex >= 6)
+        if (PlayerStats.CampaignProgressIndex >= 6)
         {
             ShopMgr.ShopAcessLevel = 2;
         }
@@ -68,7 +68,7 @@ public class GameUIManager : MonoBehaviour
         //{
         //    ShopMgr.ShopAcessLevel = 3;
         //}
-        if (gameSarter.CurrentLevelCampaignIndex >= 6 && MainMenuButtons.AlreadySeeNewThingsLevel6 == false)
+        if (PlayerStats.CampaignProgressIndex >= 6 && MainMenuButtons.AlreadySeeNewThingsLevel6 == false)
         {
             NewThingsMark.SetActive(true);
             NumberOfNewThings = 1;
