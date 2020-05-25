@@ -111,6 +111,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -193,8 +194,8 @@ MonoBehaviour:
   - {fileID: 5443486789310978349, guid: e352810de7be8c14db95b0491b9bb6e3, type: 3}
   HighLightFrame: {fileID: 134362943185089884, guid: 1a7e6b617f2abf946b6af5354c48010a,
     type: 3}
-  HighlightFramepoint: {fileID: 0}
-  BuildPoint: {fileID: 0}
+  HighlightFramepoint: {fileID: 2435286213796147436}
+  BuildPoint: {fileID: 925464277199102942}
   BuildingManager: {fileID: 0}
   BuildingFiled: -1
   MouseOver: 0

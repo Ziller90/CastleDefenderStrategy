@@ -145,9 +145,13 @@ public class SavingSystem : MonoBehaviour
         //{
         //    GlobalLanguageManager.Language = GlobalLanguageManager.GloabalLanguage.Korean;
         //}
-        //if (Application.systemLanguage == SystemLanguage.Russian)
+        else if (Application.systemLanguage == SystemLanguage.Russian)
         {
             GlobalLanguageManager.Language = GlobalLanguageManager.GloabalLanguage.Russian;
+        }
+        else
+        {
+            GlobalLanguageManager.Language = GlobalLanguageManager.GloabalLanguage.English;
         }
         //if (Application.systemLanguage == SystemLanguage.Spanish)
         //{

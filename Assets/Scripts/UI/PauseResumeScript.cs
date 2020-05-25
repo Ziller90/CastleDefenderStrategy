@@ -18,8 +18,8 @@ public class PauseResumeScript : MonoBehaviour
         {
             Paused = true;
             Time.timeScale = 0;
-            ButtonImange.texture = ResumeTexture;
-            ButtonImange.color = Color.red;
+            //ButtonImange.texture = ResumeTexture;
+            //ButtonImange.color = Color.red;
         }
         else
         {

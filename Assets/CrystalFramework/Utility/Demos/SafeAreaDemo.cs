@@ -5,7 +5,7 @@ namespace Crystal
 {
     public class SafeAreaDemo : MonoBehaviour
     {
-        [SerializeField] KeyCode KeySafeArea = KeyCode.A;
+        [SerializeField] KeyCode KeySafeArea = KeyCode.M;
         SafeArea.SimDevice[] Sims;
         int SimIdx;
 
@@ -19,7 +19,7 @@ namespace Crystal
 
         void Update ()
         {
-            if (Input.GetKeyDown (KeySafeArea))
+            if (Input.GetKeyDown (KeyCode.M))
                 ToggleSafeArea ();
         }
 
