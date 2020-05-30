@@ -17,6 +17,7 @@ public class ResourcesManager : MonoBehaviour
     int OldGold;
     int OldCrystals;
 
+    public bool InTutorialLevel;
 
 
      
@@ -42,7 +43,10 @@ public class ResourcesManager : MonoBehaviour
 
         CrystlasText.text = "" + PlayerStats.Crystals;
         GoldText.text = "" + Gold;
-        CrystlasTextShad.text = "" + PlayerStats.Crystals;
-        GoldTextShad.text = "" + Gold;
+        if (InTutorialLevel == false)
+        {
+            CrystlasTextShad.text = "" + PlayerStats.Crystals;
+            GoldTextShad.text = "" + Gold;
+        }
     }
 }
