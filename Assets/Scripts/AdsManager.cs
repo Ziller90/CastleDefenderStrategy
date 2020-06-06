@@ -11,7 +11,8 @@ using UnityEngine.UI;
 
 public class AdsManager : MonoBehaviour, IUnityAdsListener
 {
-    private string gameId;
+    private string androidGameId = "3243303";
+    private string iosGameId = "3243302";
     public string GameOverVideo = "video";
     public string WinRewardedVideo = "rewardedVideo";
     public WinScript winScript;
@@ -30,7 +31,11 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
 
     void Start()
     {
-        gameId = "3243303";
+        var gameId = "";
+        if (Application.platform == RuntimePlatform.Android)
+            gameId = androidGameId;
+        if (Application.platform == RuntimePlatform.IPhonePlayer)
+            gameId = iosGameId;
         AdConsole.SetActive(false);
         Advertisement.AddListener(this);
         Advertisement.Initialize(gameId, false);
