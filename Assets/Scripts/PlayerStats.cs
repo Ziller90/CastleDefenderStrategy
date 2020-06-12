@@ -9,6 +9,7 @@ public class PlayerStats : MonoBehaviour
     public static int CampaignProgressIndex = 0;
     public static bool StartCapitalOpened = false;
     public static bool GameWasFinished;
+    public static bool RateWindowWasShowed;
 
 
     // Update is called once per frame

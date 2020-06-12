@@ -14,12 +14,14 @@ public class MessagesManager : MonoBehaviour
     public bool HaveStartMessage;
     public bool HideUIPlayElements;
     GameUIManager gameUIManager;
+    public bool RateUsOnStart;
     void Awake ()
     {
 
     }
     void Start()
     {
+        gameUIManager = LinksContainer.instance.UIManager;
         NewMessageButton = LinksContainer.instance.NewMessageButton;
         NewMessageButton.SetActive(false);
         if (PlayerStats.GameWasFinished == false)
@@ -62,7 +64,18 @@ public class MessagesManager : MonoBehaviour
     public IEnumerator StartMessage(float Time)
     {
         yield return new WaitForSeconds(Time);
-        ShowMessage(0);
+        if (RateUsOnStart == true)
+        {
+            if (PlayerStats.RateWindowWasShowed == true)
+                ShowMessage(1);
+            if (PlayerStats.RateWindowWasShowed == false)
+                ShowMessage(0);
+            PlayerStats.RateWindowWasShowed = true;
+        }
+        else
+        {
+            ShowMessage(0);
+        }
         GameObject.Find("OK!").GetComponent<Button>().interactable = false;
         yield return new WaitForSeconds(0.5f);
         StopTime();

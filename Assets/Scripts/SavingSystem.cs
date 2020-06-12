@@ -21,6 +21,15 @@ public class SavingSystem : MonoBehaviour
     }
     public static void SavePlayerData()
     {
+        if (PlayerStats.RateWindowWasShowed == true)
+        {
+            PlayerPrefs.SetInt("RateWindowWasShowed", 1);
+        }
+        if (PlayerStats.RateWindowWasShowed == false)
+        {
+            PlayerPrefs.SetInt("RateWindowWasShowed", 0);
+        }
+
         if (PlayerStats.GameWasFinished == true)
         {
             PlayerPrefs.SetInt("GameWasFinished", 1);
@@ -71,6 +80,15 @@ public class SavingSystem : MonoBehaviour
     }
     public void SetPlayerData()
     {
+        if (PlayerPrefs.GetInt("RateWindowWasShowed") == 1)
+        {
+            PlayerStats.RateWindowWasShowed = true;
+        }
+        if (PlayerPrefs.GetInt("RateWindowWasShowed") == 0)
+        {
+            PlayerStats.RateWindowWasShowed = false;
+        }
+
         ShopProductsScriptableObject.purchases = JsonUtility.FromJson<ShopProductsScriptableObject.Purchases>(PlayerPrefs.GetString("BoughtProducts"));
         PlayerStats.DifficultyLevelIndex = PlayerPrefs.GetInt("DifficultyLevel");
         if (PlayerPrefs.GetInt("GameWasFinished") == 1)

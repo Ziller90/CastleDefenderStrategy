@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: RESTART
   m_EditorClassIdentifier: 
   EnglishVersion: RESTART
-  RussianVersion: "\u041D\u0410\u0427\u0410\u0422\u042C \u0421 \u041D\u0410\u0427\u0410\u041B\u0410"
+  RussianVersion: "\u041D\u0410\u0427\u0410\u0422\u042C \u0421\u041D\u0410\u0427\u0410\u041B\u0410"
   JapanVersion: 
   KoreanVersion: 
   SpanishVersion: 

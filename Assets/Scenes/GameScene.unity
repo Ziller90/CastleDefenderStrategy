@@ -5876,7 +5876,7 @@ PrefabInstance:
     - target: {fileID: 114000010742529126, guid: 3e8cdb2d9a3264041936d8a30d8be2af,
         type: 3}
       propertyPath: settings.captureSizeMultiplier
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114000010742529126, guid: 3e8cdb2d9a3264041936d8a30d8be2af,
         type: 3}
@@ -25103,6 +25103,7 @@ MonoBehaviour:
   CrystlasTextShad: {fileID: 415514647}
   CoinAnimator: {fileID: 1328273056}
   CrystalsAnimator: {fileID: 2028164062}
+  InTutorialLevel: 0
 --- !u!4 &1983211575
 Transform:
   m_ObjectHideFlags: 0

@@ -9,7 +9,6 @@ using UnityEngine.UI;
 public class InitSceneMainManager : MonoBehaviour
 {
     public SavingSystem savingSystem;
-    public Text text;
 
     void Start()
     {
@@ -23,8 +22,7 @@ public class InitSceneMainManager : MonoBehaviour
             savingSystem.SetPlayerStartSetting();
             PlayerPrefs.SetInt("PlayerVisitIndex", 1);
         }
-        text.text = PlayerPrefs.GetInt("PlayerVisitIndex").ToString();
-        SceneManager.LoadScene(1);
+        SceneManager.LoadSceneAsync(1);
     }
 
     // Update is called once per frame
