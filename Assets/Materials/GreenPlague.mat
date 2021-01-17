@@ -9,13 +9,12 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: GreenPlague
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: _ALPHAPREMULTIPLY_ON
+  m_ShaderKeywords: 
   m_LightmapFlags: 6
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3000
-  stringTagMap:
-    RenderType: Transparent
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
@@ -79,7 +78,7 @@ Material:
     - _DetailNormalMapScale: 1
     - _DetailStrength: 1
     - _DiffusePower: 1
-    - _DstBlend: 10
+    - _DstBlend: 0
     - _Emission: 0
     - _EmissionStrength: 1
     - _GlossMapScale: 0.965
@@ -87,7 +86,7 @@ Material:
     - _GlossyReflections: 1
     - _Mask: 0
     - _Metallic: 0.228
-    - _Mode: 3
+    - _Mode: 0
     - _Normal: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
@@ -97,7 +96,7 @@ Material:
     - _SpecularPower: 1
     - _SrcBlend: 1
     - _UVSec: 0
-    - _ZWrite: 0
+    - _ZWrite: 1
     m_Colors:
     - _Color: {r: 0.11479797, g: 0.7735849, b: 0.025542913, a: 0.5372549}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}

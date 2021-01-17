@@ -165,9 +165,9 @@ PlayerSettings:
   applicationIdentifier:
     Android: com.Abuksigun.CastleDefenderStrategy
   buildNumber: {}
-  AndroidBundleVersionCode: 7
+  AndroidBundleVersionCode: 8
   AndroidMinSdkVersion: 19
-  AndroidTargetSdkVersion: 0
+  AndroidTargetSdkVersion: 30
   AndroidPreferredInstallLocation: 1
   aotOptions: 
   stripEngineCode: 1
@@ -825,9 +825,9 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
-  cloudProjectId: ed2fbde6-df42-4f7b-81fb-54482ba38292
+  cloudProjectId: 87cd84ea-7ca6-49de-a59b-fd97f5bd4b01
   framebufferDepthMemorylessMode: 0
-  projectName: Tower Defence Strategy
+  projectName: Tower Defenser Strategy
   organizationId: zilleres
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0

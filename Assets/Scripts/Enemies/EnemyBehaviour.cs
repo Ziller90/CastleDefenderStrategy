@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyBehaviour : MonoBehaviour
 {
@@ -83,21 +84,21 @@ public class EnemyBehaviour : MonoBehaviour
     }
     void Start()
     {
-        if (PlayerStats.CampaignProgressIndex > 0)
+        if (SceneManager.GetSceneByBuildIndex(5).isLoaded == false)
         {
             switch (PlayerStats.DifficultyLevelIndex)
             {
                 case 0:
-                    MaxHP = MaxHP * 1.1f;
+                    MaxHP = MaxHP * 0.85f;
                     break;
                 case 1:
-                    MaxHP = MaxHP * 0.7f;
+                    MaxHP = MaxHP * 0.6f;
                     break;
                 case 2:
-                    MaxHP = MaxHP * 1.1f;
+                    MaxHP = MaxHP * 0.85f;                
                     break;
                 case 3:
-                    MaxHP = MaxHP * 1.7f;
+                    MaxHP = MaxHP * 1.35f;
                     break;
             }
         }

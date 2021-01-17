@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0d6491ceaa089442937b67a7d76f813, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 20
+  Damage: 6
   Reloaded: 1
   RangeOfDetection: 0.5
   ReloadingTime: 1.5
@@ -160,7 +160,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 0b9df4779bfb2c24991fba6d11155d95, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.356
+  m_Volume: 0.203
   m_Pitch: 1
   Loop: 0
   Mute: 0
