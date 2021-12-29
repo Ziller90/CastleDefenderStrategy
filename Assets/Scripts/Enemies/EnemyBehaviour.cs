@@ -25,7 +25,6 @@ public class EnemyBehaviour : MonoBehaviour
     public int CrystalsKillReward;
     public int FrozenRecover;
     public Animator EnemyAnimator;
-    public AnimationInstancing.AnimationInstancing AnimationInstancing;
 
     public bool AlreadyDead = false;
     public int ProbabilytyOfCrystalsReward;
@@ -124,13 +123,7 @@ public class EnemyBehaviour : MonoBehaviour
     {
         if (FullFreezed == true)
         {
-            if (EnemyId != "Cavalry" && EnemyId != "Healer" && EnemyId != "Catapult")
-                AnimationInstancing.Pause();
-            else
-            {
-                EnemyAnimator.speed = 0;
-            }
-
+           EnemyAnimator.speed = 0;
         }
         if (AlreadyDead == true)
         {
@@ -158,13 +151,13 @@ public class EnemyBehaviour : MonoBehaviour
             switch (AnimationIndex)
             {
                 case 1:
-                    AnimationInstancing.PlayAnimation("Run");
+                    EnemyAnimator.Play("Run");
                     break;
                 case 0:
-                    AnimationInstancing.PlayAnimation("Attack");
+                    EnemyAnimator.Play("Attack");
                     break;
                 case 2:
-                    AnimationInstancing.PlayAnimation("Death");
+                    EnemyAnimator.Play("Death");
                     break;
             }
         }
@@ -248,7 +241,7 @@ public class EnemyBehaviour : MonoBehaviour
         HPBar.gameObject.SetActive(false);
         DeathSoundPlaying();
         gameObject.GetComponent<CrystalsManager>().IfCrystalsDrop();
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(2.5f);
         Enemy.SetActive(false);
 
     }
@@ -322,8 +315,7 @@ public class EnemyBehaviour : MonoBehaviour
         else
         {
             Go = true;
-            if (EnemyId == "Cavalry" || EnemyId == "Healer" || EnemyId == "Catapult")
-                EnemyAnimator.speed = 1;
+            EnemyAnimator.speed = 1;
         }
     }
 }

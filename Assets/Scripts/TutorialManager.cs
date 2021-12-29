@@ -50,7 +50,6 @@ public class TutorialManager : MonoBehaviour
     void Start()
     {
         PlayingUIElements = LinksContainer.instance.PlayingUIElements;
-        StartCoroutine(AnimationInstancing.AnimationManager.GetInstance().LoadAnimationAssetBundle(Application.streamingAssetsPath + "/AssetBundle/animationtexture"));
         Time.timeScale = 1;
 
         DoNotTouchPanel.SetActive(true);

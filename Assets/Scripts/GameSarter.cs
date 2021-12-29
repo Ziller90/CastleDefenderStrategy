@@ -15,7 +15,6 @@ public class GameSarter : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(AnimationInstancing.AnimationManager.GetInstance().LoadAnimationAssetBundle(Application.streamingAssetsPath + "/AssetBundle/animationtexture"));
         MapLoader(LevelLoader.LevelToLoad);
         Instantiate(StartOrc, new Vector3(1000, 1000, 1000), Quaternion.identity);
     }

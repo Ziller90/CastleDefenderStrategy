@@ -17,6 +17,7 @@ public class OnArcherAttack : MonoBehaviour
     }
     public void ArcherAttack()
     {
+        Debug.Log("Arrow");
         Archer.MakeArrow();
     }
 }
