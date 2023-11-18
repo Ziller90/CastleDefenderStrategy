@@ -20,7 +20,6 @@ public class CastleScript : MonoBehaviour
     public AudioSource AudioSource;
     bool CanPlay = true;
     GlobalEnemiesManager Manager;
-    public AdsManager adsManager;
     public ShopProductsScriptableObject Shop;
 
     void Start()

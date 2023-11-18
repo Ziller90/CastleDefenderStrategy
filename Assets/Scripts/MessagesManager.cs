@@ -23,7 +23,8 @@ public class MessagesManager : MonoBehaviour
     {
         gameUIManager = LinksContainer.instance.UIManager;
         NewMessageButton = LinksContainer.instance.NewMessageButton;
-        NewMessageButton.SetActive(false);
+        if (NewMessageButton)
+            NewMessageButton.SetActive(false);
         if (PlayerStats.GameWasFinished == false)
         {
             if (HaveStartMessage)

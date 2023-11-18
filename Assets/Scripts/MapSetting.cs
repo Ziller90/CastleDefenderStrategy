@@ -21,7 +21,11 @@ public class MapSetting : MonoBehaviour
     public CripsSpawner MainSpawner;
     public ShopProductsScriptableObject Shop;
 
-
+    [ContextMenu("Double")]
+    public void Double()
+    {
+        CrystalsRewardForWin = CrystalsRewardForWin * 2;
+    }
     public void SetUseTouchCamera(bool UsingTouchCamera)
     {
         UseTouchCamera = UsingTouchCamera;
